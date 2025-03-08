@@ -22,6 +22,26 @@ export const router = createRouter({
       name: 'contact',
       component: () => import('../views/ContactView.vue'),
     },
+    {
+      path: '/website-design',
+      name: 'website-design',
+      component: () => import('../views/Website.vue'),
+    },
+    {
+      path: '/apps-software-development',
+      name: 'apps-software-development',
+      component: () => import('../views/AppsSoftware.vue'),
+    },
+    {
+      path: '/digital-marketing',
+      name: 'digital-marketing',
+      component: () => import('../views/Digital.vue'),
+    },
+    {
+      path: '/training-workshops',
+      name: 'training-workshops',
+      component: () => import('../views/Training.vue'),
+    },
   ],
 })
 
