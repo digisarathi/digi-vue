@@ -7,7 +7,7 @@
     <strong><span class="text-accent">digi</span><span class="text-primary">Sarathi</span></strong>
   </RouterLink>
 </v-toolbar-title>        <v-spacer></v-spacer>
-        <v-btn variant="plain" class="hidden-sm-and-down" text v-for="(item, index) in navItems" :key="index" :to="item.route">
+        <v-btn variant="plain" size="small" class="hidden-sm-and-down text-overline" text v-for="(item, index) in navItems" :key="index" :to="item.route">
           {{ item.title }}
         </v-btn>
         <v-btn icon class="hidden-md-and-up" color="accent"  @click="drawer = true">

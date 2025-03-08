@@ -1,7 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import Website from '../views/Website.vue'
-
+import AppsSoftware from '../views/AppsSoftware.vue'
+import Digital from '../views/Digital.vue'
+import Training from '../views/Training.vue'
 export const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -31,17 +33,17 @@ export const router = createRouter({
     {
       path: '/apps-software-development',
       name: 'apps-software-development',
-      component: () => import('../views/AppsSoftware.vue'),
+      component: AppsSoftware,
     },
     {
       path: '/digital-marketing',
       name: 'digital-marketing',
-      component: () => import('../views/Digital.vue'),
+      component: Digital,
     },
     {
       path: '/training-workshops',
       name: 'training-workshops',
-      component: () => import('../views/Training.vue'),
+      component: Training,
     },
   ],
 })
