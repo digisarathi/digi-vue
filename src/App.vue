@@ -1,10 +1,13 @@
 <template>
   <v-app>
     <header>
-      <v-toolbar >
-        <v-toolbar-title>digiSarathi</v-toolbar-title>
-        <v-spacer></v-spacer>
-        <v-btn class="hidden-sm-and-down" text v-for="(item, index) in navItems" :key="index" :to="item.route">
+      <v-toolbar class="text-h4 bg-white">
+<v-toolbar-title>
+  <RouterLink to="/" class="text-decoration-none">
+    <strong><span class="text-accent">digi</span><span class="text-primary">Sarathi</span></strong>
+  </RouterLink>
+</v-toolbar-title>        <v-spacer></v-spacer>
+        <v-btn variant="plain" class="hidden-sm-and-down" text v-for="(item, index) in navItems" :key="index" :to="item.route">
           {{ item.title }}
         </v-btn>
         <v-btn icon class="hidden-md-and-up" color="accent"  @click="drawer = true">
@@ -23,8 +26,8 @@
     <router-view></router-view>
     <footer>
       <v-footer app>
-        <v-col class="text-center">
-          © {{ new Date().getFullYear() }} digiSarathi
+        <v-col class="text-center text-secondary text-caption">
+         <a class="text-decoration-none " href="mailto:hello@digisarathi.com">hello@digisarathi.com</a> © {{ new Date().getFullYear() }} digiSarathi
         </v-col>
       </v-footer>
     </footer>
@@ -40,8 +43,7 @@ const drawer = ref(false);
 const navItems = ref([
   { title: 'Home', route: '/' },
   { title: 'About', route: '/about' },
-  { title: 'Services', route: '/' },
-  { title: 'Contact', route: '/' },
+  { title: 'Contact', route: '/contact' },
 ]);
 
 
