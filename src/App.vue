@@ -35,17 +35,7 @@
 import { ref } from 'vue';
 import { mdiMenu, mdiClose } from '@mdi/js'; // Example of importing an icon
 
-// Reactive data properties
-const email = ref('');
-const testimonials = ref([
-  { name: 'John Doe', text: 'Great service!' },
-  { name: 'Jane Smith', text: 'Highly recommend!' },
-]);
-const clients = ref([
-  { logo: 'path/to/logo1.png' },
-  { logo: 'path/to/logo2.png' },
-  { logo: 'path/to/logo3.png' },
-]);
+
 const drawer = ref(false);
 const navItems = ref([
   { title: 'Home', route: '/' },
@@ -54,8 +44,5 @@ const navItems = ref([
   { title: 'Contact', route: '/' },
 ]);
 
-// Methods
-const subscribe = () => {
-  alert(`Subscribed with email: ${email.value}`);
-};
+
 </script>

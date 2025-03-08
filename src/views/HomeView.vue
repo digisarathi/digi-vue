@@ -46,3 +46,20 @@
 
   </v-main>
 </template>
+<script setup>
+import { ref } from 'vue';
+const email = ref('');
+const testimonials = ref([
+  { name: 'John Doe', text: 'Great service!' },
+  { name: 'Jane Smith', text: 'Highly recommend!' },
+]);
+const clients = ref([
+  { logo: 'path/to/logo1.png' },
+  { logo: 'path/to/logo2.png' },
+  { logo: 'path/to/logo3.png' },
+]);
+
+const subscribe = () => {
+  alert(`Subscribed with email: ${email.value}`);
+};
+</script>
