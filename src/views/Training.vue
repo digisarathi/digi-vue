@@ -9,7 +9,7 @@
               <v-col cols="12" md="6" order="2" order-md="1">
                 <h1 class="text-h2 font-weight-bold mb-4">Empowering NGOs & SMEs with Tech Skills</h1>
                 <p class="text-body-1 mb-6">
-                  DigiSarathi provides specialized tech training for NGO and SME staff, as well as tech students in Pune. 
+                  digiSarathi provides specialized tech training for NGO and SME staff, as well as tech students in Pune. 
                   From AI workshops to WordPress development, we help bridge the digital divide.
                 </p>
                 <div class="d-flex flex-column flex-sm-row gap-4">
@@ -61,7 +61,7 @@
               <v-col cols="12" md="4">
                 <v-card height="100%">
                   <v-card-item>
-                    <v-icon color="primary" size="x-large" class="mb-4">mdi-laptop-account</v-icon>
+                    <v-icon color="primary" size="x-large" class="mb-4">{{mdiLaptopAccount}}</v-icon>
                     <v-card-title>Specialized for NGOs & SMEs</v-card-title>
                     <v-card-text>
                       Curriculum designed specifically for the unique needs and constraints of NGOs and small businesses.
@@ -72,7 +72,7 @@
               <v-col cols="12" md="4">
                 <v-card height="100%">
                   <v-card-item>
-                    <v-icon color="primary" size="x-large" class="mb-4">mdi-google-classroom</v-icon>
+                    <v-icon color="primary" size="x-large" class="mb-4">{{mdiGoogleClassroom}}</v-icon>
                     <v-card-title>Hands-on Learning</v-card-title>
                     <v-card-text>
                       Practical, project-based training that ensures you can apply your skills immediately after the course.
@@ -83,7 +83,7 @@
               <v-col cols="12" md="4">
                 <v-card height="100%">
                   <v-card-item>
-                    <v-icon color="primary" size="x-large" class="mb-4">mdi-account-group</v-icon>
+                    <v-icon color="primary" size="x-large" class="mb-4">{{mdiAccountGroup}}</v-icon>
                     <v-card-title>Community Support</v-card-title>
                     <v-card-text>
                       Ongoing mentorship and community support to help you implement your learnings effectively.
@@ -231,7 +231,7 @@
                           <v-card-item>
                             <div class="d-flex align-center mb-4">
                               <v-avatar color="primary" class="mr-4">
-                                <v-icon color="white">mdi-account</v-icon>
+                                <v-icon color="white">{{mdiAccount}}</v-icon>
                               </v-avatar>
                               <div>
                                 <div class="font-weight-bold">Priya Sharma</div>
@@ -252,7 +252,7 @@
                           <v-card-item>
                             <div class="d-flex align-center mb-4">
                               <v-avatar color="primary" class="mr-4">
-                                <v-icon color="white">mdi-account</v-icon>
+                                <v-icon color="white">{{mdiAccount}}</v-icon>
                               </v-avatar>
                               <div>
                                 <div class="font-weight-bold">Rahul Desai</div>
@@ -273,7 +273,7 @@
                           <v-card-item>
                             <div class="d-flex align-center mb-4">
                               <v-avatar color="primary" class="mr-4">
-                                <v-icon color="white">mdi-account</v-icon>
+                                <v-icon color="white">{{mdiAccount}}</v-icon>
                               </v-avatar>
                               <div>
                                 <div class="font-weight-bold">Anika Patel</div>
@@ -327,29 +327,29 @@
                 </p>
                 
                 <div class="mb-4 d-flex align-center">
-                  <v-icon color="primary" class="mr-3">mdi-map-marker</v-icon>
+                  <v-icon color="primary" class="mr-3">{{mdiMapMarker}}</v-icon>
                   <span>Pune, Maharashtra, India</span>
                 </div>
                 
                 <div class="mb-4 d-flex align-center">
-                  <v-icon color="primary" class="mr-3">mdiEmail</v-icon>
+                  <v-icon color="primary" class="mr-3">{{mdiEmail}}</v-icon>
                   <span>hello@digisarathi.com</span>
                 </div>
                 
                 <div class="mb-6 d-flex align-center">
-                  <v-icon color="primary" class="mr-3">mdiPhone</v-icon>
+                  <v-icon color="primary" class="mr-3">{{mdiPhone}}</v-icon>
                   <span>WhatsApp: +91 9022465676</span>
                 </div>
                 
                 <div class="d-flex">
                   <v-btn icon color="primary" class="mr-2">
-                    <v-icon>mdiTwitter</v-icon>
+                    <v-icon>{{mdiTwitter}}</v-icon>
                   </v-btn>
                   <v-btn icon color="primary" class="mr-2">
-                    <v-icon>mdiLinkedin</v-icon>
+                    <v-icon>{{mdiLinkedin}}</v-icon>
                   </v-btn>
                   <v-btn icon color="primary">
-                    <v-icon>mdiInstagram</v-icon>
+                    <v-icon>{{mdiInstagram}}</v-icon>
                   </v-btn>
                 </div>
               </v-col>
@@ -426,29 +426,26 @@
             <v-col cols="12" md="4">
               <h4 class="text-subtitle-1 font-weight-bold mb-4">Contact</h4>
               <div class="d-flex align-center mb-2">
-                <v-icon size="small" class="mr-2">mdi-map-marker</v-icon>
+                <v-icon size="small" class="mr-2">{{mdiMapMarker}}</v-icon>
                 <span class="text-body-2">Pune, Maharashtra, India</span>
               </div>
               <div class="d-flex align-center mb-2">
-                <v-icon size="small" class="mr-2">mdi-email</v-icon>
+                <v-icon size="small" class="mr-2">{{mdiEmail}}</v-icon>
                 <span class="text-body-2">contact@digisarathi.org</span>
               </div>
               <div class="d-flex align-center mb-4">
-                <v-icon size="small" class="mr-2">mdi-phone</v-icon>
+                <v-icon size="small" class="mr-2">{{mdiPhone}}</v-icon>
                 <span class="text-body-2">+91 9876543210</span>
               </div>
               <div class="d-flex">
                 <v-btn icon variant="text" color="white" class="mr-2">
-                  <v-icon>mdi-facebook</v-icon>
+                  <v-icon>{{mdiTwitter}}</v-icon>
                 </v-btn>
                 <v-btn icon variant="text" color="white" class="mr-2">
-                  <v-icon>mdi-twitter</v-icon>
-                </v-btn>
-                <v-btn icon variant="text" color="white" class="mr-2">
-                  <v-icon>mdi-linkedin</v-icon>
+                  <v-icon>{{mdiLinkedin}}</v-icon>
                 </v-btn>
                 <v-btn icon variant="text" color="white">
-                  <v-icon>mdi-instagram</v-icon>
+                  <v-icon>{{mdiInstagram}}</v-icon>
                 </v-btn>
               </div>
             </v-col>
@@ -462,15 +459,9 @@
     </v-app>
   </template>
   
-  <script>
-  export default {
-    name: 'DigiSarathiLandingPage',
-    data() {
-      return {
-        drawer: false,
-      }
-    }
-  }
+  <script setup>
+  import { ref } from 'vue';
+import { mdiMapMarker, mdiEmail, mdiPhone, mdiTwitter, mdiLinkedin, mdiInstagram, mdiLaptopAccount, mdiGoogleClassroom, mdiAccountGroup, mdiAccount,    } from '@mdi/js';
   </script>
   
   <style scoped>
