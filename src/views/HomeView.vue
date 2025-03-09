@@ -4,7 +4,6 @@ import { useRouter } from 'vue-router';
 import { mdiWeb, mdiCellphoneLink, mdiTrendingUp, mdiSchool, mdiCircle } from '@mdi/js';
 
 const router = useRouter();
-const email = ref('');
 
 onMounted(() => {
   const script = document.createElement('script');
@@ -23,9 +22,9 @@ const testimonials = ref([
     avatar: '/images/avatars/john-doe.jpg'
   },
   { 
-    name: 'Adv Jyoti',
+    name: 'Adv. Jyoti',
     company: 'Founder, DISHA',
-    text: 'Highly recommend! Their digital marketing strategy transformed our online presence and increased our conversion rates by 45% in just three months.',
+    text: "We deeply appreciate the invaluable contributions digiSarathi has made to DISHA. Your dedication and hard work have significantly impacted our organization. ",
     avatar: '/images/avatars/jane-smith.jpg'
   },
   { 
@@ -37,19 +36,31 @@ const testimonials = ref([
   { 
     name: 'Uma',
     company: 'Founder, Aarambh India',
-    text: 'Highly recommend! Their digital marketing strategy transformed our online presence and increased our conversion rates by 45% in just three months.',
+    text: 'DigiSarathi has an impeccable sense of the technical aspects of website development. What sets them apart is their commitment & passion to understand and engage with the subject. This approach can’t help but lead to a great product that is perfectly synced in terms of design, technology and content. Aarambh India is a testament to this.',
     avatar: '/images/avatars/jane-smith.jpg'
   },
   { 
     name: 'Dr. Sharada',
     company: 'Founder, Population First',
-    text: 'The team delivered our project on time and exceeded our expectations. Their focus on simplicity while maintaining powerful functionality was exactly what we needed.',
+    text: 'Thank you for making technology less threatening.',
     avatar: '/images/avatars/john-doe.jpg'
   },
   { 
     name: 'Vinelle Vaz',
     company: 'Head - Retail, RenewSys',
-    text: 'Highly recommend! Their digital marketing strategy transformed our online presence and increased our conversion rates by 45% in just three months.',
+    text: 'digiSarathi is my go-to whenever I want to discuss some new tech idea and its implementation.',
+    avatar: '/images/avatars/jane-smith.jpg'
+  },
+  { 
+    name: 'Daniel Ben Horin',
+    company: 'Founder, Techsoup.org',
+    text: "A comprehensive knowledge of tech issues, cross-cultural sophistication and a fierce dedication to his work were all apparent. Much of our network’s success in India can be credited to his involvement.",
+    avatar: '/images/avatars/jane-smith.jpg'
+  },
+  { 
+    name: 'Sundar Iyer',
+    company: 'Founder, Suryodaya',
+    text: "digiSarathi helped us decide that the software system we had in mind should be evaluated after we reach a certain scale otherwise we are only adding complexities to the resolution process.",
     avatar: '/images/avatars/jane-smith.jpg'
   },
   { 
@@ -63,11 +74,18 @@ const testimonials = ref([
 
 // Enhanced clients with names and industries
 const clients = ref([
-  { name: 'TechCorp', industry: 'Technology', logo: '/images/logos/techcorp.svg' },
-  { name: 'GreenEnergy', industry: 'Renewable Energy', logo: '/images/logos/greenenergy.svg' },
-  { name: 'HealthPlus', industry: 'Healthcare', logo: '/images/logos/healthplus.svg' },
-  { name: 'EduLearn', industry: 'Education', logo: '/images/logos/edulearn.svg' },
-  { name: 'FinanceHub', industry: 'Finance', logo: '/images/logos/financehub.svg' },
+  { name: 'Aarambh India', industry: 'Nonprofit', logo: 'logos/aarambh.png' },
+  { name: 'Akshara', industry: 'Nonprofit', logo: 'logos/akshara.png' },
+  { name: 'InnovSource', industry: 'Staffing', logo: 'logos/innov.png' },
+  { name: 'KServe', industry: 'BPO', logo: 'logos/kserve.png' },
+  { name: 'RenewSys', industry: 'Manufacturing', logo: 'logos/renewsys.png' },
+  { name: 'WaterAid India', industry: 'Nonprofit', logo: 'logos/wateraid.png' },
+  { name: 'LLF', industry: 'Nonprofit', logo: 'logos/learninglinks.png' },
+  { name: 'Entrib ShopWorx', industry: 'Manufacturing', logo: 'logos/shopworx.png' },
+  { name: 'UIC Energy', industry: 'Renewable Energy', logo: 'logos/uicenergy.png' },
+  { name: 'Yunus Social', industry: 'Nonprofit', logo: 'logos/ysb.png' },
+  { name: 'GuideStar India', industry: 'Nonprofit', logo: 'logos/guidestar.png' },
+  { name: 'SEEDS', industry: 'Nonprofit', logo: 'logos/seeds.png' },
 ]);
 
 // Enhanced services with icons and more detailed descriptions
@@ -161,7 +179,7 @@ const goToService = (route) => {
                   <v-card-title class="text-h4 font-weight-bold text-primary">{{ service.name }}</v-card-title>
                 </v-card-item>
                 <v-card-text>
-                <v-img class="mb-4" :src="service.image" max-width="450" contain></v-img>
+                <v-img class="mb-4" :src="service.image" max-width="450" min-height="350" contain></v-img>
 
                   <p class="mb-4 text-secondary">{{ service.text }}</p>
                   <v-chip-group class="mb-0">
@@ -229,7 +247,7 @@ const goToService = (route) => {
           </v-col>
         </v-row>
         
-        <v-row justify="center" align="center">
+        <v-row justify="center" align="center" class="">
           <v-col v-for="(client, index) in clients" :key="index" cols="6" sm="4" md="2" class="text-center mb-8">
             <v-hover v-slot="{ props }">
               <v-card
@@ -243,9 +261,10 @@ const goToService = (route) => {
                       v-bind="props"
                       :src="client.logo"
                       :alt="client.name"
-                      height="80"
+                      height="100"
+                      width="200"
                       contain
-                      class="mx-auto grey-filter"
+                      class="mx-auto "
                     ></v-img>
                   </template>
                 </v-tooltip>
