@@ -45,6 +45,15 @@ export const router = createRouter({
       name: 'training-workshops',
       component: Training,
     },
+    {
+      path: '/privacy-policy',
+      name: 'privacy-policy',
+      component: () => import('../views/PrivacyPolicy.vue'),
+    },
+    {
+      path: '/terms-of-service',
+      name: 'terms-of-service',
+      component: () => import('../views/TermsOfService.vue'),
+    },
   ],
 })
-

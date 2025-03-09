@@ -26,8 +26,9 @@
     <router-view></router-view>
     <footer>
       <v-footer app>
-        <v-col class="text-center text-secondary text-caption">
-         <a class="text-decoration-none " href="mailto:hello@digisarathi.com">hello@digisarathi.com</a> © {{ new Date().getFullYear() }} digiSarathi
+      <v-col class="text-center text-secondary text-caption footer">
+        <a href="/privacy-policy">Privacy Policy</a> | <a href="/terms-of-service">Terms of Service</a> | 
+        <a href="mailto:hello@digisarathi.com">hello@digisarathi.com</a> © {{ new Date().getFullYear() }} <a href="https://digiSarathi.com">digiSarathi</a>
         </v-col>
       </v-footer>
     </footer>
@@ -48,3 +49,9 @@ const navItems = ref([
 
 
 </script>
+<style>
+.footer a {
+  text-decoration: none;
+  color: inherit;
+}
+</style>

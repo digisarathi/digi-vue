@@ -1,24 +1,64 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
+import { mdiWeb, mdiCellphoneLink, mdiTrendingUp, mdiSchool } from '@mdi/js';
 
 const router = useRouter();
 const email = ref('');
 
+onMounted(() => {
+  const script = document.createElement('script');
+  script.setAttribute('data-uid', '7d5a62888b');
+  script.setAttribute('src', 'https://digisarathi-.kit.com/7d5a62888b/index.js');
+  script.setAttribute('async', '');
+  document.getElementById('kit-form').appendChild(script);
+});
+
 // Improved testimonials with more content and images
 const testimonials = ref([
   { 
-    name: 'John Doe',
-    company: 'Tech Solutions Inc.',
+    name: 'Dr. Dwivedi',
+    company: 'Secretary, SEEDS',
     text: 'The team delivered our project on time and exceeded our expectations. Their focus on simplicity while maintaining powerful functionality was exactly what we needed.',
     avatar: '/images/avatars/john-doe.jpg'
   },
   { 
-    name: 'Jane Smith',
-    company: 'Creative Designs',
+    name: 'Adv Jyoti',
+    company: 'Founder, DISHA',
     text: 'Highly recommend! Their digital marketing strategy transformed our online presence and increased our conversion rates by 45% in just three months.',
     avatar: '/images/avatars/jane-smith.jpg'
   },
+  { 
+    name: '',
+    company: 'Trustee, Niswaan',
+    text: 'The team delivered our project on time and exceeded our expectations. Their focus on simplicity while maintaining powerful functionality was exactly what we needed.',
+    avatar: '/images/avatars/john-doe.jpg'
+  },
+  { 
+    name: 'Uma',
+    company: 'Founder, Aarambh India',
+    text: 'Highly recommend! Their digital marketing strategy transformed our online presence and increased our conversion rates by 45% in just three months.',
+    avatar: '/images/avatars/jane-smith.jpg'
+  },
+  { 
+    name: 'Dr. Sharada',
+    company: 'Founder, Population First',
+    text: 'The team delivered our project on time and exceeded our expectations. Their focus on simplicity while maintaining powerful functionality was exactly what we needed.',
+    avatar: '/images/avatars/john-doe.jpg'
+  },
+  { 
+    name: 'Vinelle Vaz',
+    company: 'Head - Retail, RenewSys',
+    text: 'Highly recommend! Their digital marketing strategy transformed our online presence and increased our conversion rates by 45% in just three months.',
+    avatar: '/images/avatars/jane-smith.jpg'
+  },
+  { 
+    name: 'Daniel Ben Horin',
+    company: 'Founder, Techsoup.org',
+    text: "A comprehensive knowledge of tech issues, cross-cultural sophistication and a fierce dedication to his work were all apparent. Much of our network’s success in India can be credited to his involvement.",
+    avatar: '/images/avatars/jane-smith.jpg'
+  },
+  
 ]);
 
 // Enhanced clients with names and industries
@@ -34,45 +74,35 @@ const clients = ref([
 const services = ref([
   { 
     name: 'Website Design', 
-    icon: 'mdi-web',
+    icon: 'mdiWeb',
     text: 'Your website is the foundation upon which your digital marketing and fundraising campaigns are built. We create responsive, user-friendly designs that convert visitors into customers.',
     features: ['Responsive Design', 'SEO Optimization', 'Custom CMS', 'Performance Focus'],
     route: 'website-design' 
   },
   { 
     name: 'Apps & Software Development', 
-    icon: 'mdi-cellphone-link',
+    icon: 'mdiCellphoneLink',
     text: 'Innovative user experiences based on a modular and scalable architecture to scale with flexibility and create seamless digital experiences across all platforms.',
     features: ['Native Mobile Apps', 'Progressive Web Apps', 'Custom Software', 'API Integration'],
     route: 'apps-software-development' 
   },
   { 
     name: 'Digital Marketing', 
-    icon: 'mdi-trending-up',
+    icon: 'mdiTrendingUp',
     text: 'Comprehensive strategies to enhance your online presence and drive engagement. We use data-driven approaches to maximize your ROI and reach your target audience effectively.',
     features: ['SEO/SEM', 'Content Marketing', 'Social Media', 'Analytics & Reporting'],
     route: 'digital-marketing' 
   },
   { 
     name: 'Training & Workshops', 
-    icon: 'mdi-school',
+    icon: 'mdiSchool',
     text: 'Hands-on sessions designed to empower your team with essential skills and knowledge. Our expert-led workshops provide practical knowledge that can be immediately applied.',
     features: ['Customized Programs', 'Hands-on Learning', 'Remote Options', 'Ongoing Support'],
     route: 'training-workshops' 
   }
 ]);
 
-const subscribe = () => {
-  // Validate email
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(email.value)) {
-    alert('Please enter a valid email address');
-    return;
-  }
-  
-  alert(`Thanks for subscribing with email: ${email.value}`);
-  email.value = '';
-};
+
 
 const goToService = (route) => {
   router.push({ name: route });
@@ -86,16 +116,13 @@ const goToService = (route) => {
       <v-container>
         <v-row align="center" class="min-height-70vh">
           <v-col cols="12" md="7" class="hero-content">
-            <h1 class="text-h3 font-weight-bold mb-6">
+            <h1 class="text-h3 font-weight-bold mb-6 text-primary">
               We simplify digitization by focusing on what truly matters, empowering every individual.
             </h1>
-            <p class="text-h6 mb-8">
+            <p class="text-h6 mb-8 text-secondary">
               Digitisation need not be complicated. Our strategy, system design and execution processes are speedy & agile which means you see results ASAP.
             </p>
-            <div class="d-flex flex-wrap gap-4">
-              <v-btn size="large" color="primary" elevation="2" rounded>Get Started</v-btn>
-              <v-btn size="large" variant="outlined" color="primary" elevation="0" rounded>Learn More</v-btn>
-            </div>
+            
           </v-col>
           <v-col cols="12" md="5" class="d-none d-md-flex justify-center">
             <v-img src="/images/hero-illustration.svg" max-width="450" contain></v-img>
@@ -109,15 +136,15 @@ const goToService = (route) => {
       <v-container>
         <v-row>
           <v-col cols="12" class="text-center mb-12">
-            <h2 class="text-h3 font-weight-bold mb-3">Our Services</h2>
-            <p class="text-subtitle-1 mx-auto max-width-600">
+            <h2 class="text-h3 font-weight-bold mb-3 text-primary">Our Services</h2>
+            <p class="text-subtitle-1 mx-auto max-width-600 text-secondary">
               Comprehensive digital solutions tailored to your specific needs
             </p>
           </v-col>
         </v-row>
         
         <v-row>
-          <v-col v-for="(service, index) in services" :key="index" cols="12" md="6" lg="3" class="mb-4">
+          <v-col v-for="(service, index) in services" :key="index" cols="12" md="6" lg="6" class="mb-4">
             <v-hover v-slot="{ props }">
               <v-card
                 v-bind="props"
@@ -126,30 +153,19 @@ const goToService = (route) => {
                 class="service-card transition-fast overflow-hidden"
                 @click="goToService(service.route)"
               >
-                <v-card-item class="text-center pb-0">
-                  <v-icon :icon="service.icon" size="48" color="primary" class="mb-4"></v-icon>
-                  <v-card-title class="text-h5 font-weight-bold">{{ service.name }}</v-card-title>
+                <v-card-item class="text-center ">
+                  <v-icon size="48" color="primary" class="mb-4">{{ service.icon }}</v-icon>
+                  <v-card-title class="text-h5 font-weight-bold text-primary">{{ service.name }}</v-card-title>
                 </v-card-item>
                 
                 <v-card-text>
-                  <p class="mb-4">{{ service.text }}</p>
+                  <p class="mb-4 text-secondary">{{ service.text }}</p>
                   <v-chip-group class="mb-0">
                     <v-chip v-for="feature in service.features" :key="feature" size="small" class="ma-1">
                       {{ feature }}
                     </v-chip>
                   </v-chip-group>
                 </v-card-text>
-                
-                <v-overlay
-                  v-model="isHovering"
-                  contained
-                  scrim="primary"
-                  class="align-center justify-center"
-                >
-                  <v-btn variant="elevated" color="white" @click.stop="goToService(service.route)">
-                    Learn More
-                  </v-btn>
-                </v-overlay>
               </v-card>
             </v-hover>
           </v-col>
@@ -162,9 +178,9 @@ const goToService = (route) => {
       <v-container>
         <v-row>
           <v-col cols="12" class="text-center mb-12">
-            <h2 class="text-h3 font-weight-bold mb-3">What Our Clients Say</h2>
-            <p class="text-subtitle-1 mx-auto max-width-600">
-              Hear from the businesses we've helped transform digitally
+            <h2 class="text-h3 font-weight-bold mb-3 text-primary">What Our Clients Say</h2>
+            <p class="text-subtitle-1 mx-auto max-width-600 text-secondary">
+              Hear from the organizations we've helped transform digitally
             </p>
           </v-col>
         </v-row>
@@ -202,9 +218,9 @@ const goToService = (route) => {
       <v-container>
         <v-row>
           <v-col cols="12" class="text-center mb-12">
-            <h2 class="text-h3 font-weight-bold mb-3">Our Clients</h2>
-            <p class="text-subtitle-1 mx-auto max-width-600">
-              Trusted by leading companies across industries
+            <h2 class="text-h3 font-weight-bold mb-3 text-primary">Our Clients</h2>
+            <p class="text-subtitle-1 mx-auto max-width-600 text-secondary">
+              Trusted by leading organizations across industries
             </p>
           </v-col>
         </v-row>
@@ -242,42 +258,11 @@ const goToService = (route) => {
         <v-row justify="center">
           <v-col cols="12" md="8" lg="6" class="text-center">
             <h2 class="text-h3 font-weight-bold mb-3 text-white">Stay Updated</h2>
-            <p class="text-subtitle-1 mb-8 text-white opacity-high">
-              Subscribe to our newsletter for the latest trends and insights in digital transformation.
-            </p>
-            
-            <v-card class="pa-4">
-              <v-form @submit.prevent="subscribe">
-                <v-row no-gutters>
-                  <v-col cols="12" sm="8">
-                    <v-text-field
-                      v-model="email"
-                      label="Enter your email"
-                      placeholder="you@example.com"
-                      variant="outlined"
-                      hide-details
-                      class="rounded-r-0"
-                      density="comfortable"
-                    ></v-text-field>
-                  </v-col>
-                  <v-col cols="12" sm="4">
-                    <v-btn
-                      color="primary"
-                      block
-                      height="56"
-                      class="rounded-l-0"
-                      @click="subscribe"
-                    >
-                      Subscribe
-                    </v-btn>
-                  </v-col>
-                </v-row>
-              </v-form>
-            </v-card>
-            
             <p class="text-caption mt-4 text-white opacity-medium">
               We respect your privacy. Unsubscribe at any time.
             </p>
+            <div class="mx-auto pa-2" style="width: 300px;" id="kit-form">
+            </div>
           </v-col>
         </v-row>
       </v-container>
