@@ -134,7 +134,7 @@ const goToService = (route) => {
 <template>
   <main>
     <!-- Hero Section with Gradient Background -->
-    <section class="">
+    <section class="hero-section">
       <v-container>
         <v-row justify="center" align="center" class="min-height-70vh">
           <v-col cols="12" md="7" >
@@ -264,7 +264,7 @@ const goToService = (route) => {
                       height="100"
                       width="200"
                       contain
-                      class="mx-auto "
+                      class="mx-auto grey-filter"
                     ></v-img>
                   </template>
                 </v-tooltip>
