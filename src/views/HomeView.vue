@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
-import { mdiWeb, mdiCellphoneLink, mdiTrendingUp, mdiSchool } from '@mdi/js';
+import { mdiWeb, mdiCellphoneLink, mdiTrendingUp, mdiSchool, mdiCircle } from '@mdi/js';
 
 const router = useRouter();
 const email = ref('');
@@ -77,28 +77,32 @@ const services = ref([
     icon: mdiWeb,
     text: 'Your website is the foundation upon which your digital marketing and fundraising campaigns are built. We create responsive, user-friendly designs that convert visitors into customers.',
     features: ['Responsive Design', 'SEO Optimization', 'Custom CMS', 'Performance Focus'],
-    route: 'website-design' 
+    route: 'website-design',
+    image: 'wordpress.svg'
   },
   { 
-    name: 'Apps & Software Development', 
+    name: 'Apps & Custom Software ', 
     icon: mdiCellphoneLink,
     text: 'Innovative user experiences based on a modular and scalable architecture to scale with flexibility and create seamless digital experiences across all platforms.',
     features: ['Native Mobile Apps', 'Progressive Web Apps', 'Custom Software', 'API Integration'],
-    route: 'apps-software-development' 
+    route: 'apps-software-development',
+    image: 'app.svg'
   },
   { 
     name: 'Digital Marketing', 
     icon: mdiTrendingUp,
     text: 'Comprehensive strategies to enhance your online presence and drive engagement. We use data-driven approaches to maximize your ROI and reach your target audience effectively.',
     features: ['SEO/SEM', 'Content Marketing', 'Social Media', 'Analytics & Reporting'],
-    route: 'digital-marketing' 
+    route: 'digital-marketing' ,
+    image: 'social.svg'
   },
   { 
     name: 'Training & Workshops', 
     icon: mdiSchool,
     text: 'Hands-on sessions designed to empower your team with essential skills and knowledge. Our expert-led workshops provide practical knowledge that can be immediately applied.',
     features: ['Customized Programs', 'Hands-on Learning', 'Remote Options', 'Ongoing Support'],
-    route: 'training-workshops' 
+    route: 'training-workshops' ,
+    image: 'shared.svg'
   }
 ]);
 
@@ -112,10 +116,10 @@ const goToService = (route) => {
 <template>
   <main>
     <!-- Hero Section with Gradient Background -->
-    <section class="hero-section">
+    <section class="">
       <v-container>
-        <v-row align="center" class="min-height-70vh">
-          <v-col cols="12" md="7" class="hero-content">
+        <v-row justify="center" align="center" class="min-height-70vh">
+          <v-col cols="12" md="7" >
             <h1 class="text-h3 font-weight-bold mb-6 text-primary">
               We simplify digitization by focusing on what truly matters, empowering every individual.
             </h1>
@@ -125,7 +129,7 @@ const goToService = (route) => {
             
           </v-col>
           <v-col cols="12" md="5" class="d-none d-md-flex justify-center">
-            <v-img src="/images/hero-illustration.svg" max-width="450" contain></v-img>
+            <v-img src="/websites.svg" max-width="450" contain></v-img>
           </v-col>
         </v-row>
       </v-container>
@@ -144,7 +148,7 @@ const goToService = (route) => {
         </v-row>
         
         <v-row>
-          <v-col v-for="(service, index) in services" :key="index" cols="12" md="6" lg="6" class="mb-4">
+          <v-col v-for="(service, index) in services" :key="index" cols="12" md="6" lg="6" class="mb-4 pa-6">
             <v-hover v-slot="{ props }">
               <v-card
                 v-bind="props"
@@ -153,12 +157,12 @@ const goToService = (route) => {
                 class="service-card transition-fast overflow-hidden"
                 @click="goToService(service.route)"
               >
-                <v-card-item class="text-center ">
-                  <v-icon size="48" color="primary" class="mb-4">{{ service.icon }}</v-icon>
-                  <v-card-title class="text-h5 font-weight-bold text-primary">{{ service.name }}</v-card-title>
+                <v-card-item class="text-center mb-4">
+                  <v-card-title class="text-h4 font-weight-bold text-primary">{{ service.name }}</v-card-title>
                 </v-card-item>
-                
                 <v-card-text>
+                <v-img class="mb-4" :src="service.image" max-width="450" contain></v-img>
+
                   <p class="mb-4 text-secondary">{{ service.text }}</p>
                   <v-chip-group class="mb-0">
                     <v-chip v-for="feature in service.features" :key="feature" size="small" class="ma-1">
@@ -191,7 +195,7 @@ const goToService = (route) => {
               show-arrows="hover"
               height="auto"
               hide-delimiter-background
-              delimiter-icon="mdi-circle"
+              :delimiter-icon="mdiCircle"
             >
               <v-carousel-item v-for="(testimonial, index) in testimonials" :key="index">
                 <v-card class="testimonial-card mx-auto pa-6" max-width="800">

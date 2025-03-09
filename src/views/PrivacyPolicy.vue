@@ -71,3 +71,9 @@
   </v-container>
   </v-main>
   </template>
+  <style>
+    h1, h2 {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+</style>
