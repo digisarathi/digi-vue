@@ -74,28 +74,28 @@ const clients = ref([
 const services = ref([
   { 
     name: 'Website Design', 
-    icon: 'mdiWeb',
+    icon: mdiWeb,
     text: 'Your website is the foundation upon which your digital marketing and fundraising campaigns are built. We create responsive, user-friendly designs that convert visitors into customers.',
     features: ['Responsive Design', 'SEO Optimization', 'Custom CMS', 'Performance Focus'],
     route: 'website-design' 
   },
   { 
     name: 'Apps & Software Development', 
-    icon: 'mdiCellphoneLink',
+    icon: mdiCellphoneLink,
     text: 'Innovative user experiences based on a modular and scalable architecture to scale with flexibility and create seamless digital experiences across all platforms.',
     features: ['Native Mobile Apps', 'Progressive Web Apps', 'Custom Software', 'API Integration'],
     route: 'apps-software-development' 
   },
   { 
     name: 'Digital Marketing', 
-    icon: 'mdiTrendingUp',
+    icon: mdiTrendingUp,
     text: 'Comprehensive strategies to enhance your online presence and drive engagement. We use data-driven approaches to maximize your ROI and reach your target audience effectively.',
     features: ['SEO/SEM', 'Content Marketing', 'Social Media', 'Analytics & Reporting'],
     route: 'digital-marketing' 
   },
   { 
     name: 'Training & Workshops', 
-    icon: 'mdiSchool',
+    icon: mdiSchool,
     text: 'Hands-on sessions designed to empower your team with essential skills and knowledge. Our expert-led workshops provide practical knowledge that can be immediately applied.',
     features: ['Customized Programs', 'Hands-on Learning', 'Remote Options', 'Ongoing Support'],
     route: 'training-workshops' 

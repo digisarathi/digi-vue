@@ -28,7 +28,7 @@
       <v-footer app>
       <v-col class="text-center text-secondary text-caption footer">
         <a href="/privacy-policy">Privacy Policy</a> | <a href="/terms-of-service">Terms of Service</a> | 
-        <a href="mailto:hello@digisarathi.com">hello@digisarathi.com</a> © {{ new Date().getFullYear() }} <a href="https://digiSarathi.com">digiSarathi</a>
+        <a href="mailto:hello@digisarathi.com">hello@digisarathi.com</a> © {{ new Date().getFullYear() }} <a href="/">digiSarathi</a>
         </v-col>
       </v-footer>
     </footer>
