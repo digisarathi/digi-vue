@@ -124,7 +124,11 @@ const services = ref([
   }
 ]);
 
+const isMobile = ref(window.innerWidth < 960);
 
+window.addEventListener('resize', () => {
+  isMobile.value = window.innerWidth < 960;
+});
 
 const goToService = (route) => {
   router.push({ name: route });
@@ -138,10 +142,10 @@ const goToService = (route) => {
       <v-container>
         <v-row justify="center" align="center" class="min-height-70vh">
           <v-col cols="12" md="7" >
-            <h1 class="text-h3 font-weight-bold mb-6 text-primary">
+            <h1 :class="['font-weight-bold', 'mb-6', { 'text-h3': !isMobile, 'text-h4': isMobile }]" class="text-primary">
               We simplify digitization by focusing on what truly matters, empowering every individual.
             </h1>
-            <p class="text-h6 mb-8 text-secondary">
+            <p :class="['mb-8', { 'text-h6': !isMobile, 'text-h7': isMobile }]" class="text-secondary">
               Digitisation need not be complicated. Our strategy, system design and execution processes are speedy & agile which means you see results ASAP.
             </p>
             
@@ -158,7 +162,7 @@ const goToService = (route) => {
       <v-container>
         <v-row>
           <v-col cols="12" class="text-center mb-12">
-            <h2 class="text-h3 font-weight-bold mb-3 text-primary">Our Services</h2>
+            <h2 class="font-weight-bold mb-3 text-primary" :class="{ 'text-h3': !isMobile, 'text-h6': isMobile }">Our Services</h2>
             <p class="text-subtitle-1 mx-auto max-width-600 text-secondary">
               Comprehensive digital solutions tailored to your specific needs
             </p>
@@ -176,11 +180,12 @@ const goToService = (route) => {
                 @click="goToService(service.route)"
               >
                 <v-card-item class="text-center mb-4">
-                  <v-card-title class="text-h4 font-weight-bold text-primary">{{ service.name }}</v-card-title>
+                  <v-card-title class="font-weight-bold text-primary" :class="{ 'text-h4': !isMobile, 'text-h6': isMobile }">{{ service.name }}</v-card-title>
                 </v-card-item>
                 <v-card-text>
-                <v-img class="mb-4" :src="service.image" max-width="450" min-height="350" contain></v-img>
-
+                  <div class="d-flex justify-center">
+                    <v-img class="mb-4" :src="service.image" max-width="350" max-height="450" min-height="250"></v-img>
+                  </div>
                   <p class="mb-4 text-secondary">{{ service.text }}</p>
                   <v-chip-group class="mb-0">
                     <v-chip v-for="feature in service.features" :key="feature" size="small" class="ma-1">
@@ -200,7 +205,7 @@ const goToService = (route) => {
       <v-container>
         <v-row>
           <v-col cols="12" class="text-center mb-12">
-            <h2 class="text-h3 font-weight-bold mb-3 text-primary">What Our Clients Say</h2>
+            <h2 class="font-weight-bold mb-3 text-primary" :class="{ 'text-h3': !isMobile, 'text-h6': isMobile }">What Our Clients Say</h2>
             <p class="text-subtitle-1 mx-auto max-width-600 text-secondary">
               Hear from the organizations we've helped transform digitally
             </p>
@@ -240,7 +245,7 @@ const goToService = (route) => {
       <v-container>
         <v-row>
           <v-col cols="12" class="text-center mb-12">
-            <h2 class="text-h3 font-weight-bold mb-3 text-primary">Our Clients</h2>
+            <h2 class="font-weight-bold mb-3 text-primary" :class="{ 'text-h3': !isMobile, 'text-h6': isMobile }">Our Clients</h2>
             <p class="text-subtitle-1 mx-auto max-width-600 text-secondary">
               Trusted by leading organizations across industries
             </p>
@@ -280,7 +285,7 @@ const goToService = (route) => {
       <v-container>
         <v-row justify="center">
           <v-col cols="12" md="8" lg="6" class="text-center">
-            <h2 class="text-h3 font-weight-bold mb-3 text-white">Stay Updated</h2>
+            <h2 class="font-weight-bold mb-3 text-white" :class="{ 'text-h3': !isMobile, 'text-h6': isMobile }">Stay Updated</h2>
             <p class="text-caption mt-4 text-white opacity-medium">
               We respect your privacy. Unsubscribe at any time.
             </p>
