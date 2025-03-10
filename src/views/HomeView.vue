@@ -4,6 +4,12 @@ import { useRouter } from 'vue-router';
 import { mdiWeb, mdiCellphoneLink, mdiTrendingUp, mdiSchool, mdiCircle } from '@mdi/js';
 
 const router = useRouter();
+const props = defineProps({
+  isMobile: {
+    type: Boolean,
+    default: false
+  }
+});
 
 onMounted(() => {
   const script = document.createElement('script');
@@ -124,11 +130,6 @@ const services = ref([
   }
 ]);
 
-const isMobile = ref(window.innerWidth < 960);
-
-window.addEventListener('resize', () => {
-  isMobile.value = window.innerWidth < 960;
-});
 
 const goToService = (route) => {
   router.push({ name: route });

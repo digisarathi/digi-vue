@@ -5,10 +5,10 @@
       <v-container>
         <v-row justify="center" align="center" class="min-height-70vh">
           <v-col cols="12" md="7">
-            <h1 class="text-h3 font-weight-bold mb-6 text-primary">
+            <h1 :class="['font-weight-bold', 'mb-6', { 'text-h3': !isMobile, 'text-h4': isMobile }]" class="text-primary">
               We like to do things differently, never choosing the easy way, and permanently challenging inertia.
             </h1>
-            <p class="text-h6 mb-8 text-secondary">
+            <p :class="['mb-8', { 'text-h6': !isMobile, 'text-h7': isMobile }]" class="text-secondary">
               We are a team of passionate professionals dedicated to helping you achieve your goals through innovative and effective solutions.
             </p>
           </v-col>
@@ -21,7 +21,7 @@
     <section>
       <v-row>
           <v-col cols="12" class="text-center mb-6">
-            <h2 class="text-h3 font-weight-bold text-primary">Our Values</h2>
+            <h2 class="font-weight-bold mb-3 text-primary" :class="{ 'text-h3': !isMobile, 'text-h6': isMobile }">Our Values</h2>
           </v-col>
         </v-row>
       <v-container>
@@ -47,7 +47,7 @@ Our teams and people are our most precious asset. We aim to have a positive and 
       </v-row>
       <v-row>
           <v-col cols="12" class="text-center ">
-            <h2 class="text-h3 font-weight-bold text-primary">Our Founder</h2>
+            <h2 class="font-weight-bold mb-3 text-primary" :class="{ 'text-h3': !isMobile, 'text-h6': isMobile }">Our Founder</h2>
           </v-col>
         </v-row>
       <v-row class="my-2 py-6 align-center">
@@ -85,6 +85,12 @@ Our teams and people are our most precious asset. We aim to have a positive and 
 <script setup>
 import { ref } from 'vue';
 import { mdiLinkedin, mdiTwitter } from '@mdi/js';
+const props = defineProps({
+  isMobile: {
+    type: Boolean,
+    default: false
+  }
+});
 
 const values = ref([
   {

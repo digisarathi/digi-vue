@@ -42,7 +42,7 @@
       </v-list>
     </v-navigation-drawer>
 
-    <router-view></router-view>
+    <router-view :isMobile="isMobile"></router-view>
     <footer>
       <v-footer app>
         <v-col class="text-center text-secondary text-caption footer">
@@ -68,6 +68,13 @@ const navItems = ref([
   { title: 'About', route: '/about' },
   { title: 'Contact', route: '/contact' },
 ])
+
+const isMobile = ref(window.innerWidth < 960);
+
+window.addEventListener('resize', () => {
+  isMobile.value = window.innerWidth < 960;
+});
+
 </script>
 <style>
 .footer a {
