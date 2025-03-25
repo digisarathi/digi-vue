@@ -4,6 +4,11 @@ import Website from '../views/Website.vue'
 import AppsSoftware from '../views/AppsSoftware.vue'
 import Digital from '../views/Digital.vue'
 import Training from '../views/Training.vue'
+import AboutView from '../views/AboutView.vue'
+import ContactView from '../views/ContactView.vue'
+import PrivacyPolicy from '../views/PrivacyPolicy.vue'
+import TermsOfService from '../views/TermsOfService.vue'
+
 export const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -15,15 +20,12 @@ export const router = createRouter({
     {
       path: '/about',
       name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue'),
+      component: AboutView,
     },
     {
       path: '/contact',
       name: 'contact',
-      component: () => import('../views/ContactView.vue'),
+      component: ContactView,
     },
     {
       path: '/website-design',
@@ -48,12 +50,12 @@ export const router = createRouter({
     {
       path: '/privacy-policy',
       name: 'privacy-policy',
-      component: () => import('../views/PrivacyPolicy.vue'),
+      component: PrivacyPolicy,
     },
     {
       path: '/terms-of-service',
       name: 'terms-of-service',
-      component: () => import('../views/TermsOfService.vue'),
+      component: TermsOfService,
     },
   ],
 })
