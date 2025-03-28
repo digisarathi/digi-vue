@@ -12,6 +12,9 @@
   },
   "dependencies": {
     "@mdi/js": "^7.4.47",
+    "@types/marked": "^5.0.2",
+    "front-matter": "^4.0.2",
+    "marked": "^15.0.7",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0"
   },
@@ -23,8 +26,8 @@
     "eslint-plugin-vue": "^9.32.0",
     "prettier": "^3.5.1",
     "vite": "^6.1.0",
-    "vuetify": "^3.7.15",
+    "vite-plugin-vue-devtools": "^7.7.2",
     "vite-plugin-vuetify": "^2.1.0",
-    "vite-plugin-vue-devtools": "^7.7.2"
+    "vuetify": "^3.7.15"
   }
 }
