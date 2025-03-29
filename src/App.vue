@@ -59,6 +59,7 @@ const navItems = ref([
   { title: 'Home', route: '/' },
   { title: 'About', route: '/about' },
   { title: 'Contact', route: '/contact' },
+  { title: 'Blog', route: '/blog' },
 ])
 
 const isMobile = ref(window.innerWidth < 960);

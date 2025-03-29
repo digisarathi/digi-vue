@@ -3,7 +3,7 @@ import frontMatter from 'front-matter'
 
 // Function to import all markdown files from a directory
 export async function importMarkdownFiles() {
-  const markdownFiles = import.meta.glob('../posts/*.md', { as: 'raw' })
+  const markdownFiles = import.meta.glob('../posts/*.md', { query: '?raw', import: 'default' })
   const posts = []
 
   for (const path in markdownFiles) {
