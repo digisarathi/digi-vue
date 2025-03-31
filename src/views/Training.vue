@@ -6,23 +6,16 @@
       <section id="hero" class="py-16">
         <v-container>
           <v-row align="center">
-            <v-col cols="12" md="6" order="2" order-md="1">
-              <h1 class="text-h2 font-weight-bold mb-4">Empowering NGOs & SMEs with Tech Skills</h1>
+            <v-col cols="12" md="7" order="2" order-md="1">
+              <h1 class="text-h2 text-primary font-weight-bold mb-4">Building Tomorrow's Leaders with Tech Skills</h1>
               <p class="text-body-1 mb-6">
-                digiSarathi provides specialized tech training for NGO and SME staff, as well as tech students in Pune.
-                From AI workshops to WordPress development, we help bridge the digital divide.
+                digiSarathi offers specialized tech training for NGO and SME staff, as well as tech students in Pune.
+                From AI workshops to software development to managing WordPress, we help bridge the digital divide.
               </p>
-              <div class="d-flex flex-column flex-sm-row gap-4">
-                <v-btn color="primary" size="large" rounded>
-                  Explore Courses
-                </v-btn>
-                <v-btn variant="outlined" size="large" rounded>
-                  Contact Us
-                </v-btn>
-              </div>
+
             </v-col>
-            <v-col cols="12" md="6" order="1" order-md="2" class="text-center">
-              <v-img src="/api/placeholder/600/400" alt="DigiSarathi Training" class="rounded-lg elevation-5"></v-img>
+            <v-col cols="12" md="5" order="1" order-md="2" class="text-center">
+              <v-img src="/educator.svg" max-width="450" contain alt="DigiSarathi Training"></v-img>
             </v-col>
           </v-row>
         </v-container>
@@ -49,42 +42,49 @@
         <v-container>
           <v-row class="text-center mb-8">
             <v-col>
-              <h2 class="text-h4 font-weight-bold">Why Choose DigiSarathi?</h2>
+              <h2 class="text-h4 text-primary font-weight-bold">Why choose digiSarathi?</h2>
               <p class="text-body-1 mt-2">What makes our tech training programs unique</p>
             </v-col>
           </v-row>
           <v-row>
             <v-col cols="12" md="4">
-              <v-card height="100%">
-                <v-card-item>
-                  <v-icon color="primary" size="x-large" class="mb-4">{{ mdiLaptopAccount }}</v-icon>
-                  <v-card-title>Specialized for NGOs & SMEs</v-card-title>
-                  <v-card-text>
-                    Curriculum designed specifically for the unique needs and constraints of NGOs and small businesses.
-                  </v-card-text>
+              <v-card height="100%" class="feature-card">
+                <v-card-item class="pa-6">
+                  <div class="d-flex flex-column align-center text-center">
+                    <v-icon color="primary" size="x-large" class="mb-4">{{ mdiLaptopAccount }}</v-icon>
+                    <v-card-title class="text-primary font-weight-bold mb-3">Specialized for NGOs & SMEs</v-card-title>
+                    <v-card-text class="text-body-1">
+                      Curriculum designed specifically for the unique needs and constraints of NGOs and small
+                      businesses.
+                    </v-card-text>
+                  </div>
                 </v-card-item>
               </v-card>
             </v-col>
             <v-col cols="12" md="4">
-              <v-card height="100%">
-                <v-card-item>
-                  <v-icon color="primary" size="x-large" class="mb-4">{{ mdiGoogleClassroom }}</v-icon>
-                  <v-card-title>Hands-on Learning</v-card-title>
-                  <v-card-text>
-                    Practical, project-based training that ensures you can apply your skills immediately after the
-                    course.
-                  </v-card-text>
+              <v-card height="100%" class="feature-card">
+                <v-card-item class="pa-6">
+                  <div class="d-flex flex-column align-center text-center">
+                    <v-icon color="primary" size="x-large" class="mb-4">{{ mdiGoogleClassroom }}</v-icon>
+                    <v-card-title class="text-primary font-weight-bold mb-3">Hands-on Learning</v-card-title>
+                    <v-card-text class="text-body-1">
+                      Practical, project-based training that ensures you can apply your skills immediately after the
+                      course.
+                    </v-card-text>
+                  </div>
                 </v-card-item>
               </v-card>
             </v-col>
             <v-col cols="12" md="4">
-              <v-card height="100%">
-                <v-card-item>
-                  <v-icon color="primary" size="x-large" class="mb-4">{{ mdiAccountGroup }}</v-icon>
-                  <v-card-title>Community Support</v-card-title>
-                  <v-card-text>
-                    Ongoing mentorship and community support to help you implement your learnings effectively.
-                  </v-card-text>
+              <v-card height="100%" class="feature-card">
+                <v-card-item class="pa-6">
+                  <div class="d-flex flex-column align-center text-center">
+                    <v-icon color="primary" size="x-large" class="mb-4">{{ mdiAccountGroup }}</v-icon>
+                    <v-card-title class="text-primary font-weight-bold mb-3">Community Support</v-card-title>
+                    <v-card-text class="text-body-1">
+                      Ongoing mentorship and community support to help you implement your learnings effectively.
+                    </v-card-text>
+                  </div>
                 </v-card-item>
               </v-card>
             </v-col>
@@ -97,7 +97,7 @@
         <v-container>
           <v-row class="text-center mb-8">
             <v-col>
-              <h2 class="text-h4 font-weight-bold">Our Training Programs</h2>
+              <h2 class="text-h4 text-primary font-weight-bold">Courses</h2>
               <p class="text-body-1 mt-2">Comprehensive tech training for NGOs, SMEs, and students</p>
             </v-col>
           </v-row>
@@ -188,16 +188,16 @@
         <v-container>
           <v-row>
             <v-col cols="6" md="3" class="text-center">
-              <div class="text-h2 font-weight-bold">500+</div>
+              <div class="text-h2 font-weight-bold">200+</div>
               <div class="text-subtitle-1">Trainees</div>
             </v-col>
             <v-col cols="6" md="3" class="text-center">
-              <div class="text-h2 font-weight-bold">25+</div>
+              <div class="text-h2 font-weight-bold">15+</div>
               <div class="text-subtitle-1">Workshops</div>
             </v-col>
             <v-col cols="6" md="3" class="text-center">
               <div class="text-h2 font-weight-bold">40+</div>
-              <div class="text-subtitle-1">NGO Partners</div>
+              <div class="text-subtitle-1">Organizations</div>
             </v-col>
             <v-col cols="6" md="3" class="text-center">
               <div class="text-h2 font-weight-bold">5+</div>
@@ -212,7 +212,7 @@
         <v-container>
           <v-row class="text-center mb-8">
             <v-col>
-              <h2 class="text-h4 font-weight-bold">What Our Trainees Say</h2>
+              <h2 class="text-h4 text-primary font-weight-bold">What Our Trainees Say</h2>
               <p class="text-body-1 mt-2">Hear from the organizations and individuals we've trained</p>
             </v-col>
           </v-row>
