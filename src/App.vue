@@ -6,13 +6,17 @@
           <v-toolbar class="bg-white">
             <v-toolbar-title>
               <RouterLink to="/" class="text-decoration-none">
-                <div class="text-h4 d-none d-sm-inline">
-                  <strong><span class="text-accent">digi</span>
-                    <span class="text-primary">Sarathi</span></strong>
-                </div>
-                <div class="text-h6 d-sm-none">
-                  <strong><span class="text-accent">digi</span>
-                    <span class="text-primary">Sarathi</span></strong>
+                <div class="d-flex justify-start align-center">
+                  <v-img src="/greater.png" max-width="34" :height="isMobile ? 24 : 34" class="mr-1"
+                    alt="digiSarathi logo"></v-img>
+                  <div class="text-h4 d-none d-sm-inline">
+                    <strong><span class="text-accent">digi</span>
+                      <span class="text-primary">Sarathi</span></strong>
+                  </div>
+                  <div class="text-h6 d-sm-none">
+                    <strong><span class="text-accent">digi</span>
+                      <span class="text-primary">Sarathi</span></strong>
+                  </div>
                 </div>
               </RouterLink>
             </v-toolbar-title>
