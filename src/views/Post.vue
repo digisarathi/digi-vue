@@ -3,23 +3,39 @@ import { ref, onMounted, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { getMarkdownFile, importMarkdownFiles } from '@/utils/markdown'
 import { formatDate } from '@/utils/date'
+import { useMetaTags } from '@/composables/useMetaTags'
 
 const route = useRoute()
 const post = ref(null)
 const nextPost = ref(null)
+const prevPost = ref(null)
 const posts = ref([])
+const { updateMetaTags } = useMetaTags()
 
-const findNextPost = (currentSlug) => {
+const findAdjacentPosts = (currentSlug) => {
     const currentIndex = posts.value.findIndex(p => p.slug === currentSlug)
-    if (currentIndex === -1 || currentIndex === posts.value.length - 1) {
-        return null
+    if (currentIndex === -1) return { prev: null, next: null }
+
+    return {
+        prev: currentIndex > 0 ? posts.value[currentIndex - 1] : null,
+        next: currentIndex < posts.value.length - 1 ? posts.value[currentIndex + 1] : null
     }
-    return posts.value[currentIndex + 1]
 }
 
 const loadPost = async (slug) => {
     post.value = await getMarkdownFile(slug)
-    nextPost.value = findNextPost(slug)
+    const { prev, next } = findAdjacentPosts(slug)
+    prevPost.value = prev
+    nextPost.value = next
+
+    // Update meta tags for the blog post
+    if (post.value) {
+        updateMetaTags(
+            post.value.title,
+            post.value.excerpt || post.value.content.substring(0, 160),
+            post.value.image || '/og-image.jpg'
+        )
+    }
 }
 
 onMounted(async () => {
@@ -48,10 +64,18 @@ watch(() => route.params.slug, async (newSlug) => {
                         </div>
                         <div class="content mb-4" v-html="post.content"></div>
                         <div class="d-flex justify-space-between align-center">
-                            <v-btn to="/blog" color="primary">Back to Blog</v-btn>
+                            <div class="d-flex gap-2">
+                                <v-btn v-if="prevPost" :to="{ name: 'post', params: { slug: prevPost.slug } }"
+                                    color="primary" variant="outlined" size="x-small">
+                                    Previous
+                                </v-btn>
+                                <v-btn to="/blog" color="primary" variant="outlined" size="x-small">
+                                    Back to Blog
+                                </v-btn>
+                            </div>
                             <v-btn v-if="nextPost" :to="{ name: 'post', params: { slug: nextPost.slug } }"
-                                color="primary">
-                                Next Post
+                                color="primary" variant="outlined" size="x-small">
+                                Next
                             </v-btn>
                         </div>
                     </div>
