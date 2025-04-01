@@ -22,30 +22,35 @@ const findAdjacentPosts = (currentSlug) => {
     }
 }
 
+const updatePostMeta = (postData) => {
+    if (postData) {
+        const description = postData.excerpt || postData.content.substring(0, 160)
+        updateMetaTags(
+            postData.title,
+            description,
+            postData.image || '/og-image.jpg'
+        )
+    }
+}
+
 const loadPost = async (slug) => {
     post.value = await getMarkdownFile(slug)
     const { prev, next } = findAdjacentPosts(slug)
     prevPost.value = prev
     nextPost.value = next
-
-    // Update meta tags for the blog post
-    if (post.value) {
-        updateMetaTags(
-            post.value.title,
-            post.value.excerpt || post.value.content.substring(0, 160),
-            post.value.image || '/og-image.jpg'
-        )
-    }
+    updatePostMeta(post.value)
 }
 
+// Initial load
 onMounted(async () => {
     posts.value = await importMarkdownFiles()
     await loadPost(route.params.slug)
 })
 
+// Handle route changes
 watch(() => route.params.slug, async (newSlug) => {
     await loadPost(newSlug)
-})
+}, { immediate: true })
 </script>
 
 <template>

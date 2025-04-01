@@ -3,13 +3,14 @@ title: Rapid Prototyping vs Waterfall model
 date: 2023-03-25
 author: digiSarathi
 tags: ['Software-dev', 'agile', 'waterfall']
+excerpt: A comprehensive comparison between Rapid Prototyping and Waterfall models in software development, exploring their differences, use cases, and when to choose each approach.
 ---
 
 A number of software development models exist and any one of which can be adopted, depending on the nature and functionality of the end product that is expected to be delivered. This article is aimed at explaining the difference between prototype model and waterfall model, which are two popular processes of software development.
 
 ## How Does the Waterfall Model Work?
 
-When you look at the waterfall model, the words that come to your mind are ‘Structured’ and ‘Orderly’. The waterfall model is inspired by the ‘assembly line’ philosophy of the hardware industry, wherein every stage is initiated only after the successful conclusion of the previous one. It’s named as ‘Waterfall Model’ because every step is dependent on the earlier one and builds up or ‘flows’ from the work done in the previous phases.
+When you look at the waterfall model, the words that come to your mind are 'Structured' and 'Orderly'. The waterfall model is inspired by the 'assembly line' philosophy of the hardware industry, wherein every stage is initiated only after the successful conclusion of the previous one. It's named as 'Waterfall Model' because every step is dependent on the earlier one and builds up or 'flows' from the work done in the previous phases.
 
 The whole process of software development, according to the Waterfall model, begins with the understanding of the requirements and expectations from the customer or end user. After the requirements are clearly understood by the developers, analysis and design of the software actually begins.
 
@@ -19,11 +20,11 @@ Once the program is ready after integration, the testing and debugging phase beg
 
 ## How Does the Prototype Model Work?
 
-Let us now see what the prototype model of software development is like. This model is radically different from the waterfall model in many ways. As the name itself suggests, this process involves the creation of ‘prototypes’ or ‘raw models’ of the final product, right at the start, which are continuously improved through user feedback and developer efforts, until a final product which exactly confirms with user requirements is created.
+Let us now see what the prototype model of software development is like. This model is radically different from the waterfall model in many ways. As the name itself suggests, this process involves the creation of 'prototypes' or 'raw models' of the final product, right at the start, which are continuously improved through user feedback and developer efforts, until a final product which exactly confirms with user requirements is created.
 
-The developer provides the client with a rough prototype application, right after he has been fed the requirements. This is a preliminary and ‘sketchy’ model of the final product, with basic functionality and user interface. By analyzing the prototype, the client then provides feedback to the developers, about whether this is the kind of thing he wants.
+The developer provides the client with a rough prototype application, right after he has been fed the requirements. This is a preliminary and 'sketchy' model of the final product, with basic functionality and user interface. By analyzing the prototype, the client then provides feedback to the developers, about whether this is the kind of thing he wants.
 
-According to the suggested changes and overall client report, the prototype is reworked upon and it keeps improving through better designing, until it is transformed into the program which satisfies all client requirements. This is a kind of ‘Interactive’ design, wherein the end user is involved in every stage of development. Every evolving prototype goes through testing and debugging phases, including the final product, before deployment.
+According to the suggested changes and overall client report, the prototype is reworked upon and it keeps improving through better designing, until it is transformed into the program which satisfies all client requirements. This is a kind of 'Interactive' design, wherein the end user is involved in every stage of development. Every evolving prototype goes through testing and debugging phases, including the final product, before deployment.
 
 ## Prototype Model Vs. Waterfall Model
 
@@ -35,4 +36,4 @@ On the other hand, the waterfall model is better suited for a more conventional 
 
 ## Conclusion
 
-To conclude, it’s apparent that prototype model is best suited when the client himself is not sure of what he wants and waterfall model is a safe bet, when the end user or client is clear about what he wants. Before deciding which model would be ideally suited for your own software development project, study the nature of the client requirements and choose a process which would give you the best chances of creating a satisfying end product.
+To conclude, it's apparent that prototype model is best suited when the client himself is not sure of what he wants and waterfall model is a safe bet, when the end user or client is clear about what he wants. Before deciding which model would be ideally suited for your own software development project, study the nature of the client requirements and choose a process which would give you the best chances of creating a satisfying end product.
