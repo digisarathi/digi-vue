@@ -21,21 +21,7 @@
         </v-container>
       </section>
 
-      <!-- Upcoming Workshops Banner -->
-      <section class="bg-secondary py-6">
-        <v-container>
-          <v-row align="center" justify="center">
-            <v-col cols="12" md="8" class="text-center">
-              <h2 class="text-h5 text-white font-weight-medium">
-                Upcoming AI Workshops & WordPress Training Series
-              </h2>
-              <v-btn color="white" class="mt-3" variant="flat">
-                Register Now
-              </v-btn>
-            </v-col>
-          </v-row>
-        </v-container>
-      </section>
+
 
       <!-- Features Section -->
       <section id="features" class="py-12 bg-grey-lighten-4">
@@ -52,7 +38,8 @@
                 <v-card-item class="pa-6">
                   <div class="d-flex flex-column align-center text-center">
                     <v-icon color="primary" size="x-large" class="mb-4">{{ mdiLaptopAccount }}</v-icon>
-                    <v-card-title class="text-primary font-weight-bold mb-3">Specialized for NGOs & SMEs</v-card-title>
+                    <v-card-title class="text-primary font-weight-bold mb-3 text-wrap">Specialized for NGOs &
+                      SMEs</v-card-title>
                     <v-card-text class="text-body-1">
                       Curriculum designed specifically for the unique needs and constraints of NGOs and small
                       businesses.
@@ -66,7 +53,7 @@
                 <v-card-item class="pa-6">
                   <div class="d-flex flex-column align-center text-center">
                     <v-icon color="primary" size="x-large" class="mb-4">{{ mdiGoogleClassroom }}</v-icon>
-                    <v-card-title class="text-primary font-weight-bold mb-3">Hands-on Learning</v-card-title>
+                    <v-card-title class="text-primary font-weight-bold mb-3 text-wrap">Hands-on Learning</v-card-title>
                     <v-card-text class="text-body-1">
                       Practical, project-based training that ensures you can apply your skills immediately after the
                       course.
@@ -80,7 +67,7 @@
                 <v-card-item class="pa-6">
                   <div class="d-flex flex-column align-center text-center">
                     <v-icon color="primary" size="x-large" class="mb-4">{{ mdiAccountGroup }}</v-icon>
-                    <v-card-title class="text-primary font-weight-bold mb-3">Community Support</v-card-title>
+                    <v-card-title class="text-primary font-weight-bold mb-3 text-wrap">Community Support</v-card-title>
                     <v-card-text class="text-body-1">
                       Ongoing mentorship and community support to help you implement your learnings effectively.
                     </v-card-text>
@@ -107,8 +94,8 @@
               <v-card class="h-100">
                 <v-img src="/api/placeholder/400/200" height="200" cover></v-img>
                 <v-card-item>
-                  <v-card-title>AI Workshop Series</v-card-title>
-                  <v-card-subtitle>For NGO & SME Staff</v-card-subtitle>
+                  <v-card-title class="text-h5 text-primary font-weight-bold">AI Workshop Series</v-card-title>
+                  <v-card-subtitle class="text-secondary">For NGO & SME Staff</v-card-subtitle>
                   <v-card-text>
                     <p>Learn how to leverage AI tools to enhance your organization's impact. Covering practical
                       applications in data analysis, content creation, and automation.</p>
@@ -132,8 +119,8 @@
               <v-card class="h-100">
                 <v-img src="/api/placeholder/400/200" height="200" cover></v-img>
                 <v-card-item>
-                  <v-card-title>WordPress Development</v-card-title>
-                  <v-card-subtitle>Website Building for Organizations</v-card-subtitle>
+                  <v-card-title class="text-h5 text-primary font-weight-bold">WordPress Development</v-card-title>
+                  <v-card-subtitle class="text-secondary">Website Building for Organizations</v-card-subtitle>
                   <v-card-text>
                     <p>Master WordPress to create and maintain professional websites for your organization. Covers site
                       setup, content management, and basic customization.</p>
@@ -157,8 +144,8 @@
               <v-card class="h-100">
                 <v-img src="/api/placeholder/400/200" height="200" cover></v-img>
                 <v-card-item>
-                  <v-card-title>Advanced Web Development</v-card-title>
-                  <v-card-subtitle>For Tech Students</v-card-subtitle>
+                  <v-card-title class="text-h5 text-primary font-weight-bold">Advanced Web Development</v-card-title>
+                  <v-card-subtitle class="text-secondary">For Tech Students</v-card-subtitle>
                   <v-card-text>
                     <p>Deep dive into modern web development with Vue.js, React, and other frameworks. Build
                       portfolio-ready projects and prepare for tech careers.</p>
@@ -291,28 +278,6 @@
           </v-row>
         </v-container>
       </section>
-
-      <!-- CTA Section -->
-      <section class="py-12 bg-secondary text-white">
-        <v-container>
-          <v-row align="center" justify="center">
-            <v-col cols="12" md="8" class="text-center">
-              <h2 class="text-h3 font-weight-bold mb-4">Ready to Enhance Your Tech Skills?</h2>
-              <p class="text-body-1 mb-6">
-                Join our upcoming workshops and training programs. Limited seats available.
-              </p>
-              <v-btn color="white" size="large" class="mr-4" variant="flat">
-                View Schedule
-              </v-btn>
-              <v-btn color="primary" size="large">
-                Register Now
-              </v-btn>
-            </v-col>
-          </v-row>
-        </v-container>
-      </section>
-
-
 
       <!-- Newsletter Signup -->
       <section class="py-10 bg-grey-lighten-4">
