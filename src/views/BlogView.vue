@@ -76,7 +76,7 @@ onMounted(async () => {
                                 </div>
                             </v-card-subtitle>
                             <v-card-text>
-                                <div class="text-truncate" v-html="post.content"></div>
+                                <div class="blog-preview-content" v-html="post.content"></div>
                             </v-card-text>
                             <v-card-actions class="justify-end">
                                 <v-btn color="primary" size="small" variant="text">
@@ -105,11 +105,22 @@ onMounted(async () => {
     overflow: hidden;
 }
 
-.v-card-text :deep(p) {
-    margin-bottom: 0.5rem;
-}
-
 .min-height-70vh {
     min-height: 70vh;
+}
+
+.blog-preview-content {
+    width: 100%;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.blog-preview-content :deep(p) {
+    margin-bottom: 0.5rem;
 }
 </style>
