@@ -112,6 +112,18 @@ watch(() => route.params.slug, async (newSlug) => {
     line-height: 1.6;
 }
 
+.content :deep(ul),
+.content :deep(ol) {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+}
+
+.content :deep(li) {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
 .content :deep(code) {
     background-color: #f5f5f5;
     padding: 0.2rem 0.4rem;
