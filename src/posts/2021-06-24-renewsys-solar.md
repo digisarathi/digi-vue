@@ -60,7 +60,6 @@ footnotes:
   - ''
 image: /wp-content/uploads/2021/06/renewsys-screenshot.png
 tags:
-  - Case-Study
   - Industry
   - Manufacturing
   - SEO

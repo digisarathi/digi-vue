@@ -91,6 +91,11 @@ watch(() => route.params.slug, async (newSlug) => {
 </template>
 
 <style scoped>
+.blog-post {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 .content :deep(h1),
 .content :deep(h2),
 .content :deep(h3),
@@ -120,5 +125,26 @@ watch(() => route.params.slug, async (newSlug) => {
     border-radius: 4px;
     overflow-x: auto;
     margin: 1rem 0;
+}
+
+.content :deep(img) {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 2rem auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.content :deep(a) {
+    display: block;
+    text-align: center;
+    margin-top: 0.5rem;
+    color: var(--v-primary-base);
+    text-decoration: none;
+}
+
+.content :deep(a:hover) {
+    text-decoration: underline;
 }
 </style>

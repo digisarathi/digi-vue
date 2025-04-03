@@ -60,11 +60,10 @@ footnotes:
   - ''
 image: /wp-content/uploads/2021/06/harassmap.png
 tags:
-  - Case-Study
   - 'Nonprofits (NGOs)'
-  - crowdsourcing
+  - Crowdsourcing
   - 'Website Design'
-  - 'women safety'
+  - 'Women Safety'
 ---
 
 Map based frontend web application for Akshara to collect actual data directly from citizens on unsafe areas for women in Mumbai. MIS reports submitted to Municipality and Police authorities.

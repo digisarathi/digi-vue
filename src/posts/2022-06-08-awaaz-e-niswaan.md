@@ -59,12 +59,9 @@ ast-content-background-meta:
 footnotes:
   - ''
 image: /wp-content/uploads/2022/06/Screenshot_2020-06-25-Aawaaz-e-Niswaan--scaled.jpg
-categories:
-  - Case-Study
-  - 'Nonprofits (NGOs)'
 tags:
+  - 'Nonprofits (NGOs)'
   - Consulting
-  - 'social media'
   - 'Website Design'
 ---
 
