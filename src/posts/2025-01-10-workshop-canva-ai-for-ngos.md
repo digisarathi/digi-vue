@@ -59,13 +59,12 @@ ast-content-background-meta:
   - 'a:3:{s:7:"desktop";a:12:{s:16:"background-color";s:25:"var(--ast-global-color-5)";s:16:"background-image";s:0:"";s:17:"background-repeat";s:6:"repeat";s:19:"background-position";s:13:"center center";s:15:"background-size";s:4:"auto";s:21:"background-attachment";s:6:"scroll";s:15:"background-type";s:0:"";s:16:"background-media";s:0:"";s:12:"overlay-type";s:0:"";s:13:"overlay-color";s:0:"";s:15:"overlay-opacity";s:0:"";s:16:"overlay-gradient";s:0:"";}s:6:"tablet";a:12:{s:16:"background-color";s:25:"var(--ast-global-color-5)";s:16:"background-image";s:0:"";s:17:"background-repeat";s:6:"repeat";s:19:"background-position";s:13:"center center";s:15:"background-size";s:4:"auto";s:21:"background-attachment";s:6:"scroll";s:15:"background-type";s:0:"";s:16:"background-media";s:0:"";s:12:"overlay-type";s:0:"";s:13:"overlay-color";s:0:"";s:15:"overlay-opacity";s:0:"";s:16:"overlay-gradient";s:0:"";}s:6:"mobile";a:12:{s:16:"background-color";s:25:"var(--ast-global-color-5)";s:16:"background-image";s:0:"";s:17:"background-repeat";s:6:"repeat";s:19:"background-position";s:13:"center center";s:15:"background-size";s:4:"auto";s:21:"background-attachment";s:6:"scroll";s:15:"background-type";s:0:"";s:16:"background-media";s:0:"";s:12:"overlay-type";s:0:"";s:13:"overlay-color";s:0:"";s:15:"overlay-opacity";s:0:"";s:16:"overlay-gradient";s:0:"";}}'
 footnotes:
   - ''
-categories:
+tags:
   - 'Nonprofits (NGOs)'
   - SMEs
   - Socent
   - Workshop
-tags:
-  - workshop
+
 ---
 
 Canva is a free and easy-to-use tool that lets you design stunning graphics for your campaigns, social media, and presentations. While its free for basic use, check out Canva’s Nonprofit Program [​here​](https://www.canva.com/canva-for-nonprofits/).

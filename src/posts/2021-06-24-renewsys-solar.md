@@ -59,13 +59,12 @@ ast-content-background-meta:
 footnotes:
   - ''
 image: /wp-content/uploads/2021/06/renewsys-screenshot.png
-categories:
+tags:
   - Case-Study
   - Industry
   - Manufacturing
-tags:
   - SEO
-  - 'website design'
+  - 'Website Design'
 ---
 
 India’s leading Solar PV Modules manufacturer needed a new website to showcase their innovative product range. digiSarathi is proud to have successfully launched their new design in under three months. Our team understood how Renewsys stands out among competition and created an information hierarchy that tells their USP and strengths in the right manner. Their website audience is consistently giving the highest rating for the site’s user experience. With a global audience, SEO was of almost importance and digiSarathi has taken great care of the same.

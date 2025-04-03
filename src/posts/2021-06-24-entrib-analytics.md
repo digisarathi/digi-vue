@@ -12,11 +12,9 @@ site-content-layout:
   - default
 theme-transparent-header-meta:
   - default
-categories:
-  - Case-Study
+tags:
   - Industry
   - Manufacturing
-tags:
   - CI/CD
   - Consulting
   - 'Product UX/UI'

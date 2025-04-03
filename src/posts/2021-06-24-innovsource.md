@@ -12,10 +12,8 @@ site-content-layout:
   - default
 theme-transparent-header-meta:
   - default
-categories:
-  - Case-Study
-  - Staffing
 tags:
+  - Staffing
   - analytics
   - 'mobile app'
 ---

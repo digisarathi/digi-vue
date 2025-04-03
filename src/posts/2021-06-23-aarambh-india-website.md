@@ -3,7 +3,7 @@ id: 848
 title: 'Aarambh India'
 date: '2021-06-23T22:42:27+00:00'
 author: digi_admin_9
-tags: ['children safety', 'website design']
+tags: ['children safety', 'Website Design', POCSO]
 ---
 
 Prerana, Mumbai with ADM Foundation launched ‘Aarambh India’ to provide the much needed impetus to the Child Sexual Abuse situation in India. They decided adopting digital medium was the best way to bring increased focus on the topic and share best practises with the hundreds of nonprofits in India that work with children.

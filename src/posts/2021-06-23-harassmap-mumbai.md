@@ -59,12 +59,11 @@ ast-content-background-meta:
 footnotes:
   - ''
 image: /wp-content/uploads/2021/06/harassmap.png
-categories:
+tags:
   - Case-Study
   - 'Nonprofits (NGOs)'
-tags:
   - crowdsourcing
-  - 'website design'
+  - 'Website Design'
   - 'women safety'
 ---
 

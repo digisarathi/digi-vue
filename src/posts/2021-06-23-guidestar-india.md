@@ -12,10 +12,9 @@ site-content-layout:
   - default
 theme-transparent-header-meta:
   - default
-categories:
-  - Case-Study
+tags:
   - 'Nonprofits (NGOs)'
-tags: ['Consulting']
+  - 'Consulting'
 ---
 
 Guidestar India is a leading NGO association based out of Mumbai. Since two decades, Guidestar has carefully curated the NGO community in India with the help of technologies in online user enagement and outreach. More recently they have expanded their services to corporates in the CSR programs wherein the corporates can partner with reputed and innovative NGO programs.
