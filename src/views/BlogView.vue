@@ -69,7 +69,7 @@ onMounted(async () => {
                 <v-row>
                     <v-col v-for="post in filteredPosts" :key="post.slug" cols="12" md="6" lg="4" class="mb-6">
                         <v-card class="h-100" :to="{ name: 'post', params: { slug: post.slug } }">
-                            <v-card-title class="text-h5 text-primary">{{ post.title }}</v-card-title>
+                            <v-card-title class="text-h6 text-primary">{{ post.title }}</v-card-title>
                             <v-card-subtitle>
                                 <div class="d-flex align-center">
                                     <span class="text-secondary">{{ formatDate(post.date) }}</span>

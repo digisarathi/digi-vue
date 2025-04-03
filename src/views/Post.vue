@@ -149,14 +149,26 @@ watch(() => route.params.slug, async (newSlug) => {
 }
 
 .content :deep(a) {
-    display: block;
-    text-align: center;
-    margin-top: 0.5rem;
     color: var(--v-primary-base);
     text-decoration: none;
+    display: inline !important;
+    text-align: left !important;
 }
 
 .content :deep(a:hover) {
     text-decoration: underline;
+}
+
+/* Only apply block styling to image links */
+.content :deep(p > a:only-child:has(img)) {
+    display: block !important;
+    text-align: center !important;
+    margin-top: 0.5rem;
+}
+
+/* Fix for links with zero-width spaces */
+.content :deep(a[href*="​"]) {
+    display: inline;
+    text-align: left;
 }
 </style>
