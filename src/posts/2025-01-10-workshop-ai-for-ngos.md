@@ -69,7 +69,7 @@ tags:
 
 To Unlock the Power of Artificial Intelligence, Join us for an engaging 1 hour workshop designed specifically for NGOs. Supercharge your productivity with actionable insights and tools tailored to the nonprofit sector.
 
-<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-2 wp-block-columns-is-layout-flex" style="margin-top:var(--wp--preset--spacing--60);margin-bottom:0;padding-top:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30)"><div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:66.66%">##### What You’ll Learn
+### What You’ll Learn
 
 • AI-powered tools for communications, research, fundraising, outreach &amp; most importantly, self development.
 
@@ -77,7 +77,7 @@ To Unlock the Power of Artificial Intelligence, Join us for an engaging 1 hour w
 
 • Practical tips for getting started with AI for free.
 
-**Workshop Details**
+### Workshop Details
 
 📍 Location: (Online) Google Meet
 
@@ -85,8 +85,6 @@ To Unlock the Power of Artificial Intelligence, Join us for an engaging 1 hour w
 
 UPI – 9022465676@ybl
 
-##### Please register the participant using the below form
+#### Please register the participant using the below form
 
-</div><div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33.33%"><figure class="wp-block-image size-full">![](https://digisarathi.com/wp-content/uploads/2025/01/WhatsApp-Image-2025-01-10-at-16.28.37-1.jpeg)</figure>Scan QR code to transfer workshop fees (Rs. 550/-).
-
-</div></div><iframe frameborder="0" height="2069" loading="lazy" marginheight="0" marginwidth="0" src="https://docs.google.com/forms/d/e/1FAIpQLSedrsK9qnidRp5wW3rWEJfWZRGI_ufegwLGY8-b0dERy4DoEg/viewform?embedded=true" width="640">Loading…</iframe>
+<iframe frameborder="0" height="2069" loading="lazy" marginheight="0" marginwidth="0" src="https://docs.google.com/forms/d/e/1FAIpQLSedrsK9qnidRp5wW3rWEJfWZRGI_ufegwLGY8-b0dERy4DoEg/viewform?embedded=true" width="640">Loading…</iframe>
