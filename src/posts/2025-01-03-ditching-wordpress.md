@@ -65,6 +65,7 @@ categories:
   - Socent
 tags:
   - 'Website Design'
+  - SEO
 ---
 
 My team of engineers &amp; designers don’t blog! We just don’t have the time for it. But for 11 years now, we have been footing the bill for hosting and maintenance of the digiSarathi website – all because of WordPress! Maintaining a WordPress site takes up significant time and effort which is increasing year on year. Not to forget the security risks and the plugin conflicts. But, if no one is blogging regularly then WordPress and its complications today is an overkill!

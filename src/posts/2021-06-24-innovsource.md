@@ -13,9 +13,11 @@ site-content-layout:
 theme-transparent-header-meta:
   - default
 tags:
-  - Staffing
-  - analytics
-  - 'mobile app'
+  - Software-dev
+  - 'Product UX/UI'
+  - 'Software Architecture'
+  - Industry
+  - 'Mobile App'
 ---
 
 An intuitive mobile app for on-site employees of a leading Indian staffing company. 33000+ users from across India connected to their HR 24/7.
