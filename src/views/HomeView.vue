@@ -181,7 +181,7 @@ const goToService = (route) => {
                 @click="goToService(service.route)"
               >
                 <v-card-item class="text-center mb-4">
-                  <v-card-title class="font-weight-bold text-primary" :class="{ 'text-h4': !isMobile, 'text-h6': isMobile }">{{ service.name }}</v-card-title>
+                  <v-card-title class="font-weight-bold text-primary" :class="{ 'text-h5': !isMobile, 'text-h6': isMobile }">{{ service.name }}</v-card-title>
                 </v-card-item>
                 <v-card-text>
                   <div class="d-flex justify-center">
