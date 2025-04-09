@@ -49,21 +49,15 @@
                   Tech4Growth, Tech4Good!
                 </p>
               </v-col>
-              <v-col cols="6" md="2" class="mb-6 mb-md-0">
-                <h4 class="text-subtitle-1 font-weight-bold mb-4">Quick Links</h4>
+
+              <v-col cols="6" md="4" class="mb-6 mb-md-0">
+                <h4 class="text-subtitle-1 font-weight-bold mb-4">Services</h4>
                 <div class="d-flex flex-column">
-                  <a href="#" class="text-white text-decoration-none mb-2">Home</a>
-                  <a href="#courses" class="text-white text-decoration-none mb-2">Courses</a>
-                  <a href="/about" class="text-white text-decoration-none mb-2">About Us</a>
-                </div>
-              </v-col>
-              <v-col cols="6" md="2" class="mb-6 mb-md-0">
-                <h4 class="text-subtitle-1 font-weight-bold mb-4">Courses</h4>
-                <div class="d-flex flex-column">
-                  <a href="#" class="text-white text-decoration-none mb-2">AI Workshops</a>
-                  <a href="#" class="text-white text-decoration-none mb-2">WordPress</a>
-                  <a href="#" class="text-white text-decoration-none mb-2">Web Development</a>
-                  <a href="#" class="text-white text-decoration-none mb-2">All Courses</a>
+                  <a href="/website-design" class="text-white text-decoration-none mb-2">Website Design</a>
+                  <a href="/apps-software-development" class="text-white text-decoration-none mb-2">App & Software
+                    Solutions</a>
+                  <a href="/digital-marketing" class="text-white text-decoration-none mb-2">Digital Marketing</a>
+                  <a href="/training-workshops" class="text-white text-decoration-none mb-2">Training & Workshops</a>
                 </div>
               </v-col>
               <v-col cols="12" md="4">

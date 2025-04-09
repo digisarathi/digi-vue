@@ -21,61 +21,61 @@ onMounted(() => {
 
 // Improved testimonials with more content and images
 const testimonials = ref([
-  { 
+  {
     name: 'Dr. Dwivedi',
     company: 'Secretary, SEEDS',
-    text: 'The team delivered our project on time and exceeded our expectations. Their focus on simplicity while maintaining powerful functionality was exactly what we needed.',
+    text: 'We are happy to state that Digisarathi has designed the SEEDS website in 2022. The team led by Mr Prashant Pandit did a wonderful job - just the way one had visualized. Digisarathi is organization-friendly and we appreciate their sensitivities at all levels. On top of it the charges are reasonable and affordable for grass root NGOs.',
     avatar: '/images/avatars/john-doe.jpg'
   },
-  { 
+  {
     name: 'Adv. Jyoti',
     company: 'Founder, DISHA',
     text: "We deeply appreciate the invaluable contributions digiSarathi has made to DISHA. Your dedication and hard work have significantly impacted our organization. ",
     avatar: '/images/avatars/jane-smith.jpg'
   },
-  { 
+  {
     name: '',
     company: 'Trustee, Niswaan',
     text: 'The team delivered our project on time and exceeded our expectations. Their focus on simplicity while maintaining powerful functionality was exactly what we needed.',
     avatar: '/images/avatars/john-doe.jpg'
   },
-  { 
+  {
     name: 'Uma',
     company: 'Founder, Aarambh India',
     text: 'DigiSarathi has an impeccable sense of the technical aspects of website development. What sets them apart is their commitment & passion to understand and engage with the subject. This approach can’t help but lead to a great product that is perfectly synced in terms of design, technology and content. Aarambh India is a testament to this.',
     avatar: '/images/avatars/jane-smith.jpg'
   },
-  { 
+  {
     name: 'Dr. Sharada',
     company: 'Founder, Population First',
     text: 'Thank you for making technology less threatening.',
     avatar: '/images/avatars/john-doe.jpg'
   },
-  { 
+  {
     name: 'Vinelle Vaz',
     company: 'Head - Retail, RenewSys',
     text: 'digiSarathi is my go-to whenever I want to discuss some new tech idea and its implementation.',
     avatar: '/images/avatars/jane-smith.jpg'
   },
-  { 
+  {
     name: 'Daniel Ben Horin',
     company: 'Founder, Techsoup.org',
     text: "A comprehensive knowledge of tech issues, cross-cultural sophistication and a fierce dedication to his work were all apparent. Much of our network’s success in India can be credited to his involvement.",
     avatar: '/images/avatars/jane-smith.jpg'
   },
-  { 
+  {
     name: 'Sundar Iyer',
     company: 'Founder, Suryodaya',
     text: "digiSarathi helped us decide that the software system we had in mind should be evaluated after we reach a certain scale otherwise we are only adding complexities to the resolution process.",
     avatar: '/images/avatars/jane-smith.jpg'
   },
-  { 
-    name: 'Daniel Ben Horin',
-    company: 'Founder, Techsoup.org',
-    text: "A comprehensive knowledge of tech issues, cross-cultural sophistication and a fierce dedication to his work were all apparent. Much of our network’s success in India can be credited to his involvement.",
+  {
+    name: 'Seroja Manoj',
+    company: 'Communications, Maya India NGO',
+    text: "Prashant, your session was extremely helpful. Using AI tools at work makes life so much more enjoyable and easier as it is both effective and efficient. Do consider conducting more sessions to help us keep ourselves updated on how we can leverage technology to perform better at work. Keep up the good work!",
     avatar: '/images/avatars/jane-smith.jpg'
   },
-  
+
 ]);
 
 // Enhanced clients with names and industries
@@ -96,36 +96,36 @@ const clients = ref([
 
 // Enhanced services with icons and more detailed descriptions
 const services = ref([
-  { 
-    name: 'Website Design', 
+  {
+    name: 'Website Design',
     icon: mdiWeb,
     text: 'Your website is the foundation upon which your digital marketing and fundraising campaigns are built. We create responsive, user-friendly designs that convert visitors into customers.',
     features: ['Responsive Design', 'SEO Optimization', 'Custom CMS', 'Performance Focus'],
     route: 'website-design',
     image: 'wordpress.svg'
   },
-  { 
-    name: 'Apps & Custom Software ', 
+  {
+    name: 'Apps & Custom Software ',
     icon: mdiCellphoneLink,
     text: 'Innovative user experiences based on a modular and scalable architecture to scale with flexibility and create seamless digital experiences across all platforms.',
     features: ['Native Mobile Apps', 'Progressive Web Apps', 'Custom Software', 'API Integration'],
     route: 'apps-software-development',
     image: 'app.svg'
   },
-  { 
-    name: 'Digital Marketing', 
+  {
+    name: 'Digital Marketing',
     icon: mdiTrendingUp,
     text: 'Comprehensive strategies to enhance your online presence and drive engagement. We use data-driven approaches to maximize your ROI and reach your target audience effectively.',
     features: ['SEO/SEM', 'Content Marketing', 'Social Media', 'Analytics & Reporting'],
-    route: 'digital-marketing' ,
+    route: 'digital-marketing',
     image: 'social.svg'
   },
-  { 
-    name: 'Training & Workshops', 
+  {
+    name: 'Training & Workshops',
     icon: mdiSchool,
     text: 'Hands-on sessions designed to empower your team with essential skills and knowledge. Our expert-led workshops provide practical knowledge that can be immediately applied.',
     features: ['Customized Programs', 'Hands-on Learning', 'Remote Options', 'Ongoing Support'],
-    route: 'training-workshops' ,
+    route: 'training-workshops',
     image: 'shared.svg'
   }
 ]);
@@ -142,14 +142,16 @@ const goToService = (route) => {
     <section class="hero-section">
       <v-container>
         <v-row justify="center" align="center" class="min-height-70vh">
-          <v-col cols="12" md="7" >
-            <h1 :class="['font-weight-bold', 'mb-6', { 'text-h3': !isMobile, 'text-h4': isMobile }]" class="text-primary">
+          <v-col cols="12" md="7">
+            <h1 :class="['font-weight-bold', 'mb-6', { 'text-h3': !isMobile, 'text-h4': isMobile }]"
+              class="text-primary">
               We simplify digitization by focusing on what truly matters, empowering every individual.
             </h1>
             <p :class="['mb-8', { 'text-h6': !isMobile, 'text-h7': isMobile }]" class="text-secondary">
-              Digitisation need not be complicated. Our strategy, system design and execution processes are speedy & agile which means you see results ASAP.
+              Digitisation need not be complicated. Our strategy, system design and execution processes are speedy &
+              agile which means you see results ASAP.
             </p>
-            
+
           </v-col>
           <v-col cols="12" md="5" class="d-none d-md-flex justify-center">
             <v-img src="/websites.svg" max-width="450" contain></v-img>
@@ -163,25 +165,22 @@ const goToService = (route) => {
       <v-container>
         <v-row>
           <v-col cols="12" class="text-center mb-12">
-            <h2 class="font-weight-bold mb-3 text-primary" :class="{ 'text-h3': !isMobile, 'text-h6': isMobile }">Our Services</h2>
+            <h2 class="font-weight-bold mb-3 text-primary" :class="{ 'text-h3': !isMobile, 'text-h6': isMobile }">Our
+              Services</h2>
             <p class="text-subtitle-1 mx-auto max-width-600 text-secondary">
               Comprehensive digital solutions tailored to your specific needs
             </p>
           </v-col>
         </v-row>
-        
+
         <v-row>
           <v-col v-for="(service, index) in services" :key="index" cols="12" md="6" lg="6" class="mb-4 pa-6">
             <v-hover v-slot="{ props }">
-              <v-card
-                v-bind="props"
-                :elevation="2"
-                height="100%"
-                class="service-card transition-fast overflow-hidden"
-                @click="goToService(service.route)"
-              >
+              <v-card v-bind="props" :elevation="2" height="100%" class="service-card transition-fast overflow-hidden"
+                @click="goToService(service.route)">
                 <v-card-item class="text-center mb-4">
-                  <v-card-title class="font-weight-bold text-primary" :class="{ 'text-h5': !isMobile, 'text-h6': isMobile }">{{ service.name }}</v-card-title>
+                  <v-card-title class="font-weight-bold text-primary"
+                    :class="{ 'text-h5': !isMobile, 'text-h6': isMobile }">{{ service.name }}</v-card-title>
                 </v-card-item>
                 <v-card-text>
                   <div class="d-flex justify-center">
@@ -206,21 +205,17 @@ const goToService = (route) => {
       <v-container>
         <v-row>
           <v-col cols="12" class="text-center mb-12">
-            <h2 class="font-weight-bold mb-3 text-primary" :class="{ 'text-h3': !isMobile, 'text-h6': isMobile }">What Our Clients Say</h2>
+            <h2 class="font-weight-bold mb-3 text-primary" :class="{ 'text-h3': !isMobile, 'text-h6': isMobile }">What
+              Our Clients Say</h2>
             <p class="text-subtitle-1 mx-auto max-width-600 text-secondary">
               Hear from the organizations we've helped transform digitally
             </p>
           </v-col>
         </v-row>
-        
+
         <v-row justify="center">
           <v-col cols="12" md="10" lg="8">
-            <v-carousel
-              show-arrows="hover"
-              height="auto"
-              hide-delimiter-background
-              :delimiter-icon="mdiCircle"
-            >
+            <v-carousel show-arrows="hover" height="auto" hide-delimiter-background :delimiter-icon="mdiCircle">
               <v-carousel-item v-for="(testimonial, index) in testimonials" :key="index">
                 <v-card class="testimonial-card mx-auto pa-6" max-width="800">
                   <div class="d-flex flex-column align-center text-center">
@@ -246,32 +241,22 @@ const goToService = (route) => {
       <v-container>
         <v-row>
           <v-col cols="12" class="text-center mb-12">
-            <h2 class="font-weight-bold mb-3 text-primary" :class="{ 'text-h3': !isMobile, 'text-h6': isMobile }">Our Clients</h2>
+            <h2 class="font-weight-bold mb-3 text-primary" :class="{ 'text-h3': !isMobile, 'text-h6': isMobile }">Our
+              Clients</h2>
             <p class="text-subtitle-1 mx-auto max-width-600 text-secondary">
               Trusted by leading organizations across industries
             </p>
           </v-col>
         </v-row>
-        
+
         <v-row justify="center" align="center" class="">
           <v-col v-for="(client, index) in clients" :key="index" cols="6" sm="4" md="2" class="text-center mb-8">
             <v-hover v-slot="{ props }">
-              <v-card
-                v-bind="props"
-                variant="flat"
-                class="client-logo bg-transparent"
-              >
+              <v-card v-bind="props" variant="flat" class="client-logo bg-transparent">
                 <v-tooltip :text="client.name + ' - ' + client.industry" location="top">
                   <template v-slot:activator="{ props }">
-                    <v-img
-                      v-bind="props"
-                      :src="client.logo"
-                      :alt="client.name"
-                      height="100"
-                      width="200"
-                      contain
-                      class="mx-auto grey-filter"
-                    ></v-img>
+                    <v-img v-bind="props" :src="client.logo" :alt="client.name" height="100" width="200" contain
+                      class="mx-auto grey-filter"></v-img>
                   </template>
                 </v-tooltip>
               </v-card>
@@ -286,7 +271,9 @@ const goToService = (route) => {
       <v-container>
         <v-row justify="center">
           <v-col cols="12" md="8" lg="6" class="text-center">
-            <h2 class="font-weight-bold mb-3 text-white" :class="{ 'text-h3': !isMobile, 'text-h6': isMobile }">Stay Updated</h2>
+            <h2 class="font-weight-bold mb-3 text-white" :class="{ 'text-h3': !isMobile, 'text-h6': isMobile }">Stay
+              Updated
+            </h2>
             <p class="text-caption mt-4 text-white opacity-medium">
               We respect your privacy. Unsubscribe at any time.
             </p>
