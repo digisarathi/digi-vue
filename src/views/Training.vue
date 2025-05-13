@@ -103,7 +103,7 @@
                     <v-chip class="ma-1" color="primary" size="small">Hands-on</v-chip>
                   </v-card-text>
                   <v-card-actions>
-                    <v-btn variant="text" color="primary">
+                    <v-btn variant="text" color="primary" to="/ai-workshops">
                       Learn More
                     </v-btn>
                     <v-spacer></v-spacer>
