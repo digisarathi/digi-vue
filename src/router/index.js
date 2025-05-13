@@ -10,7 +10,7 @@ import PrivacyPolicy from '../views/PrivacyPolicy.vue'
 import TermsOfService from '../views/TermsOfService.vue'
 import BlogView from '../views/BlogView.vue'
 import Post from '../views/Post.vue'
-
+import AiWorkshopsView from '@/views/AiWorkshopsView.vue'
 export const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -68,6 +68,15 @@ export const router = createRouter({
       path: '/blog/:slug',
       name: 'post',
       component: Post,
+    },
+    {
+      path: '/workshop-ai-for-ngos/',
+      redirect:'/ai-workshops',
+    },
+    {
+      path: '/ai-workshops',
+      name: 'ai-workshops',
+      component: AiWorkshopsView,
     },
   ],
 })
