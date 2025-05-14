@@ -98,7 +98,7 @@
                 <v-card-subtitle class="text-secondary">Boost Efficiency and Impact</v-card-subtitle>
                 <v-card-text>
                   <p class="mb-2">
-                    Join us for an engaging 2 hour workshop designed specifically for NGOs to explore how AI can
+                    Join us for an engaging 1 hour workshop designed specifically for NGOs to explore how AI can
                     supercharge your impact. Whether you’re looking to streamline operations, enhance fundraising, or
                     improve communication, this workshop will provide actionable insights and tools tailored to the
                     nonprofit sector.

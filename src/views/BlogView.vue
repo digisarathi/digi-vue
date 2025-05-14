@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, computed } from 'vue'
+import { ref, computed } from 'vue'
 import { importMarkdownFiles } from '@/utils/markdown'
 import { formatDate } from '@/utils/date'
 
@@ -10,9 +10,10 @@ const props = defineProps({
     }
 })
 
-const posts = ref([])
+// Statically load posts
+const posts = ref(importMarkdownFiles())
+console.log(posts.value)
 const selectedTag = ref(null)
-const isLoading = ref(true)
 
 const uniqueTags = computed(() => {
     const allTags = posts.value.flatMap(post => post.tags || [])
@@ -27,15 +28,6 @@ const filteredPosts = computed(() => {
 const toggleTag = (tag) => {
     selectedTag.value = selectedTag.value === tag ? null : tag
 }
-
-onMounted(async () => {
-    try {
-        isLoading.value = true
-        posts.value = await importMarkdownFiles()
-    } finally {
-        isLoading.value = false
-    }
-})
 </script>
 
 <template>
@@ -64,39 +56,34 @@ onMounted(async () => {
         <!-- Blog Content Section -->
         <section>
             <v-container>
-                <div v-if="isLoading" class="d-flex justify-center align-center py-12">
-                    <v-progress-circular indeterminate color="primary" size="64"></v-progress-circular>
+                <div class="d-flex flex-wrap justify-center mb-8">
+                    <v-chip v-for="tag in uniqueTags" :key="tag" size="small" class="mr-2 mb-2"
+                        :color="selectedTag === tag ? 'primary' : undefined"
+                        :variant="selectedTag === tag ? 'elevated' : 'outlined'" @click="toggleTag(tag)"
+                        style="cursor: pointer">
+                        {{ tag }}
+                    </v-chip>
                 </div>
-                <template v-else>
-                    <div class="d-flex flex-wrap justify-center mb-8">
-                        <v-chip v-for="tag in uniqueTags" :key="tag" size="small" class="mr-2 mb-2"
-                            :color="selectedTag === tag ? 'primary' : undefined"
-                            :variant="selectedTag === tag ? 'elevated' : 'outlined'" @click="toggleTag(tag)"
-                            style="cursor: pointer">
-                            {{ tag }}
-                        </v-chip>
-                    </div>
-                    <v-row>
-                        <v-col v-for="post in filteredPosts" :key="post.slug" cols="12" md="6" lg="4" class="mb-6">
-                            <v-card class="h-100" :to="{ name: 'post', params: { slug: post.slug } }">
-                                <v-card-title class="text-h6 text-primary">{{ post.title }}</v-card-title>
-                                <v-card-subtitle>
-                                    <div class="d-flex align-center">
-                                        <span class="text-secondary">{{ formatDate(post.date) }}</span>
-                                    </div>
-                                </v-card-subtitle>
-                                <v-card-text>
-                                    <div class="blog-preview-content" v-html="post.content"></div>
-                                </v-card-text>
-                                <v-card-actions class="justify-end">
-                                    <v-btn color="primary" size="small" variant="text">
-                                        Read More
-                                    </v-btn>
-                                </v-card-actions>
-                            </v-card>
-                        </v-col>
-                    </v-row>
-                </template>
+                <v-row>
+                    <v-col v-for="post in filteredPosts" :key="post.slug" cols="12" md="6" lg="4" class="mb-6">
+                        <v-card class="h-100" :to="{ name: 'post', params: { slug: post.slug } }">
+                            <v-card-title class="text-h6 text-primary">{{ post.title }}</v-card-title>
+                            <v-card-subtitle>
+                                <div class="d-flex align-center">
+                                    <span class="text-secondary">{{ formatDate(post.date) }}</span>
+                                </div>
+                            </v-card-subtitle>
+                            <v-card-text>
+                                <div class="blog-preview-content" v-html="post.content"></div>
+                            </v-card-text>
+                            <v-card-actions class="justify-end">
+                                <v-btn color="primary" size="small" variant="text">
+                                    Read More
+                                </v-btn>
+                            </v-card-actions>
+                        </v-card>
+                    </v-col>
+                </v-row>
             </v-container>
         </section>
     </v-main>

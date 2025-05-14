@@ -2,12 +2,12 @@ import { marked } from 'marked'
 import frontMatter from 'front-matter'
 
 // Function to import all markdown files from a directory
-export async function importMarkdownFiles() {
-  const markdownFiles = import.meta.glob('../posts/*.md', { query: '?raw', import: 'default' })
+export function importMarkdownFiles() {
+  const markdownFiles = import.meta.glob('../posts/*.md', { query: '?raw', import: 'default', eager: true })
   const posts = []
 
   for (const path in markdownFiles) {
-    const content = await markdownFiles[path]()
+    const content = markdownFiles[path] 
     const { attributes, body } = frontMatter(content)
     const slug = path.split('/').at(-1).replace('.md', '')
 
