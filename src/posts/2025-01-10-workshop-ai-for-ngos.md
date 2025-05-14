@@ -1,7 +1,7 @@
 ---
 id: 1244
 title: 'Workshop - AI for NGOs'
-date: '2025-01-10T08:44:21+00:00'
+date: '2025-05-10T08:44:21+00:00'
 author: digi_admin_9
 layout: post
 guid: 'https://digisarathi.com/?p=1244'
