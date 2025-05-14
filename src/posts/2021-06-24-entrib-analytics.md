@@ -6,12 +6,7 @@ author: digi_admin_9
 layout: post
 guid: 'http://s780263233.onlinehome.us/?p=899'
 permalink: /entrib-analytics/
-site-sidebar-layout:
-  - default
-site-content-layout:
-  - default
-theme-transparent-header-meta:
-  - default
+
 tags:
   - Industry
   - Manufacturing
