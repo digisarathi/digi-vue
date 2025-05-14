@@ -107,9 +107,7 @@
                       Learn More
                     </v-btn>
                     <v-spacer></v-spacer>
-                    <v-btn color="primary">
-                      Register
-                    </v-btn>
+
                   </v-card-actions>
                 </v-card-item>
               </v-card>
@@ -132,9 +130,7 @@
                       Learn More
                     </v-btn>
                     <v-spacer></v-spacer>
-                    <v-btn color="primary">
-                      Register
-                    </v-btn>
+
                   </v-card-actions>
                 </v-card-item>
               </v-card>
@@ -157,9 +153,7 @@
                       Learn More
                     </v-btn>
                     <v-spacer></v-spacer>
-                    <v-btn color="primary">
-                      Register
-                    </v-btn>
+
                   </v-card-actions>
                 </v-card-item>
               </v-card>

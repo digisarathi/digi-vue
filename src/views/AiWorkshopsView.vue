@@ -37,7 +37,7 @@
               <div class="d-flex flex-column align-center text-center">
                 <v-icon color="primary" size="x-large" class="mb-4">{{
                   mdiBookOpenPageVariant
-                }}</v-icon>
+                  }}</v-icon>
                 <v-card-title class="text-primary font-weight-bold mb-3 text-wrap">Expert Instructors</v-card-title>
                 <v-card-text class="text-body-1">
                   Learn from industry experts with years of experience in AI and machine learning.
@@ -51,7 +51,7 @@
                 <div class="d-flex flex-column align-center text-center">
                   <v-icon color="primary" size="x-large" class="mb-4">{{
                     mdiLaptopAccount
-                  }}</v-icon>
+                    }}</v-icon>
                   <v-card-title class="text-primary font-weight-bold mb-3 text-wrap">Hands-on Projects</v-card-title>
                   <v-card-text class="text-body-1">
                     Practical, project-based learning that lets you apply your skills immediately.
@@ -169,7 +169,7 @@
                     <li>Hands-on experience with leading AI platforms like Replit, Bolt, and Cursor to build
                       production-ready solutions.</li>
                   </ul>
-<br>
+                  <br>
                   <strong>Who Should Attend</strong>
                   <br>
                   <p class="mt-1">This workshop is ideal for corporate professionals including product managers,
@@ -179,10 +179,12 @@
                   <br>
 
                   <strong>Duration:</strong> 2 hours
+                  <br>
                   <strong>Format:</strong> Online interactive session with live coding and Q&A
-                  <strong>Prerequisites:</strong> Basic understanding of programming concepts is recommended but not
+                  <br> <strong>Prerequisites:</strong> Basic understanding of programming concepts is recommended but
+                  not
                   required.
-                  <strong>Registration:</strong> Please register in advance to secure your spot.
+                  <br> <strong>Registration:</strong> Please register in advance to secure your spot.
 
                   <div class="mt-4">
                     <v-chip class="ma-1" color="primary" size="small">Software Development</v-chip>
@@ -238,7 +240,7 @@
         </v-row>
 
         <v-row>
-          <v-col cols="12" md="4">
+          <v-col cols="12" md="6">
             <v-card class="h-100">
               <v-card-item>
                 <div class="d-flex align-center mb-4">
@@ -246,15 +248,38 @@
                     <v-icon color="white">{{ mdiAccount }}</v-icon>
                   </v-avatar>
                   <div>
-                    <div class="font-weight-bold">Priya Sharma</div>
-                    <div class="text-caption">Program Director, Asha Foundation</div>
+                    <div class="font-weight-bold">Seroja Manoj</div>
+                    <div class="text-caption">Communications, Maya India NGO</div>
                   </div>
                 </div>
                 <v-card-text>
                   <p>
-                    "The AI workshop helped our small NGO automate several administrative tasks,
-                    giving us more time to focus on our core mission. The training was practical and
-                    tailored to our specific needs."
+                    "Using AI tools at work makes life so much more enjoyable and easier as it is both effective and
+                    efficient. Do consider conducting more sessions to help us keep ourselves updated on how we can
+                    leverage technology to perform better at work. Keep up the good work!"
+                  </p>
+                </v-card-text>
+              </v-card-item>
+            </v-card>
+          </v-col>
+          <v-col cols="12" md="6">
+            <v-card class="h-100">
+              <v-card-item>
+                <div class="d-flex align-center mb-4">
+                  <v-avatar color="primary" class="mr-4">
+                    <v-icon color="white">{{ mdiAccount }}</v-icon>
+                  </v-avatar>
+                  <div>
+                    <div class="font-weight-bold">Rashmi Shankar</div>
+                    <div class="text-caption">Communications, Maya India NGO</div>
+                  </div>
+                </div>
+                <v-card-text>
+                  <p>
+                    "I recently attended the Canva AI workshop organised by Digitech and found it to be extremely
+                    informative. I learned many new skills and techniques that I'm excited to apply to my work. The
+                    workshop was a great investment of my time and I recommend it to anyone looking to improve their
+                    designing."
                   </p>
                 </v-card-text>
               </v-card-item>
