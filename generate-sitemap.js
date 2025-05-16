@@ -66,7 +66,7 @@ const generateSitemap = async () => {
     sitemapStream.end();
 
     const data = await streamToPromise(sitemapStream);
-    fs.writeFileSync('./public/sitemap.xml', data.toString());
+    fs.writeFileSync('./dist/sitemap.xml', data.toString());
     console.log('Sitemap generated!');
   } catch (error) {
     console.error('Error generating sitemap:', error);
