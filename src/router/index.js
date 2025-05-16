@@ -11,6 +11,8 @@ import TermsOfService from '../views/TermsOfService.vue'
 import BlogView from '../views/BlogView.vue'
 import Post from '../views/Post.vue'
 import AiWorkshopsView from '@/views/AiWorkshopsView.vue'
+import NotFound from '../views/NotFound.vue'
+
 export const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -77,6 +79,11 @@ export const router = createRouter({
       path: '/ai-workshops',
       name: 'ai-workshops',
       component: AiWorkshopsView,
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'not-found',
+      component: NotFound,
     },
   ],
 })
