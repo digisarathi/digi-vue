@@ -1,1 +1,40 @@
+.blog-preview-content h1,
+.blog-preview-content h2,
+.blog-preview-content h3,
+.blog-preview-content h4,
+.blog-preview-content h5,
+.blog-preview-content h6 {
+  font-weight: bold;
+  margin-top: 1.2em;
+  margin-bottom: 0.6em;
+}
+
+.blog-preview-content p {
+  margin-bottom: 1em;
+}
+
+.blog-preview-content ul,
+.blog-preview-content ol {
+  margin-left: 1.5em;
+  margin-bottom: 1em;
+}
+
+.blog-preview-content li {
+  margin-bottom: 0.5em;
+}
+
+.blog-preview-content strong {
+  font-weight: bold;
+}
+
+.blog-preview-content em {
+  font-style: italic;
+}
+
+.blog-preview-content blockquote {
+  border-left: 4px solid #eee;
+  padding-left: 1em;
+  color: #666;
+  margin: 1em 0;
+}
 
