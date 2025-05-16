@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "generate-sitemap": "node generate-sitemap.js",
+    "build": "vite build && npm run generate-sitemap",
+    "onlybuild": "vite build ",
     "preview": "vite preview",
     "lint": "eslint . --fix",
     "format": "prettier --write src/"
@@ -28,6 +30,7 @@
     "vite": "^6.1.0",
     "vite-plugin-vue-devtools": "^7.7.2",
     "vite-plugin-vuetify": "^2.1.0",
-    "vuetify": "^3.7.15"
+    "vuetify": "^3.7.15",
+    "sitemap": "^8.0.0"
   }
 }
