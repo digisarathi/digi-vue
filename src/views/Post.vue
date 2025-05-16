@@ -68,16 +68,14 @@ watch(() => route.params.slug, async (newSlug) => {
                             </v-chip>
                         </div>
                         <div class="content mb-4" v-html="post.content"></div>
-                        <div class="d-flex justify-space-between align-center">
-                            <div class="d-flex gap-2">
-                                <v-btn v-if="prevPost" :to="{ name: 'post', params: { slug: prevPost.slug } }"
-                                    color="primary" variant="outlined" size="x-small">
-                                    Previous
-                                </v-btn>
-                                <v-btn to="/blog" color="primary" variant="outlined" size="x-small">
-                                    Back to Blog
-                                </v-btn>
-                            </div>
+                        <div class="mt-16 d-flex justify-space-between align-center">
+                            <v-btn v-if="prevPost" :to="{ name: 'post', params: { slug: prevPost.slug } }"
+                                color="primary" variant="outlined" size="x-small">
+                                Previous
+                            </v-btn>
+                            <v-btn to="/blog" color="primary" variant="outlined" size="x-small">
+                                Back to Blog
+                            </v-btn>
                             <v-btn v-if="nextPost" :to="{ name: 'post', params: { slug: nextPost.slug } }"
                                 color="primary" variant="outlined" size="x-small">
                                 Next
