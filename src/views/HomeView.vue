@@ -139,23 +139,22 @@ const goToService = (route) => {
 <template>
   <main>
     <!-- Hero Section with Gradient Background -->
-    <section class="hero-section">
+    <section class="hero-section" fetchpriority="high">
       <v-container>
         <v-row justify="center" align="center" class="min-height-70vh">
           <v-col cols="12" md="7">
             <h1 :class="['font-weight-bold', 'mb-6', { 'text-h3': !isMobile, 'text-h4': isMobile }]"
-              class="text-primary">
+              class="text-primary" fetchpriority="high">
               We simplify digitization by focusing on what truly matters, empowering every individual.
             </h1>
             <p :class="['mb-8', { 'text-h6': !isMobile, 'text-h7': isMobile }]" class="text-secondary">
               Digitisation need not be complicated. Our strategy, system design and execution processes are speedy &
               agile which means you see results ASAP.
             </p>
-
           </v-col>
           <v-col cols="12" md="5" class="d-none d-md-flex justify-center">
-            <v-img src="/websites.svg" max-width="450" contain loading="eager" width="450" height="450"
-              alt="Hero illustration"></v-img>
+            <v-img src="/websites.svg" max-width="450" contain loading="eager" fetchpriority="high"
+              width="450" height="450" alt="Hero illustration"></v-img>
           </v-col>
         </v-row>
       </v-container>
