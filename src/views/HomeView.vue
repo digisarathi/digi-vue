@@ -42,7 +42,7 @@ const testimonials = ref([
   {
     name: 'Uma',
     company: 'Founder, Aarambh India',
-    text: 'DigiSarathi has an impeccable sense of the technical aspects of website development. What sets them apart is their commitment & passion to understand and engage with the subject. This approach can’t help but lead to a great product that is perfectly synced in terms of design, technology and content. Aarambh India is a testament to this.',
+    text: "DigiSarathi has an impeccable sense of the technical aspects of website development. What sets them apart is their commitment & passion to understand and engage with the subject. This approach can't help but lead to a great product that is perfectly synced in terms of design, technology and content. Aarambh India is a testament to this.",
     avatar: '/images/avatars/jane-smith.jpg'
   },
   {
@@ -60,7 +60,7 @@ const testimonials = ref([
   {
     name: 'Daniel Ben Horin',
     company: 'Founder, Techsoup.org',
-    text: "A comprehensive knowledge of tech issues, cross-cultural sophistication and a fierce dedication to his work were all apparent. Much of our network’s success in India can be credited to his involvement.",
+    text: "A comprehensive knowledge of tech issues, cross-cultural sophistication and a fierce dedication to his work were all apparent. Much of our network's success in India can be credited to his involvement.",
     avatar: '/images/avatars/jane-smith.jpg'
   },
   {
@@ -154,7 +154,8 @@ const goToService = (route) => {
 
           </v-col>
           <v-col cols="12" md="5" class="d-none d-md-flex justify-center">
-            <v-img src="/websites.svg" max-width="450" contain></v-img>
+            <v-img src="/websites.svg" max-width="450" contain loading="eager" width="450" height="450"
+              alt="Hero illustration"></v-img>
           </v-col>
         </v-row>
       </v-container>
