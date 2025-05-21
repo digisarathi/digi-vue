@@ -27,10 +27,11 @@
     "eslint": "^9.20.1",
     "eslint-plugin-vue": "^9.32.0",
     "prettier": "^3.5.1",
+    "sitemap": "^8.0.0",
+    "terser": "^5.39.2",
     "vite": "^6.1.0",
     "vite-plugin-vue-devtools": "^7.7.2",
     "vite-plugin-vuetify": "^2.1.0",
-    "vuetify": "^3.7.15",
-    "sitemap": "^8.0.0"
+    "vuetify": "^3.7.15"
   }
 }
