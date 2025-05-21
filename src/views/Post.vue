@@ -25,10 +25,12 @@ const findAdjacentPosts = (currentSlug) => {
 const updatePostMeta = (postData) => {
     if (postData) {
         const description = postData.excerpt || postData.content.substring(0, 160)
+        const canonicalUrl = postData.permalink ? `https://digisarathi.com${postData.permalink}` : null
         updateMetaTags(
             postData.title,
             description,
-            postData.image || '/og-image.jpg'
+            postData.image || '/og-image.jpg',
+            canonicalUrl
         )
     }
 }

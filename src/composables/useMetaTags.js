@@ -1,5 +1,5 @@
 export function useMetaTags() {
-  const updateMetaTags = (title, description, image = '/og-image.jpg') => {
+  const updateMetaTags = (title, description, image = '/og-image.jpg', canonicalUrl = null) => {
     // Update title
     document.title = `${title} | digiSarathi`
 
@@ -33,6 +33,15 @@ export function useMetaTags() {
 
       meta.setAttribute('content', content)
     })
+
+    // Update canonical URL
+    let canonicalLink = document.querySelector('link[rel="canonical"]')
+    if (!canonicalLink) {
+      canonicalLink = document.createElement('link')
+      canonicalLink.setAttribute('rel', 'canonical')
+      document.head.appendChild(canonicalLink)
+    }
+    canonicalLink.setAttribute('href', canonicalUrl || window.location.href)
   }
 
   return {
