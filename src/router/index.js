@@ -13,8 +13,23 @@ import Post from '../views/Post.vue'
 import AiWorkshopsView from '@/views/AiWorkshopsView.vue'
 import NotFound from '../views/NotFound.vue'
 
+const scrollBehavior = (to, from, savedPosition) => {
+  if (to.hash) {
+    return {
+      el: to.hash,
+      behavior: 'smooth',
+      top: 100 // Adjust this value to account for any fixed headers
+    }
+  } else if (savedPosition) {
+    return savedPosition
+  } else {
+    return { top: 0 }
+  }
+}
+
 export const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
+  scrollBehavior,
   routes: [
     {
       path: '/',

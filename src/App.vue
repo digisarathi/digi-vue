@@ -22,7 +22,7 @@
             </v-toolbar-title>
             <v-spacer></v-spacer>
             <v-btn variant="plain" size="small" class="hidden-sm-and-down text-overline" text
-              v-for="(item, index) in navItems" :key="index" :to="item.route">
+              v-for="(item, index) in navItems" :key="index" :to="item.route" @click="scrollIfNeeded(item.route)">
               {{ item.title }}
             </v-btn>
             <v-btn icon class="hidden-md-and-up" color="accent" @click="drawer = true">
@@ -117,9 +117,21 @@ const drawer = ref(false)
 const navItems = ref([
   { title: 'Home', route: '/' },
   { title: 'About', route: '/about' },
-  { title: 'Contact', route: '/contact' },
+  { title: 'Services', route: { path: '/', hash: '#services' } },
   { title: 'Blog', route: '/blog' },
+  { title: 'Contact', route: '/contact' },
 ])
+
+const scrollIfNeeded = (route) => {
+  if (route.hash) {
+    setTimeout(() => {
+      const element = document.querySelector(route.hash)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
+    }, 100)
+  }
+}
 
 const isMobile = ref(window.innerWidth < 960);
 

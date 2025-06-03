@@ -161,7 +161,7 @@ const goToService = (route) => {
     </section>
 
     <!-- Services Section with Cards -->
-    <section id="services" class="py-16">
+    <section class="py-16">
       <v-container>
         <v-row>
           <v-col cols="12" class="text-center mb-12">
@@ -173,7 +173,7 @@ const goToService = (route) => {
           </v-col>
         </v-row>
 
-        <v-row>
+        <v-row id="services">
           <v-col v-for="(service, index) in services" :key="index" cols="12" md="6" lg="6" class="mb-4 pa-6">
             <v-hover v-slot="{ props }">
               <v-card v-bind="props" :elevation="2" height="100%" class="service-card transition-fast overflow-hidden"
