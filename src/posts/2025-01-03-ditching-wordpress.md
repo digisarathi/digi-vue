@@ -17,7 +17,9 @@ tags:
   - SEO
 ---
 
-My team of engineers &amp; designers don’t blog! We just don’t have the time for it. But for 11 years now, we have been footing the bill for hosting and maintenance of the digiSarathi website – all because of WordPress! Maintaining a WordPress site takes up significant time and effort which is increasing year on year. Not to forget the security risks and the plugin conflicts. But, if no one is blogging regularly then WordPress and its complications today is an overkill!
+Our engineering and design team hasn't been blogging consistently due to time constraints. Yet for 11 years, we've continued paying for hosting and maintenance of the digiSarathi website simply because it runs on WordPress.
+The overhead keeps growing – WordPress demands constant updates, security patches, and troubleshooting plugin conflicts. These maintenance tasks consume valuable resources that could be better spent elsewhere. Given that we're not actively publishing blog content, WordPress has become unnecessarily complex for our actual needs.
+We're essentially maintaining enterprise-level blogging infrastructure for a site that doesn't blog. It's time to consider a simpler, more appropriate solution.
 
 A website is essentially 4/5 pages that talks about any organization and its programs. Then I remembered how one of our clients, [​ThoughtShop Foundation​](https://thoughtshopfoundation.org/), in Kolkatta, have a non-WordPress website. Whenever needed, they make some ‘content’ updates in the Team or Donor section. Without WordPress, there is no ‘software’ updates or the bare minimum. But with WordPress, the software updates is as frequent as the ‘apps’ on our phone, i.e. forever &amp; ever! Which means the cost of AMC that digiSarathi or other IT vendors charge their clients is not coming down. This didn’t feel right!
 
