@@ -99,7 +99,7 @@ const services = ref([
   {
     name: 'Website Design',
     icon: mdiWeb,
-    text: 'Your website is the foundation upon which your digital marketing and fundraising campaigns are built. We create responsive, user-friendly designs that convert visitors into customers.',
+    text: 'Your website is the foundation upon which your digital marketing or fundraising campaigns are built. We create responsive, user-friendly designs that connect with your audience.',
     features: ['Responsive Design', 'SEO Optimization', 'Custom CMS', 'Performance Focus'],
     route: 'website-design',
     image: 'wordpress.svg'
@@ -145,11 +145,11 @@ const goToService = (route) => {
           <v-col cols="12" md="7">
             <h1 :class="['font-weight-bold', 'mb-6', { 'text-h3': !isMobile, 'text-h4': isMobile }]"
               class="text-primary" fetchpriority="high">
-              We simplify digitization by focusing on what truly matters, empowering every individual.
+              We simplify digitization by focusing on what truly matters, empowering the end user.
             </h1>
             <p :class="['mb-8', { 'text-h6': !isMobile, 'text-h7': isMobile }]" class="text-secondary">
-              Digitisation need not be complicated. Our strategy, system design and execution processes are speedy &
-              agile which means you see results ASAP.
+              Our strategy, system design and implementation processes are speedy &
+              agile which means you see results ASAP. Better control enables better results.
             </p>
           </v-col>
           <v-col cols="12" md="5" class="d-none d-md-flex justify-center">
