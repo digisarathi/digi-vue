@@ -8,10 +8,8 @@
             <v-col cols="12" md="7" order="2" order-md="1">
               <h1 class="text-h2 text-primary font-weight-bold mb-4">We Simplify Website Design & Development</h1>
               <p class="text-body-1 mb-6">
-                Our approach to website design focuses on creating user-friendly, modern, and effective digital
-                solutions.
-                We believe in making digitization accessible and straightforward, delivering results that truly matter
-                for your business.
+                Our approach to website design emphasizes crafting intuitive, visually appealing, and high-performing digital experiences. 
+                We prioritize seamless navigation and responsive design, ensuring that your website not only looks great but also drives engagement and conversions. 
               </p>
             </v-col>
             <v-col cols="12" md="5" order="1" order-md="2" class="text-center">
@@ -118,7 +116,7 @@
                     <v-icon color="primary" size="x-large" class="mb-4">{{ mdiResponsive }}</v-icon>
                     <v-card-title class="text-primary font-weight-bold mb-3 text-wrap">Responsive Design</v-card-title>
                     <v-card-text class="text-body-1">
-                      Websites that work flawlessly across all devices and screen sizes.
+                      Websites that are visually appealing across all devices and screen sizes.
                     </v-card-text>
                   </div>
                 </v-card-item>
@@ -152,21 +150,20 @@
           </v-row>
 
           <v-row>
-            <v-col cols="12" md="4">
+            <v-col v-for="(testimonial, index) in testimonials" :key="index" cols="12" md="4">
               <v-card class="h-100">
                 <v-card-item>
                   <div class="d-flex align-center mb-4">
-                    <v-avatar color="primary" class="mr-4">
-                      <v-icon color="white">{{ mdiAccount }}</v-icon>
+                    <v-avatar :color="testimonial.avatarColor || 'primary'" class="mr-4">
+                      <v-icon color="white">{{ testimonial.icon || mdiAccount }}</v-icon>
                     </v-avatar>
                     <div>
-                      <div class="font-weight-bold">Rajesh Mehta</div>
-                      <div class="text-caption">CEO, TechStart India</div>
+                      <div class="font-weight-bold">{{ testimonial.name }}</div>
+                      <div class="text-caption">{{ testimonial.title }}</div>
                     </div>
                   </div>
                   <v-card-text>
-                    <p>"The team delivered a modern, responsive website that perfectly represents our brand. The process
-                      was smooth and professional from start to finish."</p>
+                    <p>"{{ testimonial.quote }}"</p>
                   </v-card-text>
                 </v-card-item>
               </v-card>
@@ -235,6 +232,9 @@
 <script setup>
 import { ref } from 'vue';
 import {
+  mdiAccountTie,
+  mdiAccountTieWoman,
+  mdiAccountBadge,
   mdiLightbulb,
   mdiPencilRuler,
   mdiCodeBraces,
@@ -245,6 +245,30 @@ import {
   mdiAccount,
   mdiCircle
 } from '@mdi/js';
+
+const testimonials = ref([
+  {
+    name: 'Rajesh Mehta',
+    title: 'CEO, TechStart India',
+    quote: 'The team delivered a modern, responsive website that perfectly represents our brand. The process was smooth and professional from start to finish.',
+    icon: mdiAccountTie,
+    avatarColor: 'primary'
+  },
+  {
+    name: 'Priya Sharma',
+    title: 'Marketing Director, Bloom Cosmetics',
+    quote: 'Our new website has significantly improved our online presence and customer engagement. The design is beautiful and user-friendly.',
+    icon: mdiAccountTieWoman,
+    avatarColor: 'secondary'
+  },
+  {
+    name: 'Amit Patel',
+    title: 'Founder, Foodie Express',
+    quote: 'The development team was professional and delivered our food delivery app ahead of schedule. Highly recommended for any web development needs!',
+    icon: mdiAccountBadge,
+    avatarColor: 'success'
+  }
+]);
 
 const portfolioProjects = ref([
   {
