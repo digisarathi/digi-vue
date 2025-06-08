@@ -151,7 +151,7 @@
 
           <v-row>
             <v-col v-for="(testimonial, index) in testimonials" :key="index" cols="12" md="4">
-              <v-card class="h-100 d-flex flex-column">
+              <v-card class="h-100 d-flex flex-column" :href="testimonial.website" target="_blank" rel="noopener noreferrer" style="cursor: pointer;" @click.stop>
                 <v-card-text class="flex-grow-1">
                   <p class="text-body-1">"{{ testimonial.text }}"</p>
                 </v-card-text>
@@ -249,31 +249,36 @@ const testimonials = ref([
     name: 'Dr. Dwivedi',
     company: 'Secretary, SEEDS',
     text: 'We are happy to state that Digisarathi has designed the SEEDS website in 2022. The team led by Mr Prashant Pandit did a wonderful job - just the way one had visualized. Digisarathi is organization-friendly and we appreciate their sensitivities at all levels. On top of it the charges are reasonable and affordable for grass root NGOs.',
-    avatar: '/images/avatars/john-doe.jpg'
+    avatar: '/images/avatars/john-doe.jpg',
+    website: 'http://www.seedsjsr.org/'
   },
   {
     name: 'Adv. Jyoti',
     company: 'Founder, DISHA',
     text: 'We deeply appreciate the invaluable contributions digiSarathi has made to DISHA. Your dedication and hard work have significantly impacted our organization.',
-    avatar: '/images/avatars/jane-smith.jpg'
+    avatar: '/images/avatars/jane-smith.jpg',
+    website: 'https://dishaforvictim.org/'
   },
   {
     name: 'Trustee',
     company: 'Niswaan',
     text: 'The team delivered our project on time and exceeded our expectations. Their focus on simplicity while maintaining powerful functionality was exactly what we needed.',
-    avatar: '/images/avatars/john-doe.jpg'
+    avatar: '/images/avatars/john-doe.jpg',
+    website: 'https://niswaan.org/'
   },
   {
     name: 'Uma',
     company: 'Founder, Aarambh India',
     text: 'DigiSarathi has an impeccable sense of the technical aspects of website development. What sets them apart is their commitment & passion to understand and engage with the subject. This approach can\'t help but lead to a great product that is perfectly synced in terms of design, technology and content. Aarambh India is a testament to this.',
-    avatar: '/images/avatars/jane-smith.jpg'
+    avatar: '/images/avatars/jane-smith.jpg',
+    website: 'https://www.aarambhindia.org/'
   },
   {
     name: 'Dr. Sharada',
     company: 'Founder, Population First',
     text: 'Thank you for making technology less threatening.',
-    avatar: '/images/avatars/john-doe.jpg'
+    avatar: '/images/avatars/john-doe.jpg',
+    website: 'https://www.populationfirst.org/'
   }
 ]);
 
