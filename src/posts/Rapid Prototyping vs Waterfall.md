@@ -2,7 +2,7 @@
 title: Rapid Prototyping vs Waterfall model
 date: 2023-03-25
 author: digiSarathi
-tags: ['Software-dev', 'agile', 'waterfall']
+tags: ['Software Development', 'Agile' ]
 excerpt: A comprehensive comparison between Rapid Prototyping and Waterfall models in software development, exploring their differences, use cases, and when to choose each approach.
 ---
 

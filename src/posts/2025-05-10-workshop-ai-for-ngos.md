@@ -10,7 +10,7 @@ tags:
   - 'Nonprofits (NGOs)'
   - SMEs
   - Socent
-  - Workshop
+  - Workshops
 
 ---
 

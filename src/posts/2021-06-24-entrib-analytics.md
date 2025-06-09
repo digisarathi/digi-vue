@@ -16,7 +16,7 @@ tags:
   - 'Software Architecture'
 ---
 
-### Case Study: Entrib - Pioneering Digitization in Manufacturing
+Case Study: Entrib - Pioneering Digitization in Manufacturing
 
 #### Overview
 Entrib is at the forefront of bringing much-needed digitization to the manufacturing sector in India and beyond. Their innovative software product, **ShopWorx**, outlines an effective Industry 4.0 roadmap for manufacturers, enabling them to enhance efficiency and productivity in their operations.

@@ -8,7 +8,7 @@ guid: 'http://s780263233.onlinehome.us/?p=915'
 permalink: /innovsource/
 
 tags:
-  - Software-dev
+  - Software Development
   - 'Product UX/UI'
   - 'Software Architecture'
   - Industry

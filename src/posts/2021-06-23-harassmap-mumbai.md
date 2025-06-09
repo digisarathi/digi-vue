@@ -9,7 +9,6 @@ permalink: /harassmap-mumbai/
 
 tags:
   - 'Nonprofits (NGOs)'
-  - Crowdsourcing
   - 'Website Design'
   - 'Women Safety'
 ---

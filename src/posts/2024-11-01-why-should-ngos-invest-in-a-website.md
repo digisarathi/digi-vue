@@ -14,7 +14,7 @@ tags:
   - Website Design
 ---
 
-### Why have a website at all?
+Why have a website at all?
 
 It’s 2024 and everyone has a website. But this question is important because it directly leads to how any organization could or should use their website and for what goals.
 
