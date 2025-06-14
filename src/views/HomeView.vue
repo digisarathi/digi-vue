@@ -22,6 +22,11 @@ onMounted(() => {
 // Improved testimonials with more content and images
 const testimonials = ref([
   {
+    name: 'Santayan Sengupta',
+    company: 'Founder, ThoughtShop Foundation',
+    text: 'Prashant is certainly passionate about technology, but he has the vision and skill to make technology bend to human needs and not the other way around. This was particularly important in our context where users are young marginalised people with little prior access or comfort with technology. I was delighted to get a glimpse of his empathy for the people he was crafting a solution for.', avatar: '/images/avatars/jane-smith.jpg'
+  },
+  {
     name: 'Dr. Dwivedi',
     company: 'Secretary, SEEDS',
     text: 'We are happy to state that Digisarathi has designed the SEEDS website in 2022. The team led by Mr Prashant Pandit did a wonderful job - just the way one had visualized. Digisarathi is organization-friendly and we appreciate their sensitivities at all levels. On top of it the charges are reasonable and affordable for grass root NGOs.',
