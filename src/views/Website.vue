@@ -284,23 +284,71 @@ const testimonials = ref([
 
 const portfolioProjects = ref([
   {
-    title: 'E-commerce Platform',
-    description: 'A modern e-commerce solution with seamless user experience and secure payment integration.',
-    image: '/portfolio/ecommerce.jpg',
-    technologies: ['Vue.js', 'Node.js', 'MongoDB', 'Stripe']
+    title: 'CSA & POCSO',
+    description: 'India\'s first comprehensive portal on Child Sexual Abuse & Prevention of Child Sexual Offences',
+    image: '/portfolio/aarambh.png',
+    technologies: ['WordPress', 'Google Analytics']
   },
   {
-    title: 'Corporate Website',
-    description: 'A professional corporate website with dynamic content management and multilingual support.',
-    image: '/portfolio/corporate.jpg',
-    technologies: ['React', 'WordPress', 'PHP', 'MySQL']
+    title: 'SEEDS',
+    description: 'A professional website for nonprofit working with marginalized communities to create sustainable change.',
+    image: '/portfolio/seeds.png',
+    technologies: ['WordPress', 'Google Analytics']
   },
   {
-    title: 'Educational Portal',
-    description: 'An interactive learning platform with real-time collaboration features and progress tracking.',
-    image: '/portfolio/education.jpg',
-    technologies: ['Vue.js', 'Firebase', 'WebRTC', 'Material UI']
-  }
+    title: 'Solar Manufacturer',
+    description: 'A professional corporate website with dynamic content management and product catalog.',
+    image: '/portfolio/renewsys.png',
+    technologies: ['Wix', 'Google Analytics', 'Google Ads']
+  },
+  {
+    title: 'Crowdsourcing for Women Safety',
+    description: 'Open source platform for data gathering from citizens to enhance women safety',
+    image: '/portfolio/harassmap.png',
+    technologies: ['Ushahidi', 'Google Maps']
+  },
+  {
+    title: 'Rural women empowerment & livelihood',
+    description: 'A professional website for nonprofit in Amravati, Maharashtra working for rural women empowerment & livelihood',
+    image: '/portfolio/apeksha.png',
+    technologies: ['WordPress', 'Google Analytics']
+  },
+  {
+    title: 'Laadli Alumni',
+    description: 'A community platform for Laadli alumni by Population First',
+    image: '/portfolio/laadli.png',
+    technologies: ['WordPress', 'Google Analytics']
+  },
+  {
+    title: 'Minority women rehabilitation',
+    description: 'A nonprofit website for minority women rehabilitation for Awaaz-e-Niswaan',
+    image: '/portfolio/niswaan.jpg',
+    technologies: ['WordPress', 'Google Analytics']
+  },
+  {
+    title: 'Women Helpline',
+    description: 'A India-wide multilingual helpline information website for women safety',
+    image: '/portfolio/standup.png',
+    technologies: ['WordPress', 'Google Analytics']
+  },
+  {
+    title: 'Entrepreneurship Mentorship',
+    description: 'A startup incubator website for startups in Amravati, Maharashtra',
+    image: '/portfolio/varuntalwar.png',
+    technologies: ['WordPress', 'Google Analytics']
+  },
+  {
+    title: 'Water conservation',
+    description: 'A modern website for WaterAid India',
+    image: '/portfolio/wateraid.jpg',
+    technologies: ['WordPress', 'Google Analytics']
+  },
+  {
+    title: 'Legal Education',
+    description: 'A nonprofit website for Legal Education provided by IDIA',
+    image: '/portfolio/idia.png',
+    technologies: ['PHP', 'Google Analytics']
+  },
 ]);
 </script>
 
