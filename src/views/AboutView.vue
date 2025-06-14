@@ -80,6 +80,82 @@ Our teams and people are our most precious asset. We aim to have a positive and 
       </v-row>
     </v-container>
     </section>
+
+    <!-- Advisory Board Section -->
+    <section class="py-12 bg-grey-lighten-4">
+      <v-container>
+        <v-row>
+          <v-col cols="12" class="text-center mb-8">
+            <h2 class="font-weight-bold text-primary" :class="{ 'text-h3': !isMobile, 'text-h4': isMobile }">
+              Our Advisory Board
+            </h2>
+            <p class="text-h6 text-secondary mt-4">
+              Seasoned professionals guiding our strategic direction
+            </p>
+          </v-col>
+        </v-row>
+
+        <v-row class="justify-center">
+          <v-col 
+            v-for="(advisor, index) in advisors" 
+            :key="index" 
+            cols="12" 
+            md="6" 
+            lg="4"
+            class="d-flex"
+          >
+            <v-card class="h-100" elevation="3">
+              <v-img
+                :src="advisor.image"
+                height="300"
+                cover
+                class="bg-grey-lighten-1"
+              >
+                <template v-slot:placeholder>
+                  <v-row class="fill-height ma-0" align="center" justify="center">
+                    <v-progress-circular indeterminate color="primary"></v-progress-circular>
+                  </v-row>
+                </template>
+              </v-img>
+              <v-card-title class="text-h5 font-weight-bold text-primary">
+                {{ advisor.name }}
+              </v-card-title>
+              <v-card-subtitle class="text-subtitle-1">
+                {{ advisor.title }}
+              </v-card-subtitle>
+              <v-card-text class="text-body-1">
+                {{ advisor.bio }}
+              </v-card-text>
+              <v-card-actions>
+                <v-spacer></v-spacer>
+                <v-btn
+                  v-if="advisor.linkedin"
+                  :href="advisor.linkedin"
+                  target="_blank"
+                  icon
+                  size="small"
+                  color="primary"
+                  variant="text"
+                >
+                  <v-icon>{{ mdiLinkedin }}</v-icon>
+                </v-btn>
+                <v-btn
+                  v-if="advisor.twitter"
+                  :href="advisor.twitter"
+                  target="_blank"
+                  icon
+                  size="small"
+                  color="primary"
+                  variant="text"
+                >
+                  <v-icon>{{ mdiTwitter }}</v-icon>
+                </v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-col>
+        </v-row>
+      </v-container>
+    </section>
   </v-main>
 </template>
 <script setup>
@@ -96,18 +172,28 @@ const values = ref([
   {
     title: 'Innovation',
     description: 'We believe in continuous innovation and strive to bring the latest technology solutions to our clients.',
-    image: '/innovation.svg' // Replace with your actual SVG path
+    image: '/innovation.svg'
   },
   {
     title: 'Integrity',
     description: 'Our commitment to integrity ensures that we maintain transparency and honesty in all our dealings.',
-    image: '/certificate.svg' // Replace with your actual SVG path
+    image: '/certificate.svg'
   },
   {
     title: 'Customer Focus',
     description: 'We prioritize our customers and work closely with them to meet their needs and exceed their expectations.',
-    image: '/reviews.svg' // Replace with your actual SVG path
+    image: '/reviews.svg'
   }
+]);
+
+const advisors = ref([
+  {
+    name: 'Marcel Cerveny',
+    title: 'Technology Advisor',
+    bio: 'Marcel Červený is an accomplished IT leader and Agile expert, currently serving as CEO of BOOTIQ, with extensive experience in driving digital transformation and managing large-scale IT projects. With a background in business intelligence, e-commerce, and AI, he has led hundreds of projects, notably scaling BiQ Group through strategic acquisitions and partnerships. Marcel excels in software architecture, team mentorship, and stakeholder coordination, delivering innovative solutions for clients like DPD SK. Educated at the University of West Bohemia in Plzeň, he combines technical expertise with a passion for fostering growth and efficiency in tech-driven organizations.',
+    image: '/advisors/marcel-cerveny.jpeg',
+    linkedin: 'https://www.linkedin.com/in/marcelcerveny/',
+  },
 ]);
 </script>
 <style scoped>
