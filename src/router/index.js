@@ -11,6 +11,7 @@ import TermsOfService from '../views/TermsOfService.vue'
 import BlogView from '../views/BlogView.vue'
 import Post from '../views/Post.vue'
 import AiWorkshopsView from '@/views/AiWorkshopsView.vue'
+import ProjectManagementView from '@/views/ProjectManagementView.vue'
 import NotFound from '../views/NotFound.vue'
 
 const scrollBehavior = (to, from, savedPosition) => {
@@ -94,6 +95,11 @@ export const router = createRouter({
       path: '/ai-workshops',
       name: 'ai-workshops',
       component: AiWorkshopsView,
+    },
+    {
+      path: '/project-management',
+      name: 'project-management',
+      component: ProjectManagementView,
     },
     {
       path: '/:pathMatch(.*)*',

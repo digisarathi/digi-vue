@@ -158,9 +158,28 @@
                 </v-card-item>
               </v-card>
             </v-col>
+
+            <v-col cols="12" md="6" lg="4">
+              <v-card class="h-100">
+                <v-img src="/api/placeholder/400/200" height="200" cover></v-img>
+                <v-card-item>
+                  <v-card-title class="text-h5 text-primary font-weight-bold">Project Management</v-card-title>
+                  <v-card-subtitle class="text-secondary">For Professionals & Teams</v-card-subtitle>
+                  <v-card-text>
+                    <p>Master essential project management skills to deliver projects on time and within budget. Learn methodologies, tools, and best practices for effective project execution.</p>
+                    <v-chip class="ma-1" color="primary" size="small">Certification</v-chip>
+                    <v-chip class="ma-1" color="primary" size="small">Hands-on</v-chip>
+                  </v-card-text>
+                  <v-card-actions>
+                    <v-btn variant="text" color="primary" to="/project-management">
+                      Learn More
+                    </v-btn>
+                    <v-spacer></v-spacer>
+                  </v-card-actions>
+                </v-card-item>
+              </v-card>
+            </v-col>
           </v-row>
-
-
         </v-container>
       </section>
 
