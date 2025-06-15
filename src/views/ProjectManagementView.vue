@@ -12,7 +12,7 @@
             <p class="text-body-1 mb-6">
               Designed for fresh graduates and professionals stepping into leadership roles. Master essential project management skills to excel in your career and deliver successful projects.
             </p>
-            <v-btn color="primary" size="large" class="mr-4 mb-4">Register Now</v-btn>
+            <v-btn color="primary" size="large" class="mr-4 mb-4" href="https://forms.gle/RpenZtQvoMxa9MYe9" target="_blank" rel="noopener noreferrer">Register Now</v-btn>
           </v-col>
           <v-col cols="12" md="5" order="1" order-md="2" class="text-center">
             <v-img src="/project-management-hero.svg" max-width="450" contain alt="Project Management"></v-img>
@@ -129,7 +129,7 @@
           <v-card-text class="text-h6 mb-6 text-white">
             Whether you're a fresh graduate or looking to step up in your career, our Project Management Workshop will give you the skills and confidence to succeed.
           </v-card-text>
-          <v-btn color="white" size="x-large" class="text-primary mb-2">Enroll Now</v-btn>
+          <v-btn color="white" size="x-large" class="text-primary mb-2" href="https://forms.gle/RpenZtQvoMxa9MYe9" target="_blank" rel="noopener noreferrer">Enroll Now</v-btn>
           <div class="text-caption mt-2 text-white">
             Next batch starting soon | Limited seats available
           </div>
