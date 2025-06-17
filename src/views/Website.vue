@@ -194,6 +194,9 @@
                           variant="outlined">
                           {{ tech }}
                         </v-chip>
+                        <v-btn v-if="project.website" :href="project.website" target="_blank" color="primary" variant="tonal" class="mt-2" :append-icon="mdiOpenInNew">
+                          Visit Website
+                        </v-btn>
                       </v-col>
                       <v-col cols="12" md="6" class="d-flex justify-center">
                         <v-img :src="project.image" max-height="300" contain class="portfolio-image"></v-img>
@@ -241,7 +244,8 @@ import {
   mdiResponsive,
   mdiShieldCheck,
   mdiAccount,
-  mdiCircle
+  mdiCircle,
+  mdiOpenInNew,
 } from '@mdi/js';
 
 const testimonials = ref([
@@ -287,19 +291,22 @@ const portfolioProjects = ref([
     title: 'CSA & POCSO',
     description: 'India\'s first comprehensive portal on Child Sexual Abuse & Prevention of Child Sexual Offences',
     image: '/portfolio/aarambh.png',
-    technologies: ['WordPress', 'Google Analytics']
+    technologies: ['WordPress', 'Google Analytics'],
+    website: 'https://www.aarambhindia.org/'
   },
   {
     title: 'SEEDS',
     description: 'A professional website for nonprofit working with marginalized communities to create sustainable change.',
     image: '/portfolio/seeds.png',
-    technologies: ['WordPress', 'Google Analytics']
+    technologies: ['WordPress', 'Google Analytics'],
+    website: 'http://www.seedsjsr.org/'
   },
   {
     title: 'Solar Manufacturer',
     description: 'A professional corporate website with dynamic content management and product catalog.',
     image: '/portfolio/renewsys.png',
-    technologies: ['Wix', 'Google Analytics', 'Google Ads']
+    technologies: ['Wix', 'Google Analytics', 'Google Ads'],
+    website: 'https://renewsysworld.com/'
   },
   {
     title: 'Crowdsourcing for Women Safety',
@@ -311,7 +318,8 @@ const portfolioProjects = ref([
     title: 'Rural women empowerment & livelihood',
     description: 'A professional website for nonprofit in Amravati, Maharashtra working for rural women empowerment & livelihood',
     image: '/portfolio/apeksha.png',
-    technologies: ['WordPress', 'Google Analytics']
+    technologies: ['WordPress', 'Google Analytics'],
+    website: 'https://apekshasociety.org/'
   },
   {
     title: 'Laadli Alumni',
@@ -329,7 +337,8 @@ const portfolioProjects = ref([
     title: 'Women Helpline',
     description: 'A India-wide multilingual helpline information website for women safety',
     image: '/portfolio/standup.png',
-    technologies: ['WordPress', 'Google Analytics']
+    technologies: ['WordPress', 'Google Analytics'],
+    website: 'https://standupagainstviolence.org/'
   },
   {
     title: 'Entrepreneurship Mentorship',
@@ -341,13 +350,14 @@ const portfolioProjects = ref([
     title: 'Water conservation',
     description: 'A modern website for WaterAid India',
     image: '/portfolio/wateraid.jpg',
-    technologies: ['WordPress', 'Google Analytics']
+    technologies: ['WordPress', 'Google Analytics'],
   },
   {
     title: 'Legal Education',
     description: 'A nonprofit website for Legal Education provided by IDIA',
     image: '/portfolio/idia.png',
-    technologies: ['PHP', 'Google Analytics']
+    technologies: ['PHP', 'Google Analytics'],
+    website: 'https://www.idialaw.org/'
   },
 ]);
 </script>
