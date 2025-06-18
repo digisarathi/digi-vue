@@ -182,27 +182,30 @@
 
           <v-row>
             <v-col cols="12">
-              <v-carousel cycle height="400" hide-delimiter-background show-arrows="hover" delimiter-icon="mdi-circle"
+              <v-carousel cycle height="500" hide-delimiter-background show-arrows="hover" delimiter-icon="mdi-circle"
                 class="portfolio-carousel">
                 <v-carousel-item v-for="(project, i) in portfolioProjects" :key="i">
-                  <v-sheet height="100%">
-                    <v-row class="fill-height" align="center" justify="center">
-                      <v-col cols="12" md="6" class="text-center text-md-left pa-6">
-                        <h3 class="text-h5 font-weight-bold mb-2">{{ project.title }}</h3>
-                        <p class="text-body-1 mb-4">{{ project.description }}</p>
-                        <v-chip v-for="(tech, index) in project.technologies" :key="index" class="ma-1" color="primary"
-                          variant="outlined">
-                          {{ tech }}
-                        </v-chip>
-                        <v-btn v-if="project.website" :href="project.website" target="_blank" color="primary" variant="tonal" class="mt-2" :append-icon="mdiOpenInNew">
-                          Visit Website
-                        </v-btn>
-                      </v-col>
-                      <v-col cols="12" md="6" class="d-flex justify-center">
-                        <v-img :src="project.image" max-height="300" contain class="portfolio-image"></v-img>
-                      </v-col>
-                    </v-row>
-                  </v-sheet>
+                  <div class="portfolio-item" :style="{ backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(' + project.image + ')' }">
+                    <v-container class="fill-height">
+                      <v-row class="fill-height" align="center" justify="center">
+                        <v-col cols="12" md="8" class="text-center text-white">
+                          <h3 class="text-h4 font-weight-bold mb-4">{{ project.title }}</h3>
+                          <p class="text-body-1 mb-6">{{ project.description }}</p>
+                          <div class="mb-6">
+                            <v-chip v-for="(tech, index) in project.technologies" :key="index" class="ma-1" color="primary"
+                              variant="outlined" label>
+                              {{ tech }}
+                            </v-chip>
+                          </div>
+                          <v-btn v-if="project.website" :href="project.website" target="_blank" color="white" 
+                            variant="flat" size="large" :append-icon="mdiOpenInNew" class="elevation-4 text-primary font-weight-bold"
+                            style="text-transform: none; letter-spacing: 0.5px;">
+                            Visit Website
+                          </v-btn>
+                        </v-col>
+                      </v-row>
+                    </v-container>
+                  </div>
                 </v-carousel-item>
               </v-carousel>
             </v-col>
@@ -374,6 +377,58 @@ const portfolioProjects = ref([
 .portfolio-carousel {
   border-radius: 8px;
   overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-item {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: scale(1.01);
+}
+
+.portfolio-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.portfolio-item .v-container {
+  position: relative;
+  z-index: 2;
+}
+
+.portfolio-item .v-chip {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  color: white !important;
+  backdrop-filter: blur(5px);
+}
+
+.portfolio-item .v-btn {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  min-width: 180px;
+}
+
+.portfolio-item .v-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
 }
 
 .portfolio-image {
