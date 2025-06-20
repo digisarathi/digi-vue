@@ -28,7 +28,7 @@
         <v-row>
           <v-col v-for="(value, index) in values" :key="index" cols="12" md="4" class=" pa-4 text-center ">
             <v-card :elevation="2" height="100%" class="ma-1 pa-4">
-              <v-img :src="value.image" max-width="450"  max-height="200" class="mb-4"  contain></v-img>
+              <v-img :src="value.image" max-width="450"  height="200" class="mb-4"  contain></v-img>
               <h2 class="text-h5 font-weight-bold text-primary mb-2">{{ value.title }}</h2>
               <p class="text-subtitle-1 text-secondary">{{ value.description }}</p>
             </v-card>
@@ -47,35 +47,47 @@ Our teams and people are our most precious asset. We aim to have a positive and 
       </v-row>
       <v-row>
           <v-col cols="12" class="text-center ">
-            <h2 class="font-weight-bold mb-3 text-primary" :class="{ 'text-h3': !isMobile, 'text-h6': isMobile }">Our Founder</h2>
+            <h2 class="font-weight-bold mb-3 text-primary" :class="{ 'text-h3': !isMobile, 'text-h6': isMobile }">Our Team</h2>
           </v-col>
         </v-row>
-      <v-row class="my-2 py-6 align-center">
-        <v-col cols="12" md="8" class="d-flex flex-column align-center">
-          <v-card variant="text" class="">
-            <v-card-title class="text-primary font-weight-bold">Prashant Pandit</v-card-title>
-            <v-card-text class="text-secondary text-h6 mb-4">
-              <div class="mb-2">
-                Prashant brings a comprehensive knowledge of technology and its application in a wide range of complex projects, both in the commercial and not-for-profit sectors. 
-              
-                After completing an M.S. degree in Computer Science from Leiden University in the Netherlands, 
-                he spent five years at India’s NASSCOM Foundation launching and managing landmark programs such 
-                as BiGTech with Techsoup USA and ConnectIT with Microsoft. True to his belief in volunteering impact, 
-                Prashant conceptualized the MyKartavya program for NASSCOM member companies to leverage corporate 
-                volunteering.
-              </div>
-              <div class="mb-2">
-                Working with hundreds of non-profits across India, he gained first-hand insight into 
-                their technology challenges. He founded digiSarathi in 2013, to cater to the innovation needs of its Indian and global clients across various industry sectors.
-                Originally from Mumbai, Prashant now resides in Pune, engaging and mentoring its vibrant startup ecosystem.
-              </div>
-              <a href="https://www.linkedin.com/in/prashant11/" target="_blank"><v-icon size="24" class="text-primary mr-2">{{mdiLinkedin}}</v-icon></a>
-              <a href="https://www.x.com/prashantpandit" target="_blank"><v-icon size="24" class="text-primary">{{mdiTwitter}}</v-icon></a>
-            </v-card-text>
-          </v-card>
-        </v-col>
-        <v-col cols="12" md="4" class="d-flex justify-center">
-          <v-img src="/prashant.png" max-width="300" contain class="grey-filter"></v-img>
+      <v-row class="my-2 py-6">
+        <v-col 
+          v-for="(member, index) in teamMembers" 
+          :key="index" 
+          cols="12" 
+          class="mb-8"
+          :class="{ 'd-flex flex-column': index % 2 === 0, 'd-flex flex-column-reverse': index % 2 !== 0 }"
+        >
+          <v-row class="align-center">
+            <v-col cols="12" md="8" :order-md="index % 2 === 0 ? 1 : 2">
+              <v-card variant="text" class="h-100 d-flex flex-column">
+                <v-card-title class="text-primary font-weight-bold">{{ member.name }}</v-card-title>
+                <v-card-subtitle class="text-h6 text-secondary">{{ member.role }}</v-card-subtitle>
+                <v-card-text class="text-secondary text-body-1">
+                  <div v-for="(paragraph, pIndex) in member.bio" :key="pIndex" class="mb-3">
+                    {{ paragraph }}
+                  </div>
+                </v-card-text>
+                <v-card-actions class="mt-auto ml-1">
+                  <a v-if="member.linkedin" :href="member.linkedin" target="_blank" class="text-decoration-none">
+                    <v-icon size="24" class="text-primary mr-2">{{mdiLinkedin}}</v-icon>
+                  </a>
+                  <a v-if="member.twitter" :href="member.twitter" target="_blank" class="text-decoration-none">
+                    <v-icon size="24" class="text-primary">{{mdiTwitter}}</v-icon>
+                  </a>
+                </v-card-actions>
+              </v-card>
+            </v-col>
+            <v-col cols="12" md="4" :order-md="index % 2 === 0 ? 2 : 1" class="d-flex justify-center">
+              <v-img 
+                :src="member.image" 
+                max-width="300" 
+                contain 
+                class="grey-filter"
+                :style="{ maxHeight: '400px' }"
+              ></v-img>
+            </v-col>
+          </v-row>
         </v-col>
       </v-row>
     </v-container>
@@ -171,7 +183,7 @@ const props = defineProps({
 const values = ref([
   {
     title: 'Innovation',
-    description: 'We believe in continuous innovation and strive to bring the latest technology solutions to our clients.',
+    description: 'We believe in continuous innovation to bring effective & efficient technology solutions to our clients.',
     image: '/innovation.svg'
   },
   {
@@ -180,10 +192,38 @@ const values = ref([
     image: '/certificate.svg'
   },
   {
-    title: 'Customer Focus',
-    description: 'We prioritize our customers and work closely with them to meet their needs and exceed their expectations.',
+    title: 'Customer Delight',
+    description: 'We go beyond satisfaction, building lasting relationships through personalized attention.',
     image: '/reviews.svg'
   }
+]);
+
+const teamMembers = ref([
+  {
+    name: 'Prashant Pandit',
+    role: 'Founder & CEO',
+    image: '/prashant.png',
+    bio: [
+      'Prashant brings a comprehensive knowledge of technology and its application in a wide range of complex projects, both in the commercial and not-for-profit sectors.',
+      'After completing an M.S. degree in Computer Science from Leiden University in the Netherlands, he spent five years at India\'s NASSCOM Foundation launching and managing landmark programs such as BiGTech with Techsoup USA and ConnectIT with Microsoft. True to his belief in volunteering impact, Prashant conceptualized the MyKartavya program for NASSCOM member companies to leverage corporate volunteering.',
+      'Working with hundreds of non-profits across India, he gained first-hand insight into their technology challenges. He founded digiSarathi in 2013, to cater to the innovation needs of its Indian and global clients across various industry sectors. Originally from Mumbai, Prashant now resides in Pune, engaging and mentoring its vibrant startup ecosystem.'
+    ],
+    linkedin: 'https://www.linkedin.com/in/prashant11/',
+    twitter: 'https://www.x.com/prashantpandit'
+  },
+  // Add more team members here following the same structure
+  // {
+  //   name: 'Team Member Name',
+  //   role: 'Team Member Role',
+  //   image: '/path/to/image.jpg',
+  //   bio: [
+  //     'First paragraph of bio',
+  //     'Second paragraph of bio',
+  //     'Third paragraph of bio'
+  //   ],
+  //   linkedin: 'https://linkedin.com/...',
+  //   twitter: 'https://twitter.com/...'
+  // }
 ]);
 
 const advisors = ref([
