@@ -211,6 +211,17 @@ const teamMembers = ref([
     linkedin: 'https://www.linkedin.com/in/prashant11/',
     twitter: 'https://www.x.com/prashantpandit'
   },
+  {
+    name: 'Kshitija Pradhan',
+    role: 'Human Resources',
+    image: '/kshitija.jpeg',
+    bio: [
+      'Kshitija is a seasoned HR professional with a passion for talent acquisition and employee engagement. With expertise in recruitment, performance management, and organizational development, she plays a pivotal role in shaping our company culture and building high-performing teams.',
+      'Her approach to human resources combines strategic thinking with a deep understanding of people dynamics. She specializes in identifying and attracting top talent, fostering professional growth, and creating an inclusive work environment where every team member can thrive.',
+      'With a keen eye for potential and a commitment to employee well-being, Kshitija ensures that our organization not only finds the right people but also nurtures their growth and development. Her initiatives in learning and development have been instrumental in building a strong, motivated workforce aligned with our company values.'
+    ],
+    
+  },
   // Add more team members here following the same structure
   // {
   //   name: 'Team Member Name',
