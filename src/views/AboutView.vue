@@ -112,57 +112,59 @@ Our teams and people are our most precious asset. We aim to have a positive and 
             v-for="(advisor, index) in advisors" 
             :key="index" 
             cols="12" 
-            md="6" 
-            lg="4"
-            class="d-flex"
+            class="mb-6"
           >
             <v-card class="h-100" elevation="3">
-              <v-img
-                :src="advisor.image"
-                height="300"
-                cover
-                class="bg-grey-lighten-1"
-              >
-                <template v-slot:placeholder>
-                  <v-row class="fill-height ma-0" align="center" justify="center">
-                    <v-progress-circular indeterminate color="primary"></v-progress-circular>
-                  </v-row>
-                </template>
-              </v-img>
-              <v-card-title class="text-h5 font-weight-bold text-primary">
-                {{ advisor.name }}
-              </v-card-title>
-              <v-card-subtitle class="text-subtitle-1">
-                {{ advisor.title }}
-              </v-card-subtitle>
-              <v-card-text class="text-body-1">
-                {{ advisor.bio }}
-              </v-card-text>
-              <v-card-actions>
-                <v-spacer></v-spacer>
-                <v-btn
-                  v-if="advisor.linkedin"
-                  :href="advisor.linkedin"
-                  target="_blank"
-                  icon
-                  size="small"
-                  color="primary"
-                  variant="text"
-                >
-                  <v-icon>{{ mdiLinkedin }}</v-icon>
-                </v-btn>
-                <v-btn
-                  v-if="advisor.twitter"
-                  :href="advisor.twitter"
-                  target="_blank"
-                  icon
-                  size="small"
-                  color="primary"
-                  variant="text"
-                >
-                  <v-icon>{{ mdiTwitter }}</v-icon>
-                </v-btn>
-              </v-card-actions>
+              <v-row no-gutters class="h-100">
+                <!-- Left Column - Image and Social Links -->
+                <v-col cols="12" sm="4" class="pa-4 d-flex flex-column align-center text-center">
+                  <v-avatar size="150" class="elevation-2 mb-3">
+                    <v-img
+                      :src="advisor.image"
+                      cover
+                      class="bg-grey-lighten-1"
+                    ></v-img>
+                  </v-avatar>
+                  <!-- Social Links -->
+                  <div class="mt-auto">
+                    <v-btn
+                      v-if="advisor.linkedin"
+                      :href="advisor.linkedin"
+                      target="_blank"
+                      icon
+                      size="small"
+                      color="primary"
+                      variant="text"
+                      class="mx-1"
+                    >
+                      <v-icon>{{ mdiLinkedin }}</v-icon>
+                    </v-btn>
+                    <v-btn
+                      v-if="advisor.twitter"
+                      :href="advisor.twitter"
+                      target="_blank"
+                      icon
+                      size="small"
+                      color="primary"
+                      variant="text"
+                      class="mx-1"
+                    >
+                      <v-icon>{{ mdiTwitter }}</v-icon>
+                    </v-btn>
+                  </div>
+                  
+                </v-col>
+                
+                <!-- Right Column - Bio -->
+                <v-col cols="12" sm="8" class="pa-4 d-flex flex-column">
+                  <v-card-text class="text-body-2 pa-0">
+                   <v-card-title class="text-h5 font-weight-bold text-primary pa-0 mb-1">{{ advisor.name }}</v-card-title>
+                   <v-card-subtitle class="text-subtitle-1 pa-0 mb-3 text-medium-emphasis">{{ advisor.title }}</v-card-subtitle>
+                    {{ advisor.bio }}
+                  </v-card-text>
+                  
+                </v-col>
+              </v-row>
             </v-card>
           </v-col>
         </v-row>
@@ -222,29 +224,23 @@ const teamMembers = ref([
     ],
     
   },
-  // Add more team members here following the same structure
-  // {
-  //   name: 'Team Member Name',
-  //   role: 'Team Member Role',
-  //   image: '/path/to/image.jpg',
-  //   bio: [
-  //     'First paragraph of bio',
-  //     'Second paragraph of bio',
-  //     'Third paragraph of bio'
-  //   ],
-  //   linkedin: 'https://linkedin.com/...',
-  //   twitter: 'https://twitter.com/...'
-  // }
 ]);
 
 const advisors = ref([
   {
     name: 'Marcel Cerveny',
     title: 'Technology Advisor',
-    bio: 'Marcel Červený is an accomplished IT leader and Agile expert, currently serving as CEO of BOOTIQ, with extensive experience in driving digital transformation and managing large-scale IT projects. With a background in business intelligence, e-commerce, and AI, he has led hundreds of projects, notably scaling BiQ Group through strategic acquisitions and partnerships. Marcel excels in software architecture, team mentorship, and stakeholder coordination, delivering innovative solutions for clients like DPD SK. Educated at the University of West Bohemia in Plzeň, he combines technical expertise with a passion for fostering growth and efficiency in tech-driven organizations.',
+    bio: 'Marcel Červený is an accomplished IT leader and Agile expert, currently serving as CEO of BOOTIQ, with extensive experience in managing large-scale IT projects. With a background in business intelligence, e-commerce, and AI, he has led hundreds of projects, notably scaling BiQ Group through strategic acquisitions and partnerships. Marcel excels in software architecture, team mentorship, and stakeholder coordination, delivering innovative solutions for clients like DPD SK.',
     image: '/advisors/marcel-cerveny.jpeg',
     linkedin: 'https://www.linkedin.com/in/marcelcerveny/',
   },
+  {
+    name: 'Ram Iyer',
+    title: 'Mentor',
+    bio: 'Ram Iyer is an experienced Business Strategy Consultant, having graduated from the prestigious Indian Institute of Management, Ahmedabad (IIMA). He brings 35 years of diverse work experience, including 12 years in investment banking and 12 years dedicated to alternative education and social innovation. Additionally, he has spent 11 years focusing on Vipassana, service, and establishment management. His multifaceted background equips him with a unique perspective, making him a valuable advisor in various sectors.',
+    image: '/advisors/ramiyer.jpg',
+    linkedin: 'https://www.linkedin.com/in/ram-iyer-908840143/',
+  }
 ]);
 </script>
 <style scoped>
