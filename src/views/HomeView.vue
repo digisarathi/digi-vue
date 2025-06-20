@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
-import { mdiWeb, mdiCellphoneLink, mdiTrendingUp, mdiSchool, mdiCircle } from '@mdi/js';
+import { mdiWeb, mdiCellphoneLink, mdiTrendingUp, mdiSchool, mdiCircle, mdiAccount } from '@mdi/js';
 
 const router = useRouter();
 const props = defineProps({
@@ -24,13 +24,14 @@ const testimonials = ref([
   {
     name: 'Santayan Sengupta',
     company: 'Founder, ThoughtShop Foundation',
-    text: 'Prashant is certainly passionate about technology, but he has the vision and skill to make technology bend to human needs and not the other way around. This was particularly important in our context where users are young marginalised people with little prior access or comfort with technology. I was delighted to get a glimpse of his empathy for the people he was crafting a solution for.', avatar: '/images/avatars/jane-smith.jpg'
+    text: 'Prashant is certainly passionate about technology, but he has the vision and skill to make technology bend to human needs and not the other way around. This was particularly important in our context where users are young marginalised people with little prior access or comfort with technology. I was delighted to get a glimpse of his empathy for the people he was crafting a solution for.', avatar: '/images/avatars/jane-smith.jpg',
+    photo: 'santayan.webp'
   },
   {
     name: 'Dr. Dwivedi',
     company: 'Secretary, SEEDS',
     text: 'We are happy to state that Digisarathi has designed the SEEDS website in 2022. The team led by Mr Prashant Pandit did a wonderful job - just the way one had visualized. Digisarathi is organization-friendly and we appreciate their sensitivities at all levels. On top of it the charges are reasonable and affordable for grass root NGOs.',
-    avatar: '/images/avatars/john-doe.jpg'
+    photo: 'shubhra.png'
   },
   {
     name: 'Adv. Jyoti',
@@ -48,31 +49,31 @@ const testimonials = ref([
     name: 'Uma',
     company: 'Founder, Aarambh India',
     text: "DigiSarathi has an impeccable sense of the technical aspects of website development. What sets them apart is their commitment & passion to understand and engage with the subject. This approach can't help but lead to a great product that is perfectly synced in terms of design, technology and content. Aarambh India is a testament to this.",
-    avatar: '/images/avatars/jane-smith.jpg'
+    photo: 'uma.jpg'
   },
   {
     name: 'Dr. Sharada',
     company: 'Founder, Population First',
     text: 'Thank you for making technology less threatening.',
-    avatar: '/images/avatars/john-doe.jpg'
+    photo: 'sharada.jpg'
   },
   {
     name: 'Vinelle Vaz',
     company: 'Head - Retail, RenewSys',
     text: 'digiSarathi is my go-to whenever I want to discuss some new tech idea and its implementation.',
-    avatar: '/images/avatars/jane-smith.jpg'
+    photo: 'vinelle.jpeg'
   },
   {
     name: 'Daniel Ben Horin',
     company: 'Founder, Techsoup.org',
     text: "A comprehensive knowledge of tech issues, cross-cultural sophistication and a fierce dedication to his work were all apparent. Much of our network's success in India can be credited to his involvement.",
-    avatar: '/images/avatars/jane-smith.jpg'
+    photo: 'daniel.png'
   },
   {
     name: 'Sundar Iyer',
     company: 'Founder, Suryodaya',
     text: "digiSarathi helped us decide that the software system we had in mind should be evaluated after we reach a certain scale otherwise we are only adding complexities to the resolution process.",
-    avatar: '/images/avatars/jane-smith.jpg'
+    photo: 'sundar.webp'
   },
   {
     name: 'Seroja Manoj',
@@ -230,8 +231,25 @@ const goToService = (route) => {
                     <div class="quote-marks mb-4">"</div>
                     <p class="text-h6 font-italic mb-6">{{ testimonial.text }}</p>
                     <v-divider width="60" class="mb-4"></v-divider>
-                    <p class="text-subtitle-1 font-weight-bold mb-1">{{ testimonial.name }}</p>
-                    <p class="text-subtitle-2">{{ testimonial.company }}</p>
+                    <div class="d-flex align-center justify-center">
+                      <v-avatar size="60" class="mr-4">
+                        <v-img 
+                          :src="'/clients/' + testimonial.photo" 
+                          :alt="testimonial.name + ' photo'"
+                          cover
+                          class="bg-grey-lighten-3"
+                        >
+                          <template v-slot:placeholder>
+                            <v-icon size="24">mdiAccount</v-icon>
+                          </template>
+                        </v-img>
+                      </v-avatar>
+                      <div class="text-left">
+                        <p class="text-subtitle-1 font-weight-bold mb-1">{{ testimonial.name }}</p>
+                        <p class="text-subtitle-2 text-medium-emphasis">{{ testimonial.role }}</p>
+                        <p class="text-caption text-medium-emphasis">{{ testimonial.company }}</p>
+                      </div>
+                    </div>
                   </div>
                 </v-card>
               </v-carousel-item>
