@@ -118,6 +118,7 @@ const navItems = ref([
   { title: 'Home', route: '/' },
   { title: 'About', route: '/about' },
   { title: 'Services', route: { path: '/', hash: '#services' } },
+  { title: 'myCTO', route: '/mycto' },
   { title: 'Blog', route: '/blog' },
   { title: 'Contact', route: '/contact' },
 ])
