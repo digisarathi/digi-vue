@@ -6,17 +6,19 @@
         <v-row align="center">
           <v-col cols="12" md="7" order="2" order-md="1">
             <h1 class="text-h2 text-primary font-weight-bold mb-4">
-              myCTO: Your Virtual Chief Technology Officer
+              Your Virtual Chief Technology Officer
             </h1>
             <p class="text-body-1 mb-6">
-              At <strong>myCTO</strong>, we bring the expertise of a Chief Technology Officer to your SME or NGO without the hefty price tag.
+              With <strong>myCTO</strong>, we bring the expertise of a Chief Technology Officer to your SME or NGO without the hefty price tag.
                Whether you’re navigating digital transformation, troubleshooting tech issues, or planning your next big project, myCTO is your trusted partner.
             </p>
             <v-btn color="primary" size="large" class="mr-4 mb-4" href="mailto:mycto@digisarathi.com">
               Get in touch
             </v-btn>
           </v-col>
-         
+         <v-col cols="12" md="5" order="1" order-md="2" class="text-center justify-center">
+            <v-img src="/myCTO_logo.png" max-width="350" contain alt="myCTO"></v-img>
+          </v-col>
         </v-row>
       </v-container>
     </section>
