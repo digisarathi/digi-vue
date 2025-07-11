@@ -75,7 +75,7 @@
                                 </v-card-text>
                                 <v-card-actions>
                                     <v-spacer></v-spacer>
-                                    <v-btn color="primary" href="https://forms.gle/xAPmjaPoeJkW1SD38" target="_blank"
+                                    <v-btn color="primary" href="https://forms.gle/fYyPsMivM4U5v4Gi6" target="_blank"
                                         rel="noopener">
                                         Register </v-btn>
                                 </v-card-actions>
@@ -231,7 +231,7 @@
                         <v-btn color="white" size="large" href="mailto:hello@digisarathi.com" class="mr-4">
                             Connect with us
                         </v-btn>
-                        <v-btn color="white" size="large" href="https://forms.gle/xAPmjaPoeJkW1SD38" target="_blank"
+                        <v-btn color="white" size="large" href="https://forms.gle/fYyPsMivM4U5v4Gi6" target="_blank"
                             rel="noopener">
                             Register Now
                         </v-btn>

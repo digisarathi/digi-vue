@@ -13,7 +13,7 @@
               Designed for fresh graduates and professionals stepping into leadership roles. Master essential project
               management skills to excel in your career and deliver successful projects.
             </p>
-            <v-btn color="primary" size="large" class="mr-4 mb-4" href="https://forms.gle/RpenZtQvoMxa9MYe9"
+            <v-btn color="primary" size="large" class="mr-4 mb-4" href="https://forms.gle/fYyPsMivM4U5v4Gi6"
               target="_blank" rel="noopener noreferrer">Register Now</v-btn>
           </v-col>
           <v-col cols="12" md="5" order="1" order-md="2" class="text-center">
@@ -88,7 +88,7 @@
             give
             you the skills and confidence to succeed.
           </v-card-text>
-          <v-btn color="white" size="x-large" class="text-primary mb-2" href="https://forms.gle/RpenZtQvoMxa9MYe9"
+          <v-btn color="white" size="x-large" class="text-primary mb-2" href="https://forms.gle/fYyPsMivM4U5v4Gi6"
             target="_blank" rel="noopener noreferrer">Enroll Now</v-btn>
           <div class="text-caption mt-2 text-white">
             Next batch starting soon | Limited seats available

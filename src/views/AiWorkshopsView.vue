@@ -79,7 +79,7 @@
                 </v-card-text>
                 <v-card-actions>
                   <v-spacer></v-spacer>
-                  <v-btn color="primary" href="https://forms.gle/GiXgCoHYSiEsRcnPA" target="_blank" rel="noopener">
+                  <v-btn color="primary" href="https://forms.gle/fYyPsMivM4U5v4Gi6" target="_blank" rel="noopener">
                     Register </v-btn>
                 </v-card-actions>
               </v-card-item>
@@ -241,7 +241,7 @@
               Join our AI Workshop Series and unlock the potential of artificial intelligence for
               your organization.
             </p>
-            <v-btn color="white" size="large" href="mailto:hello@digisarathi.com">
+            <v-btn color="white" size="large" href="https://forms.gle/fYyPsMivM4U5v4Gi6">
               Register Now
             </v-btn>
           </v-col>
