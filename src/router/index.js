@@ -14,13 +14,14 @@ import AiWorkshopsView from '@/views/AiWorkshopsView.vue'
 import ProjectManagementView from '@/views/ProjectManagementView.vue'
 import myCTOView from '@/views/myCTO.vue'
 import NotFound from '../views/NotFound.vue'
+import SocialMediaMarketingView from '@/views/SocialMediaMarketingView.vue'
 
 const scrollBehavior = (to, from, savedPosition) => {
   if (to.hash) {
     return {
       el: to.hash,
       behavior: 'smooth',
-      top: 100 // Adjust this value to account for any fixed headers
+      top: 100, // Adjust this value to account for any fixed headers
     }
   } else if (savedPosition) {
     return savedPosition
@@ -90,7 +91,7 @@ export const router = createRouter({
     },
     {
       path: '/workshop-ai-for-ngos/',
-      redirect:'/ai-workshops',
+      redirect: '/ai-workshops',
     },
     {
       path: '/ai-workshops',
@@ -106,6 +107,11 @@ export const router = createRouter({
       path: '/mycto',
       name: 'mycto',
       component: myCTOView,
+    },
+    {
+      path: '/social-media-marketing',
+      name: 'social-media-marketing',
+      component: SocialMediaMarketingView,
     },
     {
       path: '/:pathMatch(.*)*',

@@ -117,6 +117,30 @@
               <v-card class="h-100">
                 <v-img src="/api/placeholder/400/200" height="200" cover></v-img>
                 <v-card-item>
+                  <v-card-title class="text-h5 text-primary font-weight-bold">Social Media Marketing</v-card-title>
+                  <v-card-subtitle class="text-secondary">For NGOs & Small Businesses</v-card-subtitle>
+                  <v-card-text>
+                    <p>Learn how to use social media platforms to increase your organization's reach, engage your
+                      audience, and drive real-world impact. Covers content strategy, analytics, and campaign
+                      management.</p>
+                    <v-chip class="ma-1" color="primary" size="small">Beginner-Friendly</v-chip>
+                    <v-chip class="ma-1" color="primary" size="small">Practical</v-chip>
+                    <v-chip class="ma-1" color="primary" size="small">Strategy</v-chip>
+                  </v-card-text>
+                  <v-card-actions>
+                    <v-btn variant="text" color="primary" to="/social-media-marketing">
+                      Learn More
+                    </v-btn>
+                    <v-spacer></v-spacer>
+                  </v-card-actions>
+                </v-card-item>
+              </v-card>
+            </v-col>
+
+            <v-col cols="12" md="6" lg="4">
+              <v-card class="h-100">
+                <v-img src="/api/placeholder/400/200" height="200" cover></v-img>
+                <v-card-item>
                   <v-card-title class="text-h5 text-primary font-weight-bold">WordPress Development</v-card-title>
                   <v-card-subtitle class="text-secondary">Website Building for Organizations</v-card-subtitle>
                   <v-card-text>
@@ -166,7 +190,8 @@
                   <v-card-title class="text-h5 text-primary font-weight-bold">Project Management</v-card-title>
                   <v-card-subtitle class="text-secondary">For Professionals & Teams</v-card-subtitle>
                   <v-card-text>
-                    <p>Master essential project management skills to deliver projects on time and within budget. Learn methodologies, tools, and best practices for effective project execution.</p>
+                    <p>Master essential project management skills to deliver projects on time and within budget. Learn
+                      methodologies, tools, and best practices for effective project execution.</p>
                     <v-chip class="ma-1" color="primary" size="small">Certification</v-chip>
                     <v-chip class="ma-1" color="primary" size="small">Hands-on</v-chip>
                   </v-card-text>
