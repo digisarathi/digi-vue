@@ -399,26 +399,26 @@ const pricingPlans = ref([
 // Testimonials data
 const testimonials = ref([
   {
-    quote: "myCTO gave us the confidence to launch our app without hiring a full-time CTO. Their strategic advice saved us months of trial and error!",
+    quote: "myCTO helped us evaluate if our portal needed an upgrade or not. This strategic advice saved us lot of money & time!",
     name: "Sarah M.",
     role: "CEO",
-    company: "GreenPath NGO",
+    company: "Nonprofit association",
     rating: 5,
     icon: mdiOfficeBuilding
   },
   {
-    quote: "Our team had a critical server issue, and myCTO's expert walked us through the fix over Zoom in hours. Worth every penny!",
+    quote: "myCTO showed us how our hosting bill was too high. We appreciate the annual savings!",
     name: "Raj K.",
     role: "Founder",
-    company: "TechTrend Innovations",
+    company: "Agritech startup",
     rating: 5,
     icon: mdiDomain
   },
   {
-    quote: "Having access to a CTO via email and calls feels like having an in-house expert. It's a game-changer for our small team.",
-    name: "Lisa T.",
+    quote: "Having access to a CTO expert via email and calls feels like having an in-house expert. It's a game-changer for our small team.",
+    name: "Gayatri",
     role: "Operations Lead",
-    company: "CommunityWorks",
+    company: "NGO",
     rating: 5,
     icon: mdiAccountGroup
   }
