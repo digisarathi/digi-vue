@@ -9,8 +9,8 @@
             <v-col cols="12" md="7" order="2" order-md="1">
               <h1 class="text-h2 text-primary font-weight-bold mb-4">Building Tomorrow's Leaders with Tech Skills</h1>
               <p class="text-body-1 mb-6">
-                digiSarathi offers specialized tech training for NGO and SME staff, as well as tech students in Pune.
-                From AI workshops to software development to managing WordPress, we help bridge the digital divide.
+                digiSarathi offers specialized tech training for NGOs, SMEs, and Students towards bridging the digital
+                divide through AI, marketing, communications, and software development training programs.
               </p>
 
             </v-col>
@@ -29,7 +29,7 @@
           <v-row class="text-center mb-8">
             <v-col>
               <h2 class="text-h4 text-primary font-weight-bold">Why choose digiSarathi?</h2>
-              <p class="text-body-1 mt-2">What makes our tech training programs unique</p>
+              <p class="text-body-1 mt-2">What makes our capacity building programs unique</p>
             </v-col>
           </v-row>
           <v-row>
@@ -75,6 +75,51 @@
                 </v-card-item>
               </v-card>
             </v-col>
+            <!-- AI Workshops cards -->
+            <v-col cols="12" md="4">
+              <v-card height="100%" class="feature-card">
+                <v-card-item class="pa-6">
+                  <div class="d-flex flex-column align-center text-center">
+                    <v-icon color="primary" size="x-large" class="mb-4">{{ mdiBookOpenPageVariant }}</v-icon>
+                    <v-card-title class="text-primary font-weight-bold mb-3 text-wrap">Expert Instructors</v-card-title>
+                    <v-card-text class="text-body-1">
+                      Learn from industry experts with years of experience in AI and machine learning, who are also
+                      skilled at teaching and making complex topics accessible.
+                    </v-card-text>
+                  </div>
+                </v-card-item>
+              </v-card>
+            </v-col>
+            <v-col cols="12" md="4">
+              <v-card height="100%" class="feature-card">
+                <v-card-item class="pa-6">
+                  <div class="d-flex flex-column align-center text-center">
+                    <v-icon :icon="mdiChartTimelineVariant" color="primary" size="x-large" class="mb-4"></v-icon>
+                    <v-card-title class="text-primary font-weight-bold mb-3 text-wrap">Career-Focused
+                      Curriculum</v-card-title>
+                    <v-card-text class="text-body-1">
+                      Learn practical skills that employers value, from project planning to team collaboration, giving
+                      you a competitive edge in your career.
+                    </v-card-text>
+                  </div>
+                </v-card-item>
+              </v-card>
+            </v-col>
+            <v-col cols="12" md="4">
+              <v-card height="100%" class="feature-card">
+                <v-card-item class="pa-6">
+                  <div class="d-flex flex-column align-center text-center">
+                    <v-icon :icon="mdiAccountGroup" color="primary" size="x-large" class="mb-4"></v-icon>
+                    <v-card-title class="text-primary font-weight-bold mb-3 text-wrap">Professional
+                      Certification</v-card-title>
+                    <v-card-text class="text-body-1">
+                      Earn a certificate upon completion to enhance your resume and LinkedIn profile, demonstrating your
+                      commitment to professional growth.
+                    </v-card-text>
+                  </div>
+                </v-card-item>
+              </v-card>
+            </v-col>
           </v-row>
         </v-container>
       </section>
@@ -92,7 +137,28 @@
           <v-row>
             <v-col cols="12" md="6" lg="4">
               <v-card class="h-100">
-                <v-img src="/api/placeholder/400/200" height="200" cover></v-img>
+                <div class="course-card-band"></div>
+                <v-card-item>
+                  <v-card-title class="text-h5 text-primary font-weight-bold">Project Management</v-card-title>
+                  <v-card-subtitle class="text-secondary">For Professionals & Teams</v-card-subtitle>
+                  <v-card-text>
+                    <p>Master essential project management skills to deliver projects on time and within budget. Learn
+                      methodologies, tools, and best practices for effective project execution.</p>
+                    <v-chip class="ma-1" color="primary" size="small">Certification</v-chip>
+                    <v-chip class="ma-1" color="primary" size="small">Hands-on</v-chip>
+                  </v-card-text>
+                  <v-card-actions>
+                    <v-btn variant="text" color="primary" to="/project-management">
+                      Learn More
+                    </v-btn>
+                    <v-spacer></v-spacer>
+                  </v-card-actions>
+                </v-card-item>
+              </v-card>
+            </v-col>
+            <v-col cols="12" md="6" lg="4">
+              <v-card class="h-100">
+                <div class="course-card-band"></div>
                 <v-card-item>
                   <v-card-title class="text-h5 text-primary font-weight-bold">AI Workshop Series</v-card-title>
                   <v-card-subtitle class="text-secondary">For NGO & SME Staff</v-card-subtitle>
@@ -115,7 +181,7 @@
 
             <v-col cols="12" md="6" lg="4">
               <v-card class="h-100">
-                <v-img src="/api/placeholder/400/200" height="200" cover></v-img>
+                <div class="course-card-band"></div>
                 <v-card-item>
                   <v-card-title class="text-h5 text-primary font-weight-bold">Social Media Marketing</v-card-title>
                   <v-card-subtitle class="text-secondary">For NGOs & Small Businesses</v-card-subtitle>
@@ -139,13 +205,14 @@
 
             <v-col cols="12" md="6" lg="4">
               <v-card class="h-100">
-                <v-img src="/api/placeholder/400/200" height="200" cover></v-img>
+                <div class="course-card-band"></div>
                 <v-card-item>
-                  <v-card-title class="text-h5 text-primary font-weight-bold">WordPress Development</v-card-title>
+                  <v-card-title class="text-h5 text-primary font-weight-bold">WordPress Mastery</v-card-title>
                   <v-card-subtitle class="text-secondary">Website Building for Organizations</v-card-subtitle>
                   <v-card-text>
-                    <p>Master WordPress to create and maintain professional websites for your organization. Covers site
-                      setup, content management, and basic customization.</p>
+                    <p>Learn to deploy WordPress to create and maintain professional websites for your organization.
+                      Covers
+                      basic customization, content management, SEO and maintenance.</p>
                     <v-chip class="ma-1" color="primary" size="small">Practical</v-chip>
                     <v-chip class="ma-1" color="primary" size="small">No Coding Required</v-chip>
                   </v-card-text>
@@ -162,7 +229,7 @@
 
             <v-col cols="12" md="6" lg="4">
               <v-card class="h-100">
-                <v-img src="/api/placeholder/400/200" height="200" cover></v-img>
+                <div class="course-card-band"></div>
                 <v-card-item>
                   <v-card-title class="text-h5 text-primary font-weight-bold">Advanced Web Development</v-card-title>
                   <v-card-subtitle class="text-secondary">For Tech Students</v-card-subtitle>
@@ -183,27 +250,7 @@
               </v-card>
             </v-col>
 
-            <v-col cols="12" md="6" lg="4">
-              <v-card class="h-100">
-                <v-img src="/api/placeholder/400/200" height="200" cover></v-img>
-                <v-card-item>
-                  <v-card-title class="text-h5 text-primary font-weight-bold">Project Management</v-card-title>
-                  <v-card-subtitle class="text-secondary">For Professionals & Teams</v-card-subtitle>
-                  <v-card-text>
-                    <p>Master essential project management skills to deliver projects on time and within budget. Learn
-                      methodologies, tools, and best practices for effective project execution.</p>
-                    <v-chip class="ma-1" color="primary" size="small">Certification</v-chip>
-                    <v-chip class="ma-1" color="primary" size="small">Hands-on</v-chip>
-                  </v-card-text>
-                  <v-card-actions>
-                    <v-btn variant="text" color="primary" to="/project-management">
-                      Learn More
-                    </v-btn>
-                    <v-spacer></v-spacer>
-                  </v-card-actions>
-                </v-card-item>
-              </v-card>
-            </v-col>
+
           </v-row>
         </v-container>
       </section>
@@ -349,9 +396,16 @@
 
 <script setup>
 import { ref } from 'vue';
-import { mdiMapMarker, mdiEmail, mdiPhone, mdiTwitter, mdiLinkedin, mdiInstagram, mdiLaptopAccount, mdiGoogleClassroom, mdiAccountGroup, mdiAccount, } from '@mdi/js';
+import { mdiMapMarker, mdiEmail, mdiPhone, mdiTwitter, mdiLinkedin, mdiInstagram, mdiLaptopAccount, mdiGoogleClassroom, mdiAccountGroup, mdiAccount, mdiBookOpenPageVariant, mdiChartTimelineVariant, mdiChartBar, mdiPencilRuler } from '@mdi/js';
 </script>
 
 <style scoped>
 /* Custom styles can be added here if needed */
+.course-card-band {
+  height: 48px;
+  width: 100%;
+  background: linear-gradient(90deg, #325ea4 0%, #42a5f5 100%);
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
 </style>

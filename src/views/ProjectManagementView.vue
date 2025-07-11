@@ -10,53 +10,14 @@
               Project Management for Career Growth
             </h1>
             <p class="text-body-1 mb-6">
-              Designed for fresh graduates and professionals stepping into leadership roles. Master essential project management skills to excel in your career and deliver successful projects.
+              Designed for fresh graduates and professionals stepping into leadership roles. Master essential project
+              management skills to excel in your career and deliver successful projects.
             </p>
-            <v-btn color="primary" size="large" class="mr-4 mb-4" href="https://forms.gle/RpenZtQvoMxa9MYe9" target="_blank" rel="noopener noreferrer">Register Now</v-btn>
+            <v-btn color="primary" size="large" class="mr-4 mb-4" href="https://forms.gle/RpenZtQvoMxa9MYe9"
+              target="_blank" rel="noopener noreferrer">Register Now</v-btn>
           </v-col>
           <v-col cols="12" md="5" order="1" order-md="2" class="text-center">
             <v-img src="/project-management-hero.svg" max-width="450" contain alt="Project Management"></v-img>
-          </v-col>
-        </v-row>
-      </v-container>
-    </section>
-
-    <!-- Why Choose Us Section -->
-    <section id="why-choose-us" class="py-12 bg-grey-lighten-4">
-      <v-container>
-        <v-row class="text-center mb-8">
-          <v-col>
-            <h2 class="text-h4 text-primary font-weight-bold">Why This Workshop is Perfect for You</h2>
-            
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col cols="12" md="6">
-            <v-card height="100%" class="feature-card">
-              <v-card-item class="pa-6">
-                <div class="d-flex flex-column align-center text-center">
-                  <v-icon :icon="mdiChartTimelineVariant" color="primary" size="x-large" class="mb-4"></v-icon>
-                  <v-card-title class="text-primary font-weight-bold mb-3 text-wrap">Career-Focused Curriculum</v-card-title>
-                  <v-card-text class="text-body-1">
-                    Learn practical skills that employers value, from project planning to team collaboration, giving you a competitive edge in your career.
-                  </v-card-text>
-                </div>
-              </v-card-item>
-            </v-card>
-          </v-col>
-          
-          <v-col cols="12" md="6">
-            <v-card height="100%" class="feature-card">
-              <v-card-item class="pa-6">
-                <div class="d-flex flex-column align-center text-center">
-                  <v-icon :icon="mdiAccountGroup" color="primary" size="x-large" class="mb-4"></v-icon>
-                  <v-card-title class="text-primary font-weight-bold mb-3 text-wrap">Professional Certification</v-card-title>
-                  <v-card-text class="text-body-1">
-                    Earn a certificate upon completion to enhance your resume and LinkedIn profile, demonstrating your commitment to professional growth.
-                  </v-card-text>
-                </div>
-              </v-card-item>
-            </v-card>
           </v-col>
         </v-row>
       </v-container>
@@ -80,19 +41,15 @@
             <v-col cols="12" md="5" class="d-flex align-center">
               <v-img :src="module.image" height="300" contain class="mx-auto"></v-img>
             </v-col>
-            
+
             <!-- Content Column -->
             <v-col cols="12" md="7" class="d-flex align-center">
               <div>
-                <h3 class="text-h4 text-primary font-weight-bold mb-2">{{index + 1}}. {{ module.title }}</h3>
+                <h3 class="text-h4 text-primary font-weight-bold mb-2">{{ index + 1 }}. {{ module.title }}</h3>
                 <p class="text-h6 text-secondary mb-4">{{ module.subtitle }}</p>
                 <p class="text-body-1 mb-4">{{ module.description }}</p>
                 <v-list density="comfortable" class="text-left">
-                  <v-list-item 
-                    v-for="(item, i) in module.items" 
-                    :key="i" 
-                    class="px-0"
-                  >
+                  <v-list-item v-for="(item, i) in module.items" :key="i" class="px-0">
                     <template v-slot:prepend>
                       <v-icon :icon="mdiCheck" color="success" class="me-2"></v-icon>
                     </template>
@@ -102,7 +59,7 @@
               </div>
             </v-col>
           </v-row>
-          
+
           <!-- Add divider between modules except after last one -->
           <v-divider v-if="index < modules.length - 1" class="my-8"></v-divider>
         </template>
@@ -127,9 +84,12 @@
         <v-card class="py-8 px-4 text-center" color="primary">
           <v-card-title class="text-h4 font-weight-bold mb-4 text-white">Ready to Boost Your Career?</v-card-title>
           <v-card-text class="text-h6 mb-6 text-white">
-            Whether you're a fresh graduate or looking to step up in your career, our Project Management Workshop will give you the skills and confidence to succeed.
+            Whether you're a fresh graduate or looking to step up in your career, our Project Management Workshop will
+            give
+            you the skills and confidence to succeed.
           </v-card-text>
-          <v-btn color="white" size="x-large" class="text-primary mb-2" href="https://forms.gle/RpenZtQvoMxa9MYe9" target="_blank" rel="noopener noreferrer">Enroll Now</v-btn>
+          <v-btn color="white" size="x-large" class="text-primary mb-2" href="https://forms.gle/RpenZtQvoMxa9MYe9"
+            target="_blank" rel="noopener noreferrer">Enroll Now</v-btn>
           <div class="text-caption mt-2 text-white">
             Next batch starting soon | Limited seats available
           </div>
@@ -209,9 +169,5 @@ const modules = ref([
 
 .v-card-title {
   word-break: break-word;
-}
-
-#hero {
-  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
 }
 </style>

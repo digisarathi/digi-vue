@@ -20,64 +20,6 @@
       </v-container>
     </section>
 
-    <!-- Why Choose Us Section -->
-    <section id="why-choose-us" class="py-12 bg-grey-lighten-4">
-      <v-container>
-        <v-row class="text-center mb-8">
-          <v-col>
-            <h2 class="text-h4 text-primary font-weight-bold">Why Choose Our AI Workshops?</h2>
-            <p class="text-body-1 mt-2">
-              Practical, expert-led training to help you harness the power of AI.
-            </p>
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col cols="12" md="4">
-            <v-card height="100%" class="feature-card">
-              <div class="d-flex flex-column align-center text-center">
-                <v-icon color="primary" size="x-large" class="mb-4">{{
-                  mdiBookOpenPageVariant
-                  }}</v-icon>
-                <v-card-title class="text-primary font-weight-bold mb-3 text-wrap">Expert Instructors</v-card-title>
-                <v-card-text class="text-body-1">
-                  Learn from industry experts with years of experience in AI and machine learning.
-                </v-card-text>
-              </div>
-            </v-card>
-          </v-col>
-          <v-col cols="12" md="4">
-            <v-card height="100%" class="feature-card">
-              <v-card-item class="pa-6">
-                <div class="d-flex flex-column align-center text-center">
-                  <v-icon color="primary" size="x-large" class="mb-4">{{
-                    mdiLaptopAccount
-                    }}</v-icon>
-                  <v-card-title class="text-primary font-weight-bold mb-3 text-wrap">Hands-on Projects</v-card-title>
-                  <v-card-text class="text-body-1">
-                    Practical, project-based learning that lets you apply your skills immediately.
-                  </v-card-text>
-                </div>
-              </v-card-item>
-            </v-card>
-          </v-col>
-          <v-col cols="12" md="4">
-            <v-card height="100%" class="feature-card">
-              <v-card-item class="pa-6">
-                <div class="d-flex flex-column align-center text-center">
-                  <v-icon color="primary" size="x-large" class="mb-4">{{ mdiAccountGroup }}</v-icon>
-                  <v-card-title class="text-primary font-weight-bold mb-3 text-wrap">Customized for NGOs &
-                    Corporates</v-card-title>
-                  <v-card-text class="text-body-1">
-                    Tailored content and examples for both nonprofit and corporate environments.
-                  </v-card-text>
-                </div>
-              </v-card-item>
-            </v-card>
-          </v-col>
-        </v-row>
-      </v-container>
-    </section>
-
     <!-- Courses Section -->
     <section id="courses" class="py-12">
       <v-container>
