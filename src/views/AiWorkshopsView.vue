@@ -7,14 +7,15 @@
         <v-row align="center">
           <v-col cols="12" md="7" order="2" order-md="1">
             <h1 class="text-h2 text-primary font-weight-bold mb-4">
-              Unlock the Power of AI: AI Workshop Series
+              Empower Your Team with AI: Interactive Workshop Series
             </h1>
             <p class="text-body-1 mb-6">
-              Empower your team with the knowledge and skills to leverage Artificial Intelligence.
+              Equip your organization with hands-on AI skills and practical strategies to drive innovation, boost
+              productivity, and stay ahead in a digital world.
             </p>
           </v-col>
           <v-col cols="12" md="5" order="1" order-md="2" class="text-center">
-            <v-img src="/ai-hero.svg" max-width="450" contain alt="AI Workshop"></v-img>
+            <v-img src="/ai-robot.svg" max-width="450" contain alt="AI Workshop"></v-img>
           </v-col>
         </v-row>
       </v-container>
@@ -36,7 +37,7 @@
             <v-card class="h-100">
               <v-img src="/ai-ngo.svg" height="200" cover></v-img>
               <v-card-item>
-                <v-card-title class="text-h5 text-primary font-weight-bold">AI for NGO Empowerment</v-card-title>
+                <v-card-title class="text-h5 text-primary font-weight-bold">AI for NGO Capacity Building</v-card-title>
                 <v-card-subtitle class="text-secondary">Boost Efficiency and Impact</v-card-subtitle>
                 <v-card-text>
                   <p class="mb-2">
