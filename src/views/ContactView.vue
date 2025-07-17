@@ -1,3 +1,18 @@
+<script setup>
+import { onMounted } from 'vue';
+import { useMetaTags } from '@/composables/useMetaTags';
+
+// Set meta tags for the page
+const { updateMetaTags } = useMetaTags();
+onMounted(() => {
+  updateMetaTags(
+    'Contact Us - Get in Touch | digiSarathi',
+    'Have questions? Reach out to our team for IT solutions, training, and consultancy services. We\'re here to help your business grow.',
+    '/contact-og-image.jpg'
+  );
+});
+</script>
+
 <template>
   <v-main>
     <!-- Hero Section -->

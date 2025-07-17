@@ -1,3 +1,18 @@
+<script setup>
+import { onMounted } from 'vue';
+import { useMetaTags } from '@/composables/useMetaTags';
+
+// Set meta tags for the page
+const { updateMetaTags } = useMetaTags();
+onMounted(() => {
+  updateMetaTags(
+    'Social Media Marketing Workshops | digiSarathi',
+    'Master social media marketing with our expert-led workshops. Learn to grow your organization\'s online presence and engagement effectively.',
+    '/social-media-og-image.jpg'
+  );
+});
+</script>
+
 <template>
     <v-main>
         <!-- Hero Section -->

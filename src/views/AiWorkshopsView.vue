@@ -1,4 +1,18 @@
-```vue
+<script setup>
+import { onMounted } from 'vue';
+import { useMetaTags } from '@/composables/useMetaTags';
+
+// Set meta tags for the page
+const { updateMetaTags } = useMetaTags();
+onMounted(() => {
+  updateMetaTags(
+    'AI Workshops for NGOs & Corporates | digiSarathi',
+    'Empower your team with our interactive AI workshops. Learn practical AI applications for NGOs and corporates to drive innovation and efficiency.',
+    '/ai-workshops-og-image.jpg'
+  );
+});
+</script>
+
 <template>
   <v-main>
     <!-- Hero Section -->

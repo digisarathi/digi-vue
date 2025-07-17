@@ -1,7 +1,18 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import { importMarkdownFiles } from '@/utils/markdown'
 import { formatDate } from '@/utils/date'
+import { useMetaTags } from '@/composables/useMetaTags';
+
+// Set meta tags for the page
+const { updateMetaTags } = useMetaTags();
+onMounted(() => {
+  updateMetaTags(
+    'Blog - Latest Tech Insights & Digital Trends | digiSarathi',
+    'Stay ahead with our expert articles on technology, digital transformation, and IT solutions for businesses and NGOs.',
+    '/blog-og-image.jpg'
+  );
+});
 
 const props = defineProps({
     isMobile: {

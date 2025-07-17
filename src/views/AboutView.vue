@@ -173,8 +173,19 @@ Our teams and people are our most precious asset. We aim to have a positive and 
   </v-main>
 </template>
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import { mdiLinkedin, mdiTwitter } from '@mdi/js';
+import { useMetaTags } from '@/composables/useMetaTags';
+
+// Set meta tags for the page
+const { updateMetaTags } = useMetaTags();
+onMounted(() => {
+  updateMetaTags(
+    'About Us - digiSarathi',
+    'Discover the team and values behind digiSarathi. We innovate with purpose, challenge the status quo, and deliver impactful IT solutions and training.',
+    '/team-og-image.jpg'
+  );
+});
 const props = defineProps({
   isMobile: {
     type: Boolean,

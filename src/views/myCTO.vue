@@ -277,7 +277,19 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
+import { useMetaTags } from '@/composables/useMetaTags';
+
+// Set meta tags for the page
+const { updateMetaTags } = useMetaTags();
+onMounted(() => {
+  updateMetaTags(
+    'myCTO - Virtual CTO Services for SMEs & NGOs | digiSarathi',
+    'Get expert tech leadership without the full-time cost. Our myCTO service provides on-demand CTO expertise for small and medium businesses and NGOs.',
+    '/mycto-og-image.jpg'
+  );
+});
+
 import { 
   mdiChartTimelineVariant, 
   mdiRobot, 
