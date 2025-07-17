@@ -3,6 +3,9 @@ export function useMetaTags() {
     // Update title
     document.title = `${title} | digiSarathi`
 
+    // Get the current URL for canonical and social meta tags
+    const currentUrl = canonicalUrl || window.location.href
+    
     // Update meta tags
     const metaTags = {
       title: title,
@@ -10,9 +13,13 @@ export function useMetaTags() {
       'og:title': title,
       'og:description': description,
       'og:image': image,
+      'og:url': currentUrl,
+      'og:type': 'website',
+      'twitter:card': 'summary_large_image',
       'twitter:title': title,
       'twitter:description': description,
       'twitter:image': image,
+      'twitter:url': currentUrl
     }
 
     // Update or create meta tags
