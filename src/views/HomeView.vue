@@ -78,7 +78,7 @@ const testimonials = ref([
   {
     name: 'Seroja Manoj',
     company: 'Communications, Maya India NGO',
-    text: "Prashant, your session was extremely helpful. Using AI tools at work makes life so much more enjoyable and easier as it is both effective and efficient. Do consider conducting more sessions to help us keep ourselves updated on how we can leverage technology to perform better at work. Keep up the good work!",
+    text: "digiSarathi AI training session was extremely helpful. Using AI tools at work makes life so much more enjoyable and easier as it is both effective and efficient. Do consider conducting more sessions to help us keep ourselves updated on how we can leverage technology to perform better at work. Keep up the good work!",
     avatar: '/images/avatars/jane-smith.jpg'
   },
 
@@ -220,8 +220,16 @@ const goToService = (route) => {
         </v-row>
 
         <v-row justify="center">
-          <v-col cols="12"  lg="8">
-            <v-carousel show-arrows="hover" height="auto" hide-delimiter-background :delimiter-icon="mdiCircle">
+          <v-col cols="12" lg="8">
+            <v-carousel 
+              :show-arrows="false"
+              progress="primary"
+              height="auto"
+              hide-delimiter-background
+              :delimiter-icon="mdiCircle"
+              color="primary"
+              class="testimonial-carousel"
+            >
               <v-carousel-item v-for="(testimonial, index) in testimonials" :key="index">
                 <v-card class="testimonial-card mx-auto pa-6" max-width="800">
                   <div class="d-flex flex-column align-center text-center">
@@ -310,6 +318,22 @@ const goToService = (route) => {
 </template>
 
 <style scoped>
+/* Custom carousel delimiters */
+.testimonial-carousel :deep(.v-carousel__controls) {
+  padding-top: 14px !important;
+  margin-top: 14px !important;
+  position: relative;
+}
+
+.testimonial-carousel :deep(.v-carousel__controls .v-btn) {
+  margin: 0 4px;
+  color: rgba(var(--v-theme-primary), 0.5) !important;
+}
+
+.testimonial-carousel :deep(.v-carousel__controls .v-btn--active) {
+  color: rgb(var(--v-theme-primary)) !important;
+}
+
 .hero-section {
   position: relative;
   background: linear-gradient(135deg, var(--v-primary-base) 0%, var(--v-secondary-base) 100%);
