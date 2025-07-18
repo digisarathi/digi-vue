@@ -1,17 +1,4 @@
-<script setup>
-import { onMounted } from 'vue';
-import { useMetaTags } from '@/composables/useMetaTags';
 
-// Set meta tags for the page
-const { updateMetaTags } = useMetaTags();
-onMounted(() => {
-  updateMetaTags(
-    'Project Management Workshop for Career Growth | digiSarathi',
-    'Master essential project management skills with our comprehensive workshop. Designed for fresh graduates and professionals stepping into leadership roles.',
-    '/project-management-og-image.jpg'
-  );
-});
-</script>
 
 <template>
   <v-main>
@@ -116,7 +103,17 @@ onMounted(() => {
 <script setup>
 import { ref } from 'vue';
 import { mdiChartTimelineVariant, mdiChartGantt, mdiAccountGroup, mdiCheck } from '@mdi/js';
-
+import { onMounted } from 'vue';
+import { useMetaTags } from '@/composables/useMetaTags';
+// Set meta tags for the page
+const { updateMetaTags } = useMetaTags();
+onMounted(() => {
+  updateMetaTags(
+    'Project Management Workshop for Career Growth | digiSarathi',
+    'Master essential project management skills with our comprehensive workshop. Designed for fresh graduates and professionals stepping into leadership roles.',
+    '/project-management-og-image.jpg'
+  );
+});
 const stats = ref([
   { value: '100+', label: 'Participants Trained' },
   { value: '15+', label: 'Workshops Conducted' },

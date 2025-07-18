@@ -1,7 +1,12 @@
 <script setup>
 import { onMounted } from 'vue';
 import { useMetaTags } from '@/composables/useMetaTags';
-
+import {
+    mdiAccount,
+    mdiChartBar,
+    mdiPencilRuler,
+    mdiAccountGroup,
+} from '@mdi/js'
 // Set meta tags for the page
 const { updateMetaTags } = useMetaTags();
 onMounted(() => {
@@ -256,15 +261,6 @@ onMounted(() => {
         </section>
     </v-main>
 </template>
-
-<script setup>
-import {
-    mdiAccount,
-    mdiChartBar,
-    mdiPencilRuler,
-    mdiAccountGroup,
-} from '@mdi/js'
-</script>
 
 <style scoped>
 .feature-card {

@@ -220,7 +220,7 @@ const goToService = (route) => {
         </v-row>
 
         <v-row justify="center">
-          <v-col cols="12" md="10" lg="8">
+          <v-col cols="12"  lg="8">
             <v-carousel show-arrows="hover" height="auto" hide-delimiter-background :delimiter-icon="mdiCircle">
               <v-carousel-item v-for="(testimonial, index) in testimonials" :key="index">
                 <v-card class="testimonial-card mx-auto pa-6" max-width="800">
