@@ -241,14 +241,14 @@ const advisors = ref([
   {
     name: 'Marcel Cerveny',
     title: 'Technology Advisor',
-    bio: 'Marcel Červený is an accomplished IT leader and Agile expert, currently serving as CEO of BOOTIQ, with extensive experience in managing large-scale IT projects. With a background in business intelligence, e-commerce, and AI, he has led hundreds of projects, notably scaling BiQ Group through strategic acquisitions and partnerships. Marcel excels in software architecture, team mentorship, and stakeholder coordination, delivering innovative solutions for clients like DPD SK.',
+    bio: 'Marcel Červený is an accomplished IT leader, currently serving as CEO of BOOTIQ, with extensive experience in managing large-scale IT projects. With a background in business intelligence, e-commerce, and AI, he has led hundreds of projects. Marcel excels in software architecture, team mentorship, and stakeholder coordination, delivering innovative solutions for clients like DPD SK.',
     image: '/advisors/marcel-cerveny.jpeg',
     linkedin: 'https://www.linkedin.com/in/marcelcerveny/',
   },
   {
     name: 'Ram Iyer',
     title: 'Mentor',
-    bio: 'Ram Iyer is an experienced Business Strategy Consultant, having graduated from the prestigious Indian Institute of Management, Ahmedabad (IIMA). He brings 35 years of diverse work experience, including 12 years in investment banking and 12 years dedicated to alternative education and social innovation. Additionally, he has spent 11 years focusing on Vipassana, service, and establishment management. His multifaceted background equips him with a unique perspective, making him a valuable advisor in various sectors.',
+    bio: 'Ram Iyer is an experienced Business Strategy Consultant, having graduated from the prestigious Indian Institute of Management, Ahmedabad (IIMA). He brings 35 years of diverse work experience, including 12 years in investment banking and 12 years dedicated to alternative education and social innovation. His multifaceted background equips him with a unique perspective, making him a valuable advisor in various sectors.',
     image: '/advisors/ramiyer.jpg',
     linkedin: 'https://www.linkedin.com/in/ram-iyer-908840143/',
   }
