@@ -55,10 +55,19 @@ const generateSitemap = async () => {
 
     const staticPages = [
       { url: '/', changefreq: 'weekly', priority: 1.0 },
-      { url: '/about', changefreq: 'weekly', priority: 0.7 },
-      { url: '/contact', changefreq: 'weekly', priority: 0.7 },
-      { url: '/blog', changefreq: 'weekly', priority: 0.8 },
-      // ...add other static routes as needed
+      { url: '/about', changefreq: 'weekly', priority: 0.8 },
+      { url: '/contact', changefreq: 'weekly', priority: 0.8 },
+      { url: '/blog', changefreq: 'daily', priority: 0.9 },
+      { url: '/website-design', changefreq: 'weekly', priority: 0.8 },
+      { url: '/apps-software-development', changefreq: 'weekly', priority: 0.8 },
+      { url: '/digital-marketing', changefreq: 'weekly', priority: 0.8 },
+      { url: '/training-workshops', changefreq: 'weekly', priority: 0.8 },
+      { url: '/privacy-policy', changefreq: 'monthly', priority: 0.3 },
+      { url: '/terms-of-service', changefreq: 'monthly', priority: 0.3 },
+      { url: '/ai-workshops', changefreq: 'weekly', priority: 0.8 },
+      { url: '/project-management', changefreq: 'weekly', priority: 0.8 },
+      { url: '/my-cto', changefreq: 'weekly', priority: 0.8 },
+      { url: '/social-media-marketing', changefreq: 'weekly', priority: 0.8 }
     ]
 
     staticPages.forEach((page) =>

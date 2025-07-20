@@ -16,6 +16,17 @@ import myCTOView from '@/views/myCTO.vue'
 import NotFound from '../views/NotFound.vue'
 import SocialMediaMarketingView from '@/views/SocialMediaMarketingView.vue'
 
+// Function to track page views
+const trackPageView = (to) => {
+  // Ensure window.gtag is defined
+  if (typeof window.gtag === 'function') {
+    window.gtag('config', 'G-YNQCG8V7LP', {
+      page_path: to.fullPath,
+      page_title: to.name || 'digiSarathi - ' + (to.meta.title || to.name || 'Page')
+    });
+  }
+};
+
 const scrollBehavior = (to, from, savedPosition) => {
   if (to.hash) {
     return {
@@ -30,7 +41,7 @@ const scrollBehavior = (to, from, savedPosition) => {
   }
 }
 
-export const router = createRouter({
+const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   scrollBehavior,
   routes: [
@@ -118,5 +129,12 @@ export const router = createRouter({
       name: 'not-found',
       component: NotFound,
     },
-  ],
+  ]
 })
+
+// Track page views after navigation
+router.afterEach((to) => {
+  trackPageView(to);
+});
+
+export { router };
