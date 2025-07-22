@@ -111,14 +111,6 @@ const services = ref([
     image: 'wordpress.svg'
   },
   {
-    name: 'Apps & Custom Software ',
-    icon: mdiCellphoneLink,
-    text: 'Innovative user experiences based on a modular and scalable architecture to scale with flexibility and create seamless digital experiences across all platforms.',
-    features: ['Native Mobile Apps', 'Progressive Web Apps', 'Custom Software', 'API Integration'],
-    route: 'apps-software-development',
-    image: 'app.svg'
-  },
-  {
     name: 'Digital Marketing',
     icon: mdiTrendingUp,
     text: 'Comprehensive strategies to enhance your online presence and drive engagement. We use data-driven approaches to maximize your ROI and reach your target audience effectively.',
@@ -133,6 +125,14 @@ const services = ref([
     features: ['Customized Programs', 'Hands-on Learning', 'Remote Options', 'Ongoing Support'],
     route: 'training-workshops',
     image: 'shared.svg'
+  },
+  {
+    name: 'Apps & Custom Software ',
+    icon: mdiCellphoneLink,
+    text: 'Innovative user experiences based on a modular and scalable architecture to scale with flexibility and create seamless digital experiences across all platforms.',
+    features: ['Native Mobile Apps', 'Progressive Web Apps', 'Custom Software', 'API Integration'],
+    route: 'apps-software-development',
+    image: 'app.svg'
   }
 ]);
 
@@ -149,13 +149,13 @@ const goToService = (route) => {
       <v-container>
         <v-row justify="center" align="center" class="min-height-70vh">
           <v-col cols="12" md="7">
-            <h1 :class="['font-weight-bold', 'mb-6', { 'text-h3': !isMobile, 'text-h4': isMobile }]"
+            <h1 :class="['font-weight-', 'mb-6', { 'text-h3': !isMobile, 'text-h4': isMobile }]"
               class="text-primary" fetchpriority="high">
-              We simplify digitization by focusing on what truly matters, empowering the end user.
+              We turn your mission into <strong><i>momentum</i></strong> through smart solutions that work from day one.
             </h1>
             <p :class="['mb-8', { 'text-h6': !isMobile, 'text-h7': isMobile }]" class="text-secondary">
-              Our strategy, system design and implementation processes are speedy &
-              agile which means you see results ASAP. Better control enables better results.
+              Our digital strategy, tech system design and implementation processes are speedy &
+              agile which means you see results ASAP. Because your goals can't wait for 'someday'.
             </p>
           </v-col>
           <v-col cols="12" md="5" class="d-none d-md-flex justify-center">
