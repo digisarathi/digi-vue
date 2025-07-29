@@ -216,14 +216,24 @@
       <!-- CTA Section -->
       <section class="py-10 bg-grey-lighten-4">
         <v-container>
-          <v-row align="center" justify="center">
-            <v-col cols="12" md="8" class="text-center">
-              <h3 class="text-h5 font-weight-bold mb-3">Ready to Transform Your Online Presence?</h3>
+          <v-row align="center" justify="space-evenly">
+            <v-col cols="12" md="6" class="text-center">
+              <h3 class="text-h5 text-primary font-weight-bold mb-3">Transform Your Online Presence!</h3>
               <p class="text-body-1 mb-6">
-                Let's discuss how we can help you create a website that drives results for your business.
+                Let's discuss how we can help you create/redesign your website that drives results for your business.
               </p>
               <v-btn color="primary" size="large" href="mailto:hello@digisarathi.com">
-                Get Started
+                Drop an Email
+              </v-btn>
+             
+            </v-col>
+            <v-col cols="12" md="4" class="text-center">
+              <h3 class="text-h6 text-primary font-weight-bold mb-3">Just need a quick fix?</h3>
+              <p class="text-body-2 mb-6">
+                Cost-effective Website Audit & Content Updates.
+              </p>
+              <v-btn color="accent" size="x-small" href="/website-audit">
+                 Website Quick-Fix
               </v-btn>
             </v-col>
           </v-row>

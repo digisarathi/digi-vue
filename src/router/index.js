@@ -15,6 +15,7 @@ import ProjectManagementView from '@/views/ProjectManagementView.vue'
 import myCTOView from '@/views/myCTO.vue'
 import NotFound from '../views/NotFound.vue'
 import SocialMediaMarketingView from '@/views/SocialMediaMarketingView.vue'
+import WebsiteAudit from '@/views/WebsiteAudit.vue'
 
 // Function to track page views
 const trackPageView = (to) => {
@@ -123,6 +124,11 @@ const router = createRouter({
       path: '/social-media-marketing',
       name: 'social-media-marketing',
       component: SocialMediaMarketingView,
+    },
+    {
+      path: '/website-audit',
+      name: 'website-audit',
+      component: WebsiteAudit,
     },
     {
       path: '/:pathMatch(.*)*',
