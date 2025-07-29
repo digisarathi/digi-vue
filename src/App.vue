@@ -68,11 +68,11 @@
                 </div>
                 <div class="d-flex align-center mb-2">
                   <v-icon size="small" class="mr-2">{{ mdiEmail }}</v-icon>
-                  <span class="text-body-2">hello@digisarathi.com</span>
+                  <a href="mailto:hello@digisarathi.com" class="text-decoration-none text-body-2 text-white">hello@digisarathi.com</a>
                 </div>
                 <div class="d-flex align-center mb-4">
                   <v-icon size="small" class="mr-2">{{ mdiPhone }}</v-icon>
-                  <span class="text-body-2">+91 9022465676</span>
+                  <a href="tel:+919022465676" class="text-decoration-none text-body-2 text-white">+91 9022465676</a>
                 </div>
                 <div class="d-flex">
                   <a href="https://twitter.com/digisarathi" target="_blank" rel="noopener noreferrer">
