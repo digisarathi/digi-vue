@@ -7,7 +7,7 @@
         <v-container>
           <v-row align="center">
             <v-col cols="12" md="7" order="2" order-md="1">
-              <h1 class="text-h2 text-primary font-weight-bold mb-4">Building Tomorrow's Leaders with Tech Skills</h1>
+              <h1 class="text-h2 text-primary font-weight-bold mb-4">Building Tomorrow's Leaders </h1>
               <p class="text-body-1 mb-6">
                 digiSarathi offers specialized tech training for NGOs, SMEs, and Students towards bridging the digital
                 divide through AI, marketing, communications, and software development training programs.

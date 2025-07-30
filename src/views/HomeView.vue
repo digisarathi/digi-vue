@@ -148,17 +148,17 @@ const goToService = (route) => {
     <section class="hero-section" fetchpriority="high">
       <v-container>
         <v-row justify="center" align="center" class="min-height-70vh">
-          <v-col cols="12" md="7">
-            <h1 :class="['font-weight-', 'mb-6', { 'text-h3': !isMobile, 'text-h4': isMobile }]"
+          <v-col cols="12" md="7" order="2" order-md="1">
+            <h1 :class="[ 'mb-6', { 'text-h3': !isMobile, 'text-h4': isMobile }]"
               class="text-primary" fetchpriority="high">
               We turn your mission into <strong><i>momentum</i></strong> through smart solutions that work from day one.
             </h1>
-            <p :class="['mb-8', { 'text-h6': !isMobile, 'text-h7': isMobile }]" class="text-secondary">
+            <p :class="['mb-6', { 'text-h6': !isMobile, 'text-h7': isMobile }]" class="text-secondary">
               Our digital strategy, tech system design and implementation processes are speedy &
               agile which means you see results ASAP. Because your goals can't wait for 'someday'.
             </p>
           </v-col>
-          <v-col cols="12" md="5" class="d-none d-md-flex justify-center">
+          <v-col cols="12" md="5" order="1" order-md="2">
             <v-img src="/websites.svg" max-width="450" contain loading="eager" fetchpriority="high"
               width="450" height="450" alt="Hero illustration"></v-img>
           </v-col>

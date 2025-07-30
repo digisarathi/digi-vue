@@ -92,13 +92,13 @@
             <v-col>
               <h2 class="text-h4 text-primary font-weight-bold">Pricing</h2>
               <v-card class="bordered-card pa-2 mb-4 text-accent" rounded="lg">
-                <v-card-title>Customizable based on website size and complexity</v-card-title>
+                <v-card-text>Customizable based on website size and complexity</v-card-text>
               </v-card>
               <v-card class="bordered-card pa-2 mb-4 text-accent" rounded="lg">
-                <v-card-title>Includes audit, report, and implementation of agreed-upon fixes.</v-card-title>
+                <v-card-text>Includes audit, report, and implementation of agreed-upon fixes.</v-card-text>
               </v-card>
               <v-card class="bordered-card pa-2 mb-4 text-accent" rounded="lg">
-                <v-card-title>Optional add-ons (e.g., social media integration, basic analytics setup) available</v-card-title>
+                <v-card-text>Optional add-ons (e.g., social media integration, basic analytics setup) available</v-card-text>
               </v-card>
             </v-col>
           </v-row>
@@ -111,7 +111,7 @@
           <v-row justify="center">
             <v-col cols="12" md="8" class="text-center">
               <h2 class="text-h4 font-weight-bold text-white mb-4">Ready to Improve Your Website?</h2>
-              <p>Fill out the form below to request a website audit and get started on improving your website. </p>
+              <p>Fill out the form below to request a website audit and get started!</p>
               <v-btn
                 variant="tonal"
                 color="white"
