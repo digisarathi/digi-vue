@@ -181,33 +181,54 @@
           </v-row>
 
           <v-row>
-            <v-col cols="12">
-              <v-carousel cycle height="500" hide-delimiter-background show-arrows="hover" delimiter-icon="mdi-circle"
-                class="portfolio-carousel">
-                <v-carousel-item v-for="(project, i) in portfolioProjects" :key="i">
-                  <div class="portfolio-item" :style="{ backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(' + project.image + ')' }">
-                    <v-container class="fill-height">
-                      <v-row class="fill-height" align="center" justify="center">
-                        <v-col cols="12" md="8" class="text-center text-white">
-                          <h3 class="text-h4 font-weight-bold mb-4">{{ project.title }}</h3>
-                          <p class="text-body-1 mb-6">{{ project.description }}</p>
-                          <div class="mb-6">
-                            <v-chip v-for="(tech, index) in project.technologies" :key="index" class="ma-1" color="primary"
-                              variant="outlined" label>
-                              {{ tech }}
-                            </v-chip>
-                          </div>
-                          <v-btn v-if="project.website" :href="project.website" target="_blank" color="white" 
-                            variant="flat" size="large" :append-icon="mdiOpenInNew" class="elevation-4 text-primary font-weight-bold"
-                            style="text-transform: none; letter-spacing: 0.5px;">
-                            Visit Website
-                          </v-btn>
-                        </v-col>
-                      </v-row>
-                    </v-container>
+            <v-col v-for="(project, i) in portfolioProjects" :key="i" cols="12" sm="6" md="6" lg="6">
+              <v-card class="h-100 d-flex flex-column" elevation="2" :to="'/case-studies/' + (project.slug || 'project-' + i)">
+                <v-img :src="project.image" :alt="project.title" height="200" cover>
+                  <template v-slot:placeholder>
+                    <v-row class="fill-height ma-0" align="center" justify="center">
+                      <v-progress-circular indeterminate color="primary"></v-progress-circular>
+                    </v-row>
+                  </template>
+                </v-img>
+                <v-card-item>
+                  <v-card-title class="text-h6 font-weight-bold">{{ project.title }}</v-card-title>
+                </v-card-item>
+                <v-card-text class="flex-grow-1">
+                  <p class="text-body-2 mb-2">{{ project.description }}</p>
+                  <div class="mt-2">
+                    <v-chip 
+                      v-for="(tech, index) in project.technologies.slice(0, 3)" 
+                      :key="index" 
+                      size="small"
+                      class="mr-1 mb-1"
+                      color="primary"
+                      variant="outlined"
+                    >
+                      {{ tech }}
+                    </v-chip>
+                    <v-chip 
+                      v-if="project.technologies.length > 3" 
+                      size="small"
+                      class="mb-1"
+                      color="grey"
+                      variant="outlined"
+                    >
+                      +{{ project.technologies.length - 3 }} more
+                    </v-chip>
                   </div>
-                </v-carousel-item>
-              </v-carousel>
+                </v-card-text>
+                <v-card-actions class="px-4 pb-4">
+                  <v-spacer></v-spacer>
+                  <!-- <v-btn
+                    color="primary"
+                    variant="text"
+                    size="small"
+                    :append-icon="mdiArrowRight"
+                  >
+                    
+                  </v-btn> -->
+                </v-card-actions>
+              </v-card>
             </v-col>
           </v-row>
         </v-container>
@@ -246,9 +267,6 @@
 <script setup>
 import { ref } from 'vue';
 import {
-  mdiAccountTie,
-  mdiAccountTieWoman,
-  mdiAccountBadge,
   mdiLightbulb,
   mdiPencilRuler,
   mdiCodeBraces,
@@ -256,9 +274,7 @@ import {
   mdiSpeedometer,
   mdiResponsive,
   mdiShieldCheck,
-  mdiAccount,
-  mdiCircle,
-  mdiOpenInNew,
+  mdiArrowRight,
 } from '@mdi/js';
 
 const testimonials = ref([
