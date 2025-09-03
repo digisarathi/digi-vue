@@ -2,16 +2,42 @@
 import { ref, computed, onMounted } from 'vue'
 import { importMarkdownFiles } from '@/utils/markdown'
 import { formatDate } from '@/utils/date'
-import { useMetaTags } from '@/composables/useMetaTags';
+import { useHeadManager } from '@/composables/useHeadManager';
+
+const { setMetaTags, setStructuredData } = useHeadManager();
 
 // Set meta tags for the page
-const { updateMetaTags } = useMetaTags();
 onMounted(() => {
-  updateMetaTags(
-    'Blog - Latest Tech Insights & Digital Trends | digiSarathi',
-    'Stay ahead with our expert articles on technology, digital transformation, and IT solutions for businesses and NGOs.',
-    '/blog-og-image.jpg'
-  );
+  // Set up meta tags
+  setMetaTags({
+    title: 'Blog - Latest Tech Insights & Digital Trends',
+    description: 'Stay ahead with our expert articles on technology, digital transformation, and IT solutions for businesses and NGOs.',
+    image: '/og-blog.jpg'
+  });
+
+  // Set up structured data for Blog
+  setStructuredData({
+    '@type': 'Blog',
+    '@id': 'https://digisarathi.com/blog',
+    name: 'digiSarathi Blog',
+    description: 'Expert insights on technology and digital transformation',
+    publisher: {
+      '@type': 'Organization',
+      name: 'digiSarathi',
+      logo: 'https://digisarathi.com/logo.png'
+    },
+    blogPost: posts.value.slice(0, 5).map(post => ({
+      '@type': 'BlogPosting',
+      headline: post.title,
+      description: post.description,
+      datePublished: post.date,
+      author: {
+        '@type': 'Organization',
+        name: 'digiSarathi',
+        url: 'https://digisarathi.com'
+      }
+    }))
+  });
 });
 
 const props = defineProps({
@@ -23,7 +49,6 @@ const props = defineProps({
 
 // Statically load posts
 const posts = ref(importMarkdownFiles())
-console.log(posts.value)
 const selectedTag = ref(null)
 
 const uniqueTags = computed(() => {
@@ -125,8 +150,10 @@ const toggleTag = (tag) => {
     white-space: pre-wrap;
     display: -webkit-box;
     -webkit-line-clamp: 3;
+    line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .blog-preview-content :deep(p) {

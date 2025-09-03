@@ -3,14 +3,14 @@ import { ref, onMounted, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { getMarkdownFile, importMarkdownFiles } from '@/utils/markdown'
 import { formatDate } from '@/utils/date'
-import { useMetaTags } from '@/composables/useMetaTags'
+import { useHeadManager } from '@/composables/useHeadManager'
 
 const route = useRoute()
 const post = ref(null)
 const nextPost = ref(null)
 const prevPost = ref(null)
 const posts = ref([])
-const { updateMetaTags } = useMetaTags()
+const { setMetaTags, setStructuredData } = useHeadManager()
 
 const findAdjacentPosts = (currentSlug) => {
     const currentIndex = posts.value.findIndex(p => p.slug === currentSlug)
@@ -23,16 +23,47 @@ const findAdjacentPosts = (currentSlug) => {
 }
 
 const updatePostMeta = (postData) => {
-    if (postData) {
-        const description = postData.excerpt || postData.content.substring(0, 160)
-        const canonicalUrl = postData.permalink ? `https://digisarathi.com${postData.permalink}` : null
-        updateMetaTags(
-            postData.title,
-            description,
-            postData.image || '/og-image.jpg',
-            canonicalUrl
-        )
-    }
+    if (!postData) return;
+    
+    const description = postData.excerpt || postData.content.substring(0, 160);
+    const canonicalUrl = postData.permalink ? `https://digisarathi.com${postData.permalink}` : window.location.href;
+    const imageUrl = postData.image || '/og-blog.jpg';
+    const publishedDate = postData.date ? new Date(postData.date).toISOString() : new Date().toISOString();
+    
+    // Set meta tags
+    setMetaTags({
+        title: postData.title,
+        description,
+        image: imageUrl,
+        url: canonicalUrl
+    });
+    
+    // Set structured data for BlogPosting
+    setStructuredData({
+        '@type': 'BlogPosting',
+        headline: postData.title,
+        description,
+        image: imageUrl.startsWith('http') ? imageUrl : `https://digisarathi.com${imageUrl}`,
+        datePublished: publishedDate,
+        dateModified: publishedDate,
+        author: {
+            '@type': 'Organization',
+            name: 'digiSarathi',
+            url: 'https://digisarathi.com'
+        },
+        publisher: {
+            '@type': 'Organization',
+            name: 'digiSarathi',
+            logo: {
+                '@type': 'ImageObject',
+                url: 'https://digisarathi.com/logo.png'
+            }
+        },
+        mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': canonicalUrl
+        }
+    });
 }
 
 const loadPost = async (slug) => {

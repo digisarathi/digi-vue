@@ -175,17 +175,33 @@ Our teams and people are our most precious asset. We aim to have a positive and 
 <script setup>
 import { ref, onMounted } from 'vue';
 import { mdiLinkedin, mdiTwitter } from '@mdi/js';
-import { useMetaTags } from '@/composables/useMetaTags';
+import { useHeadManager } from '@/composables/useHeadManager';
+
+const { setMetaTags, setStructuredData } = useHeadManager();
 
 // Set meta tags for the page
-const { updateMetaTags } = useMetaTags();
 onMounted(() => {
-  updateMetaTags(
-    'About Us - digiSarathi',
-    'Discover the team and values behind digiSarathi. We innovate with purpose, challenge the status quo, and deliver impactful IT solutions and training.',
-    '/team-og-image.jpg'
-  );
+  // Set up meta tags
+  setMetaTags({
+    title: 'About Us - digiSarathi',
+    description: 'Learn about digiSarathi, our mission, values, and the team behind our digital solutions for social impact.',
+    image: '/og-about.jpg'
+  });
+
+  // Set up structured data
+  setStructuredData({
+    '@type': 'AboutPage',
+    name: 'About digiSarathi',
+    description: 'Learn about our mission, values, and the team behind our digital solutions for social impact.',
+    url: 'https://digisarathi.com/about',
+    publisher: {
+      '@type': 'Organization',
+      name: 'digiSarathi',
+      logo: 'https://digisarathi.com/logo.png'
+    }
+  });
 });
+
 const props = defineProps({
   isMobile: {
     type: Boolean,

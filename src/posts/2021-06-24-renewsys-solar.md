@@ -4,7 +4,6 @@ title: 'RenewSys Solar'
 date: '2021-06-24T00:31:52+00:00'
 author: digi_admin_9
 layout: post
-guid: 'http://s780263233.onlinehome.us/?p=886'
 permalink: /renewsys-solar/
 
 tags:

@@ -4,7 +4,6 @@ title: "Now, you have a website. What's next?"
 date: '2024-11-30T11:19:00+00:00'
 author: digi_admin_9
 layout: post
-guid: 'https://digisarathi.com/?p=1267'
 permalink: /now-you-have-a-website-whats-next/
 
 tags:

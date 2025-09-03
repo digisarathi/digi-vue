@@ -1,15 +1,41 @@
 <script setup>
 import { onMounted } from 'vue';
-import { useMetaTags } from '@/composables/useMetaTags';
+import { useHeadManager } from '@/composables/useHeadManager';
+
+const { setMetaTags, setStructuredData } = useHeadManager();
 
 // Set meta tags for the page
-const { updateMetaTags } = useMetaTags();
 onMounted(() => {
-  updateMetaTags(
-    'Contact Us - Get in Touch | digiSarathi',
-    'Have questions? Reach out to our team for IT solutions, training, and consultancy services. We\'re here to help your business grow.',
-    '/contact-og-image.jpg'
-  );
+  // Set up meta tags
+  setMetaTags({
+    title: 'Contact Us - Get in Touch',
+    description: 'Have questions? Reach out to our team for IT solutions, training, and consultancy services. We\'re here to help your business grow.',
+    image: '/og-contact.jpg'
+  });
+
+  // Set up structured data for ContactPage
+  setStructuredData({
+    '@type': 'ContactPage',
+    name: 'Contact digiSarathi',
+    description: 'Get in touch with our team for IT solutions, training, and consultancy services.',
+    url: 'https://digisarathi.com/contact',
+    contactPoint: [{
+      '@type': 'ContactPoint',
+      telephone: '+91-9022465676',
+      contactType: 'customer service',
+      email: 'hello@digisarathi.com',
+      areaServed: 'IN',
+      availableLanguage: ['English', 'Hindi']
+    }],
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'A 603, Satyam Shrey, Bavdhan',
+      addressLocality: 'Pune',
+      addressRegion: 'Maharashtra',
+      postalCode: '411021',
+      addressCountry: 'IN'
+    }
+  });
 });
 </script>
 

@@ -4,7 +4,6 @@ title: 'Apeksha Society (Amravati, MH)'
 date: '2022-06-08T11:29:41+00:00'
 author: digi_admin_9
 layout: post
-guid: 'https://digisarathi.com/?p=1064'
 permalink: /apeksha-society-amravati-mh/
 
 tags:

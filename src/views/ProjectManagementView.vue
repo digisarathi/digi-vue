@@ -101,18 +101,63 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import { mdiChartTimelineVariant, mdiChartGantt, mdiAccountGroup, mdiCheck } from '@mdi/js';
-import { onMounted } from 'vue';
-import { useMetaTags } from '@/composables/useMetaTags';
-// Set meta tags for the page
-const { updateMetaTags } = useMetaTags();
+import { useHeadManager } from '@/composables/useHeadManager';
+
+const { setMetaTags, setStructuredData } = useHeadManager();
+
+// Set meta tags and structured data for the page
 onMounted(() => {
-  updateMetaTags(
-    'Project Management Workshop for Career Growth | digiSarathi',
-    'Master essential project management skills with our comprehensive workshop. Designed for fresh graduates and professionals stepping into leadership roles.',
-    '/project-management-og-image.jpg'
-  );
+  const pageTitle = 'Project Management Workshop for Career Growth';
+  const pageDescription = 'Master essential project management skills with our comprehensive workshop. Designed for fresh graduates and professionals stepping into leadership roles.';
+  const imageUrl = '/og-project-management.jpg';
+  const pageUrl = 'https://digisarathi.com/workshops/project-management';
+
+  // Set meta tags
+  setMetaTags({
+    title: pageTitle,
+    description: pageDescription,
+    image: imageUrl,
+    url: pageUrl
+  });
+
+  // Set up structured data for Workshop
+  setStructuredData({
+    '@type': 'Course',
+    name: 'Project Management Workshop',
+    description: pageDescription,
+    provider: {
+      '@type': 'Organization',
+      name: 'digiSarathi',
+      sameAs: 'https://digisarathi.com'
+    },
+    offers: [{
+      '@type': 'Offer',
+      price: '5999',
+      priceCurrency: 'INR',
+      url: pageUrl,
+      availability: 'https://schema.org/InStock',
+      validFrom: new Date().toISOString()
+    }],
+    courseCode: 'PM-101',
+    educationalCredentialAwarded: 'Certificate of Completion',
+    hasCourseInstance: [{
+      '@type': 'CourseInstance',
+      name: 'Project Management Workshop',
+      courseMode: 'online',
+      instructor: {
+        '@type': 'Organization',
+        name: 'digiSarathi',
+        url: 'https://digisarathi.com'
+      },
+      courseSchedule: {
+        '@type': 'Schedule',
+        repeatFrequency: 'P1M',
+        repeatCount: 12
+      }
+    }]
+  });
 });
 const stats = ref([
   { value: '100+', label: 'Participants Trained' },

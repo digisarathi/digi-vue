@@ -5,7 +5,6 @@ date: '2025-01-10T08:27:00+00:00'
 author: digi_admin_9
 excerpt: 'This workshop is an initiative to equip NGOs with the necessary skills to enhance their visual communication efforts effectively. '
 layout: post
-guid: 'https://digisarathi.com/?p=1240'
 permalink: /workshop-canva-ai-for-ngos/
 
 tags:

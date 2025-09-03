@@ -2,6 +2,9 @@
 import { ref, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
 import { mdiWeb, mdiCellphoneLink, mdiTrendingUp, mdiSchool, mdiCircle, mdiAccount } from '@mdi/js';
+import { useHeadManager } from '@/composables/useHeadManager';
+
+const { setMetaTags, setStructuredData } = useHeadManager();
 
 const router = useRouter();
 const props = defineProps({
@@ -12,6 +15,33 @@ const props = defineProps({
 });
 
 onMounted(() => {
+  // Set up meta tags
+  setMetaTags({
+    title: 'Digital Solutions for Social Impact | digiSarathi',
+    description: 'Empowering NGOs and social enterprises with custom digital solutions including web development, mobile apps, and digital marketing services.',
+    image: '/og-home.jpg'
+  });
+
+  // Set up structured data
+  setStructuredData({
+    '@type': 'Organization',
+    name: 'digiSarathi',
+    url: 'https://digisarathi.com',
+    logo: 'https://digisarathi.com/logo.png',
+    sameAs: [
+      'https://twitter.com/digisarathi',
+      'https://linkedin.com/company/digisarathi',
+      'https://facebook.com/digisarathi'
+    ],
+    contactPoint: [{
+      '@type': 'ContactPoint',
+      telephone: '+91-XXXXXXXXXX',
+      contactType: 'customer service',
+      availableLanguage: ['English', 'Hindi']
+    }]
+  });
+
+  // Load ConvertKit script
   const script = document.createElement('script');
   script.setAttribute('data-uid', '7d5a62888b');
   script.setAttribute('src', 'https://digisarathi-.kit.com/7d5a62888b/index.js');

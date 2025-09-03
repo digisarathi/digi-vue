@@ -1,20 +1,61 @@
 <script setup>
 import { onMounted } from 'vue';
-import { useMetaTags } from '@/composables/useMetaTags';
+import { useHeadManager } from '@/composables/useHeadManager';
 import {
     mdiAccount,
     mdiChartBar,
     mdiPencilRuler,
     mdiAccountGroup,
 } from '@mdi/js'
-// Set meta tags for the page
-const { updateMetaTags } = useMetaTags();
+
+const { setMetaTags, setStructuredData } = useHeadManager();
+
+// Set meta tags and structured data for the page
 onMounted(() => {
-  updateMetaTags(
-    'Social Media Marketing Workshops | digiSarathi',
-    'Master social media marketing with our expert-led workshops. Learn to grow your organization\'s online presence and engagement effectively.',
-    '/social-media-og-image.jpg'
-  );
+  const pageTitle = 'Social Media Marketing Workshops';
+  const pageDescription = 'Master social media marketing with our expert-led workshops. Learn to grow your organization\'s online presence and engagement effectively.';
+  const imageUrl = '/og-social-media.jpg';
+  const pageUrl = 'https://digisarathi.com/workshops/social-media-marketing';
+
+  // Set meta tags
+  setMetaTags({
+    title: pageTitle,
+    description: pageDescription,
+    image: imageUrl,
+    url: pageUrl
+  });
+
+  // Set up structured data for Workshop
+  setStructuredData({
+    '@type': 'Course',
+    name: 'Social Media Marketing Workshop',
+    description: pageDescription,
+    provider: {
+      '@type': 'Organization',
+      name: 'digiSarathi',
+      sameAs: 'https://digisarathi.com'
+    },
+    offers: [{
+      '@type': 'Offer',
+      price: '4999',
+      priceCurrency: 'INR',
+      url: pageUrl,
+      availability: 'https://schema.org/InStock',
+      validFrom: new Date().toISOString()
+    }],
+    courseCode: 'SMM-101',
+    educationalCredentialAwarded: 'Certificate of Completion',
+    hasCourseInstance: [{
+      '@type': 'CourseInstance',
+      name: 'Social Media Marketing Workshop',
+      courseMode: 'online',
+      instructor: {
+        '@type': 'Organization',
+        name: 'digiSarathi',
+        url: 'https://digisarathi.com'
+      }
+    }]
+  });
 });
 </script>
 

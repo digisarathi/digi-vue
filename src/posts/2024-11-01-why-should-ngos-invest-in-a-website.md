@@ -4,7 +4,6 @@ title: 'Why should NGOs invest in a website?'
 date: '2024-11-01T11:13:00+00:00'
 author: digi_admin_9
 layout: post
-guid: 'https://digisarathi.com/?p=1260'
 permalink: /why-should-ngos-invest-in-a-website/
 
 tags:
