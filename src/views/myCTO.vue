@@ -68,12 +68,10 @@
         </v-row>
 
         <v-row class="justify-center">
-          <v-col cols="12" md="3" v-for="(step, index) in steps" :key="index">
-            <v-card height="100%" class="step-card pa-6 text-center">
-              <v-avatar color="primary" size="64" class="mb-4">
-                <span class="text-h4 text-white">{{ index + 1 }}</span>
-              </v-avatar>
-              <h3 class="text-h6 font-weight-bold mb-3">{{ step.title }}</h3>
+          <v-col cols="12" md="4" v-for="(step, index) in process" :key="index">
+            <v-card height="100%" class="d-flex flex-column text-center pa-6">
+              <v-icon :icon="step.icon" size="64" color="secondary" class="mb-4 mx-auto"></v-icon>
+              <h3 class="text-h5 font-weight-bold mb-3 text-primary">{{ step.title }}</h3>
               <p class="text-body-2">{{ step.description }}</p>
             </v-card>
           </v-col>
@@ -81,54 +79,76 @@
       </v-container>
     </section>
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="py-12">
+    <!-- Audit Options Section -->
+    <section id="pricing" class="py-12 bg-grey-lighten-4">
       <v-container>
         <v-row class="text-center mb-8">
           <v-col>
-            <h2 class="text-h4 text-primary font-weight-bold mb-4">Simple, Transparent Pricing</h2>
-            <p class="text-body-1">Choose the plan that works best for your organization</p>
+            <h2 class="text-h4 text-primary font-weight-bold mb-4">Flexible Engagement Models</h2>
+            <p class="text-body-1">Choose the level of support that's right for your organization</p>
           </v-col>
         </v-row>
 
         <v-row class="justify-center">
-          <v-col cols="12" md="6" v-for="(plan, index) in pricingPlans" :key="index">
-            <v-card height="100%" :class="['pricing-card', { 'popular': plan.popular }]">
-              <v-card-text class="text-center pa-6">
-                <div v-if="plan.popular" class="popular-badge">
-                  <span>MOST POPULAR</span>
-                </div>
-                <h3 class="text-h5 font-weight-bold mb-3">{{ plan.name }}</h3>
-                <div class="price mb-4">
-                  <span class="text-h4 font-weight-bold"> {{ plan.price }}</span>
-                  <span class="text-body-2 text-medium-emphasis">/year</span>
-                </div>
-                <p class="text-body-2 mb-6">{{ plan.description }}</p>
-                <v-list density="compact" class="text-start mb-6 bg-transparent">
-                  <!-- Query Volume as first item -->
-                  <v-list-item class="px-0">
+          <!-- Tech Audit -->
+          <v-col cols="12" md="5" class="d-flex">
+            <v-card class="flex-grow-1" elevation="4">
+              <v-card-actions class="justify-end">
+                <v-chip size="small" class="mr-n2 mt-n2">Most Popular</v-chip>
+              </v-card-actions>
+              <v-card-title class="text-h5 font-weight-bold">
+                <v-icon :icon="mdiMagnify" color="primary" class="mr-2" />
+                Tech Audit
+              </v-card-title>
+              <v-card-text>
+                <v-list density="compact" class="py-0">
+                  <v-list-item
+                    v-for="(item, i) in auditInclusions"
+                    :key="i"
+                    class="px-0"
+                  >
                     <template v-slot:prepend>
-                      <v-icon color="success" size="small" class="">{{mdiCheckCircle}}</v-icon>
+                      <v-icon :icon="mdiCheckCircle" color="success" size="small" class="mr-2" />
                     </template>
-                    <v-list-item-title class="text-primary text-h6"><strong>{{ plan.queryVolume }}</strong></v-list-item-title>
-                  </v-list-item>
-                  <!-- Other features -->
-                  <v-list-item v-for="(feature, i) in plan.features" :key="i" class="px-0">
-                    <template v-slot:prepend>
-                      <v-icon color="success" size="small" class="">{{mdiCheckCircle}}</v-icon>
-                    </template>
-                    <v-list-item-title class="text-body-2">{{ feature }}</v-list-item-title>
+                    <v-list-item-title class="text-body-2">{{ item }}</v-list-item-title>
                   </v-list-item>
                 </v-list>
+                <v-divider class="my-4" />
+                <div class="text-h6 mb-2">Custom Pricing</div>
+                <p class="text-caption mb-4">We'll work with your budget to create a package that fits your needs</p>
+                <v-btn block color="primary" variant="outlined" href="mailto:mycto@digisarathi.com">Request Quote</v-btn>
               </v-card-text>
             </v-card>
           </v-col>
-        </v-row>
-        <v-row>
-          <v-col cols="12" class="text-center">
-            <v-btn color="primary" variant="flat" size="large" class="mt-4" href="mailto:mycto@digisarathi.com">
-                  Get Started!
-                </v-btn>
+
+          <!-- Audit + Handholding -->
+          <v-col cols="12" md="5" class="d-flex">
+            <v-card class="flex-grow-1" color="primary" dark elevation="4">
+              <v-card-actions class="justify-end">
+              </v-card-actions>
+              <v-card-title class="text-h5 font-weight-bold">
+                <v-icon :icon="mdiAccountTie" class="mr-2" />
+                Audit + Handholding
+              </v-card-title>
+              <v-card-text class="rounded-lg" >
+                <v-list class="py-0" >
+                  <v-list-item
+                    v-for="(item, i) in handholdingInclusions"
+                    :key="i"
+                    class="px-"
+                  >
+                    <template v-slot:prepend>
+                      <v-icon :icon="mdiCheckCircle" color="success" size="small" class="mr-2" />
+                    </template>
+                    <v-list-item-title class="text-body-2">{{ item }}</v-list-item-title>
+                  </v-list-item>
+                </v-list>
+                <v-divider class="my-4" />
+                <div class="text-h6 mb-2">Flexible Engagement</div>
+                <p class="text-caption mb-4">Let's discuss the right level of support for your team and its productivity</p>
+                <v-btn block color="white" variant="outlined" href="mailto:mycto@digisarathi.com">Let's Talk</v-btn>
+              </v-card-text>
+            </v-card>
           </v-col>
         </v-row>
       </v-container>
@@ -146,9 +166,9 @@
 
         <v-row class="justify-center">
           <!-- For CEOs Column -->
-          <v-col cols="12" md="5" class="px-6">
+          <v-col cols="12" md="5" class="px-1">
             <v-card variant="flat" class="h-100">
-              <v-card-text class="text-center pa-6">
+              <v-card-text class="text-center pa-4">
                 <v-icon :icon="mdiAccountTie" size="48" color="primary" class="mb-4"></v-icon>
                 <h3 class="text-h5 font-weight-bold mb-4">For CEOs & Leaders</h3>
                 <v-list density="compact" class="text-start bg-transparent">
@@ -166,9 +186,9 @@
           </v-col>
 
           <!-- For Teams Column -->
-          <v-col cols="12" md="5" class="px-6">
+          <v-col cols="12" md="5" class="px-1">
             <v-card variant="flat" class="h-100">
-              <v-card-text class="text-center pa-6">
+              <v-card-text class="text-center pa-4">
                 <v-icon :icon="mdiAccountGroup" size="48" color="primary" class="mb-4"></v-icon>
                 <h3 class="text-h5 font-weight-bold mb-4">For Teams</h3>
                 <v-list density="compact" class="text-start bg-transparent">
@@ -259,16 +279,15 @@
       <v-container class="text-center">
         <h2 class="text-h4 font-weight-bold text-white mb-4">No more searching endlessly on the Internet for your tech queries!</h2>
         <p class="text-body-1 text-white mb-8 mx-auto" style="max-width: 600px">
-          Don’t let tech challenges hold your organization back. With <strong>myCTO</strong>, you get expert strategy and support tailored to your needs, all on a flexible subscription.
+          Get expert insights and a clear roadmap to improve your tech stack, security, and performance. No long-term commitments, just actionable recommendations.
         </p>
         <v-btn
-          color="white"
-         
-          class="text-primary"
+          class="mx-2 mb-2"
           href="mailto:mycto@digisarathi.com"
-          variant="flat"
+          size="large"
+          variant="outlined"
         >
-          Connect with myCTO
+          Book a Consultation
         </v-btn>
       </v-container>
     </section>
@@ -313,120 +332,86 @@ onMounted(() => {
 
 import { 
   mdiChartTimelineVariant, 
-  mdiRobot, 
-  mdiCodeBraces, 
-  mdiChartGantt,
   mdiAccountGroup,
   mdiShieldCheck,
-  mdiEmailOutline,
-  mdiCalendarCheck,
-  mdiHeadset,
   mdiHelpCircleOutline,
   mdiCheckCircle,
   mdiAccountTie,
   mdiChevronRight,
-  mdiAccount,
   mdiDomain,
-  mdiOfficeBuilding
+  mdiOfficeBuilding,
+  mdiMagnify,
+  mdiFileDocumentOutline,
 } from '@mdi/js';
 
 const features = ref([
   {
+    title: 'Comprehensive Review',
+    description: 'Thorough analysis of your current tech stack, security, and architecture',
+    icon: mdiMagnify
+  },
+  {
+    title: 'Actionable Insights',
+    description: 'Clear, prioritized recommendations for immediate and long-term improvements',
+    icon: mdiFileDocumentOutline
+  },
+  {
     title: 'Expert Guidance',
-    description: 'Strategic advice for CEOs to align tech with organizational goals.',
-    icon: mdiRobot
+    description: 'Strategic advice from experienced technology leaders',
+    icon: mdiAccountTie
   },
   {
-    title: 'Technical Support',
-    description: 'Clear, actionable answers for your team’s technical questions.',
-    icon: mdiCodeBraces
+    title: 'Cost Optimization',
+    description: 'Identify cost-saving opportunities in your technology spend',
+    icon: mdiChartTimelineVariant
   },
   {
-    title: 'Flexible Access',
-    description: 'Connect via email, Zoom/Google Meet, or phone – whatever works for you.',
-    icon: mdiAccountGroup
-  },
-  {
-    title: 'Cost-Effective',
-    description: 'All the benefits of a CTO at a fraction of the cost of hiring one.',
-    icon: mdiChartGantt
-  },
-  {
-    title: 'Scalable Plans',
-    description: 'Choose a subscription tier that matches your team’s size and query volume.',
+    title: 'Security First',
+    description: 'Comprehensive security assessment and recommendations',
     icon: mdiShieldCheck
   },
   {
-    title: 'Robust Solutions',
-    description: 'Our guidance is well thought-out and valid for the long run.',
-    icon: mdiShieldCheck 
+    title: 'Ongoing Support',
+    description: 'Optional handholding to implement recommendations',
+    icon: mdiAccountGroup
   }
 ]);
 
-const steps = ref([
+const process = ref([
   {
-    title: 'Choose Your Plan',
-    description: 'Select a subscription tier that fits your team\'s size and query volume.'
+    title: 'Initial Consultation',
+    description: '60-minute session to understand your tech stack, challenges, and goals',
+    icon: mdiMagnify
   },
   {
-    title: 'Submit Your Questions',
-    description: 'CEOs ask strategic questions; teams ask technical ones via email, Zoom/Google Meet, or phone.'
+    title: 'In-Depth Analysis',
+    description: 'Comprehensive review of your technology infrastructure and processes',
+    icon: mdiFileDocumentOutline
   },
   {
-    title: 'Get Expert Answers',
-    description: 'Our experienced CTOs provide clear, actionable advice within 24-48 hours (or faster for urgent queries).'
-  },
-  {
-    title: 'Grow with Confidence',
-    description: 'Leverage expert insights to make informed decisions and drive success.'
+    title: 'Actionable Report',
+    description: 'Detailed findings with prioritized recommendations and implementation roadmap',
+    icon: mdiChartTimelineVariant
   }
 ]);
 
-// Common features for all plans
-const commonFeatures = [
-  'Email, Zoom/Google Meet, Phone support',
-  'Basic tech strategy',
-  'Monthly check-in call',
-  'Access to resource library',
-  'Team training (1 session/month)',
-  'Vendor selection assistance'
-];
+// Audit inclusions
+const auditInclusions = ref([
+  'Comprehensive technology review',
+  'Security assessment',
+  'Performance analysis',
+  'Detailed findings report',
+  'Implementation roadmap',
+  '60-minute strategy session'
+]);
 
-const pricingPlans = ref([
-  {
-    name: 'Starter',
-    price: 'INR 2,500',
-    description: 'Perfect for small teams & startups (1 - 10 members).',
-    popular: false,
-    queryVolume: 'Up to 50 queries/month',
-    features: [...commonFeatures]
-  },
-  {
-    name: 'Growth',
-    price: 'INR 10,000',
-    description: 'Ideal for growing SMEs & NGOs (11 - 50 members).',
-    popular: true,
-    queryVolume: 'Up to 200 queries/month',
-    features: [
-      ...commonFeatures,
-      'Priority support',
-      'Monthly check-in calls'
-    ]
-  },
-  {
-    name: 'Enterprise',
-    price: 'Custom',
-    description: 'Tailored solutions for large organizations (50+ members).',
-    popular: false,
-    queryVolume: 'Unlimited queries',
-    features: [
-      ...commonFeatures,
-      '24/7 priority support',
-      'Weekly check-in calls',
-      'Monthly team training',
-      'Custom reporting',
-    ]
-  }
+const handholdingInclusions = ref([
+  'Everything in Tech Audit',
+  'Implementation support',
+  'Monthly check-ins',
+  'Priority email support',
+  'Team training sessions',
+  'Quarterly strategy reviews'
 ]);
 
 // Testimonials data
@@ -479,39 +464,35 @@ const teamQuestions = ref([
 const faqs = ref([
   {
     question: 'What is myCTO?',
-    answer: 'myCTO is a subscription-based service that connects your CEO and team to a dedicated tech expert via email, Zoom/Google Meet, or phone for strategic guidance and technical answers, tailored to your needs.'
+    answer: 'myCTO is a comprehensive audit and tech handholding service that connects your CEO and team to a dedicated tech expert via email, Zoom/Google Meet, or phone for strategic guidance and technical answers, tailored to your needs.'
   },
   {
-    question: 'What types of organizations can benefit from myCTO?',
-    answer: 'myCTO is ideal for organizations of all sizes, from SMEs, NGOs & startups to established enterprises especially those without a dedicated CTO or technical expertise.'
+    question: 'How long does the audit process take?',
+    answer: 'Most audits are completed within 2-4 weeks, depending on the size and complexity of your infrastructure. We start with an initial consultation, followed by data collection, analysis, and finally, a review session to discuss our findings.'
   },
   {
-    question: 'What kind of questions can I ask myCTO?',
-    answer: 'You can ask any technology-related questions, from strategic decisions and architecture to specific technical challenges. Our experts cover software development, infrastructure, security, and digital transformation.'
+    question: 'What kind of organizations benefit from this audit?',
+    answer: 'Our audit is ideal for SMEs and NGOs that want to optimize their technology, improve security, reduce costs, or prepare for growth. Whether you have an in-house team or work with external IT vendors, our audit provides valuable insights.'
   },
   {
-    question: 'How quickly can I expect a response?',
-    answer: 'We typically respond within 24-48 hours for standard queries. For urgent matters, we offer expedited response times based on your subscription plan.'
+    question: 'What happens after the audit?',
+    answer: 'You\'ll receive a detailed report with our findings and recommendations. Many clients choose to continue with our optional handholding service to help implement the recommendations. However, there\'s no obligation to continue working with us.'
   },
   {
-    question: 'Is there a limit to how many questions I can ask?',
-    answer: 'Your subscription tier determines the number of questions you can ask per month. We offer flexible plans to accommodate different needs, from growing startups to established enterprises.'
+    question: 'How much does the audit cost?',
+    answer: 'Pricing is customized based on your organization\'s size and complexity. We offer transparent, fixed-fee pricing for the audit, with no hidden costs. Contact us for a personalized quote.'
   },
   {
-    question: 'Can I upgrade or downgrade my plan?',
-    answer: 'Yes, you can upgrade or downgrade your plan at any time to match your team’s needs.'
+    question: 'What if we need help implementing the recommendations?',
+    answer: 'We offer optional handholding services to help implement our recommendations. This can include software development, project management, vendor selection, team training, and ongoing advisory support. The level of involvement is entirely up to you.'
   },
   {
-    question: 'What is the cost of myCTO?',
-    answer: 'The cost of myCTO is based on the subscription tier you choose. We offer flexible plans to accommodate different team sizes.'
+    question: 'How is this different from other technology audits?',
+    answer: 'Our audit is conducted by experienced CTOs who understand the challenges of growing organizations. We focus on practical, actionable recommendations rather than just pointing out problems. Our goal is to help you make informed technology decisions that support your business objectives.'
   },
   {
-    question: 'Who are the experts behind myCTO?',
-    answer: 'Our team consists of seasoned CTOs and technology leaders with extensive experience across various industries. Each expert is carefully vetted to address each specific type of organization (NGO, startup, SME, enterprise) appropriately.'
-  },
-  {
-    question: 'Can I schedule a call with a CTO?',
-    answer: 'Yes! In any of the subscription plans, you can schedule video or phone calls with our CTOs for more in-depth discussions and strategic planning sessions.'
+    question: 'What information do you need from us?',
+    answer: 'We\'ll need access to documentation about your current systems, architecture diagrams, and key team members for interviews. We work around your schedule and can adapt to your security requirements for information sharing.'
   },
   {
     question: 'Is my data secure?',
