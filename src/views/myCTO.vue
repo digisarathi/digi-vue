@@ -94,7 +94,7 @@
           <v-col cols="12" md="5" class="d-flex">
             <v-card class="flex-grow-1" elevation="4">
               <v-card-actions class="justify-end">
-                <v-chip size="small" class="mr-n2 mt-n2">Most Popular</v-chip>
+                <v-chip color="success" variant="tonal" size="large" class="">Most Popular</v-chip>
               </v-card-actions>
               <v-card-title class="text-h5 font-weight-bold">
                 <v-icon :icon="mdiMagnify" color="primary" class="mr-2" />
