@@ -1,21 +1,12 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import Website from '../views/Website.vue'
-import AppsSoftware from '../views/AppsSoftware.vue'
-import Digital from '../views/Digital.vue'
-import Training from '../views/Training.vue'
-import AboutView from '../views/AboutView.vue'
-import ContactView from '../views/ContactView.vue'
-import PrivacyPolicy from '../views/PrivacyPolicy.vue'
-import TermsOfService from '../views/TermsOfService.vue'
-import BlogView from '../views/BlogView.vue'
-import Post from '../views/Post.vue'
-import AiWorkshopsView from '@/views/AiWorkshopsView.vue'
-import ProjectManagementView from '@/views/ProjectManagementView.vue'
-import myCTOView from '@/views/myCTO.vue'
-import NotFound from '../views/NotFound.vue'
-import SocialMediaMarketingView from '@/views/SocialMediaMarketingView.vue'
-import WebsiteAudit from '@/views/WebsiteAudit.vue'
+import { createRouter, createWebHistory } from 'vue-router';
+import HomeView from '../views/HomeView.vue';
+import Website from '../views/Website.vue';
+import Training from '../views/Training.vue';
+import AboutView from '../views/AboutView.vue';
+import ContactView from '../views/ContactView.vue';
+import BlogView from '../views/BlogView.vue';
+import Post from '../views/Post.vue';
+import NotFound from '../views/NotFound.vue';
 
 // Function to track page views
 const trackPageView = (to) => {
@@ -23,7 +14,7 @@ const trackPageView = (to) => {
   if (typeof window.gtag === 'function') {
     window.gtag('config', 'G-YNQCG8V7LP', {
       page_path: to.fullPath,
-      page_title: to.name || 'digiSarathi - ' + (to.meta.title || to.name || 'Page')
+      page_title: to.name || 'digiSarathi - ' + (to.meta.title || to.name || 'Page'),
     });
   }
 };
@@ -34,13 +25,13 @@ const scrollBehavior = (to, from, savedPosition) => {
       el: to.hash,
       behavior: 'smooth',
       top: 100, // Adjust this value to account for any fixed headers
-    }
+    };
   } else if (savedPosition) {
-    return savedPosition
+    return savedPosition;
   } else {
-    return { top: 0 }
+    return { top: 0 };
   }
-}
+};
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -69,12 +60,12 @@ const router = createRouter({
     {
       path: '/apps-software-development',
       name: 'apps-software-development',
-      component: AppsSoftware,
+      component: () => import('../views/AppsSoftware.vue'),
     },
     {
       path: '/digital-marketing',
       name: 'digital-marketing',
-      component: Digital,
+      component: () => import('../views/Digital.vue'),
     },
     {
       path: '/training-workshops',
@@ -84,12 +75,12 @@ const router = createRouter({
     {
       path: '/privacy-policy',
       name: 'privacy-policy',
-      component: PrivacyPolicy,
+      component: () => import('../views/PrivacyPolicy.vue'),
     },
     {
       path: '/terms-of-service',
       name: 'terms-of-service',
-      component: TermsOfService,
+      component: () => import('../views/TermsOfService.vue'),
     },
     {
       path: '/blog',
@@ -108,35 +99,35 @@ const router = createRouter({
     {
       path: '/ai-workshops',
       name: 'ai-workshops',
-      component: AiWorkshopsView,
+      component: () => import('../views/AiWorkshopsView.vue'),
     },
     {
       path: '/project-management',
       name: 'project-management',
-      component: ProjectManagementView,
+      component: () => import('../views/ProjectManagementView.vue'),
     },
     {
       path: '/mycto',
       name: 'mycto',
-      component: myCTOView,
+      component: () => import('../views/myCTO.vue'),
     },
     {
       path: '/social-media-marketing',
       name: 'social-media-marketing',
-      component: SocialMediaMarketingView,
+      component: () => import('../views/SocialMediaMarketingView.vue'),
     },
     {
       path: '/website-audit',
       name: 'website-audit',
-      component: WebsiteAudit,
+      component: () => import('../views/WebsiteAudit.vue'),
     },
     {
       path: '/:pathMatch(.*)*',
       name: 'not-found',
       component: NotFound,
     },
-  ]
-})
+  ],
+});
 
 // Track page views after navigation
 router.afterEach((to) => {
