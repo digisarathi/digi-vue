@@ -203,7 +203,7 @@
           </v-row>
 
           <v-row class="justify-center">
-            <v-col v-for="(testimonial, index) in testimonials" :key="index" cols="10">
+            <v-col v-for="(testimonial, index) in testimonials" :key="index" cols="12" md="10">
               <v-card
                 elevation="6"
                 :href="testimonial.website"
@@ -214,14 +214,14 @@
               >
                 <v-card-text class="flex-grow-1">
                   <v-row>
-                    <v-col cols="3" class="d-flex flex-column align-center">
+                    <v-col cols="12" md="3" class="d-flex flex-column align-center">
                       <v-avatar size="80" class="mb-4">
                         <v-img :src="/clients/ + testimonial.avatar" alt="Avatar"></v-img>
                       </v-avatar>
                       <div class="font-weight-bold">{{ testimonial.name }}</div>
                       <div class="text-caption text-medium-emphasis">{{ testimonial.company }}</div>
                     </v-col>
-                    <v-col cols="9" class="d-flex align-center">
+                    <v-col cols="12" md="9" class="d-flex align-center">
                       <p class="text-body-1">"{{ testimonial.text }}"</p>
                     </v-col>
                   </v-row>

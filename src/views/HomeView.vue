@@ -54,7 +54,7 @@ const testimonials = ref([
   {
     name: 'Santayan Sengupta',
     company: 'Founder, ThoughtShop Foundation',
-    text: 'Prashant is certainly passionate about technology, but he has the vision and skill to make technology bend to human needs and not the other way around. This was particularly important in our context where users are young marginalised people with little prior access or comfort with technology. I was delighted to get a glimpse of his empathy for the people he was crafting a solution for.', avatar: '/images/avatars/jane-smith.jpg',
+    text: 'digiSarathi is certainly passionate about technology, but they have the vision and skill to make technology bend to human needs and not the other way around. This was particularly important in our context where users are young marginalised people with little prior access or comfort with technology. I was delighted to get a glimpse of Prashant\'s empathy for the people he was crafting a solution for.',
     photo: 'santayan.webp'
   },
   {
@@ -210,11 +210,11 @@ const goToService = (route) => {
         </v-row>
 
         <v-row id="services">
-          <v-col v-for="(service, index) in services" :key="index" cols="12" md="6" lg="6" class="mb-4 pa-6">
+          <v-col v-for="(service, index) in services" :key="index" cols="12" md="6" lg="6" class="mb-md-4 mb-2 pa-2 pa-md-6">
             <v-hover v-slot="{ props }">
               <v-card v-bind="props" :elevation="2" height="100%" class="service-card transition-fast overflow-hidden"
                 @click="goToService(service.route)">
-                <v-card-item class="text-center mb-4">
+                <v-card-item class="text-center my-4">
                   <v-card-title class="font-weight-bold text-primary"
                     :class="{ 'text-h5': !isMobile, 'text-h6': isMobile }">{{ service.name }}</v-card-title>
                 </v-card-item>
