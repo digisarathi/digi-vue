@@ -127,6 +127,12 @@ watch(() => route.params.slug, async (newSlug) => {
     margin: 0 auto;
 }
 
+.content :deep(*) {
+    font-family: inherit;
+    line-height: 1.6;
+    color: inherit;
+}
+
 .content :deep(h1),
 .content :deep(h2),
 .content :deep(h3),
@@ -135,12 +141,16 @@ watch(() => route.params.slug, async (newSlug) => {
 .content :deep(h6) {
     margin-top: 2rem;
     margin-bottom: 1rem;
-    color: rgb(var(--v-theme-primary));
+    color: var(--v-primary-base);
+    font-weight: 600;
+    line-height: 1.3;
+    font-family: var(--font-heading, inherit);
 }
 
 .content :deep(p) {
     margin-bottom: 1rem;
     line-height: 1.6;
+    font-family: var(--font-body, inherit);
 }
 
 .content :deep(ul),
@@ -148,6 +158,8 @@ watch(() => route.params.slug, async (newSlug) => {
     margin-left: 1.5rem;
     margin-bottom: 1rem;
     padding-left: 1rem;
+    list-style-type: disc;
+    font-family: var(--font-body, inherit);
 }
 
 .content :deep(li) {

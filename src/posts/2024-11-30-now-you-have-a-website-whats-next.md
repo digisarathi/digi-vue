@@ -17,7 +17,7 @@ How do you know if your website is effective?</figcaption></figure>In our previo
 
 We recently onboarded one of India’s most reputed and impactful NGOs, [​Majlis Manch​](www.majlislaw.com) in our Website Design &amp; Maintenance services. and our first step was to install Google Analytics (GA) in their website.
 
-### For any website we make or maintain, the first thing we check &amp; install is the Analytics module
+### For any website we make or maintain, the first thing we check &amp; install is the Analytics module.
 
 With GA &amp; its many features, Majlis can now gather comprehensive data on visitor behaviour on their site, allowing Majlis Law to identify popular content and optimize their online presence accordingly. By tracking key metrics such as page views, session duration, and user demographics, they can measure the effectiveness of their outreach efforts and improve engagement with their audience.
 

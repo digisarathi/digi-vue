@@ -14,7 +14,7 @@ tags:
   - Website Design
 ---
 
-If you're a small to mid-sized enterprise (SME) or a non-governmental organization (NGO), you don't need a complex content management system (CMS) disguised as a website. Instead, consider a straightforward website with a simple blogging module that operates without the need for **databases. This approach can cut your annual maintenance costs by 50% and save you ₹3,000 per year in hosting fees alone!**
+If you're a small to mid-sized enterprise (SME) or a non-governmental organization (NGO), you don't need a complex content management system (CMS) disguised as a website. Instead, consider a straightforward website with a simple blogging module that operates without the need for databases. **This approach can cut your annual maintenance costs by 50% and save you few thousands per year in hosting fees alone!**
 
 In our experience with SME and NGO clients, content updates typically occur only once every three months. For NGOs, this often involves sharing beneficiary counts and workshop photos, while SMEs may focus on exhibition images and product updates. By avoiding a CMS like WordPress, the process becomes significantly easier for everyone involved. WordPress gives you a login screen and for that it has to keep a database. (it also keeps the posts and other data in the database). This login security and database maintenance is the biggest cost in AMC. By avoiding this, you can save a lot of money. You simply send your content to your the website admin, and they can upload in their automated process.  
 
@@ -22,7 +22,7 @@ In our experience with SME and NGO clients, content updates typically occur only
 
 By simplifying the digiSarathi website, we've witnessed an increase in page load speeds! We will prepare a video demo of this soon!
 
-#### To schedule a 1-on-1 consultation, [Email us](mailto:hello@digisarathi.com).
+#### To schedule a 1-on-1 consultation,<span style=" max-width: 100px; text-align: center; background-color: #325ea4; color: white; padding: 5px 10px; border-radius: 5px;"> [Email us!](mailto:hello@digisarathi.com)</span>
 
 
 ### What to Expect

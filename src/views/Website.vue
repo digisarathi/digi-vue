@@ -318,7 +318,7 @@
             <v-col cols="12" md="4" class="text-center">
               <h3 class="text-h6 text-primary font-weight-bold mb-3">Just need a quick fix?</h3>
               <p class="text-body-2 mb-6">Cost-effective Website Audit & Content Updates.</p>
-              <v-btn color="accent" size="x-small" href="/website-audit"> Website Quick-Fix </v-btn>
+              <v-btn color="accent" size="large" href="/website-audit"> Website Quick-Fix </v-btn>
             </v-col>
           </v-row>
         </v-container>
