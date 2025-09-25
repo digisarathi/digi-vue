@@ -247,7 +247,11 @@
               <v-card
                 class="h-100 d-flex flex-column"
                 elevation="2"
-                :to="'/case-studies/' + (project.slug || 'project-' + i)"
+                :to="project.website"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="cursor: pointer"
+                @click.stop
               >
                 <v-img :src="project.image" :alt="project.title" height="200" cover>
                   <template v-slot:placeholder>
@@ -422,6 +426,7 @@
       description: 'A nonprofit website for minority women rehabilitation for Awaaz-e-Niswaan',
       image: '/portfolio/niswaan.jpg',
       technologies: ['WordPress', 'Google Analytics'],
+      website: 'https://www.niswaan.org/',
     },
     {
       title: 'Women Helpline',
@@ -441,6 +446,7 @@
       description: 'A modern website for WaterAid India',
       image: '/portfolio/wateraid.jpg',
       technologies: ['WordPress', 'Google Analytics'],
+      website: 'https://wateraidindia.org/',
     },
     {
       title: 'Legal Education',

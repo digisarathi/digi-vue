@@ -8,7 +8,7 @@ import vuetify from 'vite-plugin-vuetify'
 // https://vite.dev/config/
 export default defineConfig({
   base: '/',
-  plugins: [vue(), vuetify(), vueDevTools()],
+  plugins: [vue(), vuetify({ autoImport: true }), vueDevTools()],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
@@ -20,7 +20,7 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ['vue', 'vue-router', 'vuetify'],
+          vendor: ['vue', 'vue-router', 'vuetify', 'marked', 'front-matter', '@mdi/js'],
         },
       },
     },
