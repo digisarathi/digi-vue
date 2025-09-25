@@ -141,9 +141,9 @@
                 <v-card-item>
                   <v-card-title class="text-h5 text-primary font-weight-bold">Project Management</v-card-title>
                   <v-card-subtitle class="text-secondary">For Professionals & Teams</v-card-subtitle>
-                  <v-card-text>
-                    <p>Master essential project management skills to deliver projects on time and within budget. Learn
-                      methodologies, tools, and best practices for effective project execution.</p>
+                  <v-card-text class="px-0">
+                    Master essential project management skills to deliver projects on time and within budget. Learn
+                    methodologies, tools, and best practices for effective project execution.
                     <v-chip class="ma-1" color="primary" size="small">Certification</v-chip>
                     <v-chip class="ma-1" color="primary" size="small">Hands-on</v-chip>
                   </v-card-text>
@@ -162,9 +162,9 @@
                 <v-card-item>
                   <v-card-title class="text-h5 text-primary font-weight-bold">AI Workshop Series</v-card-title>
                   <v-card-subtitle class="text-secondary">For NGO & SME Staff</v-card-subtitle>
-                  <v-card-text>
-                    <p>Learn how to leverage AI tools to enhance your organization's impact. Covering practical
-                      applications in data analysis, content creation, and automation.</p>
+                  <v-card-text class="px-0">
+                    Learn how to leverage AI tools to enhance your organization's impact. Covering practical
+                    applications in data analysis, content creation, and automation.
                     <v-chip class="ma-1" color="primary" size="small">Beginner-Friendly</v-chip>
                     <v-chip class="ma-1" color="primary" size="small">Hands-on</v-chip>
                   </v-card-text>
@@ -185,10 +185,10 @@
                 <v-card-item>
                   <v-card-title class="text-h5 text-primary font-weight-bold">Social Media Marketing</v-card-title>
                   <v-card-subtitle class="text-secondary">For NGOs & Small Businesses</v-card-subtitle>
-                  <v-card-text>
-                    <p>Learn how to use social media platforms to increase your organization's reach, engage your
-                      audience, and drive real-world impact. Covers content strategy, analytics, and campaign
-                      management.</p>
+                  <v-card-text class="px-0">
+                    Learn how to use social media platforms to increase your organization's reach, engage your
+                    audience, and drive real-world impact. Covers content strategy, analytics, and campaign
+                    management.
                     <v-chip class="ma-1" color="primary" size="small">Beginner-Friendly</v-chip>
                     <v-chip class="ma-1" color="primary" size="small">Practical</v-chip>
                     <v-chip class="ma-1" color="primary" size="small">Strategy</v-chip>
@@ -209,10 +209,10 @@
                 <v-card-item>
                   <v-card-title class="text-h5 text-primary font-weight-bold">WordPress Mastery</v-card-title>
                   <v-card-subtitle class="text-secondary">Website Building for Organizations</v-card-subtitle>
-                  <v-card-text>
-                    <p>Learn to deploy WordPress to create and maintain professional websites for your organization.
-                      Covers
-                      basic customization, content management, SEO and maintenance.</p>
+                  <v-card-text class="px-0">
+                    Learn to deploy WordPress to create and maintain professional websites for your organization.
+                    Covers
+                    basic customization, content management, SEO and maintenance.
                     <v-chip class="ma-1" color="primary" size="small">Practical</v-chip>
                     <v-chip class="ma-1" color="primary" size="small">No Coding Required</v-chip>
                   </v-card-text>

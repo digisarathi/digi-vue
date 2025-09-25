@@ -36,10 +36,13 @@
                   <div class="d-flex flex-column align-center text-center">
                     <v-icon color="primary" size="x-large" class="mb-4">{{ mdiLightbulb }}</v-icon>
                     <v-card-title class="text-primary font-weight-bold mb-3 text-wrap"
-                      >Discovery & Planning</v-card-title
+                      >Strategic Discovery & Blueprinting</v-card-title
                     >
                     <v-card-text class="text-body-1">
-                      Understanding your needs, goals, and target audience to create a strategic website plan.
+                      We immerse ourselves in your vision, analyzing business objectives, user personas, and market
+                      dynamics to craft a tailored digital strategy. Through collaborative workshops and data-driven
+                      insights, we architect a comprehensive roadmap that ensures your website delivers measurable
+                      impact and aligns seamlessly with your brand’s ethos.
                     </v-card-text>
                   </div>
                 </v-card-item>
@@ -50,9 +53,14 @@
                 <v-card-item class="pa-6">
                   <div class="d-flex flex-column align-center text-center">
                     <v-icon color="primary" size="x-large" class="mb-4">{{ mdiPencilRuler }}</v-icon>
-                    <v-card-title class="text-primary font-weight-bold mb-3 text-wrap">Design & Prototype</v-card-title>
+                    <v-card-title class="text-primary font-weight-bold mb-3 text-wrap"
+                      >Innovative Design & Prototyping</v-card-title
+                    >
                     <v-card-text class="text-body-1">
-                      Creating wireframes and visual designs that align with your brand and user needs.
+                      Our design phase transforms concepts into intuitive, visually compelling experiences. Leveraging
+                      iterative wireframes, high-fidelity prototypes, and user-centric design principles, we create
+                      interfaces that balance aesthetic sophistication with functional clarity, rigorously tested to
+                      resonate with your audience and elevate your brand identity.
                     </v-card-text>
                   </div>
                 </v-card-item>
@@ -63,9 +71,14 @@
                 <v-card-item class="pa-6">
                   <div class="d-flex flex-column align-center text-center">
                     <v-icon color="primary" size="x-large" class="mb-4">{{ mdiCodeBraces }}</v-icon>
-                    <v-card-title class="text-primary font-weight-bold mb-3 text-wrap">Development</v-card-title>
+                    <v-card-title class="text-primary font-weight-bold mb-3 text-wrap"
+                      >Precision Development & Optimization</v-card-title
+                    >
                     <v-card-text class="text-body-1">
-                      Building your website using modern technologies and best practices.
+                      Using cutting-edge frameworks, modular architectures, and performance-first coding practices, we
+                      build robust, scalable websites. From TypeScript-driven frontends to API-first backends, our
+                      development process integrates accessibility (WCAG 2.1), SEO optimization, and progressive web
+                      capabilities to ensure a future-proof digital presence.
                     </v-card-text>
                   </div>
                 </v-card-item>
@@ -76,9 +89,14 @@
                 <v-card-item class="pa-6">
                   <div class="d-flex flex-column align-center text-center">
                     <v-icon color="primary" size="x-large" class="mb-4">{{ mdiRocketLaunch }}</v-icon>
-                    <v-card-title class="text-primary font-weight-bold mb-3 text-wrap">Launch & Support</v-card-title>
+                    <v-card-title class="text-primary font-weight-bold mb-3 text-wrap"
+                      >Seamless Launch & Proactive Support</v-card-title
+                    >
                     <v-card-text class="text-body-1">
-                      Deploying your website and providing ongoing maintenance and support.
+                      We orchestrate a flawless deployment with automated testing, CI/CD pipelines, and cloud-based
+                      hosting for maximum uptime. Post-launch, our dedicated support includes performance monitoring,
+                      iterative updates, and strategic enhancements to keep your website secure, relevant, and aligned
+                      with evolving business goals.
                     </v-card-text>
                   </div>
                 </v-card-item>

@@ -8,7 +8,7 @@
             <h1 class="text-h2 text-primary font-weight-bold mb-4">
               Your Virtual Chief Technology Officer
             </h1>
-            <p class="text-body-1 mb-6">
+            <p class="text-h6 mb-6 text-secondary">
               With <strong>myCTO</strong>, we bring the expertise of a Chief Technology Officer to your SME or NGO without the hefty price tag.
                Whether you’re navigating digital transformation, troubleshooting tech issues, or planning your next big project, myCTO is your trusted partner.
             </p>

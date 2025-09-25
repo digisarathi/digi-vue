@@ -31,7 +31,7 @@
             </v-col>
           </v-row>
           <v-row>
-            <v-col cols="12" md="3">
+            <v-col cols="12" md="6">
               <v-card height="100%" class="feature-card">
                 <v-card-item class="pa-6">
                   <div class="d-flex flex-column align-center text-center">
@@ -45,7 +45,7 @@
                 </v-card-item>
               </v-card>
             </v-col>
-            <v-col cols="12" md="3">
+            <v-col cols="12" md="6">
               <v-card height="100%" class="feature-card">
                 <v-card-item class="pa-6">
                   <div class="d-flex flex-column align-center text-center">
@@ -59,7 +59,7 @@
                 </v-card-item>
               </v-card>
             </v-col>
-            <v-col cols="12" md="3">
+            <v-col cols="12" md="6">
               <v-card height="100%" class="feature-card">
                 <v-card-item class="pa-6">
                   <div class="d-flex flex-column align-center text-center">
@@ -73,7 +73,7 @@
                 </v-card-item>
               </v-card>
             </v-col>
-            <v-col cols="12" md="3">
+            <v-col cols="12" md="6">
               <v-card height="100%" class="feature-card">
                 <v-card-item class="pa-6">
                   <div class="d-flex flex-column align-center text-center">

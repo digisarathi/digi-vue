@@ -6,7 +6,7 @@
         <v-row justify="center" align="center" class="min-height-70vh">
           <v-col cols="12" md="7">
             <h1 :class="['font-weight-bold', 'mb-6', { 'text-h3': !isMobile, 'text-h4': isMobile }]" class="text-primary">
-              We like to do things differently, never choosing the easy way, and permanently challenging inertia.
+            We defy inertia, preferring the bolder, more meaningful route.
             </h1>
             <p :class="['mb-8', { 'text-h6': !isMobile, 'text-h7': isMobile }]" class="text-secondary">
               We are a team of passionate professionals dedicated to helping you achieve your goals through innovative and effective solutions.
@@ -40,7 +40,7 @@
     <v-container >
       <v-row class="my-2 py-6">
         <v-col class="text-center">
-          <p class="text-h6 mb-8 text-secondary">Every new project is welcomed with open arms, and grows into an offer if it turns out to be sustainable. That’s the way we grow and stand out from the crowd.
+          <p class="text-body-1 mb-8 text-secondary">Every new project is welcomed with open arms, and grows into an offer if it turns out to be sustainable. That’s the way we grow and stand out from the crowd.
 Objectives Key Results (OKRs) are set up at a group, team, and individual level to accomplish our mission all together.
 Our teams and people are our most precious asset. We aim to have a positive and valuable impact on Earth via our work with nonprofits.</p>
         </v-col>
