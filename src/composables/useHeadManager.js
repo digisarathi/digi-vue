@@ -52,7 +52,7 @@ export function useHeadManager() {
             '@type': 'Organization',
             name: 'digiSarathi',
             url: 'https://digisarathi.com',
-            logo: 'https://digisarathi.com/logo.png',
+            logo: 'https://digisarathi.com/greater.png',
             ...data
           })
         }
