@@ -4,7 +4,6 @@ title: 'GuideStar India'
 date: '2021-06-23T23:07:40+00:00'
 author: digi_admin_9
 layout: post
-permalink: /guidestar-india/
 
 tags:
   - 'Nonprofits (NGOs)'
@@ -12,6 +11,7 @@ tags:
 ---
 
 Guidestar India, a prominent NGO association based in Mumbai, has been at the forefront of curating the NGO community in India for over two decades. By leveraging technology for online user engagement and outreach, Guidestar has successfully connected various stakeholders in the nonprofit sector. Recently, they have expanded their services to include corporate partnerships, enabling companies to collaborate with reputable and innovative NGO programs through their Corporate Social Responsibility (CSR) initiatives.
+
 <h3>Objectives</h3>
 The latest initiative, GivingTuesdays, aims to promote a culture of volunteering and philanthropy in India. This online portal is designed to encourage individuals and organizations to engage in giving back to their communities, thereby fostering a spirit of social responsibility.
 <h3> Process</h3>

@@ -5,13 +5,11 @@ date: '2025-05-10T08:44:21+00:00'
 author: digi_admin_9
 layout: post
 guid: 'https://digisarathi.com/?p=1244'
-permalink: /workshop-ai-for-ngos/
 tags:
   - 'Nonprofits (NGOs)'
   - SMEs
   - Socent
   - Workshops
-
 ---
 
 To Unlock the Power of Artificial Intelligence, Join us for an engaging 1 hour workshop designed specifically for NGOs. Supercharge your productivity with actionable insights and tools tailored to the nonprofit sector.

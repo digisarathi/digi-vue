@@ -4,7 +4,6 @@ title: 'Ditching WordPress'
 date: '2025-01-03T10:38:12+00:00'
 author: digi_admin_9
 layout: post
-permalink: /ditching-wordpress/
 
 categories:
   - Industry

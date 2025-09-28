@@ -5,14 +5,12 @@ date: '2025-01-10T08:27:00+00:00'
 author: digi_admin_9
 excerpt: 'This workshop is an initiative to equip NGOs with the necessary skills to enhance their visual communication efforts effectively. '
 layout: post
-permalink: /workshop-canva-ai-for-ngos/
 
 tags:
   - 'Nonprofits (NGOs)'
   - SMEs
   - Socent
   - Workshops
-
 ---
 
 Canva is a free and easy-to-use tool that lets you design stunning graphics for your campaigns, social media, and presentations. While its free for basic use, check out Canva’s Nonprofit Program [​here​](https://www.canva.com/canva-for-nonprofits/).

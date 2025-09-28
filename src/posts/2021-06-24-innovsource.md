@@ -4,7 +4,6 @@ title: Innovsource
 date: '2021-06-24T04:23:03+00:00'
 author: digi_admin_9
 layout: post
-permalink: /innovsource/
 
 tags:
   - Software Development
@@ -15,6 +14,7 @@ tags:
 ---
 
 In a rapidly evolving workforce landscape, a prominent Indian staffing company sought to enhance communication and connectivity for its on-site employees. With over 33,000 users across India, the need for a robust mobile application that could facilitate 24/7 access to HR services became paramount.
+
 <h3>Research Insights</h3>
 Our comprehensive research revealed that the majority of users were utilizing Android and Windows devices, particularly Nokia phones. This insight guided our development strategy, ensuring that the mobile app would cater specifically to the needs of these platforms.
 <h3>Development Strategy</h3>

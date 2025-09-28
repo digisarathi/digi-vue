@@ -4,7 +4,6 @@ title: 'Harassmap Mumbai'
 date: '2021-06-23T23:00:21+00:00'
 author: digi_admin_9
 layout: post
-permalink: /harassmap-mumbai/
 
 tags:
   - 'Nonprofits (NGOs)'

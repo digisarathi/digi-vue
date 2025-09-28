@@ -14,13 +14,43 @@ const extractFrontMatter = (content) => {
     const frontMatter = match[1]
     const lines = frontMatter.split('\n')
     const data = {}
+    let currentKey = ''
+    let currentValue = []
+
     lines.forEach((line) => {
-      const [key, value] = line.split(':').map((part) => part.trim())
-      if (key && value) {
-        // Remove surrounding quotes if present
-        data[key] = value.replace(/^['"]|['"]$/g, '')
+      // Skip empty lines
+      if (!line.trim()) return
+
+      // Check if line starts with a key (word characters, hyphens, or underscores)
+      const keyMatch = line.match(/^([\w-]+):\s*(.*)/)
+      
+      if (keyMatch) {
+        // If we were building a value, save it before starting a new key
+        if (currentKey) {
+          data[currentKey] = currentValue.join('\n').trim()
+        }
+        
+        // Start new key-value pair
+        currentKey = keyMatch[1]
+        currentValue = [keyMatch[2].trim()]
+      } else if (currentKey) {
+        // If line doesn't start with a key but we have a current key, it's a continuation of the value
+        currentValue.push(line.trim())
       }
     })
+
+    // Don't forget to save the last key-value pair
+    if (currentKey) {
+      data[currentKey] = currentValue.join('\n').trim()
+    }
+
+    // Clean up values (remove surrounding quotes if present)
+    Object.keys(data).forEach(key => {
+      if (typeof data[key] === 'string') {
+        data[key] = data[key].replace(/^['"](.*)['"]$/, '$1')
+      }
+    })
+
     return data
   }
   return {}

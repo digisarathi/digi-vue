@@ -5,7 +5,6 @@ date: '2022-06-08T10:21:10+00:00'
 author: digi_admin_9
 layout: post
 guid: 'https://digisarathi.com/?p=1045'
-permalink: /awaaz-e-niswaan/
 
 tags:
   - 'Nonprofits (NGOs)'

@@ -4,11 +4,10 @@ title: 'How to choose Website technology? '
 date: '2025-01-17T08:05:44+00:00'
 author: digi_admin_9
 layout: post
-permalink: /how-to-choose-website-technology/
 
 description: 'The technology one chooses to implement a corporate website is as crucial a decision as the design and content itself.'
 excerpt: 'ith attention spans on the internet at their lowest, page load times and device/screen size responsiveness can make or break the user experience (UX).'
-image: '/og-image.jpg'  # Recommended size: 1200x630px
+image: '/og-image.jpg' # Recommended size: 1200x630px
 tags:
   - Industry
   - 'Nonprofits (NGOs)'
@@ -16,7 +15,7 @@ tags:
   - Website Design
 og_title: 'How to choose Website technology? - digiSarathi'
 og_description: 'The technology one chooses to implement a corporate website is as crucial a decision as the design and content itself.'
-og_image: '/og-image.jpg'  # Full URL
+og_image: '/og-image.jpg' # Full URL
 twitter_card: 'summary_large_image'
 ---
 
@@ -30,13 +29,11 @@ Choose technology that amplifies your impact. Let’s connect to craft a website
 
 #NonprofitTech #SMEStrategy #WebPerformance #UXDesign
 
-
 ### Experience Unmatched Performance
 
 By simplifying the digiSarathi website, we've witnessed an increase in page load speeds! We will prepare a video demo of this soon!
 
 #### To schedule a 1-on-1 consultation,<span style=" max-width: 100px; text-align: center; background-color: #325ea4; color: white; padding: 5px 10px; border-radius: 5px;"> [Email us!](mailto:hello@digisarathi.com)</span>
-
 
 ### What to Expect
 
