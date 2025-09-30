@@ -1,25 +1,26 @@
 <script setup>
-import { ref, onMounted } from 'vue';
-import { useRouter } from 'vue-router';
-import { mdiWeb, mdiCellphoneLink, mdiTrendingUp, mdiSchool, mdiCircle, mdiAccount } from '@mdi/js';
-import { useHeadManager } from '@/composables/useHeadManager';
+import {ref, onMounted} from 'vue';
+import {useRouter} from 'vue-router';
+import {mdiWeb, mdiCellphoneLink, mdiTrendingUp, mdiSchool, mdiCircle, mdiAccount} from '@mdi/js';
+import {useHeadManager} from '@/composables/useHeadManager';
 
-const { setMetaTags, setStructuredData } = useHeadManager();
+const {setMetaTags, setStructuredData} = useHeadManager();
 
 const router = useRouter();
 const props = defineProps({
   isMobile: {
     type: Boolean,
-    default: false
-  }
+    default: false,
+  },
 });
 
 onMounted(() => {
   // Set up meta tags
   setMetaTags({
     title: 'Digital Solutions for Social Impact | digiSarathi',
-    description: 'Empowering NGOs and social enterprises with custom digital solutions including web development, mobile apps, and digital marketing services.',
-    image: '/og-home.jpg'
+    description:
+      'Empowering NGOs and social enterprises with custom digital solutions including web development, mobile apps, and digital marketing services.',
+    image: '/og-home.jpg',
   });
 
   // Set up structured data
@@ -31,14 +32,16 @@ onMounted(() => {
     sameAs: [
       'https://twitter.com/digisarathi',
       'https://linkedin.com/company/digisarathi',
-      'https://facebook.com/digisarathi'
+      'https://facebook.com/digisarathi',
     ],
-    contactPoint: [{
-      '@type': 'ContactPoint',
-      telephone: '+91-XXXXXXXXXX',
-      contactType: 'customer service',
-      availableLanguage: ['English', 'Hindi']
-    }]
+    contactPoint: [
+      {
+        '@type': 'ContactPoint',
+        telephone: '+91-XXXXXXXXXX',
+        contactType: 'customer service',
+        availableLanguage: ['English', 'Hindi'],
+      },
+    ],
   });
 
   // Load ConvertKit script
@@ -54,80 +57,79 @@ const testimonials = ref([
   {
     name: 'Santayan Sengupta',
     company: 'Founder, ThoughtShop Foundation',
-    text: 'digiSarathi is certainly passionate about technology, but they have the vision and skill to make technology bend to human needs and not the other way around. This was particularly important in our context where users are young marginalised people with little prior access or comfort with technology. I was delighted to get a glimpse of Prashant\'s empathy for the people he was crafting a solution for.',
-    photo: 'santayan.webp'
+    text: "digiSarathi is certainly passionate about technology, but they have the vision and skill to make technology bend to human needs and not the other way around. This was particularly important in our context where users are young marginalised people with little prior access or comfort with technology. I was delighted to get a glimpse of Prashant's empathy for the people he was crafting a solution for.",
+    photo: 'santayan.webp',
   },
   {
     name: 'Dr. Dwivedi',
     company: 'Secretary, SEEDS',
     text: 'We are happy to state that Digisarathi has designed the SEEDS website in 2022. The team led by Mr Prashant Pandit did a wonderful job - just the way one had visualized. Digisarathi is organization-friendly and we appreciate their sensitivities at all levels. On top of it the charges are reasonable and affordable for grass root NGOs.',
-    photo: 'shubhra.png'
+    photo: 'shubhra.png',
   },
   {
     name: 'Adv. Jyoti',
     company: 'Founder, DISHA',
-    text: "We deeply appreciate the invaluable contributions digiSarathi has made to DISHA. Your dedication and hard work have significantly impacted our organization. ",
-    avatar: '/images/avatars/jane-smith.jpg'
+    text: 'We deeply appreciate the invaluable contributions digiSarathi has made to DISHA. Your dedication and hard work have significantly impacted our organization. ',
+    avatar: '/images/avatars/jane-smith.jpg',
   },
   {
     name: '',
     company: 'Trustee, Niswaan',
     text: 'The team delivered our project on time and exceeded our expectations. Their focus on simplicity while maintaining powerful functionality was exactly what we needed.',
-    avatar: '/images/avatars/john-doe.jpg'
+    avatar: '/images/avatars/john-doe.jpg',
   },
   {
     name: 'Uma',
     company: 'Founder, Aarambh India',
     text: "DigiSarathi has an impeccable sense of the technical aspects of website development. What sets them apart is their commitment & passion to understand and engage with the subject. This approach can't help but lead to a great product that is perfectly synced in terms of design, technology and content. Aarambh India is a testament to this.",
-    photo: 'uma.jpg'
+    photo: 'uma.jpg',
   },
   {
     name: 'Dr. Sharada',
     company: 'Founder, Population First',
     text: 'Thank you for making technology less threatening.',
-    photo: 'sharada.jpg'
+    photo: 'sharada.jpg',
   },
   {
     name: 'Vinelle Vaz',
     company: 'Head - Retail, RenewSys',
     text: 'digiSarathi is my go-to whenever I want to discuss some new tech idea and its implementation.',
-    photo: 'vinelle.jpeg'
+    photo: 'vinelle.jpeg',
   },
   {
     name: 'Daniel Ben Horin',
     company: 'Founder, Techsoup.org',
     text: "A comprehensive knowledge of tech issues, cross-cultural sophistication and a fierce dedication to his work were all apparent. Much of our network's success in India can be credited to his involvement.",
-    photo: 'daniel.png'
+    photo: 'daniel.png',
   },
   {
     name: 'Sundar Iyer',
     company: 'Founder, Suryodaya',
-    text: "digiSarathi helped us decide that the software system we had in mind should be evaluated after we reach a certain scale otherwise we are only adding complexities to the resolution process.",
-    photo: 'sundar.webp'
+    text: 'digiSarathi helped us decide that the software system we had in mind should be evaluated after we reach a certain scale otherwise we are only adding complexities to the resolution process.',
+    photo: 'sundar.webp',
   },
   {
     name: 'Seroja Manoj',
     company: 'Communications, Maya India NGO',
-    text: "digiSarathi AI training session was extremely helpful. Using AI tools at work makes life so much more enjoyable and easier as it is both effective and efficient. Do consider conducting more sessions to help us keep ourselves updated on how we can leverage technology to perform better at work. Keep up the good work!",
-    avatar: '/images/avatars/jane-smith.jpg'
+    text: 'digiSarathi AI training session was extremely helpful. Using AI tools at work makes life so much more enjoyable and easier as it is both effective and efficient. Do consider conducting more sessions to help us keep ourselves updated on how we can leverage technology to perform better at work. Keep up the good work!',
+    avatar: '/images/avatars/jane-smith.jpg',
   },
-
 ]);
 
 // Enhanced clients with names and industries
 const clients = ref([
-  { name: 'Aarambh India', industry: 'Nonprofit', logo: 'logos/aarambh.png' },
-  { name: 'Akshara', industry: 'Nonprofit', logo: 'logos/akshara.png' },
-  { name: 'InnovSource', industry: 'Staffing', logo: 'logos/innov.png' },
-  { name: 'KServe', industry: 'BPO', logo: 'logos/kserve.png' },
-  { name: 'RenewSys', industry: 'Manufacturing', logo: 'logos/renewsys.png' },
-  { name: 'WaterAid India', industry: 'Nonprofit', logo: 'logos/wateraid.png' },
-  { name: 'LLF', industry: 'Nonprofit', logo: 'logos/learninglinks.png' },
-  { name: 'Entrib ShopWorx', industry: 'Manufacturing', logo: 'logos/shopworx.png' },
-  { name: 'UIC Energy', industry: 'Renewable Energy', logo: 'logos/uicenergy.png' },
-  { name: 'Yunus Social', industry: 'Nonprofit', logo: 'logos/ysb.png' },
-  { name: 'GuideStar India', industry: 'Nonprofit', logo: 'logos/guidestar.png' },
-  { name: 'SEEDS', industry: 'Nonprofit', logo: 'logos/seeds.png' },
+  {name: 'Aarambh India', industry: 'Nonprofit', logo: 'logos/aarambh.png'},
+  {name: 'Akshara', industry: 'Nonprofit', logo: 'logos/akshara.png'},
+  {name: 'InnovSource', industry: 'Staffing', logo: 'logos/innov.png'},
+  {name: 'KServe', industry: 'BPO', logo: 'logos/kserve.png'},
+  {name: 'RenewSys', industry: 'Manufacturing', logo: 'logos/renewsys.png'},
+  {name: 'WaterAid India', industry: 'Nonprofit', logo: 'logos/wateraid.png'},
+  {name: 'LLF', industry: 'Nonprofit', logo: 'logos/learninglinks.png'},
+  {name: 'Entrib ShopWorx', industry: 'Manufacturing', logo: 'logos/shopworx.png'},
+  {name: 'UIC Energy', industry: 'Renewable Energy', logo: 'logos/uicenergy.png'},
+  {name: 'Yunus Social', industry: 'Nonprofit', logo: 'logos/ysb.png'},
+  {name: 'GuideStar India', industry: 'Nonprofit', logo: 'logos/guidestar.png'},
+  {name: 'SEEDS', industry: 'Nonprofit', logo: 'logos/seeds.png'},
 ]);
 
 // Enhanced services with icons and more detailed descriptions
@@ -138,7 +140,7 @@ const services = ref([
     text: 'Your website is the foundation upon which your digital marketing or fundraising campaigns are built. We create responsive, user-friendly designs that connect with your audience.',
     features: ['Responsive Design', 'SEO Optimization', 'Custom CMS', 'Performance Focus'],
     route: 'website-design',
-    image: 'wordpress.svg'
+    image: 'wordpress.svg',
   },
   {
     name: 'Digital Marketing',
@@ -146,7 +148,7 @@ const services = ref([
     text: 'Comprehensive strategies to enhance your online presence and drive engagement. We use data-driven approaches to maximize your ROI and reach your target audience effectively.',
     features: ['SEO/SEM', 'Content Marketing', 'Social Media', 'Analytics & Reporting'],
     route: 'digital-marketing',
-    image: 'social.svg'
+    image: 'social.svg',
   },
   {
     name: 'Training & Workshops',
@@ -154,7 +156,7 @@ const services = ref([
     text: 'Hands-on sessions designed to empower your team with essential skills and knowledge. Our expert-led workshops provide practical knowledge that can be immediately applied.',
     features: ['Customized Programs', 'Hands-on Learning', 'Remote Options', 'Ongoing Support'],
     route: 'training-workshops',
-    image: 'shared.svg'
+    image: 'shared.svg',
   },
   {
     name: 'Apps & Custom Software ',
@@ -162,13 +164,12 @@ const services = ref([
     text: 'Innovative user experiences based on a modular and scalable architecture to scale with flexibility and create seamless digital experiences across all platforms.',
     features: ['Native Mobile Apps', 'Progressive Web Apps', 'Custom Software', 'API Integration'],
     route: 'apps-software-development',
-    image: 'app.svg'
-  }
+    image: 'app.svg',
+  },
 ]);
 
-
 const goToService = (route) => {
-  router.push({ name: route });
+  router.push({name: route});
 };
 </script>
 
@@ -179,18 +180,29 @@ const goToService = (route) => {
       <v-container>
         <v-row justify="center" align="center" class="min-height-70vh">
           <v-col cols="12" md="7" order="2" order-md="1">
-            <h1 :class="[ 'mb-6', { 'text-h3': !isMobile, 'text-h4': isMobile }]"
-              class="text-primary" fetchpriority="high">
-              We turn your mission into <strong><i>momentum</i></strong> through smart solutions that work from day one.
+            <h1
+              :class="['mb-6', {'text-h3': !isMobile, 'text-h4': isMobile}]"
+              class="text-primary"
+              fetchpriority="high">
+              We turn your mission into
+              <strong><i>momentum</i></strong>
+              through smart solutions that work from day one.
             </h1>
-            <p :class="['mb-6', { 'text-h6': !isMobile, 'text-h7': isMobile }]" class="text-secondary">
-              Our digital strategy, tech system design and implementation processes are speedy &
-              agile which means you see results ASAP. Because your goals can't wait for 'someday'.
+            <p :class="['mb-6', {'text-h6': !isMobile, 'text-h7': isMobile}]" class="text-secondary">
+              Our digital strategy, tech system design and implementation processes are speedy & agile which means you
+              see results ASAP. Because your goals can't wait for 'someday'.
             </p>
           </v-col>
           <v-col cols="12" md="5" order="1" order-md="2">
-            <v-img src="/websites.svg" max-width="450" contain loading="eager" fetchpriority="high"
-              width="450" height="450" alt="Hero illustration"></v-img>
+            <v-img
+              src="/websites.svg"
+              max-width="450"
+              contain
+              loading="eager"
+              fetchpriority="high"
+              width="450"
+              height="450"
+              alt="Hero illustration"></v-img>
           </v-col>
         </v-row>
       </v-container>
@@ -201,8 +213,9 @@ const goToService = (route) => {
       <v-container>
         <v-row>
           <v-col cols="12" class="text-center mb-12">
-            <h2 class="font-weight-bold mb-3 text-primary" :class="{ 'text-h3': !isMobile, 'text-h6': isMobile }">Our
-              Services</h2>
+            <h2 class="font-weight-bold mb-3 text-primary" :class="{'text-h3': !isMobile, 'text-h6': isMobile}">
+              Our Services
+            </h2>
             <p class="text-subtitle-1 mx-auto max-width-600 text-secondary">
               Comprehensive digital solutions tailored to your specific needs
             </p>
@@ -210,13 +223,26 @@ const goToService = (route) => {
         </v-row>
 
         <v-row id="services">
-          <v-col v-for="(service, index) in services" :key="index" cols="12" md="6" lg="6" class="mb-md-4 mb-2 pa-2 pa-md-6">
-            <v-hover v-slot="{ props }">
-              <v-card v-bind="props" :elevation="2" height="100%" class="service-card transition-fast overflow-hidden"
+          <v-col
+            v-for="(service, index) in services"
+            :key="index"
+            cols="12"
+            md="6"
+            lg="6"
+            class="mb-md-4 mb-2 pa-2 pa-md-6">
+            <v-hover v-slot="{props}">
+              <v-card
+                v-bind="props"
+                :elevation="2"
+                height="100%"
+                class="service-card transition-fast overflow-hidden"
                 @click="goToService(service.route)">
                 <v-card-item class="text-center my-4">
-                  <v-card-title class="font-weight-bold text-primary"
-                    :class="{ 'text-h5': !isMobile, 'text-h6': isMobile }">{{ service.name }}</v-card-title>
+                  <v-card-title
+                    class="font-weight-bold text-primary"
+                    :class="{'text-h5': !isMobile, 'text-h6': isMobile}">
+                    {{ service.name }}
+                  </v-card-title>
                 </v-card-item>
                 <v-card-text>
                   <div class="d-flex justify-center">
@@ -241,8 +267,9 @@ const goToService = (route) => {
       <v-container>
         <v-row>
           <v-col cols="12" class="text-center mb-12">
-            <h2 class="font-weight-bold mb-3 text-primary" :class="{ 'text-h3': !isMobile, 'text-h6': isMobile }">What
-              Our Clients Say</h2>
+            <h2 class="font-weight-bold mb-3 text-primary" :class="{'text-h3': !isMobile, 'text-h6': isMobile}">
+              What Our Clients Say
+            </h2>
             <p class="text-subtitle-1 mx-auto max-width-600 text-secondary">
               Hear from the organizations we've helped transform digitally
             </p>
@@ -251,15 +278,14 @@ const goToService = (route) => {
 
         <v-row justify="center">
           <v-col cols="12" lg="8">
-            <v-carousel 
+            <v-carousel
               :show-arrows="false"
               progress="primary"
               height="auto"
               hide-delimiter-background
               :delimiter-icon="mdiCircle"
               color="primary"
-              class="testimonial-carousel"
-            >
+              class="testimonial-carousel">
               <v-carousel-item v-for="(testimonial, index) in testimonials" :key="index">
                 <v-card class="testimonial-card mx-auto pa-6" max-width="800">
                   <div class="d-flex flex-column align-center text-center">
@@ -271,12 +297,11 @@ const goToService = (route) => {
                     <v-divider width="60" class="mb-4"></v-divider>
                     <div class="d-flex align-center justify-center">
                       <v-avatar size="60" class="mr-4">
-                        <v-img 
-                          :src="'/clients/' + testimonial.photo" 
+                        <v-img
+                          :src="'/clients/' + testimonial.photo"
                           :alt="testimonial.name + ' photo'"
                           cover
-                          class="bg-grey-lighten-3"
-                        >
+                          class="bg-grey-lighten-3">
                           <template v-slot:placeholder>
                             <v-icon size="24">mdiAccount</v-icon>
                           </template>
@@ -302,8 +327,9 @@ const goToService = (route) => {
       <v-container>
         <v-row>
           <v-col cols="12" class="text-center mb-12">
-            <h2 class="font-weight-bold mb-3 text-primary" :class="{ 'text-h3': !isMobile, 'text-h6': isMobile }">Our
-              Clients</h2>
+            <h2 class="font-weight-bold mb-3 text-primary" :class="{'text-h3': !isMobile, 'text-h6': isMobile}">
+              Our Clients
+            </h2>
             <p class="text-subtitle-1 mx-auto max-width-600 text-secondary">
               Trusted by leading organizations across industries
             </p>
@@ -312,11 +338,17 @@ const goToService = (route) => {
 
         <v-row justify="center" align="center" class="">
           <v-col v-for="(client, index) in clients" :key="index" cols="6" sm="4" md="2" class="text-center mb-8">
-            <v-hover v-slot="{ props }">
+            <v-hover v-slot="{props}">
               <v-card v-bind="props" variant="flat" class="client-logo bg-transparent">
                 <v-tooltip :text="client.name + ' - ' + client.industry" location="top">
-                  <template v-slot:activator="{ props }">
-                    <v-img v-bind="props" :src="client.logo" :alt="client.name" height="100" width="200" contain
+                  <template v-slot:activator="{props}">
+                    <v-img
+                      v-bind="props"
+                      :src="client.logo"
+                      :alt="client.name"
+                      height="100"
+                      width="200"
+                      contain
                       class="mx-auto grey-filter"></v-img>
                   </template>
                 </v-tooltip>
@@ -332,14 +364,12 @@ const goToService = (route) => {
       <v-container>
         <v-row justify="center">
           <v-col cols="12" md="8" lg="6" class="text-center">
-            <h2 class="font-weight-bold mb-3 text-white" :class="{ 'text-h3': !isMobile, 'text-h6': isMobile }">Stay
-              Updated
+            <h2 class="font-weight-bold mb-3 text-white" :class="{'text-h3': !isMobile, 'text-h6': isMobile}">
+              Join 5000+ people who get our email newsletter to stay updated.
             </h2>
-            <p class="text-caption mt-4 text-white opacity-medium">
-              We respect your privacy. Unsubscribe at any time.
-            </p>
-            <div class="mx-auto pa-2" style="width: 300px;" id="kit-form">
-            </div>
+            <p class="text-caption mt-4 text-white">We’ll share product updates, thoughts, new releases, and other tidbits we think you’ll find interesting.</p>
+            <p class="text-caption mt-4 text-white">We respect your privacy. Unsubscribe at any time.</p>
+            <div class="mx-auto pa-2" style="width: 300px" id="kit-form"></div>
           </v-col>
         </v-row>
       </v-container>
@@ -369,7 +399,6 @@ const goToService = (route) => {
   background: linear-gradient(135deg, var(--v-primary-base) 0%, var(--v-secondary-base) 100%);
   overflow: hidden;
 }
-
 
 .min-height-70vh {
   min-height: 70vh;
