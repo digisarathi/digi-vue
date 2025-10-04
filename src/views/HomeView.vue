@@ -1,18 +1,18 @@
 <script setup>
-import {ref, onMounted} from 'vue';
-import {useRouter} from 'vue-router';
-import {mdiWeb, mdiCellphoneLink, mdiTrendingUp, mdiSchool, mdiCircle, mdiAccount} from '@mdi/js';
-import {useHeadManager} from '@/composables/useHeadManager';
+import { ref, onMounted } from 'vue'
+import { useRouter } from 'vue-router'
+import { mdiWeb, mdiCellphoneLink, mdiTrendingUp, mdiSchool, mdiCircle, mdiAccount } from '@mdi/js'
+import { useHeadManager } from '@/composables/useHeadManager'
 
-const {setMetaTags, setStructuredData} = useHeadManager();
+const { setMetaTags, setStructuredData } = useHeadManager()
 
-const router = useRouter();
+const router = useRouter()
 const props = defineProps({
   isMobile: {
     type: Boolean,
     default: false,
   },
-});
+})
 
 onMounted(() => {
   // Set up meta tags
@@ -21,7 +21,7 @@ onMounted(() => {
     description:
       'Empowering NGOs and social enterprises with custom digital solutions including web development, mobile apps, and digital marketing services.',
     image: '/og-home.jpg',
-  });
+  })
 
   // Set up structured data
   setStructuredData({
@@ -42,15 +42,15 @@ onMounted(() => {
         availableLanguage: ['English', 'Hindi'],
       },
     ],
-  });
+  })
 
   // Load ConvertKit script
-  const script = document.createElement('script');
-  script.setAttribute('data-uid', '7d5a62888b');
-  script.setAttribute('src', 'https://digisarathi-.kit.com/7d5a62888b/index.js');
-  script.setAttribute('async', '');
-  document.getElementById('kit-form').appendChild(script);
-});
+  const script = document.createElement('script')
+  script.setAttribute('data-uid', '7d5a62888b')
+  script.setAttribute('src', 'https://digisarathi-.kit.com/7d5a62888b/index.js')
+  script.setAttribute('async', '')
+  document.getElementById('kit-form').appendChild(script)
+})
 
 // Improved testimonials with more content and images
 const testimonials = ref([
@@ -65,12 +65,6 @@ const testimonials = ref([
     company: 'Secretary, SEEDS',
     text: 'We are happy to state that Digisarathi has designed the SEEDS website in 2022. The team led by Mr Prashant Pandit did a wonderful job - just the way one had visualized. Digisarathi is organization-friendly and we appreciate their sensitivities at all levels. On top of it the charges are reasonable and affordable for grass root NGOs.',
     photo: 'shubhra.png',
-  },
-  {
-    name: 'Adv. Jyoti',
-    company: 'Founder, DISHA',
-    text: 'We deeply appreciate the invaluable contributions digiSarathi has made to DISHA. Your dedication and hard work have significantly impacted our organization. ',
-    avatar: '/images/avatars/jane-smith.jpg',
   },
   {
     name: '',
@@ -114,23 +108,23 @@ const testimonials = ref([
     text: 'digiSarathi AI training session was extremely helpful. Using AI tools at work makes life so much more enjoyable and easier as it is both effective and efficient. Do consider conducting more sessions to help us keep ourselves updated on how we can leverage technology to perform better at work. Keep up the good work!',
     avatar: '/images/avatars/jane-smith.jpg',
   },
-]);
+])
 
 // Enhanced clients with names and industries
 const clients = ref([
-  {name: 'Aarambh India', industry: 'Nonprofit', logo: 'logos/aarambh.png'},
-  {name: 'Akshara', industry: 'Nonprofit', logo: 'logos/akshara.png'},
-  {name: 'InnovSource', industry: 'Staffing', logo: 'logos/innov.png'},
-  {name: 'KServe', industry: 'BPO', logo: 'logos/kserve.png'},
-  {name: 'RenewSys', industry: 'Manufacturing', logo: 'logos/renewsys.png'},
-  {name: 'WaterAid India', industry: 'Nonprofit', logo: 'logos/wateraid.png'},
-  {name: 'LLF', industry: 'Nonprofit', logo: 'logos/learninglinks.png'},
-  {name: 'Entrib ShopWorx', industry: 'Manufacturing', logo: 'logos/shopworx.png'},
-  {name: 'UIC Energy', industry: 'Renewable Energy', logo: 'logos/uicenergy.png'},
-  {name: 'Yunus Social', industry: 'Nonprofit', logo: 'logos/ysb.png'},
-  {name: 'GuideStar India', industry: 'Nonprofit', logo: 'logos/guidestar.png'},
-  {name: 'SEEDS', industry: 'Nonprofit', logo: 'logos/seeds.png'},
-]);
+  { name: 'Aarambh India', industry: 'Nonprofit', logo: 'logos/aarambh.png' },
+  { name: 'Akshara', industry: 'Nonprofit', logo: 'logos/akshara.png' },
+  { name: 'InnovSource', industry: 'Staffing', logo: 'logos/innov.png' },
+  { name: 'KServe', industry: 'BPO', logo: 'logos/kserve.png' },
+  { name: 'RenewSys', industry: 'Manufacturing', logo: 'logos/renewsys.png' },
+  { name: 'WaterAid India', industry: 'Nonprofit', logo: 'logos/wateraid.png' },
+  { name: 'LLF', industry: 'Nonprofit', logo: 'logos/learninglinks.png' },
+  { name: 'Entrib ShopWorx', industry: 'Manufacturing', logo: 'logos/shopworx.png' },
+  { name: 'UIC Energy', industry: 'Renewable Energy', logo: 'logos/uicenergy.png' },
+  { name: 'Yunus Social', industry: 'Nonprofit', logo: 'logos/ysb.png' },
+  { name: 'GuideStar India', industry: 'Nonprofit', logo: 'logos/guidestar.png' },
+  { name: 'SEEDS', industry: 'Nonprofit', logo: 'logos/seeds.png' },
+])
 
 // Enhanced services with icons and more detailed descriptions
 const services = ref([
@@ -166,11 +160,11 @@ const services = ref([
     route: 'apps-software-development',
     image: 'app.svg',
   },
-]);
+])
 
 const goToService = (route) => {
-  router.push({name: route});
-};
+  router.push({ name: route })
+}
 </script>
 
 <template>
@@ -181,16 +175,20 @@ const goToService = (route) => {
         <v-row justify="center" align="center" class="min-height-70vh">
           <v-col cols="12" md="7" order="2" order-md="1">
             <h1
-              :class="['mb-6', {'text-h3': !isMobile, 'text-h4': isMobile}]"
+              :class="['mb-6', { 'text-h3': !isMobile, 'text-h4': isMobile }]"
               class="text-primary"
-              fetchpriority="high">
+              fetchpriority="high"
+            >
               We turn your mission into
               <strong><i>momentum</i></strong>
               through smart solutions that work from day one.
             </h1>
-            <p :class="['mb-6', {'text-h6': !isMobile, 'text-h7': isMobile}]" class="text-secondary">
-              Our digital strategy, tech system design and implementation processes are speedy & agile which means you
-              see results ASAP. Because your goals can't wait for 'someday'.
+            <p
+              :class="['mb-6', { 'text-h6': !isMobile, 'text-h7': isMobile }]"
+              class="text-secondary"
+            >
+              Our digital strategy, tech system design and implementation processes are speedy &
+              agile which means you see results ASAP. Because your goals can't wait for 'someday'.
             </p>
           </v-col>
           <v-col cols="12" md="5" order="1" order-md="2">
@@ -202,7 +200,8 @@ const goToService = (route) => {
               fetchpriority="high"
               width="450"
               height="450"
-              alt="Hero illustration"></v-img>
+              alt="Hero illustration"
+            ></v-img>
           </v-col>
         </v-row>
       </v-container>
@@ -213,7 +212,10 @@ const goToService = (route) => {
       <v-container>
         <v-row>
           <v-col cols="12" class="text-center mb-12">
-            <h2 class="font-weight-bold mb-3 text-primary" :class="{'text-h3': !isMobile, 'text-h6': isMobile}">
+            <h2
+              class="font-weight-bold mb-3 text-primary"
+              :class="{ 'text-h3': !isMobile, 'text-h6': isMobile }"
+            >
               Our Services
             </h2>
             <p class="text-subtitle-1 mx-auto max-width-600 text-secondary">
@@ -229,28 +231,42 @@ const goToService = (route) => {
             cols="12"
             md="6"
             lg="6"
-            class="mb-md-4 mb-2 pa-2 pa-md-6">
-            <v-hover v-slot="{props}">
+            class="mb-md-4 mb-2 pa-2 pa-md-6"
+          >
+            <v-hover v-slot="{ props }">
               <v-card
                 v-bind="props"
                 :elevation="2"
                 height="100%"
                 class="service-card transition-fast overflow-hidden"
-                @click="goToService(service.route)">
+                @click="goToService(service.route)"
+              >
                 <v-card-item class="text-center my-4">
                   <v-card-title
                     class="font-weight-bold text-primary"
-                    :class="{'text-h5': !isMobile, 'text-h6': isMobile}">
+                    :class="{ 'text-h5': !isMobile, 'text-h6': isMobile }"
+                  >
                     {{ service.name }}
                   </v-card-title>
                 </v-card-item>
                 <v-card-text>
                   <div class="d-flex justify-center">
-                    <v-img class="mb-4" :src="service.image" max-width="350" max-height="450" min-height="250"></v-img>
+                    <v-img
+                      class="mb-4"
+                      :src="service.image"
+                      max-width="350"
+                      max-height="450"
+                      min-height="250"
+                    ></v-img>
                   </div>
                   <p class="mb-4 text-secondary">{{ service.text }}</p>
                   <v-chip-group class="mb-0">
-                    <v-chip v-for="feature in service.features" :key="feature" size="small" class="ma-1">
+                    <v-chip
+                      v-for="feature in service.features"
+                      :key="feature"
+                      size="small"
+                      class="ma-1"
+                    >
                       {{ feature }}
                     </v-chip>
                   </v-chip-group>
@@ -267,7 +283,10 @@ const goToService = (route) => {
       <v-container>
         <v-row>
           <v-col cols="12" class="text-center mb-12">
-            <h2 class="font-weight-bold mb-3 text-primary" :class="{'text-h3': !isMobile, 'text-h6': isMobile}">
+            <h2
+              class="font-weight-bold mb-3 text-primary"
+              :class="{ 'text-h3': !isMobile, 'text-h6': isMobile }"
+            >
               What Our Clients Say
             </h2>
             <p class="text-subtitle-1 mx-auto max-width-600 text-secondary">
@@ -285,7 +304,8 @@ const goToService = (route) => {
               hide-delimiter-background
               :delimiter-icon="mdiCircle"
               color="primary"
-              class="testimonial-carousel">
+              class="testimonial-carousel"
+            >
               <v-carousel-item v-for="(testimonial, index) in testimonials" :key="index">
                 <v-card class="testimonial-card mx-auto pa-6" max-width="800">
                   <div class="d-flex flex-column align-center text-center">
@@ -301,7 +321,8 @@ const goToService = (route) => {
                           :src="'/clients/' + testimonial.photo"
                           :alt="testimonial.name + ' photo'"
                           cover
-                          class="bg-grey-lighten-3">
+                          class="bg-grey-lighten-3"
+                        >
                           <template v-slot:placeholder>
                             <v-icon size="24">mdiAccount</v-icon>
                           </template>
@@ -327,7 +348,10 @@ const goToService = (route) => {
       <v-container>
         <v-row>
           <v-col cols="12" class="text-center mb-12">
-            <h2 class="font-weight-bold mb-3 text-primary" :class="{'text-h3': !isMobile, 'text-h6': isMobile}">
+            <h2
+              class="font-weight-bold mb-3 text-primary"
+              :class="{ 'text-h3': !isMobile, 'text-h6': isMobile }"
+            >
               Our Clients
             </h2>
             <p class="text-subtitle-1 mx-auto max-width-600 text-secondary">
@@ -337,11 +361,18 @@ const goToService = (route) => {
         </v-row>
 
         <v-row justify="center" align="center" class="">
-          <v-col v-for="(client, index) in clients" :key="index" cols="6" sm="4" md="2" class="text-center mb-8">
-            <v-hover v-slot="{props}">
+          <v-col
+            v-for="(client, index) in clients"
+            :key="index"
+            cols="6"
+            sm="4"
+            md="2"
+            class="text-center mb-8"
+          >
+            <v-hover v-slot="{ props }">
               <v-card v-bind="props" variant="flat" class="client-logo bg-transparent">
                 <v-tooltip :text="client.name + ' - ' + client.industry" location="top">
-                  <template v-slot:activator="{props}">
+                  <template v-slot:activator="{ props }">
                     <v-img
                       v-bind="props"
                       :src="client.logo"
@@ -349,7 +380,8 @@ const goToService = (route) => {
                       height="100"
                       width="200"
                       contain
-                      class="mx-auto grey-filter"></v-img>
+                      class="mx-auto grey-filter"
+                    ></v-img>
                   </template>
                 </v-tooltip>
               </v-card>
@@ -364,11 +396,19 @@ const goToService = (route) => {
       <v-container>
         <v-row justify="center">
           <v-col cols="12" md="8" lg="6" class="text-center">
-            <h2 class="font-weight-bold mb-3 text-white" :class="{'text-h3': !isMobile, 'text-h6': isMobile}">
+            <h2
+              class="font-weight-bold mb-3 text-white"
+              :class="{ 'text-h3': !isMobile, 'text-h6': isMobile }"
+            >
               Join 5000+ people who get our email newsletter to stay updated.
             </h2>
-            <p class="text-caption mt-4 text-white">We’ll share product updates, thoughts, new releases, and other tidbits we think you’ll find interesting.</p>
-            <p class="text-caption mt-4 text-white">We respect your privacy. Unsubscribe at any time.</p>
+            <p class="text-caption mt-4 text-white">
+              We’ll share product updates, thoughts, new releases, and other tidbits we think you’ll
+              find interesting.
+            </p>
+            <p class="text-caption mt-4 text-white">
+              We respect your privacy. Unsubscribe at any time.
+            </p>
             <div class="mx-auto pa-2" style="width: 300px" id="kit-form"></div>
           </v-col>
         </v-row>
