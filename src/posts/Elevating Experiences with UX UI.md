@@ -2,7 +2,10 @@
 title: Elevating Experiences - UX/UI Excellence in the Digital Age
 date: 2025-10-03
 author: digiSarathi
-tags: [ 'DesignThinking', 'DataDrivenDesign', 'WebDesign', 'Prototyping', 'Product Design' ]
+tags:
+- Data Driven Design
+- Prototyping
+- Product Design
 excerpt: In 2025, with AI integration and multi-modal interactions reshaping engagement, our strategic, user-centric approach drives tangible growth, demonstrating that a targeted investment in UX can return up to $100 for every dollar spent.
 ---
 
