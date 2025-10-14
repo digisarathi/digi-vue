@@ -278,11 +278,8 @@
               <v-card
                 class="h-100 d-flex flex-column"
                 elevation="2"
-                :to="project.website"
-                target="_blank"
-                rel="noopener noreferrer"
                 style="cursor: pointer"
-                @click.stop
+                @click.stop="handleProjectClick(project.website)"
               >
                 <v-img :src="project.image" :alt="project.title" height="200" cover>
                   <template v-slot:placeholder>
@@ -406,6 +403,13 @@ const testimonials = ref([
     website: 'https://www.populationfirst.org/',
   },
 ])
+
+const handleProjectClick = (url) => {
+  if (!url) return;
+  // Ensure the URL has a protocol
+  const formattedUrl = url.startsWith('http') ? url : `https://${url}`;
+  window.open(formattedUrl, '_blank', 'noopener,noreferrer');
+};
 
 const portfolioProjects = ref([
   {
