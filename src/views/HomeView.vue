@@ -52,6 +52,52 @@ onMounted(() => {
   document.getElementById('kit-form').appendChild(script)
 })
 
+const orgServices = [
+  {
+    name: 'Website Design',
+    icon: mdiWeb,
+    text: 'Your website is the foundation upon which your digital marketing or fundraising campaigns are built. We create responsive, user-friendly designs that connect with your audience.',
+    features: ['Responsive Design', 'SEO Optimization', 'Custom CMS', 'Performance Focus'],
+    route: 'website-design',
+    image: 'wordpress.svg',
+  },
+  {
+    name: 'Digital Marketing',
+    icon: mdiTrendingUp,
+    text: 'Comprehensive strategies to enhance your online presence and drive engagement. We use data-driven approaches to maximize your ROI and reach your target audience effectively.',
+    features: ['SEO/SEM', 'Content Marketing', 'Social Media', 'Analytics & Reporting'],
+    route: 'digital-marketing',
+    image: 'social.svg',
+  },
+]
+const peopleServices = [
+  {
+    name: 'Training & Workshops',
+    icon: mdiSchool,
+    text: 'Hands-on sessions designed to empower your team with essential skills and knowledge. Our expert-led workshops provide practical knowledge that can be immediately applied.',
+    features: ['Customized Programs', 'Hands-on Learning', 'Remote Options', 'Ongoing Support'],
+    route: 'training-workshops',
+    image: 'shared.svg',
+  },
+]
+const techServices = [
+  {
+    name: 'Custom Apps',
+    icon: mdiCellphoneLink,
+    text: 'Innovative user experiences based on a modular and scalable architecture to scale with flexibility and create seamless digital experiences across all platforms.',
+    features: ['Mobile & Web Apps', 'Custom Software', 'API Integration'],
+    route: 'apps-software-development',
+    image: 'app.svg',
+  },
+  {
+    name: 'myCTO',
+    icon: mdiCellphoneLink,
+    text: 'Your trusted virtual CTO helping you navigate Digital Transformation, Troubleshooting Tech Issues or Planning your next big project.',
+    features: ['Tech Consulting', 'Tech Implementation', 'Tech Support'],
+    route: 'mycto',
+    image: 'myCTO_logo.png',
+  },
+]
 // Improved testimonials with more content and images
 const testimonials = ref([
   {
@@ -126,42 +172,6 @@ const clients = ref([
   { name: 'SEEDS', industry: 'Nonprofit', logo: 'logos/seeds.png' },
 ])
 
-// Enhanced services with icons and more detailed descriptions
-const services = ref([
-  {
-    name: 'Website Design',
-    icon: mdiWeb,
-    text: 'Your website is the foundation upon which your digital marketing or fundraising campaigns are built. We create responsive, user-friendly designs that connect with your audience.',
-    features: ['Responsive Design', 'SEO Optimization', 'Custom CMS', 'Performance Focus'],
-    route: 'website-design',
-    image: 'wordpress.svg',
-  },
-  {
-    name: 'Digital Marketing',
-    icon: mdiTrendingUp,
-    text: 'Comprehensive strategies to enhance your online presence and drive engagement. We use data-driven approaches to maximize your ROI and reach your target audience effectively.',
-    features: ['SEO/SEM', 'Content Marketing', 'Social Media', 'Analytics & Reporting'],
-    route: 'digital-marketing',
-    image: 'social.svg',
-  },
-  {
-    name: 'Training & Workshops',
-    icon: mdiSchool,
-    text: 'Hands-on sessions designed to empower your team with essential skills and knowledge. Our expert-led workshops provide practical knowledge that can be immediately applied.',
-    features: ['Customized Programs', 'Hands-on Learning', 'Remote Options', 'Ongoing Support'],
-    route: 'training-workshops',
-    image: 'shared.svg',
-  },
-  {
-    name: 'Apps & Custom Software ',
-    icon: mdiCellphoneLink,
-    text: 'Innovative user experiences based on a modular and scalable architecture to scale with flexibility and create seamless digital experiences across all platforms.',
-    features: ['Native Mobile Apps', 'Progressive Web Apps', 'Custom Software', 'API Integration'],
-    route: 'apps-software-development',
-    image: 'app.svg',
-  },
-])
-
 const goToService = (route) => {
   router.push({ name: route })
 }
@@ -204,7 +214,6 @@ const goToService = (route) => {
         </v-row>
       </v-container>
     </section>
-
     <!-- Services Section with Cards -->
     <section class="py-16">
       <v-container>
@@ -217,26 +226,127 @@ const goToService = (route) => {
               Our Services
             </h2>
             <p class="text-subtitle-1 mx-auto max-width-600 text-secondary">
-              Comprehensive digital solutions tailored to your specific needs
+              Comprehensive digital solutions for growth, tailored to your specific needs
             </p>
           </v-col>
         </v-row>
-
-        <v-row id="services">
-          <v-col
-            v-for="(service, index) in services"
-            :key="index"
-            cols="12"
-            md="6"
-            lg="6"
-            class="mb-md-4 mb-2 pa-2 pa-md-6"
-          >
-            <v-hover v-slot="{ props }">
+        <v-row class="align-stretch mb-8">
+          <v-col cols="12" md="2" class="d-flex">
+            <div
+              class="pillar-label text-uppercase text-h4 pa-4 rounded-xl d-flex align-center justify-center w-100"
+              style="background-color: rgba(var(--v-theme-accent), 0.1)"
+            >
+              <span class="text-disabled">Organization</span>
+            </div>
+          </v-col>
+          <v-col md="5" v-for="(service, index) in orgServices" :key="index" class="d-flex">
+            <v-hover v-slot="{ isHovering, props }" close-delay="100">
               <v-card
                 v-bind="props"
-                :elevation="2"
-                height="100%"
-                class="service-card transition-fast overflow-hidden"
+                :elevation="isHovering ? 6 : 2"
+                class="service-card transition-fast overflow-hidden d-flex flex-column h-100"
+                @click="goToService(service.route)"
+              >
+                <v-card-item class="text-center my-4">
+                  <v-card-title
+                    class="font-weight-bold text-primary"
+                    :class="{ 'text-h5': !isMobile, 'text-h6': isMobile }"
+                  >
+                    {{ service.name }}
+                  </v-card-title>
+                </v-card-item>
+                <v-card-text>
+                  <div class="d-flex justify-center">
+                    <v-img
+                      class="mb-4"
+                      :src="service.image"
+                      max-width="350"
+                      max-height="450"
+                      min-height="250"
+                    ></v-img>
+                  </div>
+                  <p class="mb-4 text-secondary">{{ service.text }}</p>
+                  <v-chip-group class="mb-0">
+                    <v-chip
+                      v-for="feature in service.features"
+                      :key="feature"
+                      size="small"
+                      class="ma-1"
+                    >
+                      {{ feature }}
+                    </v-chip>
+                  </v-chip-group>
+                </v-card-text>
+              </v-card>
+            </v-hover>
+          </v-col>
+        </v-row>
+        <v-row class="align-stretch mb-8">
+          <v-col cols="12" md="2" class="d-flex">
+            <div
+              class="pillar-label text-uppercase text-h4 pa-4 rounded-xl d-flex align-center justify-center w-100"
+              style="background-color: rgba(var(--v-theme-accent), 0.1)"
+            >
+              <span class="text-disabled">People</span>
+            </div>
+          </v-col>
+          <v-col md="5" v-for="(service, index) in peopleServices" :key="index" class="d-flex">
+            <v-hover v-slot="{ isHovering, props }" close-delay="100">
+              <v-card
+                v-bind="props"
+                :elevation="isHovering ? 6 : 2"
+                class="service-card transition-fast overflow-hidden d-flex flex-column h-100"
+                @click="goToService(service.route)"
+              >
+                <v-card-item class="text-center my-4">
+                  <v-card-title
+                    class="font-weight-bold text-primary"
+                    :class="{ 'text-h5': !isMobile, 'text-h6': isMobile }"
+                  >
+                    {{ service.name }}
+                  </v-card-title>
+                </v-card-item>
+                <v-card-text>
+                  <div class="d-flex justify-center">
+                    <v-img
+                      class="mb-4"
+                      :src="service.image"
+                      max-width="350"
+                      max-height="450"
+                      min-height="250"
+                    ></v-img>
+                  </div>
+                  <p class="mb-4 text-secondary">{{ service.text }}</p>
+                  <v-chip-group class="mb-0">
+                    <v-chip
+                      v-for="feature in service.features"
+                      :key="feature"
+                      size="small"
+                      class="ma-1"
+                    >
+                      {{ feature }}
+                    </v-chip>
+                  </v-chip-group>
+                </v-card-text>
+              </v-card>
+            </v-hover>
+          </v-col>
+        </v-row>
+        <v-row class="align-stretch mb-8">
+          <v-col cols="12" md="2" class="d-flex">
+            <div
+              class="pillar-label text-uppercase text-h4 pa-4 rounded-xl d-flex align-center justify-center w-100"
+              style="background-color: rgba(var(--v-theme-accent), 0.1)"
+            >
+              <span class="text-disabled">Technology</span>
+            </div>
+          </v-col>
+          <v-col md="5" v-for="(service, index) in techServices" :key="index" class="d-flex">
+            <v-hover v-slot="{ isHovering, props }" close-delay="100">
+              <v-card
+                v-bind="props"
+                :elevation="isHovering ? 6 : 2"
+                class="service-card transition-fast overflow-hidden d-flex flex-column h-100"
                 @click="goToService(service.route)"
               >
                 <v-card-item class="text-center my-4">
@@ -493,5 +603,25 @@ const goToService = (route) => {
 
 .opacity-medium {
   opacity: 0.7;
+}
+.pillar-label {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #3254ae; /* Example: Light blue, adjust for your theme */
+  margin-bottom: 1rem;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .pillar-label {
+    writing-mode: horizontal-tb;
+    text-orientation: initial;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    text-align: left;
+  }
 }
 </style>
