@@ -187,8 +187,7 @@ const goToService = (route) => {
               :class="['mb-6', { 'text-h6': !isMobile, 'text-h7': isMobile }]"
               class="text-secondary"
             >
-              Our digital strategy, tech system design and implementation processes are speedy &
-              agile which means you see results ASAP. Because your goals can't wait for 'someday'.
+              Because your goals can't wait for 'someday'.
             </p>
           </v-col>
           <v-col cols="12" md="5" order="1" order-md="2">
@@ -198,8 +197,7 @@ const goToService = (route) => {
               contain
               loading="eager"
               fetchpriority="high"
-              width="450"
-              height="450"
+              max-height="450"
               alt="Hero illustration"
             ></v-img>
           </v-col>
