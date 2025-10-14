@@ -22,240 +22,6 @@
           </v-row>
         </v-container>
       </section>
-
-      <!-- Process Section -->
-      <section id="process" class="py-12 bg-grey-lighten-4">
-        <v-container>
-          <v-row class="text-center mb-8">
-            <v-col>
-              <h2 class="text-h4 text-primary font-weight-bold">Our Website Design Process</h2>
-              <p class="text-body-1 mt-2">
-                A streamlined approach to creating your perfect website
-              </p>
-            </v-col>
-          </v-row>
-          <v-row>
-            <v-col cols="12" md="6">
-              <v-card height="100%" class="feature-card">
-                <v-card-item class="pa-6">
-                  <div class="d-flex flex-column align-center text-center">
-                    <v-icon color="primary" size="x-large" class="mb-4">{{ mdiLightbulb }}</v-icon>
-                    <v-card-title class="text-primary font-weight-bold mb-3 text-wrap"
-                      >Strategic Discovery & Blueprinting</v-card-title
-                    >
-                    <v-card-text class="text-body-1">
-                      We immerse ourselves in your vision, analyzing business objectives, user
-                      personas, and market dynamics to craft a tailored digital strategy. Through
-                      collaborative workshops and data-driven insights, we architect a comprehensive
-                      roadmap that ensures your website delivers measurable impact and aligns
-                      seamlessly with your brand’s ethos.
-                    </v-card-text>
-                  </div>
-                </v-card-item>
-              </v-card>
-            </v-col>
-            <v-col cols="12" md="6">
-              <v-card height="100%" class="feature-card">
-                <v-card-item class="pa-6">
-                  <div class="d-flex flex-column align-center text-center">
-                    <v-icon color="primary" size="x-large" class="mb-4">{{
-                      mdiPencilRuler
-                    }}</v-icon>
-                    <v-card-title class="text-primary font-weight-bold mb-3 text-wrap"
-                      >Innovative Design & Prototyping</v-card-title
-                    >
-                    <v-card-text class="text-body-1">
-                      Our design phase transforms concepts into intuitive, visually compelling
-                      experiences. Leveraging iterative wireframes, high-fidelity prototypes, and
-                      user-centric design principles, we create interfaces that balance aesthetic
-                      sophistication with functional clarity, rigorously tested to resonate with
-                      your audience and elevate your brand identity.
-                    </v-card-text>
-                  </div>
-                </v-card-item>
-              </v-card>
-            </v-col>
-            <v-col cols="12" md="6">
-              <v-card height="100%" class="feature-card">
-                <v-card-item class="pa-6">
-                  <div class="d-flex flex-column align-center text-center">
-                    <v-icon color="primary" size="x-large" class="mb-4">{{ mdiCodeBraces }}</v-icon>
-                    <v-card-title class="text-primary font-weight-bold mb-3 text-wrap"
-                      >Precision Development & Optimization</v-card-title
-                    >
-                    <v-card-text class="text-body-1">
-                      Using cutting-edge frameworks, modular architectures, and performance-first
-                      coding practices, we build robust, scalable websites. From TypeScript-driven
-                      frontends to API-first backends, our development process integrates
-                      accessibility (WCAG 2.1), SEO optimization, and progressive web capabilities
-                      to ensure a future-proof digital presence.
-                    </v-card-text>
-                  </div>
-                </v-card-item>
-              </v-card>
-            </v-col>
-            <v-col cols="12" md="6">
-              <v-card height="100%" class="feature-card">
-                <v-card-item class="pa-6">
-                  <div class="d-flex flex-column align-center text-center">
-                    <v-icon color="primary" size="x-large" class="mb-4">{{
-                      mdiRocketLaunch
-                    }}</v-icon>
-                    <v-card-title class="text-primary font-weight-bold mb-3 text-wrap"
-                      >Seamless Launch & Proactive Support</v-card-title
-                    >
-                    <v-card-text class="text-body-1">
-                      We orchestrate a flawless deployment with automated testing, CI/CD pipelines,
-                      and cloud-based hosting for maximum uptime. Post-launch, our dedicated support
-                      includes performance monitoring, iterative updates, and strategic enhancements
-                      to keep your website secure, relevant, and aligned with evolving business
-                      goals.
-                    </v-card-text>
-                  </div>
-                </v-card-item>
-              </v-card>
-            </v-col>
-          </v-row>
-        </v-container>
-      </section>
-
-      <!-- Features Section -->
-      <section id="features" class="py-12">
-        <v-container>
-          <v-row class="text-center mb-8">
-            <v-col>
-              <h2 class="text-h4 text-primary font-weight-bold">
-                Why Choose Our Website Services?
-              </h2>
-              <p class="text-body-1 mt-2">What makes our website design process unique</p>
-            </v-col>
-          </v-row>
-          <v-row>
-            <v-col cols="12" md="6">
-              <v-card height="100%" class="feature-card">
-                <v-card-item class="pa-6">
-                  <div class="d-flex flex-column align-center text-center">
-                    <v-icon color="primary" size="x-large" class="mb-4">{{
-                      mdiSpeedometer
-                    }}</v-icon>
-                    <v-card-title class="text-primary font-weight-bold mb-3 text-wrap"
-                      >Precision-Engineered Performance</v-card-title
-                    >
-                    <v-card-text class="text-body-1">
-                      We architect websites with optimized codebases and cutting-edge frameworks,
-                      ensuring sub-second load times and seamless user experiences. By leveraging
-                      server-side rendering, lazy loading, and CDN integration, we deliver
-                      blazing-fast performance without sacrificing functionality or scalability.
-                    </v-card-text>
-                  </div>
-                </v-card-item>
-              </v-card>
-            </v-col>
-            <v-col cols="12" md="6">
-              <v-card height="100%" class="feature-card">
-                <v-card-item class="pa-6">
-                  <div class="d-flex flex-column align-center text-center">
-                    <v-icon color="primary" size="x-large" class="mb-4">{{ mdiResponsive }}</v-icon>
-                    <v-card-title class="text-primary font-weight-bold mb-3 text-wrap"
-                      >Adaptive, Future-Proof Design</v-card-title
-                    >
-                    <v-card-text class="text-body-1">
-                      Our designs transcend traditional responsive layouts, employing fluid grids,
-                      dynamic typography, and progressive enhancement to create visually stunning
-                      interfaces that adapt effortlessly to any device or viewport. Built with
-                      accessibility (WCAG 2.1) and SEO best practices at the core, your site will
-                      engage diverse audiences and rank competitively.
-                    </v-card-text>
-                  </div>
-                </v-card-item>
-              </v-card>
-            </v-col>
-            <v-col cols="12" md="6">
-              <v-card height="100%" class="feature-card">
-                <v-card-item class="pa-6">
-                  <div class="d-flex flex-column align-center text-center">
-                    <v-icon color="primary" size="x-large" class="mb-4">{{
-                      mdiShieldCheck
-                    }}</v-icon>
-                    <v-card-title class="text-primary font-weight-bold mb-3 text-wrap"
-                      >Fortified Security & Reliability</v-card-title
-                    >
-                    <v-card-text class="text-body-1">
-                      Security is woven into every layer of our development process. From secure
-                      APIs and OWASP-compliant coding to automated vulnerability scanning and robust
-                      CI/CD pipelines, we ensure your website is resilient against threats. Regular
-                      updates and performance monitoring keep your digital presence dependable and
-                      trustworthy.
-                    </v-card-text>
-                  </div>
-                </v-card-item>
-              </v-card>
-            </v-col>
-            <v-col cols="12" md="6">
-              <v-card height="100%" class="feature-card">
-                <v-card-item class="pa-6">
-                  <div class="d-flex flex-column align-center text-center">
-                    <v-icon color="primary" size="x-large" class="mb-4">{{
-                      mdiShieldCheck
-                    }}</v-icon>
-                    <v-card-title class="text-primary font-weight-bold mb-3 text-wrap"
-                      >Tailored Innovation & Strategy</v-card-title
-                    >
-                    <v-card-text class="text-body-1">
-                      We craft bespoke solutions that align with your brand’s unique vision and
-                      goals. By integrating data-driven insights, A/B testing, and emerging
-                      technologies like WebAssembly or AI-powered personalization, we create
-                      websites that not only captivate but also drive measurable business outcomes,
-                      setting you apart in a crowded digital landscape.
-                    </v-card-text>
-                  </div>
-                </v-card-item>
-              </v-card>
-            </v-col></v-row
-          >
-        </v-container>
-      </section>
-
-      <!-- Testimonials Section -->
-      <section id="testimonials" class="py-12 bg-grey-lighten-4">
-        <v-container>
-          <v-row class="text-center mb-8">
-            <v-col>
-              <h2 class="text-h4 text-primary font-weight-bold">Client Success Stories</h2>
-              <p class="text-body-1 mt-2">See what our clients say about our website services</p>
-            </v-col>
-          </v-row>
-
-          <v-row class="justify-center">
-            <v-col v-for="(testimonial, index) in testimonials" :key="index" cols="12" md="10">
-              <v-card
-                elevation="6"
-                :href="testimonial.website"
-                target="_blank"
-                rel="noopener noreferrer"
-                style="cursor: pointer"
-                @click.stop
-              >
-                <v-card-text class="flex-grow-1">
-                  <v-row>
-                    <v-col cols="12" md="3" class="d-flex flex-column align-center">
-                      <v-avatar size="80" class="mb-4">
-                        <v-img :src="/clients/ + testimonial.avatar" alt="Avatar"></v-img>
-                      </v-avatar>
-                      <div class="font-weight-bold">{{ testimonial.name }}</div>
-                      <div class="text-caption text-medium-emphasis">{{ testimonial.company }}</div>
-                    </v-col>
-                    <v-col cols="12" md="9" class="d-flex align-center">
-                      <p class="text-body-1">"{{ testimonial.text }}"</p>
-                    </v-col>
-                  </v-row>
-                </v-card-text>
-              </v-card>
-            </v-col>
-          </v-row>
-        </v-container>
-      </section>
-
       <!-- Portfolio Section -->
       <section id="portfolio" class="py-12">
         <v-container>
@@ -331,7 +97,45 @@
           </v-row>
         </v-container>
       </section>
+      <!-- Testimonials Section -->
+      <section id="testimonials" class="py-12 bg-grey-lighten-4">
+        <v-container>
+          <v-row class="text-center mb-8">
+            <v-col>
+              <h2 class="text-h4 text-primary font-weight-bold">Client Success Stories</h2>
+              <p class="text-body-1 mt-2">See what our clients say about our website services</p>
+            </v-col>
+          </v-row>
 
+          <v-row class="justify-center">
+            <v-col v-for="(testimonial, index) in testimonials" :key="index" cols="12" md="10">
+              <v-card
+                elevation="6"
+                :href="testimonial.website"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="cursor: pointer"
+                @click.stop
+              >
+                <v-card-text class="flex-grow-1">
+                  <v-row>
+                    <v-col cols="12" md="3" class="d-flex flex-column align-center">
+                      <v-avatar size="80" class="mb-4">
+                        <v-img :src="/clients/ + testimonial.avatar" alt="Avatar"></v-img>
+                      </v-avatar>
+                      <div class="font-weight-bold">{{ testimonial.name }}</div>
+                      <div class="text-caption text-medium-emphasis">{{ testimonial.company }}</div>
+                    </v-col>
+                    <v-col cols="12" md="9" class="d-flex align-center">
+                      <p class="text-body-1">"{{ testimonial.text }}"</p>
+                    </v-col>
+                  </v-row>
+                </v-card-text>
+              </v-card>
+            </v-col>
+          </v-row>
+        </v-container>
+      </section>
       <!-- CTA Section -->
       <section class="py-10 bg-grey-lighten-4">
         <v-container>
@@ -405,15 +209,22 @@ const testimonials = ref([
 ])
 
 const handleProjectClick = (url) => {
-  if (!url) return;
+  if (!url) return
   // Ensure the URL has a protocol
-  const formattedUrl = url.startsWith('http') ? url : `https://${url}`;
-  window.open(formattedUrl, '_blank', 'noopener,noreferrer');
-};
+  const formattedUrl = url.startsWith('http') ? url : `https://${url}`
+  window.open(formattedUrl, '_blank', 'noopener,noreferrer')
+}
 
 const portfolioProjects = ref([
   {
-    title: 'CSA & POCSO',
+    title: 'Surendra Forgings',
+    description: ' A growing manufacturing company showcasing its products and services',
+    image: '/portfolio/surendra.png',
+    technologies: ['Custom Web Stack', 'Google Analytics'],
+    website: 'https://surendraforgings.com/',
+  },
+  {
+    title: 'Aarambh India',
     description:
       "India's first comprehensive portal on Child Sexual Abuse & Prevention of Child Sexual Offences",
     image: '/portfolio/aarambh.png',
