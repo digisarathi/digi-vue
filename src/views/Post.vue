@@ -23,13 +23,17 @@ const findAdjacentPosts = (currentSlug) => {
 }
 
 const updateCanonicalUrl = (url) => {
+  // Ensure we have a proper URL
+  const canonicalUrl = new URL(url, 'https://digisarathi.com').href
+
+  // Update the canonical tag
   let link = document.querySelector('link[rel="canonical"]')
   if (!link) {
     link = document.createElement('link')
     link.rel = 'canonical'
     document.head.appendChild(link)
   }
-  link.href = url
+  link.href = canonicalUrl
 }
 
 const updatePostMeta = (postData) => {
