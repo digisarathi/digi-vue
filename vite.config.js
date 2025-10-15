@@ -7,13 +7,13 @@ import vuetify from 'vite-plugin-vuetify'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/',
   plugins: [vue(), vuetify({ autoImport: true }), vueDevTools()],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
+  base: process.env.NODE_ENV === 'production' ? 'https://digisarathi.com' : '/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
