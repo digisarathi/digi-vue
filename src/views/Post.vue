@@ -25,48 +25,27 @@ const findAdjacentPosts = (currentSlug) => {
 const updatePostMeta = (postData) => {
   if (!postData) return
 
-  const description = postData.excerpt || postData.content.substring(0, 160)
+  const baseUrl = 'https://digisarathi.com'
   const canonicalUrl = postData.permalink
-    ? `https://digisarathi.com${postData.permalink}`
+    ? `${baseUrl}${postData.permalink}`.replace(/([^:]\/)\/+/g, '$1') // Remove double slashes
     : window.location.href
-  const imageUrl = postData.image || '/og-blog.jpg'
-  const publishedDate = postData.date
-    ? new Date(postData.date).toISOString()
-    : new Date().toISOString()
 
   // Set meta tags
   setMetaTags({
     title: postData.title,
-    description,
-    image: imageUrl,
+    description: postData.excerpt || postData.content.substring(0, 160),
+    image: postData.image || '/og-blog.jpg',
     url: canonicalUrl,
   })
 
-  // Set structured data for BlogPosting
-  setStructuredData({
-    '@type': 'BlogPosting',
-    headline: postData.title,
-    description,
-    image: imageUrl.startsWith('http') ? imageUrl : `https://digisarathi.com${imageUrl}`,
-    datePublished: publishedDate,
-    dateModified: publishedDate,
-    author: {
-      '@type': 'Organization',
-      name: 'digiSarathi',
-      url: 'https://digisarathi.com',
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'digiSarathi',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://digisarathi.com/logo.png',
+  // Set canonical URL
+  useHead({
+    link: [
+      {
+        rel: 'canonical',
+        href: canonicalUrl,
       },
-    },
-    mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': canonicalUrl,
-    },
+    ],
   })
 }
 
@@ -75,6 +54,10 @@ const loadPost = async (slug) => {
   const { prev, next } = findAdjacentPosts(slug)
   prevPost.value = prev
   nextPost.value = next
+  // Generate permalink if not provided
+  if (!post.value.permalink) {
+    post.value.permalink = `/blog/${slug}/`;
+  }
   updatePostMeta(post.value)
 }
 
