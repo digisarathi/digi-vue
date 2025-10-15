@@ -39,10 +39,22 @@ const updateCanonicalUrl = (url) => {
 const updatePostMeta = (postData) => {
   if (!postData) return
 
-  const baseUrl = 'https://digisarathi.com'
-  const canonicalUrl = postData.permalink
-    ? `${baseUrl}${postData.permalink}`.replace(/([^:]\/)\/+/g, '$1')
-    : window.location.href
+  let canonicalUrl
+  
+  if (postData.permalink) {
+    // Check if permalink already has a protocol
+    if (postData.permalink.startsWith('http')) {
+      canonicalUrl = postData.permalink
+    } else {
+      // Only prepend base URL if it's a relative path
+      const baseUrl = 'https://digisarathi.com'
+      canonicalUrl = `${baseUrl}${postData.permalink.startsWith('/') ? '' : '/'}${postData.permalink}`
+    }
+    // Normalize multiple slashes
+    canonicalUrl = canonicalUrl.replace(/([^:]\/)\/+/g, '$1')
+  } else {
+    canonicalUrl = window.location.href
+  }
 
   // Update the canonical URL in the DOM
   updateCanonicalUrl(canonicalUrl)
