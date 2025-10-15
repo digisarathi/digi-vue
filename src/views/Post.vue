@@ -22,26 +22,34 @@ const findAdjacentPosts = (currentSlug) => {
   }
 }
 
+const updateCanonicalUrl = (url) => {
+  let link = document.querySelector('link[rel="canonical"]')
+  if (!link) {
+    link = document.createElement('link')
+    link.rel = 'canonical'
+    document.head.appendChild(link)
+  }
+  link.href = url
+}
+
 const updatePostMeta = (postData) => {
   if (!postData) return
 
   const baseUrl = 'https://digisarathi.com'
   const canonicalUrl = postData.permalink
-    ? `${baseUrl}${postData.permalink}`.replace(/([^:]\/)\/+/g, '$1') // Remove double slashes
+    ? `${baseUrl}${postData.permalink}`.replace(/([^:]\/)\/+/g, '$1')
     : window.location.href
 
-  // Set meta tags including canonical URL
+  // Update the canonical URL in the DOM
+  updateCanonicalUrl(canonicalUrl)
+  console.log('Setting canonical URL to:', canonicalUrl)
+
+  // Set meta tags
   setMetaTags({
     title: postData.title,
     description: postData.excerpt || postData.content.substring(0, 160),
     image: postData.image || '/og-blog.jpg',
     url: canonicalUrl,
-    link: [
-      {
-        rel: 'canonical',
-        href: canonicalUrl,
-      },
-    ],
   })
 }
 

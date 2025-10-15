@@ -17,7 +17,6 @@
       gtag('config', 'G-YNQCG8V7LP')
     </script>
     <!-- Primary Meta Tags -->
-    <title>digiSarathi - Tech4Growth, Tech4Good</title>
     <meta name="title" content="digiSarathi - Tech4Growth, Tech4Good" />
     <meta
       name="description"
@@ -55,7 +54,8 @@
     />
     <meta name="author" content="digiSarathi" />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://digisarathi.com/" />
+    <link id="canonical" rel="canonical" href="<%= BASE_URL %>" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
     <div id="app"></div>
