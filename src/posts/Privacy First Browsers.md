@@ -7,7 +7,7 @@ tags:
   - privacy
   - security
   - chrome
-excerpt: For nonprofits, the Brave browser offers something that almost every organization working online urgently needs today — protection from digital tracking and faster, cleaner browsing without distractions.
+excerpt: For nonprofits, the Web browser is a crucial tool that should provide something that almost every organization working online urgently needs today — protection from digital tracking and faster, cleaner browsing without distractions.
 ---
 
 ### [Brave Browser](https://brave.com/)
