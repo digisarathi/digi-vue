@@ -1,12 +1,12 @@
-import { createRouter, createWebHistory } from 'vue-router';
-import HomeView from '../views/HomeView.vue';
-import Website from '../views/Website.vue';
-import Training from '../views/Training.vue';
-import AboutView from '../views/AboutView.vue';
-import ContactView from '../views/ContactView.vue';
-import BlogView from '../views/BlogView.vue';
-import Post from '../views/Post.vue';
-import NotFound from '../views/NotFound.vue';
+import { createRouter, createWebHistory } from 'vue-router'
+import HomeView from '../views/HomeView.vue'
+import Website from '../views/Website.vue'
+import Training from '../views/Training.vue'
+import AboutView from '../views/AboutView.vue'
+import ContactView from '../views/ContactView.vue'
+import BlogView from '../views/BlogView.vue'
+import Post from '../views/Post.vue'
+import NotFound from '../views/NotFound.vue'
 
 // Function to track page views
 const trackPageView = (to) => {
@@ -15,9 +15,9 @@ const trackPageView = (to) => {
     window.gtag('config', 'G-YNQCG8V7LP', {
       page_path: to.fullPath,
       page_title: to.name || 'digiSarathi - ' + (to.meta.title || to.name || 'Page'),
-    });
+    })
   }
-};
+}
 
 const scrollBehavior = (to, from, savedPosition) => {
   if (to.hash) {
@@ -25,13 +25,13 @@ const scrollBehavior = (to, from, savedPosition) => {
       el: to.hash,
       behavior: 'smooth',
       top: 100, // Adjust this value to account for any fixed headers
-    };
+    }
   } else if (savedPosition) {
-    return savedPosition;
+    return savedPosition
   } else {
-    return { top: 0 };
+    return { top: 0 }
   }
-};
+}
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -97,6 +97,14 @@ const router = createRouter({
       redirect: '/ai-workshops',
     },
     {
+      path: '/about-us',
+      redirect: '/about',
+    },
+    {
+      path: '/rapid-prototyping-vs-waterfall-model',
+      redirect: '/blog/Rapid%20Prototyping%20vs%20Waterfall',
+    },
+    {
       path: '/ai-workshops',
       name: 'ai-workshops',
       component: () => import('../views/AiWorkshopsView.vue'),
@@ -127,11 +135,11 @@ const router = createRouter({
       component: NotFound,
     },
   ],
-});
+})
 
 // Track page views after navigation
 router.afterEach((to) => {
-  trackPageView(to);
-});
+  trackPageView(to)
+})
 
-export { router };
+export { router }

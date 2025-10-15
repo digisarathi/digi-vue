@@ -16,12 +16,6 @@ const props = defineProps({
 
 onMounted(() => {
   // Set up meta tags
-  setMetaTags({
-    title: 'Digital Solutions for Social Impact | digiSarathi',
-    description:
-      'Empowering NGOs and social enterprises with custom digital solutions including web development, mobile apps, and digital marketing services.',
-    image: '/og-home.jpg',
-  })
 
   // Set up structured data
   setStructuredData({
@@ -37,7 +31,7 @@ onMounted(() => {
     contactPoint: [
       {
         '@type': 'ContactPoint',
-        telephone: '+91-XXXXXXXXXX',
+        telephone: '+91-9022465676',
         contactType: 'customer service',
         availableLanguage: ['English', 'Hindi'],
       },
