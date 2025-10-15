@@ -1,5 +1,5 @@
 ---
-title: Privacy First: Why Nonprofits Should Choose these Browsers for Safer Browsing
+title: Privacy First - Why Nonprofits Should Choose these Browsers for Safer Browsing
 date: 2025-10-16
 author: digiSarathi
 tags:
