@@ -40,7 +40,7 @@ const updatePostMeta = (postData) => {
   if (!postData) return
 
   let canonicalUrl
-  
+
   if (postData.permalink) {
     // Check if permalink already has a protocol
     if (postData.permalink.startsWith('http')) {
@@ -104,20 +104,17 @@ watch(
       <v-row justify="center">
         <v-col cols="12" md="8">
           <div v-if="post" class="mt-4">
-            <h1 class="text-h3 text-primary mb-4">{{ post.title }}</h1>
-            <div class="d-flex flex-wrap align-center mb-6">
-              <p class="text-secondary flex-1-1 flex-sm-1">{{ formatDate(post.date) }}</p>
-              <v-chip
-                v-for="tag in post.tags"
-                :key="tag"
-                size="small"
-                class="ml-2 flex-1-1 flex-sm-0"
-                color="primary"
-                variant="outlined"
-              >
-                {{ tag }}
-              </v-chip>
+            <h1 class="text-h3 d-md-block d-none text-primary mb-4">{{ post.title }}</h1>
+            <h1 class="text-h4 d-sm-block d-md-none text-primary mb-4">{{ post.title }}</h1>
+            <div class="d-flex flex-wrap align-start mb-6">
+              <div v-for="tag in post.tags" :key="tag" class="">
+                <v-chip size="small" color="primary" variant="tonal">
+                  {{ tag }}
+                </v-chip>
+              </div>
             </div>
+            <p class="text-caption">{{ formatDate(post.date) }}</p>
+            <v-divider class="mb-4"></v-divider>
             <div class="content mb-4" v-html="post.content"></div>
             <div class="mt-16 d-flex justify-space-between align-center">
               <v-btn
