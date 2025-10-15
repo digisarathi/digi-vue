@@ -23,49 +23,68 @@ const findAdjacentPosts = (currentSlug) => {
 }
 
 const updateCanonicalUrl = (url) => {
-  // Ensure we have a proper URL
-  const canonicalUrl = new URL(url, 'https://digisarathi.com').href
+  try {
+    // If the URL already starts with http, use it as is
+    if (url.startsWith('http')) {
+      // Just ensure we don't have duplicate domains
+      const urlObj = new URL(url)
+      urlObj.hostname = 'digisarathi.com' // Ensure consistent domain
+      url = urlObj.toString()
+    } else {
+      // Handle relative URLs
+      let path = url.startsWith('/') ? url : `/${url}` // Ensure leading / for path
+      url = `https://digisarathi.com${path}`
+      // Normalize any double slashes
+      url = url.replace(/([^:]\/)\/+/g, '$1')
+    }
 
-  // Update the canonical tag
-  let link = document.querySelector('link[rel="canonical"]')
-  if (!link) {
-    link = document.createElement('link')
-    link.rel = 'canonical'
-    document.head.appendChild(link)
+    // Update the canonical tag
+    let link = document.querySelector('link[rel="canonical"]')
+    if (!link) {
+      link = document.createElement('link')
+      link.rel = 'canonical'
+      document.head.appendChild(link)
+    }
+    link.href = url
+  } catch (error) {
+    console.error('Error updating canonical URL:', error)
   }
-  link.href = canonicalUrl
 }
 
 const updatePostMeta = (postData) => {
   if (!postData) return
 
-  let canonicalUrl
+  // If we have a permalink, use it directly
+  // updateCanonicalUrl will handle the URL formatting
+  const canonicalUrl = postData.permalink || window.location.pathname
 
-  if (postData.permalink) {
-    // Check if permalink already has a protocol
-    if (postData.permalink.startsWith('http')) {
-      canonicalUrl = postData.permalink
+  // First, compute the full URL to pass to setMetaTags (ensures it's always absolute)
+  let fullUrl
+  try {
+    if (canonicalUrl.startsWith('http')) {
+      const urlObj = new URL(canonicalUrl)
+      urlObj.hostname = 'digisarathi.com'
+      fullUrl = urlObj.toString()
     } else {
-      // Only prepend base URL if it's a relative path
-      const baseUrl = 'https://digisarathi.com'
-      canonicalUrl = `${baseUrl}${postData.permalink.startsWith('/') ? '' : '/'}${postData.permalink}`
+      let path = canonicalUrl.startsWith('/') ? canonicalUrl : `/${canonicalUrl}`
+      fullUrl = `https://digisarathi.com${path}`
+      fullUrl = fullUrl.replace(/([^:]\/)\/+/g, '$1')
     }
-    // Normalize multiple slashes
-    canonicalUrl = canonicalUrl.replace(/([^:]\/)\/+/g, '$1')
-  } else {
-    canonicalUrl = window.location.href
+  } catch (error) {
+    console.error('Error computing full URL:', error)
+    fullUrl = `https://digisarathi.com${canonicalUrl.startsWith('/') ? canonicalUrl : `/${canonicalUrl}`}`
   }
 
   // Update the canonical URL in the DOM
-  updateCanonicalUrl(canonicalUrl)
-  console.log('Setting canonical URL to:', canonicalUrl)
+  updateCanonicalUrl(canonicalUrl) // Still pass raw for consistency, but now fullUrl is safe
+  console.log('Setting canonical URL to:', fullUrl)
 
-  // Set meta tags
+  // Set meta tags with full URL
   setMetaTags({
     title: postData.title,
     description: postData.excerpt || postData.content.substring(0, 160),
     image: postData.image || '/og-blog.jpg',
-    url: canonicalUrl,
+    url: fullUrl, // Use full URL here to avoid any doubling in useHeadManager
   })
 }
 
@@ -78,7 +97,6 @@ const loadPost = async (slug) => {
   if (!post.value.permalink) {
     post.value.permalink = `/blog/${slug}/`
   }
-  console.log('Generated permalink:', post.value.permalink)
   updatePostMeta(post.value)
 }
 
