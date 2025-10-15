@@ -10,7 +10,7 @@ const post = ref(null)
 const nextPost = ref(null)
 const prevPost = ref(null)
 const posts = ref([])
-const { setMetaTags, setStructuredData } = useHeadManager()
+const { setMetaTags } = useHeadManager()
 
 const findAdjacentPosts = (currentSlug) => {
   const currentIndex = posts.value.findIndex((p) => p.slug === currentSlug)
@@ -30,16 +30,12 @@ const updatePostMeta = (postData) => {
     ? `${baseUrl}${postData.permalink}`.replace(/([^:]\/)\/+/g, '$1') // Remove double slashes
     : window.location.href
 
-  // Set meta tags
+  // Set meta tags including canonical URL
   setMetaTags({
     title: postData.title,
     description: postData.excerpt || postData.content.substring(0, 160),
     image: postData.image || '/og-blog.jpg',
     url: canonicalUrl,
-  })
-
-  // Set canonical URL
-  useHead({
     link: [
       {
         rel: 'canonical',
@@ -56,8 +52,9 @@ const loadPost = async (slug) => {
   nextPost.value = next
   // Generate permalink if not provided
   if (!post.value.permalink) {
-    post.value.permalink = `/blog/${slug}/`;
+    post.value.permalink = `/blog/${slug}/`
   }
+  console.log('Generated permalink:', post.value.permalink)
   updatePostMeta(post.value)
 }
 
