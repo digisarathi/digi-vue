@@ -1,11 +1,11 @@
 <template>
   <article class="post">
     <header class="post-header">
-      <h1 class="post-title">{{ title }}</h1>
+      <h1 class="post-title">{{ post.title }}</h1>
       <div class="post-meta">
-        <time :datetime="date">{{ formattedDate }}</time>
-        <div v-if="tags && tags.length > 0" class="post-tags">
-          <span v-for="(tag, index) in tags" :key="index" class="tag">
+        <time :datetime="props.post.date">{{ formattedDate }}</time>
+        <div v-if="props.post.tags && props.post.tags.length > 0" class="post-tags">
+          <span v-for="(tag, index) in props.post.tags" :key="index" class="tag">
             {{ tag }}
           </span>
         </div>
@@ -22,22 +22,14 @@
 import { computed } from 'vue';
 
 const props = defineProps({
-  title: {
-    type: String,
+  post: {
+    type: Object,
     required: true
   },
-  date: {
-    type: String,
-    required: true
-  },
-  tags: {
-    type: Array,
-    default: () => []
-  }
 });
 
 const formattedDate = computed(() => {
-  return new Date(props.date).toLocaleDateString('en-US', {
+  return new Date(props.post.date).toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',
     day: 'numeric'
