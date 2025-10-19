@@ -8,21 +8,28 @@ import BlogView from '../views/BlogView.vue'
 import NotFound from '../views/NotFound.vue'
 
 // Dynamically import all blog posts from the posts directory
-const blogPostModules = import.meta.glob('../posts/*.vue')
+const blogPostModules = import.meta.glob('../posts/*.vue', { eager: true })
 
-// Create routes for blog posts
-const blogPostRoutes = Object.entries(blogPostModules).map(([path, component]) => {
-  const name = path.split('/').pop().replace(/\.vue$/, '')
-  return {
-    path: `/blog/${name}`,
-    name: `blog-${name}`,
-    component: component,
-    meta: {
-      isBlogPost: true,
-      slug: name
+// Create routes for blog posts and sort by date (newest first)
+const blogPostRoutes = Object.entries(blogPostModules)
+  .map(([path, module]) => {
+    const name = path.split('/').pop().replace(/\.vue$/, '')
+    return {
+      path: `/blog/${name}`,
+      name: `blog-${name}`,
+      component: () => Promise.resolve(module),
+      meta: {
+        isBlogPost: true,
+        slug: name,
+        date: module.post?.date || null
+      }
     }
-  }
-})
+  })
+  .sort((a, b) => {
+    // Sort by date, newest first
+    if (!a.meta.date || !b.meta.date) return 0
+    return new Date(b.meta.date) - new Date(a.meta.date)
+  })
 
 // Second pass: add next/previous post info to each route
 blogPostRoutes.forEach((route, index) => {
