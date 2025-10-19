@@ -333,39 +333,10 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import { useHeadManager } from '@/composables/useHeadManager'
 
-const { setMetaTags, setStructuredData } = useHeadManager()
 
-// Set page title and meta tags
-const updatePageMeta = () => {
-  setMetaTags({
-    title: 'Your Virtual CTO Service',
-    description:
-      'Get expert tech leadership on demand with our Virtual CTO services. Perfect for startups and SMEs looking to scale their technology strategy.',
-    image: '/og-mycto.jpg', // Add your custom OG image for this page
-  })
 
-  setStructuredData({
-    '@type': 'Product',
-    name: 'myCTO Service',
-    description: 'On-demand CTO services for startups and SMEs',
-    brand: {
-      '@type': 'Brand',
-      name: 'digiSarathi',
-    },
-    offers: {
-      '@type': 'Offer',
-      price: '19999',
-      priceCurrency: 'INR',
-      availability: 'https://schema.org/InStock',
-    },
-  })
-}
 
-onMounted(() => {
-  updatePageMeta()
-})
 
 import {
   mdiChartTimelineVariant,

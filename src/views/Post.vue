@@ -3,14 +3,12 @@ import { ref, onMounted, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { getMarkdownFile, importMarkdownFiles } from '@/utils/markdown'
 import { formatDate } from '@/utils/date'
-import { useHeadManager } from '@/composables/useHeadManager'
 
 const route = useRoute()
 const post = ref(null)
 const nextPost = ref(null)
 const prevPost = ref(null)
 const posts = ref([])
-const { setMetaTags } = useHeadManager()
 
 const findAdjacentPosts = (currentSlug) => {
   const currentIndex = posts.value.findIndex((p) => p.slug === currentSlug)
@@ -58,7 +56,6 @@ const updatePostMeta = (postData) => {
   // updateCanonicalUrl will handle the URL formatting
   const canonicalUrl = postData.permalink || window.location.pathname
 
-  // First, compute the full URL to pass to setMetaTags (ensures it's always absolute)
   let fullUrl
   try {
     if (canonicalUrl.startsWith('http')) {
@@ -78,14 +75,6 @@ const updatePostMeta = (postData) => {
   // Update the canonical URL in the DOM
   updateCanonicalUrl(canonicalUrl) // Still pass raw for consistency, but now fullUrl is safe
   console.log('Setting canonical URL to:', fullUrl)
-
-  // Set meta tags with full URL
-  setMetaTags({
-    title: postData.title,
-    description: postData.excerpt || postData.content.substring(0, 160),
-    image: postData.image || '/og-blog.jpg',
-    url: fullUrl, // Use full URL here to avoid any doubling in useHeadManager
-  })
 }
 
 const loadPost = async (slug) => {

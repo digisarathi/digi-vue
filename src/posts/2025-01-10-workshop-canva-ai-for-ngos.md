@@ -36,4 +36,4 @@ Canva is a free and easy-to-use tool that lets you design stunning graphics for 
 
 UPI – 9022465676@ybl
 
-</div><div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33.33%"><figure class="wp-block-image size-full">![](https://digisarathi.com/wp-content/uploads/2025/01/WhatsApp-Image-2025-01-10-at-16.28.37-1.jpeg)<figcaption class="wp-element-caption">Scan QR code to transfer workshop fees. </figcaption></figure></div></div><iframe frameborder="0" height="2148" loading="lazy" marginheight="0" marginwidth="20" src="https://docs.google.com/forms/d/e/1FAIpQLSfOLVteW2iDr3q9RwTuOSy5ixEYgx2smeFzQWDZjieWjMwDPw/viewform?embedded=true" width="640">Loading…</iframe>
+</div>

@@ -1,45 +1,9 @@
 <script setup>
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed } from 'vue'
 import { importMarkdownFiles } from '@/utils/markdown'
 import { formatDate } from '@/utils/date'
-import { useHeadManager } from '@/composables/useHeadManager'
 
-const { setMetaTags, setStructuredData } = useHeadManager()
-
-// Set meta tags for the page
-onMounted(() => {
-  // Set up meta tags
-  setMetaTags({
-    title: 'Blog - Latest Tech Insights & Digital Trends',
-    description:
-      'Stay ahead with our expert articles on technology, digital transformation, and IT solutions for businesses and NGOs.',
-    image: '/og-blog.jpg',
-  })
-
-  // Set up structured data for Blog
-  setStructuredData({
-    '@type': 'Blog',
-    '@id': 'https://digisarathi.com/blog',
-    name: 'digiSarathi Blog',
-    description: 'Expert insights on technology and digital transformation',
-    publisher: {
-      '@type': 'Organization',
-      name: 'digiSarathi',
-      logo: 'https://digisarathi.com/logo.png',
-    },
-    blogPost: posts.value.slice(0, 5).map((post) => ({
-      '@type': 'BlogPosting',
-      headline: post.title,
-      description: post.description,
-      datePublished: post.date,
-      author: {
-        '@type': 'Organization',
-        name: 'digiSarathi',
-        url: 'https://digisarathi.com',
-      },
-    })),
-  })
-})
+// TODO: Add head management with @unhead/vue
 
 const props = defineProps({
   isMobile: {
@@ -88,7 +52,7 @@ const toggleTag = (tag) => {
               trends. Stay informed with our expert insights and practical guides.
             </p>
           </v-col>
-          <v-col cols="12" md="5" class=" d-md-flex justify-center">
+          <v-col cols="12" md="5" class="d-md-flex justify-center">
             <v-img src="/blog.svg" max-width="450" contain></v-img>
           </v-col>
         </v-row>
