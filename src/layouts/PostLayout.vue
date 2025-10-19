@@ -26,6 +26,41 @@
             <div class="post-content">
               <slot></slot>
             </div>
+
+            <v-divider class="my-8"></v-divider>
+
+            <div class="d-flex justify-space-between align-center">
+              <v-btn
+                v-if="route.meta.previousPost"
+                :to="route.meta.previousPost.path"
+                color="primary"
+                variant="outlined"
+                size="small"
+              >
+                Previous
+              </v-btn>
+              <v-spacer v-else></v-spacer>
+
+              <v-btn
+                to="/blog"
+                color="primary"
+                variant="outlined"
+                size="small"
+              >
+                Back to Blog
+              </v-btn>
+
+              <v-btn
+                v-if="route.meta.nextPost"
+                :to="route.meta.nextPost.path"
+                color="primary"
+                variant="outlined"
+                size="small"
+              >
+                Next
+              </v-btn>
+              <v-spacer v-else></v-spacer>
+            </div>
           </article>
         </v-col>
       </v-row>
@@ -35,7 +70,10 @@
 
 <script setup>
 import { computed } from 'vue'
+import { useRoute } from 'vue-router'
 import { formatDate } from '@/utils/date'
+
+const route = useRoute()
 
 const props = defineProps({
   post: {

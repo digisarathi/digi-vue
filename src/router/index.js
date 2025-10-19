@@ -11,12 +11,9 @@ import NotFound from '../views/NotFound.vue'
 const blogPostModules = import.meta.glob('../posts/*.vue')
 
 // Create routes for blog posts
-const blogPostRoutes = []
-
-// First pass: collect all blog post modules
-Object.entries(blogPostModules).forEach(([path, component]) => {
+const blogPostRoutes = Object.entries(blogPostModules).map(([path, component]) => {
   const name = path.split('/').pop().replace(/\.vue$/, '')
-  blogPostRoutes.push({
+  return {
     path: `/blog/${name}`,
     name: `blog-${name}`,
     component: component,
@@ -24,7 +21,7 @@ Object.entries(blogPostModules).forEach(([path, component]) => {
       isBlogPost: true,
       slug: name
     }
-  })
+  }
 })
 
 // Second pass: add next/previous post info to each route
