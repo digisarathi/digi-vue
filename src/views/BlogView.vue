@@ -84,6 +84,7 @@ import { useRouter, useRoute } from 'vue-router'
 import { useDisplay } from 'vuetify'
 import { mdiArrowRight } from '@mdi/js'
 import { getPosts } from '../composables/posts'
+import { formatDate } from '@/utils/date'
 
 const router = useRouter()
 const route = useRoute()
@@ -115,13 +116,6 @@ const toggleTag = (tag) => {
   // Update URL
   const query = selectedTag.value ? { tag: selectedTag.value } : {}
   router.push({ query })
-}
-
-// Format date for display
-const formatDate = (dateString) => {
-  if (!dateString) return ''
-  const options = { year: 'numeric', month: 'long', day: 'numeric' }
-  return new Date(dateString).toLocaleDateString('en-US', options)
 }
 
 // Watch for URL changes to update selected tag
