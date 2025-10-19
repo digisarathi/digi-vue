@@ -6,6 +6,8 @@ import AboutView from '../views/AboutView.vue'
 import ContactView from '../views/ContactView.vue'
 import BlogView from '../views/BlogView.vue'
 import Post from '../views/Post.vue'
+import AarambhIndia from '@/components/posts/AarambhIndia.vue'
+import GuideStarIndia from '@/components/posts/GuideStarIndia.vue'
 import NotFound from '../views/NotFound.vue'
 
 // Function to track page views
@@ -91,6 +93,26 @@ const router = createRouter({
       path: '/blog/:slug',
       name: 'post',
       component: Post,
+    },
+    // Static route for the Aarambh India post
+    // This is a temporary solution until we set up dynamic route generation with vite-ssg
+    {
+      path: '/blog/aarambh-india',
+      name: 'aarambh-india',
+      component: AarambhIndia,
+      meta: {
+        title: 'Aarambh India - digiSarathi',
+        description: 'Aarambh India - A digital initiative for child safety and awareness',
+      },
+    },
+    {
+      path: '/blog/guidestar-india',
+      name: 'guidestar-india',
+      component: GuideStarIndia,
+      meta: {
+        title: 'GuideStar India - digiSarathi',
+        description: 'GuideStar India - Fostering a culture of giving and corporate social responsibility',
+      },
     },
     {
       path: '/workshop-ai-for-ngos/',
