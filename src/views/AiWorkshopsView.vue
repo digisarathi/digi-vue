@@ -255,75 +255,10 @@
 <script setup>
 import {
   mdiAccount,
-  mdiBookOpenPageVariant,
-  mdiLaptopAccount,
-  mdiAccountGroup,
-  mdiPencilRuler,
-  mdiCodeBraces,
-  mdiRocketLaunch,
-  mdiChartBar,
-  mdiSearchWeb,
-  mdiGlobeModel,
-  mdiEmail,
-  mdiChartLine,
+  
 } from '@mdi/js'
-import { onMounted } from 'vue';
-import { useHeadManager } from '@/composables/useHeadManager';
 
-const { setMetaTags, setStructuredData } = useHeadManager();
 
-// Set meta tags and structured data for the page
-onMounted(() => {
-  const pageTitle = 'AI Workshops for NGOs & Corporates';
-  const pageDescription = 'Empower your team with our interactive AI workshops. Learn practical AI applications for NGOs and corporates to drive innovation and efficiency.';
-  const imageUrl = '/og-ai-workshops.jpg';
-  const pageUrl = 'https://digisarathi.com/workshops/ai';
-
-  // Set meta tags
-  setMetaTags({
-    title: pageTitle,
-    description: pageDescription,
-    image: imageUrl,
-    url: pageUrl
-  });
-
-  // Set up structured data for Workshop
-  setStructuredData({
-    '@type': 'Course',
-    name: 'AI Workshop for Organizations',
-    description: pageDescription,
-    provider: {
-      '@type': 'Organization',
-      name: 'digiSarathi',
-      sameAs: 'https://digisarathi.com'
-    },
-    offers: [{
-      '@type': 'Offer',
-      price: '9999',
-      priceCurrency: 'INR',
-      url: pageUrl,
-      availability: 'https://schema.org/InStock',
-      validFrom: new Date().toISOString()
-    }],
-    courseCode: 'AI-101',
-    educationalCredentialAwarded: 'Certificate of Completion',
-    hasCourseInstance: [{
-      '@type': 'CourseInstance',
-      name: 'AI Workshop for Organizations',
-      courseMode: ['online', 'inPerson'],
-      instructor: {
-        '@type': 'Organization',
-        name: 'digiSarathi',
-        url: 'https://digisarathi.com'
-      },
-      courseSchedule: {
-        '@type': 'Schedule',
-        repeatFrequency: 'P2W',
-        repeatCount: 24
-      }
-    }]
-  });
-});
 </script>
 
 <style scoped>

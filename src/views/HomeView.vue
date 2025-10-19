@@ -2,9 +2,6 @@
 import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { mdiWeb, mdiCellphoneLink, mdiTrendingUp, mdiSchool, mdiCircle, mdiAccount } from '@mdi/js'
-import { useHeadManager } from '@/composables/useHeadManager'
-
-const { setMetaTags, setStructuredData } = useHeadManager()
 
 const router = useRouter()
 const props = defineProps({
@@ -14,30 +11,9 @@ const props = defineProps({
   },
 })
 
+// TODO: Add head management with @unhead/vue
+
 onMounted(() => {
-  // Set up meta tags
-
-  // Set up structured data
-  setStructuredData({
-    '@type': 'Organization',
-    name: 'digiSarathi',
-    url: 'https://digisarathi.com',
-    logo: 'https://digisarathi.com/logo.png',
-    sameAs: [
-      'https://twitter.com/digisarathi',
-      'https://linkedin.com/company/digisarathi',
-      'https://facebook.com/digisarathi',
-    ],
-    contactPoint: [
-      {
-        '@type': 'ContactPoint',
-        telephone: '+91-9022465676',
-        contactType: 'customer service',
-        availableLanguage: ['English', 'Hindi'],
-      },
-    ],
-  })
-
   // Load ConvertKit script
   const script = document.createElement('script')
   script.setAttribute('data-uid', '7d5a62888b')
@@ -219,7 +195,7 @@ const goToService = (route) => {
             >
               Our Services
             </h2>
-            <p class="text-subtitle-1 mx-auto max-width-600 text-secondary">
+            <p id="services" class="text-subtitle-1 mx-auto max-width-600 text-secondary">
               Comprehensive digital solutions for growth, tailored to your specific needs
             </p>
           </v-col>
@@ -609,7 +585,7 @@ const goToService = (route) => {
   text-align: center;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 960px) {
   .pillar-label {
     writing-mode: horizontal-tb;
     text-orientation: initial;
