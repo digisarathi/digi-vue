@@ -18,6 +18,8 @@ const blogPostModules = import.meta.glob('./posts/*.vue', { eager: true })
 const blogPostRoutes = Object.entries(blogPostModules)
   .map(([path, module]) => {
     const name = path.split('/').pop().replace(/\.vue$/, '')
+    const post = module.post || {}
+    
     return {
       path: `/blog/${name}`,
       name: `blog-${name}`,
@@ -25,7 +27,12 @@ const blogPostRoutes = Object.entries(blogPostModules)
       meta: {
         isBlogPost: true,
         slug: name,
-        date: module.post?.date || null
+        date: post.date || null,
+        // Add meta for SSG
+        title: post.title,
+        description: post.description || post.excerpt,
+        tags: post.tags || [],
+        ogImage: post.ogImage || 'https://digisarathi.com/og-image.png'
       }
     }
   })
@@ -91,7 +98,7 @@ export const createApp = ViteSSG(
     routes,
     scrollBehavior
   },
-  ({ app, router, routes, isClient, initialState }) => {
+  ({ app, router, routes, isClient, initialState, head }) => {
     // Install plugins
     app.use(vuetify)
     
@@ -107,5 +114,42 @@ export const createApp = ViteSSG(
         }
       })
     }
+    
+    // Set up head management for SSG
+    router.beforeEach((to, from, next) => {
+      if (to.meta.title) {
+        const fullTitle = `${to.meta.title} - digiSarathi`
+        const fullUrl = `https://digisarathi.com${to.path}`
+        const description = to.meta.description || 'digiSarathi is technology company providing cost-effective IT solutions and trainings to empower organizations and individuals.'
+        const image = to.meta.ogImage || 'https://digisarathi.com/og-image.png'
+        
+        if (head) {
+          head.push({
+            title: fullTitle,
+            meta: [
+              { name: 'description', content: description },
+              { property: 'og:title', content: fullTitle },
+              { property: 'og:description', content: description },
+              { property: 'og:image', content: image },
+              { property: 'og:url', content: fullUrl },
+              { property: 'og:type', content: to.meta.isBlogPost ? 'article' : 'website' },
+              { property: 'og:site_name', content: 'digiSarathi' },
+              ...(to.meta.isBlogPost && to.meta.date ? [
+                { property: 'article:published_time', content: to.meta.date },
+                { property: 'article:author', content: 'digiSarathi' },
+              ] : []),
+              { name: 'twitter:card', content: 'summary_large_image' },
+              { name: 'twitter:title', content: fullTitle },
+              { name: 'twitter:description', content: description },
+              { name: 'twitter:image', content: image },
+            ],
+            link: [
+              { rel: 'canonical', href: fullUrl }
+            ]
+          })
+        }
+      }
+      next()
+    })
   }
 )
