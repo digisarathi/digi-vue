@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter as createVueRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
 import ContactView from '../views/ContactView.vue'
@@ -68,15 +68,17 @@ const scrollBehavior = (to, from, savedPosition) => {
   }
 }
 
-const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  scrollBehavior,
-  routes: [
-  {
-    path: '/',
-    name: 'home',
-    component: HomeView,
-  },
+// Export factory function for SSG compatibility
+export function createRouter() {
+  const router = createVueRouter({
+    history: createWebHistory(import.meta.env.BASE_URL),
+    scrollBehavior,
+    routes: [
+    {
+      path: '/',
+      name: 'home',
+      component: HomeView,
+    },
   {
     path: '/about',
     name: 'about',
@@ -171,11 +173,15 @@ const router = createRouter({
     component: NotFound,
     },
   ],
-})
+  })
 
-// Track page views after navigation
-router.afterEach((to) => {
-  trackPageView(to)
-})
+  // Track page views after navigation
+  router.afterEach((to) => {
+    trackPageView(to)
+  })
 
-export { router }
+  return router
+}
+
+// Export router instance for non-SSG usage
+export const router = createRouter()

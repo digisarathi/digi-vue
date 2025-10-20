@@ -146,11 +146,14 @@
     }
   };
 
-  const isMobile = ref(window.innerWidth < 960);
+  // SSR-safe window access
+  const isMobile = ref(typeof window !== 'undefined' ? window.innerWidth < 960 : false);
 
-  window.addEventListener('resize', () => {
-    isMobile.value = window.innerWidth < 960;
-  });
+  if (typeof window !== 'undefined') {
+    window.addEventListener('resize', () => {
+      isMobile.value = window.innerWidth < 960;
+    });
+  }
 </script>
 <style>
 .footer a {

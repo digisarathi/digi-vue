@@ -8,6 +8,17 @@ import vuetify from 'vite-plugin-vuetify'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [vue(), vuetify({ autoImport: true }), vueDevTools()],
+  ssgOptions: {
+    script: 'async',
+    formatting: 'minify',
+    crittersOptions: {
+      reduceInlineStyles: false,
+    },
+    entry: './src/main.ssg.js',
+  },
+  ssr: {
+    noExternal: ['vuetify'],
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
@@ -19,8 +30,11 @@ export default defineConfig({
     assetsDir: 'assets',
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ['vue', 'vue-router', 'vuetify', 'marked', 'front-matter', '@mdi/js'],
+        manualChunks: (id) => {
+          // Don't manually chunk for SSR build
+          if (id.includes('node_modules')) {
+            return 'vendor'
+          }
         },
       },
     },
