@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite-ssg build",
+    "build": "vite-ssg build && npm run generate-sitemap",
     "build:old": "vite build && npm run generate-sitemap",
     "generate-sitemap": "node generate-sitemap.js",
     "preview": "vite preview",
