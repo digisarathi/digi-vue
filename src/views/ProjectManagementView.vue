@@ -1,5 +1,3 @@
-
-
 <template>
   <v-main>
     <!-- Hero Section -->
@@ -83,7 +81,7 @@
     <section class="py-12">
       <v-container>
         <v-card class="py-8 px-4 text-center" color="primary">
-          <v-card-title class="text-h4 font-weight-bold mb-4 text-white">Ready to Boost Your Career?</v-card-title>
+          <v-card-title class="text-h4 font-weight-bold mb-4 text-white text-wrap">Ready to Boost Your Career?</v-card-title>
           <v-card-text class="text-h6 mb-6 text-white">
             Whether you're a fresh graduate or looking to step up in your career, our Project Management Workshop will
             give

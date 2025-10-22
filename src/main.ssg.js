@@ -10,6 +10,7 @@ import Website from './views/Website.vue'
 import Training from './views/Training.vue'
 import BlogView from './views/BlogView.vue'
 import NotFound from './views/NotFound.vue'
+import UXUI from './views/UX-UIServices.vue'
 
 // Dynamically import all blog posts
 const blogPostModules = import.meta.glob('./posts/*.vue', { eager: true })
@@ -70,6 +71,7 @@ const routes = [
   { path: '/rapid-prototyping-vs-waterfall-model', redirect: '/blog/rapid-prototyping-vs-waterfall' },
   { path: '/ai-workshops', name: 'ai-workshops', component: () => import('./views/AiWorkshopsView.vue') },
   { path: '/project-management', name: 'project-management', component: () => import('./views/ProjectManagementView.vue') },
+  { path: '/ux-ui-services', name: 'ux-ui-services', component: UXUI },
   { path: '/mycto', name: 'mycto', component: () => import('./views/myCTO.vue') },
   { path: '/social-media-marketing', name: 'social-media-marketing', component: () => import('./views/SocialMediaMarketingView.vue') },
   { path: '/website-audit', name: 'website-audit', component: () => import('./views/WebsiteAudit.vue') },
