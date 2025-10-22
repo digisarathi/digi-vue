@@ -5,11 +5,12 @@
       <v-container>
         <v-row justify="center" align="center" class="min-height-70vh">
           <v-col cols="12" md="7">
-            <h1 :class="['font-weight-bold', 'mb-6', { 'text-h3': !isMobile, 'text-h4': isMobile }]" class="text-primary">
-            We defy inertia, preferring the bolder, more meaningful route.
+            <h1 :class="['font-weight-bold', 'mb-6', { 'text-h3': !isMobile, 'text-h4': isMobile }]"
+              class="text-primary">
+              Boldly defying inertia, for the more meaningful route.
             </h1>
             <p :class="['mb-8', { 'text-h6': !isMobile, 'text-h7': isMobile }]" class="text-secondary">
-              We are a team of passionate professionals dedicated to helping you achieve your goals through innovative and effective solutions.
+              We are a team of passionate professionals dedicated to customer delight through creativity & innovation.
             </p>
           </v-col>
           <v-col cols="12" md="5" class="d-none d-md-flex justify-center">
@@ -20,77 +21,72 @@
     </section>
     <section>
       <v-row>
-          <v-col cols="12" class="text-center mb-6">
-            <h2 class="font-weight-bold mb-3 text-primary" :class="{ 'text-h3': !isMobile, 'text-h6': isMobile }">Our Values</h2>
-          </v-col>
-        </v-row>
+        <v-col cols="12" class="text-center mb-6">
+          <h2 class="font-weight-bold mb-3 text-primary" :class="{ 'text-h3': !isMobile, 'text-h6': isMobile }">Our
+            Values</h2>
+        </v-col>
+      </v-row>
       <v-container>
         <v-row>
           <v-col v-for="(value, index) in values" :key="index" cols="12" md="4" class=" pa-4 text-center ">
             <v-card :elevation="2" height="100%" class="ma-1 pa-4">
-              <v-img :src="value.image" max-width="450"  height="200" class="mb-4"  contain></v-img>
+              <v-img :src="value.image" max-width="450" height="200" class="mb-4" contain></v-img>
               <h2 class="text-h5 font-weight-bold text-primary mb-2">{{ value.title }}</h2>
               <p class="text-subtitle-1 text-secondary">{{ value.description }}</p>
             </v-card>
           </v-col>
         </v-row>
       </v-container>
-  </section>
-  <section>
-    <v-container >
-      <v-row class="my-2 py-6">
-        <v-col class="text-center">
-          <p class="text-body-1 mb-8 text-secondary">Every new project is welcomed with open arms, and grows into an offer if it turns out to be sustainable. That’s the way we grow and stand out from the crowd.
-Objectives Key Results (OKRs) are set up at a group, team, and individual level to accomplish our mission all together.
-Our teams and people are our most precious asset. We aim to have a positive and valuable impact on Earth via our work with nonprofits.</p>
-        </v-col>
-      </v-row>
-      <v-row>
-          <v-col cols="12" class="text-center ">
-            <h2 class="font-weight-bold mb-3 text-primary" :class="{ 'text-h3': !isMobile, 'text-h6': isMobile }">Our Team</h2>
+    </section>
+    <section>
+      <v-container>
+        <v-row class="my-2 py-6">
+          <v-col class="text-center">
+            <p class="text-body-1 mb-8 text-secondary">Every new project is welcomed with open arms, and grows into an
+              offer if it turns out to be sustainable. That’s the way we grow and stand out from the crowd.
+              Objectives Key Results (OKRs) are set up at a group, team, and individual level to accomplish our mission
+              all together.
+              Our teams and people are our most precious asset. We aim to have a positive and valuable impact on Earth
+              via our work with nonprofits.</p>
           </v-col>
         </v-row>
-      <v-row class="my-2 py-6">
-        <v-col 
-          v-for="(member, index) in teamMembers" 
-          :key="index" 
-          cols="12" 
-          class="mb-8"
-          :class="{ 'd-flex flex-column': index % 2 === 0, 'd-flex flex-column-reverse': index % 2 !== 0 }"
-        >
-          <v-row class="align-center">
-            <v-col cols="12" md="8" :order-md="index % 2 === 0 ? 1 : 2">
-              <v-card variant="text" class="h-100 d-flex flex-column">
-                <v-card-title class="text-primary font-weight-bold">{{ member.name }}</v-card-title>
-                <v-card-subtitle class="text-h6 text-secondary">{{ member.role }}</v-card-subtitle>
-                <v-card-text class="text-secondary text-body-1">
-                  <div v-for="(paragraph, pIndex) in member.bio" :key="pIndex" class="mb-3">
-                    {{ paragraph }}
-                  </div>
-                </v-card-text>
-                <v-card-actions class="mt-auto ml-1">
-                  <a v-if="member.linkedin" :href="member.linkedin" target="_blank" class="text-decoration-none">
-                    <v-icon size="24" class="text-primary mr-2">{{mdiLinkedin}}</v-icon>
-                  </a>
-                  <a v-if="member.twitter" :href="member.twitter" target="_blank" class="text-decoration-none">
-                    <v-icon size="24" class="text-primary">{{mdiTwitter}}</v-icon>
-                  </a>
-                </v-card-actions>
-              </v-card>
-            </v-col>
-            <v-col cols="12" md="4" :order-md="index % 2 === 0 ? 2 : 1" class="d-flex justify-center">
-              <v-img 
-                :src="member.image" 
-                max-width="300" 
-                contain 
-                class="grey-filter"
-                :style="{ maxHeight: '400px' }"
-              ></v-img>
-            </v-col>
-          </v-row>
-        </v-col>
-      </v-row>
-    </v-container>
+        <v-row>
+          <v-col cols="12" class="text-center ">
+            <h2 class="font-weight-bold mb-3 text-primary" :class="{ 'text-h3': !isMobile, 'text-h6': isMobile }">Our
+              Team</h2>
+          </v-col>
+        </v-row>
+        <v-row class="my-2 py-6">
+          <v-col v-for="(member, index) in teamMembers" :key="index" cols="12" class="mb-8"
+            :class="{ 'd-flex flex-column': index % 2 === 0, 'd-flex flex-column-reverse': index % 2 !== 0 }">
+            <v-row class="align-center">
+              <v-col cols="12" md="8" :order-md="index % 2 === 0 ? 1 : 2">
+                <v-card variant="text" class="h-100 d-flex flex-column">
+                  <v-card-title class="text-primary font-weight-bold">{{ member.name }}</v-card-title>
+                  <v-card-subtitle class="text-h6 text-secondary">{{ member.role }}</v-card-subtitle>
+                  <v-card-text class="text-secondary text-body-1">
+                    <div v-for="(paragraph, pIndex) in member.bio" :key="pIndex" class="mb-3">
+                      {{ paragraph }}
+                    </div>
+                  </v-card-text>
+                  <v-card-actions class="mt-auto ml-1">
+                    <a v-if="member.linkedin" :href="member.linkedin" target="_blank" class="text-decoration-none">
+                      <v-icon size="24" class="text-primary mr-2">{{ mdiLinkedin }}</v-icon>
+                    </a>
+                    <a v-if="member.twitter" :href="member.twitter" target="_blank" class="text-decoration-none">
+                      <v-icon size="24" class="text-primary">{{ mdiTwitter }}</v-icon>
+                    </a>
+                  </v-card-actions>
+                </v-card>
+              </v-col>
+              <v-col cols="12" md="4" :order-md="index % 2 === 0 ? 2 : 1" class="d-flex justify-center">
+                <v-img :src="member.image" max-width="300" contain class="grey-filter"
+                  :style="{ maxHeight: '400px' }"></v-img>
+              </v-col>
+            </v-row>
+          </v-col>
+        </v-row>
+      </v-container>
     </section>
 
     <!-- Advisory Board Section -->
@@ -108,61 +104,38 @@ Our teams and people are our most precious asset. We aim to have a positive and 
         </v-row>
 
         <v-row class="justify-center">
-          <v-col 
-            v-for="(advisor, index) in advisors" 
-            :key="index" 
-            cols="12" 
-            class="mb-6"
-          >
+          <v-col v-for="(advisor, index) in advisors" :key="index" cols="12" class="mb-6">
             <v-card class="h-100" elevation="3">
               <v-row no-gutters class="h-100">
                 <!-- Left Column - Image and Social Links -->
                 <v-col cols="12" sm="4" class="pa-4 d-flex flex-column align-center text-center">
                   <v-avatar size="150" class="elevation-2 mb-3">
-                    <v-img
-                      :src="advisor.image"
-                      cover
-                      class="bg-grey-lighten-1"
-                    ></v-img>
+                    <v-img :src="advisor.image" cover class="bg-grey-lighten-1"></v-img>
                   </v-avatar>
                   <!-- Social Links -->
                   <div class="mt-auto">
-                    <v-btn
-                      v-if="advisor.linkedin"
-                      :href="advisor.linkedin"
-                      target="_blank"
-                      icon
-                      size="small"
-                      color="primary"
-                      variant="text"
-                      class="mx-1"
-                    >
+                    <v-btn v-if="advisor.linkedin" :href="advisor.linkedin" target="_blank" icon size="small"
+                      color="primary" variant="text" class="mx-1">
                       <v-icon>{{ mdiLinkedin }}</v-icon>
                     </v-btn>
-                    <v-btn
-                      v-if="advisor.twitter"
-                      :href="advisor.twitter"
-                      target="_blank"
-                      icon
-                      size="small"
-                      color="primary"
-                      variant="text"
-                      class="mx-1"
-                    >
+                    <v-btn v-if="advisor.twitter" :href="advisor.twitter" target="_blank" icon size="small"
+                      color="primary" variant="text" class="mx-1">
                       <v-icon>{{ mdiTwitter }}</v-icon>
                     </v-btn>
                   </div>
-                  
+
                 </v-col>
-                
+
                 <!-- Right Column - Bio -->
                 <v-col cols="12" sm="8" class="pa-4 d-flex flex-column">
                   <v-card-text class="text-body-2 pa-0">
-                   <v-card-title class="text-h5 font-weight-bold text-primary pa-0 mb-1">{{ advisor.name }}</v-card-title>
-                   <v-card-subtitle class="text-subtitle-1 pa-0 mb-3 text-medium-emphasis">{{ advisor.title }}</v-card-subtitle>
+                    <v-card-title class="text-h5 font-weight-bold text-primary pa-0 mb-1">{{ advisor.name
+                      }}</v-card-title>
+                    <v-card-subtitle class="text-subtitle-1 pa-0 mb-3 text-medium-emphasis">{{ advisor.title
+                      }}</v-card-subtitle>
                     {{ advisor.bio }}
                   </v-card-text>
-                  
+
                 </v-col>
               </v-row>
             </v-card>

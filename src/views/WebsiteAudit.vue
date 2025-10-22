@@ -6,12 +6,11 @@
         <v-container>
           <v-row align="center">
             <v-col cols="12" md="7">
-              <h1 class="text-h2 text-primary font-weight-bold mb-4">Quick-Fix Website Audit Service</h1>
+              <h1 class="text-h2 text-primary font-weight-bold mb-4">Website Audit & Quick-Fix Service</h1>
               <p class="text-body-1 mb-6">
-                This Website Audit & Quick Fix Package is designed for NGOs seeking to enhance their online presence
+                This package is designed to enhance online presence
                 without a full website revamp. Through targeted analysis and minor tweaks, we deliver significant
-                improvements in user experience, accessibility, and performance, maximizing your website’s impact for
-                your mission.
+                improvements in user experience, accessibility, and performance, maximizing your website’s user engagement.
               </p>
             </v-col>
             <v-col cols="12" md="5" class="text-center">

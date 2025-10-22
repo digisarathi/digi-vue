@@ -13,12 +13,7 @@
               Transformation, Troubleshooting Tech Issues or Planning your next big project, myCTO
               is your trusted partner.
             </p>
-            <v-btn
-              color="primary"
-              size="large"
-              class="mr-4 mb-4"
-              href="mailto:mycto@digisarathi.com"
-            >
+            <v-btn color="primary" size="large" class="mr-4 mb-4" href="mailto:mycto@digisarathi.com">
               Get in touch
             </v-btn>
           </v-col>
@@ -123,9 +118,8 @@
                 <p class="text-caption mb-4">
                   We'll work with your budget to create a package that fits your needs
                 </p>
-                <v-btn block color="primary" variant="outlined" href="mailto:mycto@digisarathi.com"
-                  >Request Quote</v-btn
-                >
+                <v-btn block color="primary" variant="outlined" href="mailto:mycto@digisarathi.com">Request
+                  Quote</v-btn>
               </v-card-text>
             </v-card>
           </v-col>
@@ -152,9 +146,7 @@
                 <p class="text-caption mb-4">
                   Let's discuss the right level of support for your team and its productivity
                 </p>
-                <v-btn block color="white" variant="outlined" href="mailto:mycto@digisarathi.com"
-                  >Let's Talk</v-btn
-                >
+                <v-btn block color="white" variant="outlined" href="mailto:mycto@digisarathi.com">Let's Talk</v-btn>
               </v-card-text>
             </v-card>
           </v-col>
@@ -182,11 +174,7 @@
                 <v-icon :icon="mdiAccountTie" size="48" color="primary" class="mb-4"></v-icon>
                 <h3 class="text-h5 font-weight-bold mb-4">For CEOs & Leaders</h3>
                 <v-list density="compact" class="text-start bg-transparent">
-                  <v-list-item
-                    v-for="(item, i) in ceoQuestions"
-                    :key="'ceo-' + i"
-                    class="px-0 align-start"
-                  >
+                  <v-list-item v-for="(item, i) in ceoQuestions" :key="'ceo-' + i" class="px-0 align-start">
                     <template v-slot:prepend>
                       <v-icon color="primary" size="small" class="mt-1 me-2 flex-shrink-0">{{
                         mdiChevronRight
@@ -208,11 +196,7 @@
                 <v-icon :icon="mdiAccountGroup" size="48" color="primary" class="mb-4"></v-icon>
                 <h3 class="text-h5 font-weight-bold mb-4">For Teams</h3>
                 <v-list density="compact" class="text-start bg-transparent">
-                  <v-list-item
-                    v-for="(item, i) in teamQuestions"
-                    :key="'team-' + i"
-                    class="px-0 align-start"
-                  >
+                  <v-list-item v-for="(item, i) in teamQuestions" :key="'team-' + i" class="px-0 align-start">
                     <template v-slot:prepend>
                       <v-icon color="primary" size="small" class="mt-1 me-2 flex-shrink-0">{{
                         mdiChevronRight
@@ -244,23 +228,11 @@
         </v-row>
 
         <v-row class="justify-center">
-          <v-col
-            cols="12"
-            md="4"
-            v-for="(testimonial, index) in testimonials"
-            :key="index"
-            class="mb-6"
-          >
+          <v-col cols="12" md="4" v-for="(testimonial, index) in testimonials" :key="index" class="mb-6">
             <v-card variant="flat" class="h-100 d-flex flex-column">
               <v-card-text class="flex-grow-1">
-                <v-rating
-                  v-model="testimonial.rating"
-                  color="amber"
-                  density="compact"
-                  size="small"
-                  readonly
-                  class="mb-3"
-                ></v-rating>
+                <v-rating v-model="testimonial.rating" color="amber" density="compact" size="small" readonly
+                  class="mb-3"></v-rating>
                 <p class="text-body-1 font-italic mb-4">"{{ testimonial.quote }}"</p>
               </v-card-text>
               <v-card-actions class="bg-grey-lighten-4 pa-4">
@@ -318,12 +290,7 @@
           Get expert insights and a clear roadmap to improve your tech stack, security, and
           performance. No long-term commitments, just actionable recommendations.
         </p>
-        <v-btn
-          class="mx-2 mb-2 rounded-lg"
-          href="mailto:mycto@digisarathi.com"
-          size="large"
-          variant="outlined"
-        >
+        <v-btn class="mx-2 mb-2 rounded-lg" href="mailto:mycto@digisarathi.com" size="large" variant="outlined">
           Book a Consultation
         </v-btn>
       </v-container>
@@ -418,16 +385,16 @@ const handholdingInclusions = ref([
 const testimonials = ref([
   {
     quote:
-      'myCTO helped us evaluate if our portal needed an upgrade or not. This strategic advice saved us lot of money & energy!',
-    name: 'Sarah M.',
+      'myCTO helped us evaluate & manage our portal upgrade. Their strategic advice saved us lot of money & energy!',
+    name: 'Kritika Parab',
     role: 'CEO',
     company: 'Nonprofit association',
     rating: 5,
     icon: mdiOfficeBuilding,
   },
   {
-    quote: 'myCTO showed us how our hosting bill was too high. We appreciate the annual savings!',
-    name: 'Raj K.',
+    quote: 'We appreciate the annual savings of our website hosting bill! Thanks myCTO',
+    name: 'Raj Krishnan',
     role: 'Founder',
     company: 'Agritech startup',
     rating: 5,
@@ -435,8 +402,8 @@ const testimonials = ref([
   },
   {
     quote:
-      "Having access to a CTO expert via email and calls feels like having an in-house expert. It's a game-changer for our small team.",
-    name: 'Gayatri',
+      "Availability of the CTO expert via email and calls is almost always instant. It's a game-changer for our small team.",
+    name: 'Gayatri Shenoy',
     role: 'Operations Lead',
     company: 'NGO',
     rating: 5,

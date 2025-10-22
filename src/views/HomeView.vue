@@ -26,7 +26,7 @@ const orgServices = [
   {
     name: 'Website Design',
     icon: mdiWeb,
-    text: 'Your website is the foundation upon which your digital marketing or fundraising campaigns are built. We create responsive, user-friendly designs that connect with your audience.',
+    text: 'Your website is the foundation upon which your digital marketing or fundraising campaigns are built.',
     features: ['Responsive Design', 'SEO Optimization', 'Custom CMS', 'Performance Focus'],
     route: 'website-design',
     image: 'wordpress.svg',
@@ -34,7 +34,7 @@ const orgServices = [
   {
     name: 'UX/UI Design',
     icon: mdiCellphoneLink,
-    text: 'Creating intuitive and engaging digital experiences that prioritize user needs and business goals through research-driven design principles.',
+    text: 'Creating intuitive & engaging digital experiences for user needs and business goals through unique design principles.',
     features: ['User Research', 'Wireframing & Prototyping', 'Visual Design', 'Usability Testing'],
     route: 'ux-ui-services',
     image: 'ux-ui.svg',
@@ -44,7 +44,7 @@ const peopleServices = [
   {
     name: 'Training & Workshops',
     icon: mdiSchool,
-    text: 'Hands-on sessions designed to empower your team with essential skills and knowledge. Our expert-led workshops provide practical knowledge that can be immediately applied.',
+    text: 'Hands-on sessions designed to empower your team with essential skills and knowledge, led by industry experts.',
     features: ['Customized Programs', 'Hands-on Learning', 'Remote Options', 'Ongoing Support'],
     route: 'training-workshops',
     image: 'shared.svg',
@@ -54,7 +54,7 @@ const techServices = [
   {
     name: 'Custom Apps',
     icon: mdiCellphoneLink,
-    text: 'Innovative user experiences based on a modular and scalable architecture to scale with flexibility and create seamless digital experiences across all platforms.',
+    text: 'Modular and scalable architecture to scale with flexibility and evolving business needs.',
     features: ['Mobile & Web Apps', 'Custom Software', 'API Integration'],
     route: 'apps-software-development',
     image: 'app.svg',
@@ -62,12 +62,12 @@ const techServices = [
   {
     name: 'myCTO',
     icon: mdiCellphoneLink,
-    text: 'Your trusted virtual CTO helping you navigate Digital Transformation, Troubleshooting Tech Issues or Planning your next big project.',
+    text: 'Your trusted virtual CTO helping you navigate Digital Transformation or  Tech Issues.',
     features: ['Tech Consulting', 'Tech Implementation', 'Tech Support'],
     route: 'mycto',
     image: 'myCTO_logo.png',
   },
-  
+
 ]
 // Improved testimonials with more content and images
 const testimonials = ref([
@@ -158,7 +158,7 @@ const goToService = (route) => {
             <h1 :class="['mb-6', { 'text-h3': !isMobile, 'text-h4': isMobile }]" class="text-primary"
               fetchpriority="high">
               Your goals can't wait for 'someday'.
-              
+
             </h1>
             <p :class="['mb-6', { 'text-h6': !isMobile, 'text-h7': isMobile }]" class="text-secondary">
               We turn your mission into
