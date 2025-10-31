@@ -4,11 +4,8 @@
     <section>
       <v-container>
         <v-row justify="center" align="center" class="min-height-70vh">
-          <v-col cols="12" md="7">
-            <h1
-              class="font-weight-bold mb-6 text-primary"
-              :class="{ 'text-h3': !isMobile, 'text-h4': isMobile }"
-            >
+          <v-col cols="12" md="7" order="2" order-md="1">
+            <h1 class="font-weight-bold mb-6 text-primary" :class="{ 'text-h3': !isMobile, 'text-h4': isMobile }">
               Insights, Updates, and Digital Innovation
             </h1>
             <p class="mb-8 text-body-1 text-secondary">
@@ -16,20 +13,15 @@
               trends. Stay informed with our expert insights and practical guides.
             </p>
           </v-col>
-          <v-col cols="12" md="5" class="d-md-flex justify-center">
+          <v-col cols="12" md="5" order="1" order-md="2" class="text-center justify-center">
             <v-img src="/blog.svg" max-width="450" contain></v-img>
           </v-col>
         </v-row>
 
         <!-- Tag Filter -->
         <div v-if="uniqueTags.length > 0" class="my-8">
-          <v-chip
-            v-for="tag in uniqueTags"
-            :key="tag"
-            class="mr-2 mb-2"
-            :color="selectedTag === tag ? 'primary' : 'accent'"
-            @click="toggleTag(tag)"
-          >
+          <v-chip v-for="tag in uniqueTags" :key="tag" class="mr-2 mb-2"
+            :color="selectedTag === tag ? 'primary' : 'accent'" @click="toggleTag(tag)">
             {{ tag }}
           </v-chip>
         </div>
@@ -43,14 +35,7 @@
                 <span v-if="post.date">{{ formatDate(post.date) }}</span>
                 <v-spacer></v-spacer>
                 <template v-if="post.tags && post.tags.length > 0">
-                  <v-chip
-                    v-for="tag in post.tags"
-                    :key="tag"
-                    size="small"
-                    class="ml-1"
-                    color="primary"
-                    variant="tonal"
-                  >
+                  <v-chip v-for="tag in post.tags" :key="tag" size="small" class="ml-1" color="primary" variant="tonal">
                     {{ tag }}
                   </v-chip>
                 </template>

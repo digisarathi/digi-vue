@@ -5,10 +5,11 @@
       <v-container>
         <v-row align="center">
           <v-col cols="12" md="7" order="2" order-md="1">
-            <h1 class="text-h2 text-primary font-weight-bold mb-4">
+            <h1 :class="['mb-6', { 'text-h3': !isMobile, 'text-h4': isMobile }]" class="text-primary"
+              fetchpriority="high">
               Your Virtual Chief Technology Officer
             </h1>
-            <p class="text-h6 mb-6 text-secondary">
+            <p :class="['mb-6', { 'text-h6': !isMobile, 'text-h7': isMobile }]" class="text-secondary">
               Expertise without the hefty price tag! Whether you’re navigating Digital
               Transformation, Troubleshooting Tech Issues or Planning your next big project, myCTO
               is your trusted partner.
@@ -178,7 +179,7 @@
                     <template v-slot:prepend>
                       <v-icon color="primary" size="small" class="mt-1 me-2 flex-shrink-0">{{
                         mdiChevronRight
-                      }}</v-icon>
+                        }}</v-icon>
                     </template>
                     <v-list-item-title class="text-body-2">
                       <div class="text-wrap">{{ item }}</div>
@@ -200,7 +201,7 @@
                     <template v-slot:prepend>
                       <v-icon color="primary" size="small" class="mt-1 me-2 flex-shrink-0">{{
                         mdiChevronRight
-                      }}</v-icon>
+                        }}</v-icon>
                     </template>
                     <v-list-item-title class="text-body-2">
                       <div class="text-wrap">{{ item }}</div>
@@ -299,9 +300,14 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref } from 'vue'
 
-
+const props = defineProps({
+  isMobile: {
+    type: Boolean,
+    default: false,
+  },
+})
 
 
 

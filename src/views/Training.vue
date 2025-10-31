@@ -7,7 +7,8 @@
         <v-container>
           <v-row align="center">
             <v-col cols="12" md="7" order="2" order-md="1">
-              <h1 class="text-h2 text-primary font-weight-bold mb-4">Building Tomorrow's Leaders </h1>
+              <h1 :class="['mb-6', { 'text-h3': !isMobile, 'text-h4': isMobile }]" class="text-primary"
+                fetchpriority="high">Building Tomorrow's Leaders </h1>
               <p class="text-body-1 mb-6">
                 digiSarathi offers specialized tech training for NGOs, SMEs, and Students towards bridging the digital
                 divide through AI, marketing, communications, and software development training programs.
@@ -15,7 +16,7 @@
 
             </v-col>
             <v-col cols="12" md="5" order="1" order-md="2" class="text-center">
-              <v-img src="/educator.svg" max-width="450" contain alt="DigiSarathi Training"></v-img>
+              <v-img src="/educator.svg" max-width="450" max-height="350" contain alt="DigiSarathi Training"></v-img>
             </v-col>
           </v-row>
         </v-container>
@@ -395,8 +396,13 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import { mdiMapMarker, mdiEmail, mdiPhone, mdiTwitter, mdiLinkedin, mdiInstagram, mdiLaptopAccount, mdiGoogleClassroom, mdiAccountGroup, mdiAccount, mdiBookOpenPageVariant, mdiChartTimelineVariant, mdiChartBar, mdiPencilRuler } from '@mdi/js';
+const props = defineProps({
+  isMobile: {
+    type: Boolean,
+    default: false,
+  },
+})
+import { mdiLaptopAccount, mdiGoogleClassroom, mdiAccountGroup, mdiAccount, mdiBookOpenPageVariant, mdiChartTimelineVariant, mdiChartBar, mdiPencilRuler } from '@mdi/js';
 </script>
 
 <style scoped>

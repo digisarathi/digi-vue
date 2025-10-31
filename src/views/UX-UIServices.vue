@@ -4,8 +4,9 @@
         <v-container fluid class="hero-section">
             <v-row align="center" justify="center" class="min-height-70vh">
                 <v-col cols="12" md="7" order="2" order-md="1">
-                    <h1 class="text-h2 text-primary font-weight-bold  mb-6">
-                        UX/UI Design & Digital Experience
+                    <h1 :class="['mb-6', { 'text-h3': !isMobile, 'text-h4': isMobile }]" class="text-primary"
+                        fetchpriority="high">
+                        UX/UI Design & Digital Experiences
                     </h1>
                     <p class="text-body-1 mb-8">
                         We craft intuitive user experiences and visual systems for digital products, presentations, and
@@ -13,12 +14,10 @@
                         Translating ideas into visually fluent, functional, and accessible designs for the modern
                         audience.
                     </p>
-                    <v-btn size="large" color="primary" href="mailto:hello@digisarathi.com">
-                        Start Your Design Project
-                    </v-btn>
+
                 </v-col>
                 <v-col cols="12" md="5" order="1" order-md="2" class="text-center">
-                    <v-img src="/ux-ui.svg" max-width="450" contain alt="UI Designers"></v-img>
+                    <v-img src="/ux-ui.svg" max-width="450" max-height="350" contain alt="UI Designers"></v-img>
                 </v-col>
             </v-row>
         </v-container>
@@ -119,6 +118,12 @@
 </template>
 <script setup>
 import { mdiCheckCircle, mdiAccountGroupOutline, mdiTabletCellphone, mdiVectorSquareEdit, mdiPresentationPlay } from '@mdi/js'
+const props = defineProps({
+    isMobile: {
+        type: Boolean,
+        default: false,
+    },
+})
 const modules = [
     {
         icon: mdiAccountGroupOutline,

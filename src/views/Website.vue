@@ -6,18 +6,18 @@
         <v-container>
           <v-row align="center">
             <v-col cols="12" md="7" order="2" order-md="1">
-              <h1 class="text-h2 text-primary font-weight-bold mb-4">
-                We Simplify Website Design & Development
+              <h1 :class="['mb-6', { 'text-h3': !isMobile, 'text-h4': isMobile }]" class="text-primary"
+                fetchpriority="high">
+                We Simplify Website Design
               </h1>
               <p class="text-body-1 mb-6">
-                Our approach to website design emphasizes crafting intuitive, visually appealing,
-                and high-performing digital experiences. We prioritize seamless navigation and
-                responsive design, ensuring that your website not only looks great but also drives
-                engagement and conversions.
+                Our approach to website design emphasizes crafting visually appealing
+                and high-performing digital experiences. With intuitive navigation, your website will not only look
+                great but also drive engagement and conversions.
               </p>
             </v-col>
             <v-col cols="12" md="5" order="1" order-md="2" class="text-center">
-              <v-img src="/website-hero.svg" max-width="450" contain alt="Website Design"></v-img>
+              <v-img src="/websites.svg" max-width="450" max-height="350" contain alt="Website Design"></v-img>
             </v-col>
           </v-row>
         </v-container>
@@ -33,20 +33,9 @@
           </v-row>
 
           <v-row>
-            <v-col
-              v-for="(project, i) in portfolioProjects"
-              :key="i"
-              cols="12"
-              sm="6"
-              md="6"
-              lg="6"
-            >
-              <v-card
-                class="h-100 d-flex flex-column"
-                elevation="2"
-                style="cursor: pointer"
-                @click.stop="handleProjectClick(project.website)"
-              >
+            <v-col v-for="(project, i) in portfolioProjects" :key="i" cols="12" sm="6" md="6" lg="6">
+              <v-card class="h-100 d-flex flex-column" elevation="2" style="cursor: pointer"
+                @click.stop="handleProjectClick(project.website)">
                 <v-img :src="project.image" :alt="project.title" height="200" cover>
                   <template v-slot:placeholder>
                     <v-row class="fill-height ma-0" align="center" justify="center">
@@ -60,23 +49,12 @@
                 <v-card-text class="flex-grow-1">
                   <p class="text-body-2 mb-2">{{ project.description }}</p>
                   <div class="mt-2">
-                    <v-chip
-                      v-for="(tech, index) in project.technologies.slice(0, 3)"
-                      :key="index"
-                      size="small"
-                      class="mr-1 mb-1"
-                      color="primary"
-                      variant="outlined"
-                    >
+                    <v-chip v-for="(tech, index) in project.technologies.slice(0, 3)" :key="index" size="small"
+                      class="mr-1 mb-1" color="primary" variant="outlined">
                       {{ tech }}
                     </v-chip>
-                    <v-chip
-                      v-if="project.technologies.length > 3"
-                      size="small"
-                      class="mb-1"
-                      color="grey"
-                      variant="outlined"
-                    >
+                    <v-chip v-if="project.technologies.length > 3" size="small" class="mb-1" color="grey"
+                      variant="outlined">
                       +{{ project.technologies.length - 3 }} more
                     </v-chip>
                   </div>
@@ -109,14 +87,8 @@
 
           <v-row class="justify-center">
             <v-col v-for="(testimonial, index) in testimonials" :key="index" cols="12" md="10">
-              <v-card
-                elevation="6"
-                :href="testimonial.website"
-                target="_blank"
-                rel="noopener noreferrer"
-                style="cursor: pointer"
-                @click.stop
-              >
+              <v-card elevation="6" :href="testimonial.website" target="_blank" rel="noopener noreferrer"
+                style="cursor: pointer" @click.stop>
                 <v-card-text class="flex-grow-1">
                   <v-row>
                     <v-col cols="12" md="3" class="d-flex flex-column align-center">
@@ -166,17 +138,12 @@
 
 <script setup>
 import { ref } from 'vue'
-import {
-  mdiLightbulb,
-  mdiPencilRuler,
-  mdiCodeBraces,
-  mdiRocketLaunch,
-  mdiSpeedometer,
-  mdiResponsive,
-  mdiShieldCheck,
-  mdiArrowRight,
-} from '@mdi/js'
-
+const props = defineProps({
+  isMobile: {
+    type: Boolean,
+    default: false,
+  },
+})
 const testimonials = ref([
   {
     name: 'Dr. Dwivedi',

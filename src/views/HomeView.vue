@@ -167,7 +167,7 @@ const goToService = (route) => {
             </p>
           </v-col>
           <v-col cols="12" md="7" order="1" order-md="2">
-            <v-img src="/websites.svg" max-width="450" contain loading="eager" fetchpriority="high" max-height="450"
+            <v-img src="/home_hero.svg" max-width="450" max-height="350" contain loading="eager" fetchpriority="high"
               alt="Hero illustration"></v-img>
           </v-col>
         </v-row>

@@ -6,7 +6,9 @@
         <v-container>
           <v-row align="center">
             <v-col cols="12" md="7" order="2" order-md="1">
-              <h1 class="text-h2 text-primary font-weight-bold mb-4">Elevate Your Business with Custom Software
+              <h1 :class="['mb-6', { 'text-h3': !isMobile, 'text-h4': isMobile }]" class="text-primary"
+                fetchpriority="high">
+                Elevate Your Business with Custom Software
                 Solutions</h1>
               <p class="text-body-1 mb-6">
                 Our software development services leverage Agile methodologies to deliver high-quality, scalable
@@ -15,7 +17,8 @@
               </p>
             </v-col>
             <v-col cols="12" md="5" order="1" order-md="2" class="text-center">
-              <v-img src="/software-hero.svg" max-width="450" contain alt="Software Development"></v-img>
+              <v-img src="/innovation.svg" max-width="450" max-height="350" contain
+                alt="Software Development"></v-img>
             </v-col>
           </v-row>
         </v-container>
@@ -154,5 +157,11 @@
   </v-app>
 </template>
 <script setup>
+const props = defineProps({
+  isMobile: {
+    type: Boolean,
+    default: false,
+  },
+})
 import { mdiEmail, mdiRocketLaunch, mdiSearchWeb, mdiChartBar, mdiPencil, mdiChartLine, } from '@mdi/js'
 </script>
