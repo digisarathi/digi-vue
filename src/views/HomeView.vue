@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
-import { mdiWeb, mdiCellphoneLink, mdiTrendingUp, mdiSchool, mdiCircle, mdiAccount } from '@mdi/js'
+import { mdiWeb, mdiCellphoneLink, mdiSchool, mdiCircle, } from '@mdi/js'
 
 const router = useRouter()
 const props = defineProps({
@@ -370,6 +370,27 @@ const goToService = (route) => {
       </v-container>
     </section>
 
+    <section id="techforgood" class="py-16 bg-grey-lighten-4">
+      <v-container>
+        <v-row justify="center">
+          <v-col cols="12" md="8" class="text-center">
+            <h2 class="font-weight-bold mb-3 text-primary" :class="{ 'text-h3': !isMobile, 'text-h6': isMobile }">
+              Technology for Good
+            </h2>
+            <p class="text-subtitle-1 mx-auto max-width-600 text-secondary">
+              At digiSarathi, we believe in the transformative power of technology to drive positive change.
+              We are committed to leveraging our expertise to support ngos, nonprofits and social enterprises in
+              achieving their missions more effectively.
+            </p>
+            <v-btn color="primary" to="/ngos" class="mt-4">Learn More</v-btn>
+          </v-col>
+          <v-col>
+            <v-img src="/green.svg" alt="Technology for Good" contain></v-img>
+          </v-col>
+        </v-row>
+      </v-container>
+
+    </section>
     <!-- Newsletter Section with Modern Form -->
     <section id="newsletter" class="py-16 bg-primary">
       <v-container>

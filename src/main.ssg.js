@@ -11,6 +11,7 @@ import Training from './views/Training.vue'
 import BlogView from './views/BlogView.vue'
 import NotFound from './views/NotFound.vue'
 import UXUI from './views/UX-UIServices.vue'
+import Nonprofits from './views/Nonprofits.vue'
 
 // Dynamically import all blog posts
 const blogPostModules = import.meta.glob('./posts/*.vue', { eager: true })
@@ -75,6 +76,7 @@ const routes = [
   { path: '/mycto', name: 'mycto', component: () => import('./views/myCTO.vue') },
   { path: '/social-media-marketing', name: 'social-media-marketing', component: () => import('./views/SocialMediaMarketingView.vue') },
   { path: '/website-audit', name: 'website-audit', component: () => import('./views/WebsiteAudit.vue') },
+  { path: '/ngos', name: 'nonprofits', component: Nonprofits },
   ...blogPostRoutes,
   { path: '/:pathMatch(.*)*', name: 'not-found', component: NotFound },
 ]

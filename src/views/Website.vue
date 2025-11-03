@@ -35,7 +35,7 @@
           <v-row>
             <v-col v-for="(project, i) in portfolioProjects" :key="i" cols="12" sm="6" md="6" lg="6">
               <v-card class="h-100 d-flex flex-column" elevation="2" style="cursor: pointer"
-                @click.stop="handleProjectClick(project.website)">
+                @click.stop="handleProjectClick(project)">
                 <v-img :src="project.image" :alt="project.title" height="200" cover>
                   <template v-slot:placeholder>
                     <v-row class="fill-height ma-0" align="center" justify="center">
@@ -175,12 +175,12 @@ const testimonials = ref([
   },
 ])
 
-const handleProjectClick = (url) => {
-  if (!url) return
-  // Ensure the URL has a protocol
-  const formattedUrl = url.startsWith('http') ? url : `https://${url}`
-  window.open(formattedUrl, '_blank', 'noopener,noreferrer')
+
+const handleProjectClick = (project) => {
+  if (!project.website) window.open(`https://www.digisarathi.com/${project.image}`, '_blank', 'noopener,noreferrer')
+  window.open(project.website, '_blank', 'noopener,noreferrer')
 }
+
 
 const portfolioProjects = ref([
   {
@@ -191,10 +191,18 @@ const portfolioProjects = ref([
     website: 'https://surendraforgings.com/',
   },
   {
+    title: 'Solar Manufacturer',
+    description:
+      'A professional corporate website with dynamic content management and product catalog.',
+    image: '/portfolio/thumbnails/renewsys.png',
+    technologies: ['Wix', 'Google Analytics', 'Google Ads'],
+    website: 'https://renewsysworld.com/',
+  },
+  {
     title: 'Aarambh India',
     description:
       "India's first comprehensive portal on Child Sexual Abuse & Prevention of Child Sexual Offences",
-    image: '/portfolio/aarambh.png',
+    image: '/portfolio/thumbnails/aarambh.png',
     technologies: ['WordPress', 'Google Analytics'],
     website: 'https://www.aarambhindia.org/',
   },
@@ -202,71 +210,59 @@ const portfolioProjects = ref([
     title: 'SEEDS',
     description:
       'A professional website for nonprofit working with marginalized communities to create sustainable change.',
-    image: '/portfolio/seeds.png',
+    image: '/portfolio/thumbnails/seeds.png',
     technologies: ['WordPress', 'Google Analytics'],
     website: 'http://www.seedsjsr.org/',
   },
   {
-    title: 'Solar Manufacturer',
-    description:
-      'A professional corporate website with dynamic content management and product catalog.',
-    image: '/portfolio/renewsys.png',
-    technologies: ['Wix', 'Google Analytics', 'Google Ads'],
-    website: 'https://renewsysworld.com/',
-  },
-  {
     title: 'Crowdsourcing for Women Safety',
     description: 'Open source platform for data gathering from citizens to enhance women safety',
-    image: '/portfolio/harassmap.png',
+    image: '/portfolio/thumbnails/harassmap.png',
     technologies: ['Ushahidi', 'Google Maps'],
   },
   {
     title: 'Rural women empowerment & livelihood',
     description:
       'A professional website for nonprofit in Amravati, Maharashtra working for rural women empowerment & livelihood',
-    image: '/portfolio/apeksha.png',
+    image: '/portfolio/thumbnails/apeksha.png',
     technologies: ['WordPress', 'Google Analytics'],
-    website: 'https://apekshasociety.org/',
   },
   {
     title: 'Laadli Alumni',
     description: 'A community platform for Laadli alumni by Population First',
-    image: '/portfolio/laadli.png',
+    image: '/portfolio/thumbnails/laadli.png',
     technologies: ['WordPress', 'Google Analytics'],
   },
   {
     title: 'Minority women rehabilitation',
     description: 'A nonprofit website for minority women rehabilitation for Awaaz-e-Niswaan',
-    image: '/portfolio/niswaan.jpg',
+    image: '/portfolio/thumbnails/niswaan.jpg',
     technologies: ['WordPress', 'Google Analytics'],
-    website: 'https://www.niswaan.org/',
   },
   {
     title: 'Women Helpline',
     description: 'A India-wide multilingual helpline information website for women safety',
-    image: '/portfolio/standup.png',
+    image: '/portfolio/thumbnails/standup.png',
     technologies: ['WordPress', 'Google Analytics'],
     website: 'https://standupagainstviolence.org/',
   },
   {
     title: 'Entrepreneurship Mentorship',
     description: 'A startup incubator website for startups in Amravati, Maharashtra',
-    image: '/portfolio/varuntalwar.png',
+    image: '/portfolio/thumbnails/varuntalwar.png',
     technologies: ['WordPress', 'Google Analytics'],
   },
   {
     title: 'Water conservation',
     description: 'A modern website for WaterAid India',
-    image: '/portfolio/wateraid.jpg',
+    image: '/portfolio/thumbnails/wateraid.jpg',
     technologies: ['WordPress', 'Google Analytics'],
-    website: 'https://wateraidindia.org/',
   },
   {
     title: 'Legal Education',
     description: 'A nonprofit website for Legal Education provided by IDIA',
-    image: '/portfolio/idia.png',
+    image: '/portfolio/thumbnails/idia.png',
     technologies: ['PHP', 'Google Analytics'],
-    website: 'https://www.idialaw.org/',
   },
 ])
 </script>

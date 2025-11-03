@@ -80,7 +80,7 @@
                 </v-card>
               </v-col>
               <v-col cols="12" md="4" :order-md="index % 2 === 0 ? 2 : 1" class="d-flex justify-center">
-                <v-img :src="member.image" max-width="300" contain class="grey-filter"
+                <v-img :src="member.image" max-width="300" contain class="grey-filter rounded-lg"
                   :style="{ maxHeight: '400px' }"></v-img>
               </v-col>
             </v-row>
@@ -179,7 +179,7 @@ const teamMembers = ref([
   {
     name: 'Prashant Pandit',
     role: 'Founder & CEO',
-    image: '/prashant.png',
+    image: '/pp.jpeg',
     bio: [
       'Prashant brings a comprehensive knowledge of technology and its application in a wide range of complex projects, both in the commercial and not-for-profit sectors.',
       'After completing an M.S. degree in Computer Science from Leiden University in the Netherlands, he spent five years at India\'s NASSCOM Foundation launching and managing landmark programs such as BiGTech with Techsoup USA and ConnectIT with Microsoft. True to his belief in volunteering impact, Prashant conceptualized the MyKartavya program for NASSCOM member companies to leverage corporate volunteering.',
