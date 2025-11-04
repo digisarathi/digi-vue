@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
-import { mdiWeb, mdiCellphoneLink, mdiSchool, mdiCircle, } from '@mdi/js'
+import { mdiWeb, mdiCellphoneLink, mdiSchool, mdiCircle } from '@mdi/js'
 
 const router = useRouter()
 const props = defineProps({
@@ -67,7 +67,6 @@ const techServices = [
     route: 'mycto',
     image: 'myCTO_logo.png',
   },
-
 ]
 // Improved testimonials with more content and images
 const testimonials = ref([
@@ -151,24 +150,36 @@ const goToService = (route) => {
 <template>
   <main>
     <!-- Hero Section with Gradient Background -->
-    <section class="hero-section" fetchpriority="high">
+    <section id="hero-section" class="hero-section" fetchpriority="high">
       <v-container>
         <v-row justify="center" align="center" class="min-height-70vh">
-          <v-col cols="12" md="5" order="2" order-md="1">
-            <h1 :class="['mb-6', { 'text-h3': !isMobile, 'text-h4': isMobile }]" class="text-primary"
-              fetchpriority="high">
+          <v-col cols="12" md="5" order="2" order-md="1" class="text-center">
+            <h1
+              :class="['mb-6', { 'text-h3': !isMobile, 'text-h4': isMobile }]"
+              class="text-primary"
+              fetchpriority="high"
+            >
               Your goals can't wait for 'someday'.
-
             </h1>
-            <p :class="['mb-6', { 'text-h6': !isMobile, 'text-h7': isMobile }]" class="text-secondary">
+            <p
+              :class="['mb-6', { 'text-h6': !isMobile, 'text-h7': isMobile }]"
+              class="text-secondary"
+            >
               We turn your mission into
               <strong><i>momentum</i></strong>
               through smart solutions that work from day one.
             </p>
           </v-col>
-          <v-col cols="12" md="7" order="1" order-md="2">
-            <v-img src="/home_hero.svg" max-width="450" max-height="350" contain loading="eager" fetchpriority="high"
-              alt="Hero illustration"></v-img>
+          <v-col cols="12" md="7" order="1" order-md="2" class="d-flex justify-center align-center">
+            <v-img
+              src="/home_hero.svg"
+              max-width="450"
+              max-height="350"
+              contain
+              loading="eager"
+              fetchpriority="high"
+              alt="Hero illustration"
+            ></v-img>
           </v-col>
         </v-row>
       </v-container>
@@ -178,7 +189,10 @@ const goToService = (route) => {
       <v-container>
         <v-row>
           <v-col cols="12" class="text-center mb-12">
-            <h2 class="font-weight-bold mb-3 text-primary" :class="{ 'text-h3': !isMobile, 'text-h6': isMobile }">
+            <h2
+              class="font-weight-bold mb-3 text-primary"
+              :class="{ 'text-h3': !isMobile, 'text-h6': isMobile }"
+            >
               Our Services
             </h2>
             <p id="services" class="text-subtitle-1 mx-auto max-width-600 text-secondary">
@@ -187,30 +201,54 @@ const goToService = (route) => {
           </v-col>
         </v-row>
         <v-row class="align-stretch mb-8">
-          <v-col cols="12" md="1" class="d-flex">
-            <div class="pillar-label text-uppercase text-h4 pa-4 rounded-xl d-flex align-center justify-center w-100"
-              style="background-color: rgba(var(--v-theme-accent), 0.1)">
+          <v-col cols="12" md="1" class="d-flex justify-center">
+            <div
+              class="pillar-label text-uppercase text-h4 pa-4 rounded-xl d-flex align-center justify-center w-100"
+              style="background-color: rgba(var(--v-theme-accent), 0.1)"
+            >
               <span class="text-disabled">Organization</span>
             </div>
           </v-col>
-          <v-col md="5" v-for="(service, index) in orgServices" :key="index" class="d-flex">
+          <v-col
+            md="5"
+            v-for="(service, index) in orgServices"
+            :key="index"
+            class="d-flex justify-center"
+          >
             <v-hover v-slot="{ isHovering, props }" close-delay="100">
-              <v-card v-bind="props" :elevation="isHovering ? 6 : 2"
+              <v-card
+                width="100%"
+                v-bind="props"
+                :elevation="isHovering ? 6 : 2"
                 class="service-card transition-fast overflow-hidden d-flex flex-column h-100"
-                @click="goToService(service.route)">
+                @click="goToService(service.route)"
+              >
                 <v-card-item class="text-center my-4">
-                  <v-card-title class="font-weight-bold text-primary"
-                    :class="{ 'text-h5': !isMobile, 'text-h6': isMobile }">
+                  <v-card-title
+                    class="font-weight-bold text-primary"
+                    :class="{ 'text-h5': !isMobile, 'text-h6': isMobile }"
+                  >
                     {{ service.name }}
                   </v-card-title>
                 </v-card-item>
                 <v-card-text>
                   <div class="d-flex justify-center">
-                    <v-img class="mb-4" :src="service.image" max-width="350" max-height="450" min-height="250"></v-img>
+                    <v-img
+                      class="mb-4"
+                      :src="service.image"
+                      max-width="350"
+                      max-height="450"
+                      min-height="250"
+                    ></v-img>
                   </div>
                   <p class="mb-4 text-secondary">{{ service.text }}</p>
                   <v-chip-group class="mb-0">
-                    <v-chip v-for="feature in service.features" :key="feature" size="small" class="ma-1">
+                    <v-chip
+                      v-for="feature in service.features"
+                      :key="feature"
+                      size="small"
+                      class="ma-1"
+                    >
                       {{ feature }}
                     </v-chip>
                   </v-chip-group>
@@ -221,29 +259,53 @@ const goToService = (route) => {
         </v-row>
         <v-row class="align-stretch mb-8">
           <v-col cols="12" md="1" class="d-flex">
-            <div class="pillar-label text-uppercase text-h4 pa-4 rounded-xl d-flex align-center justify-center w-100"
-              style="background-color: rgba(var(--v-theme-accent), 0.1)">
+            <div
+              class="pillar-label text-uppercase text-h4 pa-4 rounded-xl d-flex align-center justify-center w-100"
+              style="background-color: rgba(var(--v-theme-accent), 0.1)"
+            >
               <span class="text-disabled">People</span>
             </div>
           </v-col>
-          <v-col md="5" v-for="(service, index) in peopleServices" :key="index" class="d-flex">
+          <v-col
+            md="5"
+            v-for="(service, index) in peopleServices"
+            :key="index"
+            class="d-flex justify-center"
+          >
             <v-hover v-slot="{ isHovering, props }" close-delay="100">
-              <v-card v-bind="props" :elevation="isHovering ? 6 : 2"
+              <v-card
+                width="100%"
+                v-bind="props"
+                :elevation="isHovering ? 6 : 2"
                 class="service-card transition-fast overflow-hidden d-flex flex-column h-100"
-                @click="goToService(service.route)">
+                @click="goToService(service.route)"
+              >
                 <v-card-item class="text-center my-4">
-                  <v-card-title class="font-weight-bold text-primary"
-                    :class="{ 'text-h5': !isMobile, 'text-h6': isMobile }">
+                  <v-card-title
+                    class="font-weight-bold text-primary"
+                    :class="{ 'text-h5': !isMobile, 'text-h6': isMobile }"
+                  >
                     {{ service.name }}
                   </v-card-title>
                 </v-card-item>
                 <v-card-text>
                   <div class="d-flex justify-center">
-                    <v-img class="mb-4" :src="service.image" max-width="350" max-height="450" min-height="250"></v-img>
+                    <v-img
+                      class="mb-4"
+                      :src="service.image"
+                      max-width="350"
+                      max-height="450"
+                      min-height="250"
+                    ></v-img>
                   </div>
                   <p class="mb-4 text-secondary">{{ service.text }}</p>
                   <v-chip-group class="mb-0">
-                    <v-chip v-for="feature in service.features" :key="feature" size="small" class="ma-1">
+                    <v-chip
+                      v-for="feature in service.features"
+                      :key="feature"
+                      size="small"
+                      class="ma-1"
+                    >
                       {{ feature }}
                     </v-chip>
                   </v-chip-group>
@@ -254,29 +316,53 @@ const goToService = (route) => {
         </v-row>
         <v-row class="align-stretch mb-8">
           <v-col cols="12" md="1" class="d-flex">
-            <div class="pillar-label text-uppercase text-h4 pa-4 rounded-xl d-flex align-center justify-center w-100"
-              style="background-color: rgba(var(--v-theme-accent), 0.1)">
+            <div
+              class="pillar-label text-uppercase text-h4 pa-4 rounded-xl d-flex align-center justify-center w-100"
+              style="background-color: rgba(var(--v-theme-accent), 0.1)"
+            >
               <span class="text-disabled">Technology</span>
             </div>
           </v-col>
-          <v-col md="5" v-for="(service, index) in techServices" :key="index" class="d-flex">
+          <v-col
+            md="5"
+            v-for="(service, index) in techServices"
+            :key="index"
+            class="d-flex justify-center"
+          >
             <v-hover v-slot="{ isHovering, props }" close-delay="100">
-              <v-card v-bind="props" :elevation="isHovering ? 6 : 2"
+              <v-card
+                width="100%"
+                v-bind="props"
+                :elevation="isHovering ? 6 : 2"
                 class="service-card transition-fast overflow-hidden d-flex flex-column h-100"
-                @click="goToService(service.route)">
+                @click="goToService(service.route)"
+              >
                 <v-card-item class="text-center my-4">
-                  <v-card-title class="font-weight-bold text-primary"
-                    :class="{ 'text-h5': !isMobile, 'text-h6': isMobile }">
+                  <v-card-title
+                    class="font-weight-bold text-primary"
+                    :class="{ 'text-h5': !isMobile, 'text-h6': isMobile }"
+                  >
                     {{ service.name }}
                   </v-card-title>
                 </v-card-item>
                 <v-card-text>
                   <div class="d-flex justify-center">
-                    <v-img class="mb-4" :src="service.image" max-width="350" max-height="450" min-height="250"></v-img>
+                    <v-img
+                      class="mb-4"
+                      :src="service.image"
+                      max-width="350"
+                      max-height="450"
+                      min-height="250"
+                    ></v-img>
                   </div>
                   <p class="mb-4 text-secondary">{{ service.text }}</p>
                   <v-chip-group class="mb-0">
-                    <v-chip v-for="feature in service.features" :key="feature" size="small" class="ma-1">
+                    <v-chip
+                      v-for="feature in service.features"
+                      :key="feature"
+                      size="small"
+                      class="ma-1"
+                    >
                       {{ feature }}
                     </v-chip>
                   </v-chip-group>
@@ -293,7 +379,10 @@ const goToService = (route) => {
       <v-container>
         <v-row>
           <v-col cols="12" class="text-center mb-12">
-            <h2 class="font-weight-bold mb-3 text-primary" :class="{ 'text-h3': !isMobile, 'text-h6': isMobile }">
+            <h2
+              class="font-weight-bold mb-3 text-primary"
+              :class="{ 'text-h3': !isMobile, 'text-h6': isMobile }"
+            >
               What Our Clients Say
             </h2>
             <p class="text-subtitle-1 mx-auto max-width-600 text-secondary">
@@ -304,8 +393,15 @@ const goToService = (route) => {
 
         <v-row justify="center">
           <v-col cols="12" lg="8">
-            <v-carousel :show-arrows="false" progress="primary" height="auto" hide-delimiter-background
-              :delimiter-icon="mdiCircle" color="primary" class="testimonial-carousel">
+            <v-carousel
+              :show-arrows="false"
+              progress="primary"
+              height="auto"
+              hide-delimiter-background
+              :delimiter-icon="mdiCircle"
+              color="primary"
+              class="testimonial-carousel"
+            >
               <v-carousel-item v-for="(testimonial, index) in testimonials" :key="index">
                 <v-card class="testimonial-card mx-auto pa-6" max-width="800">
                   <div class="d-flex flex-column align-center text-center">
@@ -317,8 +413,12 @@ const goToService = (route) => {
                     <v-divider width="60" class="mb-4"></v-divider>
                     <div class="d-flex align-center justify-center">
                       <v-avatar size="60" class="mr-4">
-                        <v-img :src="'/clients/' + testimonial.photo" :alt="testimonial.name + ' photo'" cover
-                          class="bg-grey-lighten-3">
+                        <v-img
+                          :src="'/clients/' + testimonial.photo"
+                          :alt="testimonial.name + ' photo'"
+                          cover
+                          class="bg-grey-lighten-3"
+                        >
                           <template v-slot:placeholder>
                             <v-icon size="24">mdiAccount</v-icon>
                           </template>
@@ -344,7 +444,10 @@ const goToService = (route) => {
       <v-container>
         <v-row>
           <v-col cols="12" class="text-center mb-12">
-            <h2 class="font-weight-bold mb-3 text-primary" :class="{ 'text-h3': !isMobile, 'text-h6': isMobile }">
+            <h2
+              class="font-weight-bold mb-3 text-primary"
+              :class="{ 'text-h3': !isMobile, 'text-h6': isMobile }"
+            >
               Our Clients
             </h2>
             <p class="text-subtitle-1 mx-auto max-width-600 text-secondary">
@@ -354,13 +457,27 @@ const goToService = (route) => {
         </v-row>
 
         <v-row justify="center" align="center" class="">
-          <v-col v-for="(client, index) in clients" :key="index" cols="6" sm="4" md="2" class="text-center mb-8">
+          <v-col
+            v-for="(client, index) in clients"
+            :key="index"
+            cols="6"
+            sm="4"
+            md="2"
+            class="text-center mb-8"
+          >
             <v-hover v-slot="{ props }">
               <v-card v-bind="props" variant="flat" class="client-logo bg-transparent">
                 <v-tooltip :text="client.name + ' - ' + client.industry" location="top">
                   <template v-slot:activator="{ props }">
-                    <v-img v-bind="props" :src="client.logo" :alt="client.name" height="100" width="200" contain
-                      class="mx-auto grey-filter"></v-img>
+                    <v-img
+                      v-bind="props"
+                      :src="client.logo"
+                      :alt="client.name"
+                      height="100"
+                      width="200"
+                      contain
+                      class="mx-auto grey-filter"
+                    ></v-img>
                   </template>
                 </v-tooltip>
               </v-card>
@@ -374,13 +491,16 @@ const goToService = (route) => {
       <v-container>
         <v-row justify="center">
           <v-col cols="12" md="8" class="text-center">
-            <h2 class="font-weight-bold mb-3 text-primary" :class="{ 'text-h3': !isMobile, 'text-h6': isMobile }">
+            <h2
+              class="font-weight-bold mb-3 text-primary"
+              :class="{ 'text-h3': !isMobile, 'text-h6': isMobile }"
+            >
               Technology for Good
             </h2>
             <p class="text-subtitle-1 mx-auto max-width-600 text-secondary">
-              At digiSarathi, we believe in the transformative power of technology to drive positive change.
-              We are committed to leveraging our expertise to support ngos, nonprofits and social enterprises in
-              achieving their missions more effectively.
+              At digiSarathi, we believe in the transformative power of technology to drive positive
+              change. We are committed to leveraging our expertise to support ngos, nonprofits and
+              social enterprises in achieving their missions more effectively.
             </p>
             <v-btn color="primary" to="/ngos" class="mt-4">Learn More</v-btn>
           </v-col>
@@ -389,14 +509,16 @@ const goToService = (route) => {
           </v-col>
         </v-row>
       </v-container>
-
     </section>
     <!-- Newsletter Section with Modern Form -->
     <section id="newsletter" class="py-16 bg-primary">
       <v-container>
         <v-row justify="center">
           <v-col cols="12" md="8" lg="6" class="text-center">
-            <h2 class="font-weight-bold mb-3 text-white" :class="{ 'text-h3': !isMobile, 'text-h6': isMobile }">
+            <h2
+              class="font-weight-bold mb-3 text-white"
+              :class="{ 'text-h3': !isMobile, 'text-h6': isMobile }"
+            >
               Join 5000+ people who get our email newsletter to stay updated.
             </h2>
             <p class="text-caption mt-4 text-white">
