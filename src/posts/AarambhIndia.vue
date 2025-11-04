@@ -66,7 +66,7 @@ const post = {
   id: '848',
   title: 'Aarambh India',
   date: '2021-06-23T22:42:27+00:00',
-  tags: ['Children Safety', 'Website Design', 'SEO', 'Nonprofits (NGOs)'],
+  tags: ['Children & Women Safety', 'Website Design', 'Nonprofits (NGOs)'],
   excerpt:
     'By creating a dedicated online space for awareness and collaboration, Prerana and the ADM Foundation have made significant strides in empowering nonprofits and enhancing child protection efforts across India.',
 }

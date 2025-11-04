@@ -1,7 +1,9 @@
 <template>
   <PostLayout :post="post">
     <p>
-      Map based frontend web application for Akshara to collect actual data directly from citizens on unsafe areas for women in Mumbai. MIS reports submitted to Municipality and Police authorities.
+      Map based frontend web application for Akshara to collect actual data directly from citizens
+      on unsafe areas for women in Mumbai. MIS reports submitted to Municipality and Police
+      authorities.
     </p>
   </PostLayout>
 </template>
@@ -11,7 +13,7 @@ const post = {
   id: '869',
   title: 'Harassmap Mumbai',
   date: '2021-06-23T23:00:21+00:00',
-  tags: ['Nonprofits (NGOs)', 'Website Design', 'Women Safety'],
+  tags: ['Nonprofits (NGOs)', 'Website Design', 'Children & Women Safety'],
   excerpt:
     'Map based frontend web application for Akshara to collect actual data directly from citizens on unsafe areas for women in Mumbai. MIS reports submitted to Municipality and Police authorities.',
 }

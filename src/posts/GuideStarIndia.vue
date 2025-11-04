@@ -62,7 +62,7 @@ const post = {
   id: '876',
   title: 'GuideStar India',
   date: '2021-06-23T23:07:40+00:00',
-  tags: ['Nonprofits (NGOs)', 'Consulting'],
+  tags: ['Nonprofits (NGOs)'],
   excerpt:
     'By creating a dedicated platform for promoting a giving culture, Guidestar India aims to inspire individuals and organizations to participate actively in social causes. The initiative not only enhances community engagement but also strengthens the ties between NGOs and corporate partners.',
 }
