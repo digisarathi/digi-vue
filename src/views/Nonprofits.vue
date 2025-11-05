@@ -33,10 +33,9 @@
             </v-col>
           </v-row>
 
-          <v-row class="justify-center ">
-            <v-col v-for="(project, i) in portfolioProjects" :key="i" cols="8" class="border mb-8">
-              <v-row
-                style="background-color: rgba(var(--v-theme-primary), 0.05); border-left: 4px solid rgb(var(--v-theme-primary))">
+          <v-row class="justify-center ma-0 pa-0" no-gutters>
+            <v-col v-for="(project, i) in portfolioProjects" :key="i" cols="12" md="8" class="rounded-lg my-8">
+              <v-row class="bg-primary rounded-lg" style="border-left: 4px solid rgb(var(--v-theme-accent))">
                 <!-- Project Card -->
                 <v-col cols="12">
                   <v-card class="h-100 d-flex flex-column" elevation="0" @click.stop="handleProjectClick(project)">
@@ -93,32 +92,47 @@
       <!-- CTA Section -->
       <section class="py-10 bg-grey-lighten-4">
         <v-container>
-          <v-row align="center" justify="space-evenly">
-            <v-col cols="12" md="6" class="text-center">
-              <h3 class="text-h5 text-primary font-weight-bold mb-3">
-                Inspire your visitors!
-              </h3>
-              <p class="text-body-1 mb-6">
-                Let's discuss how we can help you create/redesign your website.
-              </p>
-              <v-btn color="primary" size="large" href="mailto:hello@digisarathi.com">
-                Drop an Email
-              </v-btn>
+          <v-row class="py-8">
+            <!-- Primary CTA -->
+            <v-col cols="12" md="6" class="d-flex align-center">
+              <div>
+                <h3 class="text-h5 text-primary font-weight-bold mb-3">
+                  Inspire your visitors!
+                </h3>
+                <p class="text-body-1 mb-6">
+                  Let's discuss how we can help you create/redesign your website.
+                </p>
+                <v-btn color="primary" size="large" href="mailto:hello@digisarathi.com">
+                  Drop an Email
+                </v-btn>
+              </div>
             </v-col>
-            <v-col cols="12" md="6" class="text-center">
-              <h3 class="text-h6 text-primary font-weight-bold mb-3">Just need a quick fix?</h3>
-              <p class="text-body-2 mb-6">Cost-effective Website Audit & Content Updates.</p>
-              <v-btn color="accent" size="large" href="/website-audit"> Website Quick-Fix </v-btn>
-            </v-col>
-            <v-col cols="12" md="6" class="text-center">
-              <h3 class="text-h6 text-primary font-weight-bold mb-3">Looking for training?</h3>
-              <p class="text-body-2 mb-6">Upskill your team with our tailored training programs.</p>
-              <v-btn color="secondary" size="large" href="/training-workshops"> Explore Training </v-btn>
-            </v-col>
-            <v-col cols="12" md="6" class="text-center">
-              <h3 class="text-h6 text-primary font-weight-bold mb-3">Need Tech Strategy?</h3>
-              <p class="text-body-2 mb-6">Explore our service, myCTO, for nonprofits.</p>
-              <v-btn color="tertiary" size="large" href="/mycto"> View myCTO </v-btn>
+
+            <!-- Secondary CTAs -->
+            <v-col cols="12" md="6">
+              <v-row>
+                <v-col cols="12" sm="6" class="pb-6">
+                  <h4 class="text-subtitle-1 text-primary font-weight-bold mb-2">
+                    Just need a quick fix?
+                  </h4>
+                  <p class="text-body-2 mb-4">Cost-effective Website Audit & Content Updates.</p>
+                  <v-btn color="accent" href="/website-audit"> Website Quick-Fix </v-btn>
+                </v-col>
+                <v-col cols="12" sm="6" class="pb-6">
+                  <h4 class="text-subtitle-1 text-primary font-weight-bold mb-2">
+                    Looking for training?
+                  </h4>
+                  <p class="text-body-2 mb-4">Upskill your team with our tailored training programs.</p>
+                  <v-btn color="secondary" href="/training-workshops"> Explore Training </v-btn>
+                </v-col>
+                <v-col cols="12">
+                  <h4 class="text-subtitle-1 text-primary font-weight-bold mb-2">
+                    Need Tech Strategy?
+                  </h4>
+                  <p class="text-body-2 mb-4">Explore our service, myCTO, for nonprofits.</p>
+                  <v-btn color="tertiary" href="/mycto"> View myCTO </v-btn>
+                </v-col>
+              </v-row>
             </v-col>
           </v-row>
         </v-container>
@@ -228,13 +242,13 @@ const portfolioProjects = ref([
   },
   {
     title: 'Legal Education',
-    description: 'A nonprofit website for Legal Education provided by IDIA',
+    description: 'Website for Legal Education provided by nonprofit, IDIA',
     image: '/portfolio/thumbnails/idia.png',
     technologies: ['PHP', 'Google Analytics'],
   },
   {
     title: 'Entrepreneurship Mentorship',
-    description: 'A startup incubator website for startups in Amravati, Maharashtra',
+    description: 'A startup incubator website for startups ',
     image: '/portfolio/thumbnails/varuntalwar.png',
     technologies: ['WordPress', 'Google Analytics'],
   },
