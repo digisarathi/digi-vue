@@ -17,7 +17,7 @@
               </v-btn>
             </v-col>
             <v-col cols="12" md="5" class="text-center">
-              <v-img src="/cto-hero.svg" max-width="450" max-height="350" contain alt="myCTO"></v-img>
+              <v-img src="/myCTO.png" max-width="450" max-height="350" contain alt="myCTO"></v-img>
             </v-col>
           </v-row>
         </v-container>
