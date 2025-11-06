@@ -120,6 +120,35 @@
         </v-container>
       </section>
 
+      <!-- Case Studies Section -->
+      <section id="case-studies">
+        <v-container>
+          <v-row class="mb-12">
+            <v-col cols="12" class="text-center">
+              <h2 class="text-h5 text-primary mb-2">Case Studies</h2>
+              <p class="text-subtitle-2 text-primary">The Value myCTO Creates</p>
+            </v-col>
+          </v-row>
+          <v-row>
+            <v-col v-for="post in related_posts" :key="post.id" cols="12" md="6">
+
+              <!-- 2️⃣ Each post inside a v‑card -->
+              <v-card :to="post.url" target="_blank" rel="noopener" variant="tonal" class="mb-4"
+                style="border-left: #3254ae 10px solid;">
+                <v-card-title>
+                  {{ post.title }}
+                </v-card-title>
+                <v-card-text>
+                  <p class="text-body-2">
+                    {{ post.description }}
+                  </p>
+                </v-card-text>
+              </v-card>
+            </v-col>
+          </v-row>
+        </v-container>
+
+      </section>
       <!-- FAQ Section -->
       <section id="faq" class="py-16 bg-light">
         <v-container>
@@ -173,6 +202,21 @@ import { useDisplay } from 'vuetify'
 
 const { mobile } = useDisplay()
 const isMobile = computed(() => mobile.value)
+
+const related_posts = ref([
+  {
+    id: 1,
+    title: 'Majlis Law – Jul 2025',
+    url: '/blog/MajlisLaw',
+    description: 'How we helped Majlis streamline their website management process, resulting in significant cost savings and improved efficiency.'
+  },
+  {
+    id: 2,
+    title: 'InnovSource – June 2025',
+    url: 'blog/InnovSource',
+    description: 'Discover how InnovSource optimized their customer support processes, resulting in faster response times and improved customer satisfaction.'
+  },
+])
 
 const auditItems = [
   'Deep dive into your current IT systems and architecture',
