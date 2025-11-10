@@ -2,10 +2,10 @@
   <v-app>
     <v-main>
       <!-- Hero Section -->
-      <section id="hero" class="py-16">
+      <section id="hero">
         <v-container>
-          <v-row align="center">
-            <v-col cols="12" md="7" order="2" order-md="1">
+          <v-row justify="center" align="center" style="min-height: 70vh;">
+            <v-col cols="12" md="7" order="2" order-md="1" class="text-center">
               <h1 :class="['mb-6', { 'text-h3': !isMobile, 'text-h4': isMobile }]" class="text-primary"
                 fetchpriority="high">
                 Elevate Your Business with Custom Software
@@ -16,9 +16,8 @@
                 improvement to ensure your project’s success.
               </p>
             </v-col>
-            <v-col cols="12" md="5" order="1" order-md="2" class="text-center">
-              <v-img src="/innovation.svg" max-width="450" max-height="350" contain
-                alt="Software Development"></v-img>
+            <v-col cols="12" md="5" order="1" order-md="2" class="d-flex justify-center">
+              <v-img src="/innovation.svg" max-width="450" max-height="350" contain alt="Software Development"></v-img>
             </v-col>
           </v-row>
         </v-container>

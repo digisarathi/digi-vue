@@ -2,22 +2,22 @@
   <v-app>
     <v-main>
       <!-- Hero Section -->
-      <section id="hero" class="py-16">
+      <section id="hero">
         <v-container>
-          <v-row align="center">
-            <v-col cols="12" md="7" order="2" order-md="1">
+          <v-row justify="center" align="center" class="min-height-70vh">
+            <v-col cols="12" md="7" order="2" order-md="1" class="text-center">
               <h1 :class="['mb-6', { 'text-h3': !isMobile, 'text-h4': isMobile }]" class="text-primary"
                 fetchpriority="high">
                 <strong>#TechforGood</strong>
               </h1>
               <p class="text-body-1 mb-6">
-                At digiSarathi, social impact isn't a program, it's our engineering philosophy! We build
+                At digiSarathi, social impact isn't a program, it's our engineering philosophy. We build
                 enterprise-grade technology specifically for nonprofits and social enterprises: custom solutions, SaaS
                 products, and
                 training that help you scale impact.
               </p>
             </v-col>
-            <v-col cols="12" md="5" order="1" order-md="2" class="text-center">
+            <v-col cols="12" md="5" order="1" order-md="2" class=" d-flex justify-center">
               <v-img src="/ai-robot.svg" max-width="450" max-height="350" contain alt="Website Design"></v-img>
             </v-col>
           </v-row>
@@ -28,8 +28,8 @@
         <v-container>
           <v-row class="text-center mb-8">
             <v-col>
-              <h2 class="text-h4 text-primary font-weight-bold">Our Portfolio</h2>
-              <p class="text-body-1 mt-2">Explore some of our recent projects</p>
+              <h2 class="text-h4 text-primary font-weight-bold">Social Impact</h2>
+              <p class="text-body-1 mt-2">Explore some of our recent projects for Nonprofits</p>
             </v-col>
           </v-row>
 
@@ -325,5 +325,8 @@ const portfolioProjects = ref([
 .portfolio-image {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.min-height-70vh {
+  min-height: 70vh;
 }
 </style>

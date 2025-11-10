@@ -2,21 +2,23 @@
   <v-app>
     <v-main>
       <!-- Hero Section -->
-      <section id="hero" class="py-16">
+      <section id="hero">
         <v-container>
-          <v-row align="center">
-            <v-col cols="12" md="7">
+          <v-row justify="center" align="center" style="min-height: 70vh;">
+            <v-col cols="12" md="7" order="2" order-md="1" class="text-center">
               <h1 :class="['mb-6', { 'text-h3': !isMobile, 'text-h4': isMobile }]" class="text-primary">
-                You don't have to hire a full-time CTO to get expert tech leadership.
+                Hiring a full-time CTO can be costly & complex.
+
               </h1>
               <p class="text-body-1 mb-6">
-                You need SMART part-time. Get expert guidance, avoid costly mistakes, have peace of mind.
+                You need SMART, part-time. Strategic direction without the overhead. Avoid costly mistakes, have peace
+                of mind.
               </p>
               <v-btn href="mailto:hello@digisarathi.com" color="primary" size="large" class="me-3">
                 Let's Chat
               </v-btn>
             </v-col>
-            <v-col cols="12" md="5" class="text-center">
+            <v-col cols="12" md="5" order="1" order-md="2" class="d-flex justify-center">
               <v-img src="/myCTO.png" max-width="450" max-height="350" contain alt="myCTO"></v-img>
             </v-col>
           </v-row>

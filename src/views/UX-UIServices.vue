@@ -3,7 +3,7 @@
         <!-- Hero Section -->
         <v-container fluid class="hero-section">
             <v-row align="center" justify="center" class="min-height-70vh">
-                <v-col cols="12" md="7" order="2" order-md="1">
+                <v-col cols="12" md="7" order="2" order-md="1" class="text-center">
                     <h1 :class="['mb-6', { 'text-h3': !isMobile, 'text-h4': isMobile }]" class="text-primary"
                         fetchpriority="high">
                         UX/UI Design & Digital Experiences
@@ -16,7 +16,7 @@
                     </p>
 
                 </v-col>
-                <v-col cols="12" md="5" order="1" order-md="2" class="text-center">
+                <v-col cols="12" md="5" order="1" order-md="2" class="d-flex justify-center">
                     <v-img src="/ux-ui.svg" max-width="450" max-height="350" contain alt="UI Designers"></v-img>
                 </v-col>
             </v-row>
@@ -51,7 +51,7 @@
                         </div>
                         <v-card-item>
                             <v-card-title class="text-h6 text-primary font-weight-bold mb-4">{{ module.title
-                            }}</v-card-title>
+                                }}</v-card-title>
                             <v-card-text>
                                 <p class="mb-4">{{ module.description }}</p>
                                 <v-list density="compact">
@@ -86,7 +86,7 @@
                     <v-card class="h-100 feature-card" elevation="2" rounded="lg">
                         <v-card-item>
                             <v-card-title class="text-h6 text-primary text-wrap font-weight-bold mb-4">{{ caseItem.title
-                            }}</v-card-title>
+                                }}</v-card-title>
                             <v-card-text class="text-body-2">{{ caseItem.context }}</v-card-text>
                         </v-card-item>
                     </v-card>
