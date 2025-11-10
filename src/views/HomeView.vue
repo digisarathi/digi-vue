@@ -65,7 +65,7 @@ const techServices = [
     text: 'Your trusted virtual CTO helping you navigate Digital Transformation or  Tech Issues.',
     features: ['Tech Consulting', 'Tech Implementation', 'Tech Support'],
     route: 'mycto',
-    image: 'myCTO_logo.png',
+    image: 'myCTO.png',
   },
 ]
 // Improved testimonials with more content and images
@@ -138,6 +138,7 @@ const clients = ref([
   { name: 'Yunus Social', industry: 'Nonprofit', logo: 'logos/ysb.png' },
   { name: 'GuideStar India', industry: 'Nonprofit', logo: 'logos/guidestar.png' },
   { name: 'SEEDS', industry: 'Nonprofit', logo: 'logos/seeds.png' },
+  { name: 'Surendra Forgings', industry: 'Manufacturing', logo: 'logos/surendra.png' },
 ])
 
 const goToService = (route) => {
@@ -165,6 +166,27 @@ const goToService = (route) => {
           <v-col cols="12" md="7" order="1" order-md="2" class="d-flex justify-center align-center">
             <v-img src="/home_hero.svg" max-width="450" max-height="350" contain loading="eager" fetchpriority="high"
               alt="Hero illustration"></v-img>
+          </v-col>
+        </v-row>
+      </v-container>
+    </section>
+    <!-- Technology for Good Section -->
+    <section id="techforgood" class="py-16 bg-grey-lighten-4">
+      <v-container>
+        <v-row justify="center">
+          <v-col cols="12" md="8" class="text-center">
+            <h2 class="font-weight-bold mb-3 text-primary" :class="{ 'text-h3': !isMobile, 'text-h6': isMobile }">
+              Technology for Good
+            </h2>
+            <p class="text-subtitle-1 mx-auto max-width-600 text-secondary">
+              At digiSarathi, we believe in the transformative power of technology to drive positive
+              change. We are committed to leveraging our expertise to support ngos, nonprofits and
+              social enterprises in achieving their missions more effectively.
+            </p>
+            <v-btn color="primary" to="/ngos" class="mt-4">Learn More</v-btn>
+          </v-col>
+          <v-col>
+            <v-img src="/green.svg" alt="Technology for Good" :max-height="isMobile ? 250 : 500" contain></v-img>
           </v-col>
         </v-row>
       </v-container>
@@ -351,12 +373,12 @@ const goToService = (route) => {
 
         <v-row justify="center" align="center" class="">
           <v-col v-for="(client, index) in clients" :key="index" cols="6" sm="4" md="2" class="text-center mb-8">
-            <v-hover v-slot="{ props }">
+            <v-hover v-slot="{ isHovering, props }">
               <v-card v-bind="props" variant="flat" class="client-logo bg-transparent">
                 <v-tooltip :text="client.name + ' - ' + client.industry" location="top">
                   <template v-slot:activator="{ props }">
                     <v-img v-bind="props" :src="client.logo" :alt="client.name" height="100" width="200" contain
-                      class="mx-auto grey-filter"></v-img>
+                      :class="['mx-auto', !isHovering ? 'grey-filter' : '']"></v-img>
                   </template>
                 </v-tooltip>
               </v-card>
@@ -366,26 +388,6 @@ const goToService = (route) => {
       </v-container>
     </section>
 
-    <section id="techforgood" class="py-16 bg-grey-lighten-4">
-      <v-container>
-        <v-row justify="center">
-          <v-col cols="12" md="8" class="text-center">
-            <h2 class="font-weight-bold mb-3 text-primary" :class="{ 'text-h3': !isMobile, 'text-h6': isMobile }">
-              Technology for Good
-            </h2>
-            <p class="text-subtitle-1 mx-auto max-width-600 text-secondary">
-              At digiSarathi, we believe in the transformative power of technology to drive positive
-              change. We are committed to leveraging our expertise to support ngos, nonprofits and
-              social enterprises in achieving their missions more effectively.
-            </p>
-            <v-btn color="primary" to="/ngos" class="mt-4">Learn More</v-btn>
-          </v-col>
-          <v-col>
-            <v-img src="/green.svg" alt="Technology for Good" contain></v-img>
-          </v-col>
-        </v-row>
-      </v-container>
-    </section>
     <!-- Newsletter Section with Modern Form -->
     <section id="newsletter" class="py-16 bg-primary">
       <v-container>
