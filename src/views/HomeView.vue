@@ -49,6 +49,14 @@ const peopleServices = [
     route: 'training-workshops',
     image: 'shared.svg',
   },
+  {
+    name: 'ChainReaction',
+    icon: mdiSchool,
+    text: 'A unique yes/no journaling tool to help individuals reflect, set goals, and track progress over time.',
+    features: ['Personal Growth', 'Goal Setting', 'Progress Tracking'],
+    route: 'https://chainreaction.digisarathi.com',
+    image: 'chainreaction.svg',
+  }
 ]
 const techServices = [
   {
@@ -142,8 +150,15 @@ const clients = ref([
 ])
 
 const goToService = (route) => {
-  router.push({ name: route })
+  if (route.startsWith('http://') || route.startsWith('https://')) {
+    // External URL, open in new tab
+    window.open(route, '_blank');
+  } else {
+    // Internal named route, navigate within SPA
+    router.push({ name: route });
+  }
 }
+
 </script>
 
 <template>
