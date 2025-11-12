@@ -179,8 +179,10 @@
                   <v-card-text class="px-0">
                     Master essential project management skills to deliver projects on time and within budget. Learn
                     methodologies, tools, and best practices for effective project execution.
-                    <v-chip class="ma-1" color="primary" size="small">Certification</v-chip>
-                    <v-chip class="ma-1" color="primary" size="small">Hands-on</v-chip>
+                    <v-chip-group>
+                      <v-chip class="ma-1" color="primary" size="small">Certification</v-chip>
+                      <v-chip class="ma-1" color="primary" size="small">Hands-on</v-chip>
+                    </v-chip-group>
                   </v-card-text>
                   <v-card-actions>
                     <v-btn variant="text" color="primary" to="/project-management">
@@ -200,8 +202,10 @@
                   <v-card-text class="px-0">
                     Learn how to leverage AI tools to enhance your organization's impact. Covering practical
                     applications in data analysis, content creation, and automation.
-                    <v-chip class="ma-1" color="primary" size="small">Beginner-Friendly</v-chip>
-                    <v-chip class="ma-1" color="primary" size="small">Hands-on</v-chip>
+                    <v-chip-group>
+                      <v-chip class="ma-1" color="primary" size="small">Beginner-Friendly</v-chip>
+                      <v-chip class="ma-1" color="primary" size="small">Hands-on</v-chip>
+                    </v-chip-group>
                   </v-card-text>
                   <v-card-actions>
                     <v-btn variant="text" color="primary" to="/ai-workshops">
@@ -224,9 +228,11 @@
                     Learn how to use social media platforms to increase your organization's reach, engage your
                     audience, and drive real-world impact. Covers content strategy, analytics, and campaign
                     management.
-                    <v-chip class="ma-1" color="primary" size="small">Beginner-Friendly</v-chip>
-                    <v-chip class="ma-1" color="primary" size="small">Practical</v-chip>
-                    <v-chip class="ma-1" color="primary" size="small">Strategy</v-chip>
+                    <v-chip-group>
+                      <v-chip class="ma-1" color="primary" size="small">Beginner-Friendly</v-chip>
+                      <v-chip class="ma-1" color="primary" size="small">Practical</v-chip>
+                      <v-chip class="ma-1" color="primary" size="small">Strategy</v-chip>
+                    </v-chip-group>
                   </v-card-text>
                   <v-card-actions>
                     <v-btn variant="text" color="primary" to="/social-media-marketing">
@@ -248,15 +254,16 @@
                     Learn to deploy WordPress to create and maintain professional websites for your organization.
                     Covers
                     basic customization, content management, SEO and maintenance.
-                    <v-chip class="ma-1" color="primary" size="small">Practical</v-chip>
-                    <v-chip class="ma-1" color="primary" size="small">No Coding Required</v-chip>
+                    <v-chip-group>
+                      <v-chip class="ma-1" color="primary" size="small">No Coding Required</v-chip>
+                      <v-chip class="ma-1" color="primary" size="small">Hands-on</v-chip>
+                    </v-chip-group>
                   </v-card-text>
                   <v-card-actions>
-                    <v-btn variant="text" color="primary">
+                    <v-btn variant="text" color="primary" to="/wordpress-mastery">
                       Learn More
                     </v-btn>
                     <v-spacer></v-spacer>
-
                   </v-card-actions>
                 </v-card-item>
               </v-card>
@@ -271,8 +278,11 @@
                   <v-card-text>
                     <p>Deep dive into modern web development with Vue.js, React, and other frameworks. Build
                       portfolio-ready projects and prepare for tech careers.</p>
-                    <v-chip class="ma-1" color="primary" size="small">Project-Based</v-chip>
-                    <v-chip class="ma-1" color="primary" size="small">Certificate</v-chip>
+
+                    <v-chip-group>
+                      <v-chip class="ma-1" color="primary" size="small">Project-Based</v-chip>
+                      <v-chip class="ma-1" color="primary" size="small">Certificate</v-chip>
+                    </v-chip-group>
                   </v-card-text>
                   <v-card-actions>
                     <v-btn variant="text" color="primary">

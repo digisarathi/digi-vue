@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
-import { mdiWeb, mdiCellphoneLink, mdiSchool, mdiCircle } from '@mdi/js'
+import { mdiWeb, mdiCellphoneLink, mdiSchool, mdiCircle, mdiChevronRight } from '@mdi/js'
 
 const router = useRouter()
 const props = defineProps({
@@ -76,6 +76,8 @@ const techServices = [
     image: 'myCTO.png',
   },
 ]
+
+const services = ref([...orgServices, ...peopleServices, ...techServices])
 // Improved testimonials with more content and images
 const testimonials = ref([
   {
@@ -220,20 +222,19 @@ const goToService = (route) => {
           </v-col>
         </v-row>
         <v-row class="align-stretch mb-8">
-          <v-col md="" v-for="(service, index) in orgServices" :key="index" class="d-flex justify-center">
+          <v-col v-for="(service, index) in services" :key="index" class="d-flex justify-center">
             <v-hover v-slot="{ isHovering, props }" close-delay="100">
               <v-card width="100%" v-bind="props" :elevation="isHovering ? 6 : 2"
-                class="service-card transition-fast overflow-hidden d-flex flex-column h-100"
+                class="service-card transition-fast overflow-hidden d-flex flex-column h-100 "
                 @click="goToService(service.route)">
-                <v-card-item class="text-center my-4">
-                  <v-card-title class="font-weight-bold text-primary"
-                    :class="{ 'text-h5': !isMobile, 'text-h6': isMobile }">
-                    {{ service.name }}
-                  </v-card-title>
-                </v-card-item>
+                <v-card-title class="font-weight-bold bg-primary justify-center text-center text-white"
+                  :class="{ 'text-h5': !isMobile, 'text-h6': isMobile }"
+                  style="background: linear-gradient(90deg, #325ea4 0%, #42a5f5 100%);">
+                  {{ service.name }}
+                </v-card-title>
                 <v-card-text>
                   <div class="d-flex justify-center">
-                    <v-img class="mb-4" :src="service.image" max-width="350" max-height="450" min-height="250"></v-img>
+                    <v-img class="mb-4" :src="service.image" max-width="350" height="250" min-height="250"></v-img>
                   </div>
                   <p class="mb-4 text-secondary">{{ service.text }}</p>
                   <v-chip-group class="mb-0">
@@ -242,63 +243,8 @@ const goToService = (route) => {
                     </v-chip>
                   </v-chip-group>
                 </v-card-text>
-                <v-btn block variant="tonal" class="bg-primary" @click="goToService(service.route)">Learn More</v-btn>
-              </v-card>
-            </v-hover>
-          </v-col>
-        </v-row>
-        <v-row class="align-stretch mb-8">
-          <v-col md="5" v-for="(service, index) in peopleServices" :key="index" class="d-flex justify-center">
-            <v-hover v-slot="{ isHovering, props }" close-delay="100">
-              <v-card width="100%" v-bind="props" :elevation="isHovering ? 6 : 2"
-                class="service-card transition-fast overflow-hidden d-flex flex-column h-100"
-                @click="goToService(service.route)">
-                <v-card-item class="text-center my-4">
-                  <v-card-title class="font-weight-bold text-primary"
-                    :class="{ 'text-h5': !isMobile, 'text-h6': isMobile }">
-                    {{ service.name }}
-                  </v-card-title>
-                </v-card-item>
-                <v-card-text>
-                  <div class="d-flex justify-center">
-                    <v-img class="mb-4" :src="service.image" max-width="350" max-height="450" min-height="250"></v-img>
-                  </div>
-                  <p class="mb-4 text-secondary">{{ service.text }}</p>
-                  <v-chip-group class="mb-0">
-                    <v-chip v-for="feature in service.features" :key="feature" size="small" class="ma-1">
-                      {{ feature }}
-                    </v-chip>
-                  </v-chip-group>
-                </v-card-text>
-                <v-btn block variant="tonal" class="bg-primary" @click="goToService(service.route)">Learn More</v-btn>
-              </v-card>
-            </v-hover>
-          </v-col>
-        </v-row>
-        <v-row class="align-stretch mb-8">
-          <v-col md="5" v-for="(service, index) in techServices" :key="index" class="d-flex justify-center">
-            <v-hover v-slot="{ isHovering, props }" close-delay="100">
-              <v-card width="100%" v-bind="props" :elevation="isHovering ? 6 : 2"
-                class="service-card transition-fast overflow-hidden d-flex flex-column h-100"
-                @click="goToService(service.route)">
-                <v-card-item class="text-center my-4">
-                  <v-card-title class="font-weight-bold text-primary"
-                    :class="{ 'text-h5': !isMobile, 'text-h6': isMobile }">
-                    {{ service.name }}
-                  </v-card-title>
-                </v-card-item>
-                <v-card-text>
-                  <div class="d-flex justify-center">
-                    <v-img class="mb-4" :src="service.image" max-width="350" max-height="450" min-height="250"></v-img>
-                  </div>
-                  <p class="mb-4 text-secondary">{{ service.text }}</p>
-                  <v-chip-group class="mb-0">
-                    <v-chip v-for="feature in service.features" :key="feature" size="small" class="ma-1">
-                      {{ feature }}
-                    </v-chip>
-                  </v-chip-group>
-                </v-card-text>
-                <v-btn block variant="tonal" class="bg-primary" @click="goToService(service.route)">Learn More</v-btn>
+                <v-btn block variant="plain" @click="goToService(service.route)" :append-icon="mdiChevronRight">Read
+                  More</v-btn>
               </v-card>
             </v-hover>
           </v-col>
@@ -321,11 +267,11 @@ const goToService = (route) => {
         </v-row>
 
         <v-row justify="center">
-          <v-col cols="12" lg="8">
+          <v-col cols="12">
             <v-carousel :show-arrows="false" progress="primary" height="auto" hide-delimiter-background
               :delimiter-icon="mdiCircle" color="primary" class="testimonial-carousel">
               <v-carousel-item v-for="(testimonial, index) in testimonials" :key="index">
-                <v-card class="testimonial-card mx-auto pa-6" max-width="800">
+                <v-card class="testimonial-card mx-auto pa-6" max-width="950">
                   <div class="d-flex flex-column align-center text-center">
                     <v-avatar size="80" class="mb-4">
                       <v-img :src="testimonial.avatar" alt="Avatar"></v-img>
