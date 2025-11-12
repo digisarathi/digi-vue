@@ -42,15 +42,15 @@
 
         </v-container>
       </section>
-      <section>
+      <section id="participants" class="py-6 mb-6">
         <v-container>
           <v-row justify="center" align="center" class="text-center">
             <v-col>
               <h3>Our Participants</h3>
             </v-col>
           </v-row>
-          <v-row class="bg-surface">
-            <v-col v-for="(img, index) in logos" :key="index" cols="3">
+          <v-row class="bg-surface" justify="center" align="center" dense>
+            <v-col v-for="(img, index) in logos" :key="index" cols="3" md="2" class="d-flex justify-center pa-4">
               <v-img :src="img" aspect-ratio="1" max-height="100" max-width="100" />
             </v-col>
           </v-row>
@@ -302,74 +302,71 @@
 
           <v-row>
             <v-col cols="12">
-              <v-carousel hide-delimiters :show-arrows="false" height="auto">
-                <v-carousel-item>
-                  <v-row>
-                    <v-col cols="12" md="4">
-                      <v-card class="h-100">
-                        <v-card-item>
-                          <div class="d-flex align-center mb-4">
-                            <v-avatar color="primary" class="mr-4">
-                              <v-icon color="white">{{ mdiAccount }}</v-icon>
-                            </v-avatar>
-                            <div>
-                              <div class="font-weight-bold">Priya Sharma</div>
-                              <div class="text-caption">Program Director, Asha Foundation</div>
-                            </div>
-                          </div>
-                          <v-card-text>
-                            <p>"The AI workshop helped our small NGO automate several administrative tasks,
-                              giving us more time to focus on our core mission. The training was practical
-                              and tailored to our specific needs."</p>
-                          </v-card-text>
-                        </v-card-item>
-                      </v-card>
-                    </v-col>
 
-                    <v-col cols="12" md="4">
-                      <v-card class="h-100">
-                        <v-card-item>
-                          <div class="d-flex align-center mb-4">
-                            <v-avatar color="primary" class="mr-4">
-                              <v-icon color="white">{{ mdiAccount }}</v-icon>
-                            </v-avatar>
-                            <div>
-                              <div class="font-weight-bold">Rahul Desai</div>
-                              <div class="text-caption">Owner, GreenTech Solutions</div>
-                            </div>
-                          </div>
-                          <v-card-text>
-                            <p>"As a small business owner with limited technical knowledge, the WordPress
-                              training was a game-changer. I can now manage our website independently,
-                              saving us significant costs."</p>
-                          </v-card-text>
-                        </v-card-item>
-                      </v-card>
-                    </v-col>
+              <v-row>
+                <v-col cols="12" md="4">
+                  <v-card class="h-100">
+                    <v-card-item>
+                      <div class="d-flex align-center mb-4">
+                        <v-avatar color="primary" class="mr-4">
+                          <v-icon color="white">{{ mdiAccount }}</v-icon>
+                        </v-avatar>
+                        <div>
+                          <div class="font-weight-bold">Priya Sharma</div>
+                          <div class="text-caption">Program Manager, Asha Foundation</div>
+                        </div>
+                      </div>
+                      <v-card-text>
+                        <p>"The AI workshop helped our small NGO improve our Communications' efforts saving valuable
+                          time. The training was practical
+                          and tailored to our specific needs."</p>
+                      </v-card-text>
+                    </v-card-item>
+                  </v-card>
+                </v-col>
 
-                    <v-col cols="12" md="4">
-                      <v-card class="h-100">
-                        <v-card-item>
-                          <div class="d-flex align-center mb-4">
-                            <v-avatar color="primary" class="mr-4">
-                              <v-icon color="white">{{ mdiAccount }}</v-icon>
-                            </v-avatar>
-                            <div>
-                              <div class="font-weight-bold">Anika Patel</div>
-                              <div class="text-caption">Computer Science Student, Pune University</div>
-                            </div>
-                          </div>
-                          <v-card-text>
-                            <p>"The web development course went beyond theory and gave me hands-on
-                              experience with real-world projects. The mentorship continued even after
-                              the course ended, which was incredibly valuable."</p>
-                          </v-card-text>
-                        </v-card-item>
-                      </v-card>
-                    </v-col>
-                  </v-row>
-                </v-carousel-item>
-              </v-carousel>
+                <v-col cols="12" md="4">
+                  <v-card class="h-100">
+                    <v-card-item>
+                      <div class="d-flex align-center mb-4">
+                        <v-avatar color="primary" class="mr-4">
+                          <v-icon color="white">{{ mdiAccount }}</v-icon>
+                        </v-avatar>
+                        <div>
+                          <div class="font-weight-bold">Rahul Desai</div>
+                          <div class="text-caption">Owner, GreenTech Solutions</div>
+                        </div>
+                      </div>
+                      <v-card-text>
+                        <p>"As a small business owner with limited technical knowledge, the WordPress
+                          training was a game-changer. I can now manage our website independently,
+                          saving us significant costs."</p>
+                      </v-card-text>
+                    </v-card-item>
+                  </v-card>
+                </v-col>
+
+                <v-col cols="12" md="4">
+                  <v-card class="h-100">
+                    <v-card-item>
+                      <div class="d-flex align-center mb-4">
+                        <v-avatar color="primary" class="mr-4">
+                          <v-icon color="white">{{ mdiAccount }}</v-icon>
+                        </v-avatar>
+                        <div>
+                          <div class="font-weight-bold">Anika Patel</div>
+                          <div class="text-caption">Computer Science Student, Pune University</div>
+                        </div>
+                      </div>
+                      <v-card-text>
+                        <p>"The web development course went beyond theory and gave me hands-on
+                          experience with real-world projects. The mentorship continued even after
+                          the course ended, which was incredibly valuable."</p>
+                      </v-card-text>
+                    </v-card-item>
+                  </v-card>
+                </v-col>
+              </v-row>
             </v-col>
           </v-row>
         </v-container>
@@ -412,7 +409,7 @@ const props = defineProps({
     default: false,
   },
 })
-const logos = Object.values(import.meta.glob('../assets/workshop-logos/*.{png,jpg,jpeg,svg}', { eager: true })).map(m => m.default)
+const logos = Object.values(import.meta.glob('../assets/workshop-logos/*.{png,jpg,jpeg,svg,webp}', { eager: true })).map(m => m.default)
 import { mdiLaptopAccount, mdiGoogleClassroom, mdiAccountGroup, mdiAccount, mdiBookOpenPageVariant, mdiChartTimelineVariant, mdiChartBar, mdiPencilRuler } from '@mdi/js';
 </script>
 
