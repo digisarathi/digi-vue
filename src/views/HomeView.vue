@@ -220,13 +220,7 @@ const goToService = (route) => {
           </v-col>
         </v-row>
         <v-row class="align-stretch mb-8">
-          <v-col cols="12" md="1" class="d-flex justify-center">
-            <div class="pillar-label text-uppercase text-h4 pa-4 rounded-xl d-flex align-center justify-center w-100"
-              style="background-color: rgba(var(--v-theme-accent), 0.1)">
-              <span class="text-disabled">Organization</span>
-            </div>
-          </v-col>
-          <v-col md="5" v-for="(service, index) in orgServices" :key="index" class="d-flex justify-center">
+          <v-col md="" v-for="(service, index) in orgServices" :key="index" class="d-flex justify-center">
             <v-hover v-slot="{ isHovering, props }" close-delay="100">
               <v-card width="100%" v-bind="props" :elevation="isHovering ? 6 : 2"
                 class="service-card transition-fast overflow-hidden d-flex flex-column h-100"
@@ -248,17 +242,12 @@ const goToService = (route) => {
                     </v-chip>
                   </v-chip-group>
                 </v-card-text>
+                <v-btn block variant="tonal" class="bg-primary" @click="goToService(service.route)">Learn More</v-btn>
               </v-card>
             </v-hover>
           </v-col>
         </v-row>
         <v-row class="align-stretch mb-8">
-          <v-col cols="12" md="1" class="d-flex">
-            <div class="pillar-label text-uppercase text-h4 pa-4 rounded-xl d-flex align-center justify-center w-100"
-              style="background-color: rgba(var(--v-theme-accent), 0.1)">
-              <span class="text-disabled">People</span>
-            </div>
-          </v-col>
           <v-col md="5" v-for="(service, index) in peopleServices" :key="index" class="d-flex justify-center">
             <v-hover v-slot="{ isHovering, props }" close-delay="100">
               <v-card width="100%" v-bind="props" :elevation="isHovering ? 6 : 2"
@@ -281,17 +270,12 @@ const goToService = (route) => {
                     </v-chip>
                   </v-chip-group>
                 </v-card-text>
+                <v-btn block variant="tonal" class="bg-primary" @click="goToService(service.route)">Learn More</v-btn>
               </v-card>
             </v-hover>
           </v-col>
         </v-row>
         <v-row class="align-stretch mb-8">
-          <v-col cols="12" md="1" class="d-flex">
-            <div class="pillar-label text-uppercase text-h4 pa-4 rounded-xl d-flex align-center justify-center w-100"
-              style="background-color: rgba(var(--v-theme-accent), 0.1)">
-              <span class="text-disabled">Technology</span>
-            </div>
-          </v-col>
           <v-col md="5" v-for="(service, index) in techServices" :key="index" class="d-flex justify-center">
             <v-hover v-slot="{ isHovering, props }" close-delay="100">
               <v-card width="100%" v-bind="props" :elevation="isHovering ? 6 : 2"
@@ -314,6 +298,7 @@ const goToService = (route) => {
                     </v-chip>
                   </v-chip-group>
                 </v-card-text>
+                <v-btn block variant="tonal" class="bg-primary" @click="goToService(service.route)">Learn More</v-btn>
               </v-card>
             </v-hover>
           </v-col>

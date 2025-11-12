@@ -22,6 +22,40 @@
         </v-container>
       </section>
 
+      <!-- Stats Counter -->
+      <section class="py-12 bg-primary text-white">
+        <v-container>
+          <v-row>
+            <v-col md="4" class="text-center">
+              <div class="text-h2 font-weight-bold">200+</div>
+              <div class="text-subtitle-1">Trainees</div>
+            </v-col>
+            <v-col md="4" class="text-center">
+              <div class="text-h2 font-weight-bold">25+</div>
+              <div class="text-subtitle-1">Workshops</div>
+            </v-col>
+            <v-col md="4" class="text-center">
+              <div class="text-h2 font-weight-bold">40+</div>
+              <div class="text-subtitle-1">Organizations</div>
+            </v-col>
+          </v-row>
+
+        </v-container>
+      </section>
+      <section>
+        <v-container>
+          <v-row justify="center" align="center" class="text-center">
+            <v-col>
+              <h3>Our Participants</h3>
+            </v-col>
+          </v-row>
+          <v-row class="bg-surface">
+            <v-col v-for="(img, index) in logos" :key="index" cols="3">
+              <v-img :src="img" aspect-ratio="1" max-height="100" max-width="100" />
+            </v-col>
+          </v-row>
+        </v-container>
+      </section>
 
 
       <!-- Features Section -->
@@ -256,30 +290,6 @@
         </v-container>
       </section>
 
-      <!-- Stats Counter -->
-      <section class="py-12 bg-primary text-white">
-        <v-container>
-          <v-row>
-            <v-col cols="6" md="3" class="text-center">
-              <div class="text-h2 font-weight-bold">200+</div>
-              <div class="text-subtitle-1">Trainees</div>
-            </v-col>
-            <v-col cols="6" md="3" class="text-center">
-              <div class="text-h2 font-weight-bold">15+</div>
-              <div class="text-subtitle-1">Workshops</div>
-            </v-col>
-            <v-col cols="6" md="3" class="text-center">
-              <div class="text-h2 font-weight-bold">40+</div>
-              <div class="text-subtitle-1">Organizations</div>
-            </v-col>
-            <v-col cols="6" md="3" class="text-center">
-              <div class="text-h2 font-weight-bold">5+</div>
-              <div class="text-subtitle-1">Training Programs</div>
-            </v-col>
-          </v-row>
-        </v-container>
-      </section>
-
       <!-- Testimonials Section -->
       <section id="testimonials" class="py-12">
         <v-container>
@@ -402,6 +412,7 @@ const props = defineProps({
     default: false,
   },
 })
+const logos = Object.values(import.meta.glob('../assets/workshop-logos/*.{png,jpg,jpeg,svg}', { eager: true })).map(m => m.default)
 import { mdiLaptopAccount, mdiGoogleClassroom, mdiAccountGroup, mdiAccount, mdiBookOpenPageVariant, mdiChartTimelineVariant, mdiChartBar, mdiPencilRuler } from '@mdi/js';
 </script>
 
