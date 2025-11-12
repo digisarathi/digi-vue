@@ -11,8 +11,8 @@
                 We Simplify Website Design
               </h1>
               <p class="text-body-1 mb-6">
-                Our approach to website design emphasizes crafting visually appealing
-                and high-performing digital experiences. With intuitive navigation, your website will not only look
+                Our websites are visually appealing
+                and high-performing digital experiences. With intuitive navigation, our designs will not only look
                 great but also drive engagement and conversions.
               </p>
             </v-col>
@@ -33,10 +33,10 @@
           </v-row>
 
           <v-row>
-            <v-col v-for="(project, i) in portfolioProjects" :key="i" cols="12" sm="6" md="6" lg="6">
-              <v-card class="h-100 d-flex flex-column" elevation="2" style="cursor: pointer"
-                @click.stop="handleProjectClick(project)">
-                <v-img :src="project.image" :alt="project.title" height="200" cover>
+            <v-col v-for="(project, i) in portfolioProjects" :key="i" cols="12" sm="6" md="4" class="mb-6">
+              <v-card class="h-100 d-flex flex-column" :elevation="hoverIndex === i ? 12 : 2" style="cursor: pointer"
+                @click.stop="handleProjectClick(project)" @mouseover="hoverIndex = i" @mouseleave="hoverIndex = -1">
+                <v-img :src="project.image" :alt="project.title" height="200">
                   <template v-slot:placeholder>
                     <v-row class="fill-height ma-0" align="center" justify="center">
                       <v-progress-circular indeterminate color="primary"></v-progress-circular>
@@ -59,17 +59,6 @@
                     </v-chip>
                   </div>
                 </v-card-text>
-                <v-card-actions class="px-4 pb-4">
-                  <v-spacer></v-spacer>
-                  <!-- <v-btn
-                    color="primary"
-                    variant="text"
-                    size="small"
-                    :append-icon="mdiArrowRight"
-                  >
-
-                  </v-btn> -->
-                </v-card-actions>
               </v-card>
             </v-col>
           </v-row>
@@ -144,6 +133,7 @@ const props = defineProps({
     default: false,
   },
 })
+const hoverIndex = ref(-1)
 const testimonials = ref([
   {
     name: 'Dr. Dwivedi',
@@ -185,15 +175,15 @@ const handleProjectClick = (project) => {
 const portfolioProjects = ref([
   {
     title: 'Surendra Forgings',
-    description: ' A growing manufacturing company showcasing its products and services',
+    description: 'A growing manufacturing company showcasing its products and state-of-the-art facilities.',
     image: '/portfolio/surendra.png',
     technologies: ['Custom Web Stack', 'Google Analytics'],
     website: 'https://surendraforgings.com/',
   },
   {
-    title: 'Solar Manufacturer',
+    title: 'RenewSys Solar',
     description:
-      'A professional corporate website with dynamic content management and product catalog.',
+      'One of India\'s leading solar manufacturers, RenewSys required a professional corporate website showcasing their premium product catalog.',
     image: '/portfolio/thumbnails/renewsys.png',
     technologies: ['Wix', 'Google Analytics', 'Google Ads'],
     website: 'https://renewsysworld.com/',
@@ -215,7 +205,7 @@ const portfolioProjects = ref([
     website: 'http://www.seedsjsr.org/',
   },
   {
-    title: 'Crowdsourcing for Women Safety',
+    title: 'Harrasmap Mumbai',
     description: 'Open source platform for data gathering from citizens to enhance women safety',
     image: '/portfolio/thumbnails/harassmap.png',
     technologies: ['Ushahidi', 'Google Maps'],
@@ -234,7 +224,7 @@ const portfolioProjects = ref([
     technologies: ['WordPress', 'Google Analytics'],
   },
   {
-    title: 'Minority women rehabilitation',
+    title: 'Awaaz-e-Niswaan',
     description: 'A nonprofit website for minority women rehabilitation for Awaaz-e-Niswaan',
     image: '/portfolio/thumbnails/niswaan.jpg',
     technologies: ['WordPress', 'Google Analytics'],
@@ -259,7 +249,7 @@ const portfolioProjects = ref([
     technologies: ['WordPress', 'Google Analytics'],
   },
   {
-    title: 'Legal Education',
+    title: 'IDIA',
     description: 'A nonprofit website for Legal Education provided by IDIA',
     image: '/portfolio/thumbnails/idia.png',
     technologies: ['PHP', 'Google Analytics'],

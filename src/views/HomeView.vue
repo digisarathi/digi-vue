@@ -169,19 +169,19 @@ const goToService = (route) => {
     <section id="hero-section" class="hero-section" fetchpriority="high">
       <v-container>
         <v-row justify="center" align="center" class="min-height-70vh">
-          <v-col cols="12" md="5" order="2" order-md="1" class="text-center">
+          <v-col cols="12" md="7" order="2" order-md="1" class="text-center">
             <h1 :class="['mb-6', { 'text-h3': !isMobile, 'text-h4': isMobile }]" class="text-primary"
               fetchpriority="high">
               Your goals can't wait for 'someday'.
             </h1>
-            <p :class="['mb-6', { 'text-h6': !isMobile, 'text-h7': isMobile }]" class="text-secondary">
-              We turn your mission into
-              <strong><i>momentum</i></strong>
-              through smart solutions that work from day one.
+            <p class="text-secondary text-h6">
+              In a fiercely competitive marketplace, strategy alone won’t secure victory. Speed of execution is the
+              decisive edge and speed demands deep expertise.
+              Fortunately, we bring both.
             </p>
           </v-col>
-          <v-col cols="12" md="7" order="1" order-md="2" class="d-flex justify-center align-center">
-            <v-img src="/home_hero.svg" max-width="450" max-height="350" contain loading="eager" fetchpriority="high"
+          <v-col cols="12" md="5" order="1" order-md="2" class="d-flex justify-center align-center">
+            <v-img src="/home_hero.svg" max-width="450" :max-height="isMobile ? 200 : 350" contain loading="eager" fetchpriority="high"
               alt="Hero illustration"></v-img>
           </v-col>
         </v-row>
