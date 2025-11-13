@@ -207,15 +207,21 @@ const isMobile = computed(() => mobile.value)
 
 const related_posts = ref([
   {
+    id: 3,
+    title: 'Unites (Navi Mumbai)',
+    url: '/blog/UnitesInsurance',
+    description: 'Unites was tasked with building a PoS mobile insurance platform from scratch. Here\'s how we helped them make the right tech choices & build a scalable & secure platform.'
+  },
+  {
     id: 1,
-    title: 'Majlis Law – Jul 2025',
+    title: 'Majlis Law Nonprofit',
     url: '/blog/MajlisLaw',
     description: 'How we helped Majlis streamline their website management process, resulting in significant cost savings and improved efficiency.'
   },
   {
     id: 2,
-    title: 'InnovSource – June 2025',
-    url: 'blog/InnovSource',
+    title: 'InnovSource Staffing',
+    url: '/blog/InnovSource',
     description: 'Discover how InnovSource optimized their customer support processes, resulting in faster response times and improved customer satisfaction.'
   },
 ])
