@@ -132,11 +132,11 @@
             </v-col>
           </v-row>
           <v-row>
-            <v-col v-for="post in related_posts" :key="post.id" cols="12" md="6">
+            <v-col v-for="post in related_posts" :key="post.id" cols="12" md="4">
 
               <!-- 2️⃣ Each post inside a v‑card -->
-              <v-card :to="post.url" target="_blank" rel="noopener" variant="tonal" class="mb-4"
-                style="border-left: #3254ae 10px solid;">
+              <v-card :to="post.url" target="_blank" rel="noopener" variant="tonal" class="w-100 mb-4"
+                style="border-left: #3254ae 10px solid; height: 100%;">
                 <v-card-title>
                   {{ post.title }}
                 </v-card-title>
