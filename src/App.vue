@@ -6,19 +6,22 @@
           <v-toolbar class="bg-white">
             <v-toolbar-title>
               <RouterLink to="/" class="text-decoration-none">
-                <div class="d-flex justify-start align-center">
+                <div class="d-flex justify-start align-center gap-2">
                   <v-img src="/greater.png" max-width="34" :width="isMobile ? 24 : 30" :height="isMobile ? 24 : 30"
                     class="" alt="digiSarathi logo"></v-img>
-                  <div class="text-h5 d-none d-sm-inline">
-                    <strong><span class="text-accent">digi</span><span class="text-primary">Sarathi</span></strong>
+                  <div class="d-flex flex-column mt-3">
+                    <div class="text-h5 d-none d-sm-inline">
+                      <strong><span class="text-accent">digi</span><span class="text-primary">Sarathi</span></strong>
+                    </div>
+                    <div class="text-h6 d-sm-none">
+                      <strong><span class="text-accent">digi</span><span class="text-primary">Sarathi</span></strong>
+                    </div>
+                    <div class="text-caption text-secondary " style="line-height: 1;">Trusted since 2013</div>
                   </div>
-                  <div class="text-h6 d-sm-none">
-                    <strong><span class="text-accent">digi</span><span class="text-primary">Sarathi</span></strong>
-                  </div>
+
                 </div>
               </RouterLink>
             </v-toolbar-title>
-            <v-spacer></v-spacer>
             <v-btn variant="plain" size="small" class="hidden-sm-and-down text-overline" text
               v-for="(item, index) in navItems" :key="index" :to="item.route" @click="scrollIfNeeded(item.route)">
               {{ item.title }}
