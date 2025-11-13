@@ -127,14 +127,11 @@
         <v-container>
           <v-row class="mb-12">
             <v-col cols="12" class="text-center">
-              <h2 class="text-h5 text-primary mb-2">Case Studies</h2>
-              <p class="text-subtitle-2 text-primary">The Value myCTO Creates</p>
+              <h2 class="text-h5 text-primary ">Case Studies</h2>
             </v-col>
           </v-row>
           <v-row>
             <v-col v-for="post in related_posts" :key="post.id" cols="12" md="4">
-
-              <!-- 2️⃣ Each post inside a v‑card -->
               <v-card :to="post.url" target="_blank" rel="noopener" variant="tonal" class="w-100 mb-4"
                 style="border-left: #3254ae 10px solid; height: 100%;">
                 <v-card-title>
@@ -146,6 +143,32 @@
                   </p>
                 </v-card-text>
               </v-card>
+            </v-col>
+          </v-row>
+          <v-row justify="center">
+            <v-col cols="12" md="10" lg="8">
+              <!-- PDF Viewer Card -->
+              <v-card v-if="!isMobile" class="elevation-6 rounded-xl overflow-hidden" height="800">
+                <v-card-text class="pa-0 h-100">
+                  <!-- Desktop: Embedded PDF -->
+                  <embed v-if="!isMobile" :src="pdfUrl + '#toolbar=0&navpanes=0&scrollbar=0&view=FitH'"
+                    type="application/pdf" class="w-100 h-100" style="border: none;" />
+
+                  <!-- Mobile: Fallback with Download + Preview -->
+                  <div v-else class="d-flex flex-column h-100">
+                    <v-btn block size="large" variant="outlined" :href="pdfUrl" download :prepend-icon="mdiDownload">
+                      Download PDF
+                    </v-btn>
+                  </div>
+                </v-card-text>
+              </v-card>
+
+              <!-- Optional: Quick Download for Desktop -->
+              <div class="text-center mt-6">
+                <h4>Appreciation Letter - ThoughtShop Foundation</h4>
+                <v-btn block variant="tonal" :href="pdfUrl" download :prepend-icon="mdiDownload" size="large">
+                  Download </v-btn>
+              </div>
             </v-col>
           </v-row>
         </v-container>
@@ -199,12 +222,12 @@
 
 <script setup>
 import { ref, computed } from 'vue'
-import { mdiRocket, mdiMagnify } from '@mdi/js'
+import { mdiRocket, mdiMagnify, mdiDownload } from '@mdi/js'
 import { useDisplay } from 'vuetify'
 
-const { mobile } = useDisplay()
-const isMobile = computed(() => mobile.value)
-
+const { smAndDown } = useDisplay()
+const isMobile = computed(() => smAndDown.value)
+const pdfUrl = '/santayan.pdf'
 const related_posts = ref([
   {
     id: 3,
