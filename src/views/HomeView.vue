@@ -181,8 +181,8 @@ const goToService = (route) => {
             </p>
           </v-col>
           <v-col cols="12" md="5" order="1" order-md="2" class="d-flex justify-center align-center">
-            <v-img src="/home_hero.svg" max-width="450" :max-height="isMobile ? 200 : 350" contain loading="eager" fetchpriority="high"
-              alt="Hero illustration"></v-img>
+            <v-img src="/home_hero.svg" max-width="450" :max-height="isMobile ? 200 : 350" contain loading="eager"
+              fetchpriority="high" alt="Hero illustration"></v-img>
           </v-col>
         </v-row>
       </v-container>
@@ -221,30 +221,39 @@ const goToService = (route) => {
             </p>
           </v-col>
         </v-row>
-        <v-row class="align-stretch mb-8">
-          <v-col v-for="(service, index) in services" :key="index" class="d-flex justify-center">
-            <v-hover v-slot="{ isHovering, props }" close-delay="100">
-              <v-card width="100%" v-bind="props" :elevation="isHovering ? 6 : 2"
-                class="service-card transition-fast overflow-hidden d-flex flex-column h-100 "
+        <v-row class="mb-8">
+          <v-col v-for="(service, index) in services" :key="index" cols="12" sm="6" md="6" class="d-flex">
+            <v-hover v-slot="{ isHovering, props }">
+              <v-card v-bind="props" :elevation="isHovering ? 8 : 3" class="service-card d-flex flex-column h-100"
                 @click="goToService(service.route)">
-                <v-card-title class="font-weight-bold bg-primary justify-center text-center text-white"
-                  :class="{ 'text-h5': !isMobile, 'text-h6': isMobile }"
+                <v-card-title class="font-weight-bold text-white text-center py-4"
                   style="background: linear-gradient(90deg, #325ea4 0%, #42a5f5 100%);">
                   {{ service.name }}
                 </v-card-title>
-                <v-card-text>
-                  <div class="d-flex justify-center">
-                    <v-img class="mb-4" :src="service.image" max-width="350" height="250" min-height="250"></v-img>
-                  </div>
-                  <p class="mb-4 text-secondary">{{ service.text }}</p>
-                  <v-chip-group class="mb-0">
+
+                <div class="image-container">
+                  <v-img :src="service.image" :aspect-ratio="4 / 3" class="rounded-b">
+                    <template v-slot:placeholder>
+                      <div class="d-flex align-center justify-center fill-height">
+                        <v-progress-circular indeterminate color="primary" />
+                      </div>
+                    </template>
+                  </v-img>
+                </div>
+
+                <v-card-text class="flex-grow-1 d-flex flex-column">
+                  <p class="mb-4 text-secondary flex-grow-1">{{ service.text }}</p>
+                  <v-chip-group>
                     <v-chip v-for="feature in service.features" :key="feature" size="small" class="ma-1">
                       {{ feature }}
                     </v-chip>
                   </v-chip-group>
                 </v-card-text>
-                <v-btn block variant="plain" @click="goToService(service.route)" :append-icon="mdiChevronRight">Read
-                  More</v-btn>
+
+                <v-btn block variant="text" color="primary" :append-icon="mdiChevronRight"
+                  @click.stop="goToService(service.route)" class="mt-auto">
+                  Read More
+                </v-btn>
               </v-card>
             </v-hover>
           </v-col>
@@ -391,6 +400,19 @@ const goToService = (route) => {
 .service-card {
   cursor: pointer;
   border-radius: 16px;
+}
+
+.image-container {
+  height: 250px;
+  overflow: hidden;
+}
+
+.service-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
 }
 
 .testimonial-card {
