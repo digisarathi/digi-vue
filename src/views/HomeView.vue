@@ -26,7 +26,7 @@ const orgServices = [
   {
     name: 'Website Design',
     icon: mdiWeb,
-    text: 'Your website is the foundation upon which your digital marketing  are built.',
+    text: 'Your website is the foundation upon which your digital marketing campaigns are built.',
     features: ['Responsive Design', 'SEO Optimization', 'Custom CMS', 'Performance Focus'],
     route: 'website-design',
     image: 'wordpress.svg',
@@ -34,7 +34,7 @@ const orgServices = [
   {
     name: 'UX/UI Design',
     icon: mdiCellphoneLink,
-    text: 'Creating intuitive & engaging digital experiences for user needs through unique design principles.',
+    text: 'Creating intuitive & engaging digital experiences for users through unique design principles.',
     features: ['User Research', 'Wireframing & Prototyping', 'Visual Design', 'Usability Testing'],
     route: 'ux-ui-services',
     image: 'ux-ui.svg',
@@ -44,7 +44,7 @@ const peopleServices = [
   {
     name: 'Training & Workshops',
     icon: mdiSchool,
-    text: 'Hands-on trainings designed to empower your team, led by industry experts.',
+    text: 'Hands-on trainings to empower your team, designed & led by industry experts.',
     features: ['Customized Programs', 'Hands-on Learning', 'Remote Options', 'Ongoing Support'],
     route: 'training-workshops',
     image: 'shared.svg',
