@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
-import { mdiWeb, mdiCellphoneLink, mdiSchool, mdiCircle, mdiChevronRight } from '@mdi/js'
+import { mdiWeb, mdiCellphoneLink, mdiSchool, mdiCircle, mdiChevronRight, mdiAccount } from '@mdi/js'
 
 const router = useRouter()
 const props = defineProps({
@@ -26,7 +26,7 @@ const orgServices = [
   {
     name: 'Website Design',
     icon: mdiWeb,
-    text: 'Your website is the foundation upon which your digital marketing or fundraising campaigns are built.',
+    text: 'Your website is the foundation upon which your digital marketing  are built.',
     features: ['Responsive Design', 'SEO Optimization', 'Custom CMS', 'Performance Focus'],
     route: 'website-design',
     image: 'wordpress.svg',
@@ -34,7 +34,7 @@ const orgServices = [
   {
     name: 'UX/UI Design',
     icon: mdiCellphoneLink,
-    text: 'Creating intuitive & engaging digital experiences for user needs and business goals through unique design principles.',
+    text: 'Creating intuitive & engaging digital experiences for user needs through unique design principles.',
     features: ['User Research', 'Wireframing & Prototyping', 'Visual Design', 'Usability Testing'],
     route: 'ux-ui-services',
     image: 'ux-ui.svg',
@@ -44,7 +44,7 @@ const peopleServices = [
   {
     name: 'Training & Workshops',
     icon: mdiSchool,
-    text: 'Hands-on sessions designed to empower your team with essential skills and knowledge, led by industry experts.',
+    text: 'Hands-on trainings designed to empower your team, led by industry experts.',
     features: ['Customized Programs', 'Hands-on Learning', 'Remote Options', 'Ongoing Support'],
     route: 'training-workshops',
     image: 'shared.svg',
@@ -52,7 +52,7 @@ const peopleServices = [
   {
     name: 'ChainReaction',
     icon: mdiSchool,
-    text: 'A unique yes/no journaling tool to help individuals reflect, set goals, and track progress over time.',
+    text: 'A unique yes/no journaling app to help individuals reflect, set goals, and track progress over time.',
     features: ['Personal Growth', 'Goal Setting', 'Progress Tracking'],
     route: 'https://chainreaction.digisarathi.com',
     image: 'chainreaction.svg',
@@ -62,7 +62,7 @@ const techServices = [
   {
     name: 'Custom Apps',
     icon: mdiCellphoneLink,
-    text: 'Modular and scalable architecture to scale with flexibility and evolving business needs.',
+    text: 'Modular system design & architecture to scale with evolving business needs.',
     features: ['Mobile & Web Apps', 'Custom Software', 'API Integration'],
     route: 'apps-software-development',
     image: 'app.svg',
@@ -70,7 +70,7 @@ const techServices = [
   {
     name: 'myCTO',
     icon: mdiCellphoneLink,
-    text: 'Your trusted virtual CTO helping you navigate Digital Transformation or  Tech Issues.',
+    text: 'Your trusted virtual CTO helping you navigate Digital Transformation and Technology.',
     features: ['Tech Consulting', 'Tech Implementation', 'Tech Support'],
     route: 'mycto',
     image: 'myCTO.png',
@@ -94,7 +94,7 @@ const testimonials = ref([
   },
   {
     name: '',
-    company: 'Trustee, Niswaan',
+    company: 'Trustee, Awaaz-e-Niswaan',
     text: 'The team delivered our project on time and exceeded our expectations. Their focus on simplicity while maintaining powerful functionality was exactly what we needed.',
     avatar: '/images/avatars/john-doe.jpg',
   },
@@ -221,41 +221,36 @@ const goToService = (route) => {
             </p>
           </v-col>
         </v-row>
-        <v-row class="mb-8">
-          <v-col v-for="(service, index) in services" :key="index" cols="12" sm="6" md="6" class="d-flex">
-            <v-hover v-slot="{ isHovering, props }">
-              <v-card v-bind="props" :elevation="isHovering ? 8 : 3" class="service-card d-flex flex-column h-100"
-                @click="goToService(service.route)">
-                <v-card-title class="font-weight-bold text-white text-center py-4"
-                  style="background: linear-gradient(90deg, #325ea4 0%, #42a5f5 100%);">
-                  {{ service.name }}
-                </v-card-title>
-
-                <div class="image-container">
-                  <v-img :src="service.image" :aspect-ratio="4 / 3" class="rounded-b">
-                    <template v-slot:placeholder>
-                      <div class="d-flex align-center justify-center fill-height">
-                        <v-progress-circular indeterminate color="primary" />
-                      </div>
-                    </template>
-                  </v-img>
-                </div>
-
-                <v-card-text class="flex-grow-1 d-flex flex-column">
-                  <p class="mb-4 text-secondary flex-grow-1">{{ service.text }}</p>
-                  <v-chip-group>
-                    <v-chip v-for="feature in service.features" :key="feature" size="small" class="ma-1">
+        <v-row v-for="(service, index) in services" :key="index" class="mb-8">
+          <v-col cols="12">
+            <v-row @click="goToService(service.route)" class="mb-4">
+              <v-col>
+                <p class="text-h4 mb-4 text-secondary flex-grow-1">{{ service.text }}</p>
+                <div class="chip-container w-100">
+                  <div class="d-flex flex-wrap">
+                    <v-chip v-for="feature in service.features" :key="feature" size="small" class="ma-1 mb-1 chip-item">
                       {{ feature }}
                     </v-chip>
-                  </v-chip-group>
-                </v-card-text>
-
-                <v-btn block variant="text" color="primary" :append-icon="mdiChevronRight"
-                  @click.stop="goToService(service.route)" class="mt-auto">
-                  Read More
-                </v-btn>
-              </v-card>
-            </v-hover>
+                  </div>
+                </div>
+              </v-col>
+              <v-col>
+                <v-img :src="service.image" :aspect-ratio="4 / 3" class="rounded-b">
+                  <template v-slot:placeholder>
+                    <div class="d-flex align-center justify-center fill-height">
+                      <v-progress-circular indeterminate color="primary" />
+                    </div>
+                  </template>
+                </v-img>
+                <v-card-title class="font-weight-bold text-white text-center my-4 py-4"
+                  style="background: linear-gradient(90deg, #325ea4 0%, #42a5f5 100%); cursor: pointer;">
+                  {{ service.name }} <v-icon>{{ mdiChevronRight }}</v-icon>
+                </v-card-title>
+              </v-col>
+            </v-row>
+            <v-row>
+              <v-col><v-divider></v-divider></v-col>
+            </v-row>
           </v-col>
         </v-row>
       </v-container>
@@ -293,7 +288,7 @@ const goToService = (route) => {
                         <v-img :src="'/clients/' + testimonial.photo" :alt="testimonial.name + ' photo'" cover
                           class="bg-grey-lighten-3">
                           <template v-slot:placeholder>
-                            <v-icon size="24">mdiAccount</v-icon>
+                            <v-icon size="48" color="primary">{{ mdiAccount }}</v-icon>
                           </template>
                         </v-img>
                       </v-avatar>
@@ -478,6 +473,26 @@ const goToService = (route) => {
     margin-bottom: 0.5rem;
     font-size: 1.1rem;
     text-align: left;
+  }
+}
+
+/* Fix chip wrapping on mobile */
+.chip-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.chip-item {
+  flex: 0 0 auto;
+  max-width: calc(100% - 16px);
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 600px) {
+  .chip-item {
+    font-size: 0.75rem;
+    padding: 0 8px;
   }
 }
 </style>
