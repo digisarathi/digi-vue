@@ -1,24 +1,31 @@
 <template>
   <PostLayout :post="post">
-    <h3>
-      <a href="https://brave.com/" target="_blank" rel="noopener noreferrer">Brave Browser</a>
-    </h3>
-    <p>
-      For nonprofits, the Brave browser offers something that almost every organization working
-      online urgently needs today — protection from digital tracking and faster, cleaner browsing
-      without distractions. Built upon the same browser engine as Google Chrome, Brave automatically
-      blocks ads, pop‑ups, and third‑party trackers that follow you across the web. It loads pages
-      noticeably faster and uses less mobile data, which means smoother work even on slower internet
-      connections — something especially useful for teams working in rural or community settings.
-    </p>
 
+    <v-row>
+      <v-col cols="12" md="7" sm="7">
+        <p>
+          For nonprofits, the Brave browser offers something that almost every organization working
+          online urgently needs today — protection from digital tracking and faster, cleaner browsing
+          without distractions. Built upon the same browser engine as Google Chrome, Brave automatically
+          blocks ads, pop‑ups, and third‑party trackers that follow you across the web. It loads pages
+          noticeably faster and uses less mobile data, which means smoother work even on slower internet
+          connections — something especially useful for teams working in rural or community settings.
+        </p>
+      </v-col>
+      <v-col class="d-flex flex-column justify-center" cols="12" sm="4" md="4">
+        <h3 class="text-center" style="cursor: pointer;">
+          <a href="https://brave.com/" target="_blank" rel="noopener noreferrer">Brave Browser</a>
+          <v-img src="/blog/brave.svg" alt="Brave Browser Logo" max-height="50"></v-img>
+        </h3>
+      </v-col>
+    </v-row>
     <p>
       More importantly, Brave doesn't collect your data or sell it to advertisers. It's built with
       what's called "privacy by default," meaning the browser itself never stores unnecessary
       personal information. Emails, searches, and logins are less exposed to hidden tracking tools
-      that most mainstream browsers allow by default. For any nonprofit that deals with sensitive
-      beneficiary information, partner data, or online fundraising, this layer of privacy helps
-      safeguard both your organization and the people you serve.
+      that most mainstream browsers allow by default. <strong>For any nonprofit that deals with sensitive
+        beneficiary information, partner data, or online fundraising, this layer of privacy helps
+        safeguard both your organization and the people you serve.</strong>
     </p>
 
     <p>
@@ -29,27 +36,32 @@
       short, Brave is not just another browser — it's a tool that builds digital resilience for
       mission‑driven organizations that need to stay safe, efficient, and focused online.
     </p>
+    <v-divider class="mb-6"></v-divider>
+    <v-row>
 
-    <h3>
-      <a href="https://www.vivaldi.com/" target="_blank" rel="noopener noreferrer"
-        >Vivaldi Browser</a
-      >
-    </h3>
-    <p>
-      Vivaldi is a strong choice for nonprofit teams who want greater privacy, security, and control
-      over their online experience. Vivaldi stands out by blocking website trackers and unwanted ads
-      automatically, which helps protect sensitive data from being collected or sold without your
-      knowledge. The built-in tracker and ad blockers make browsing safer and smoother, using less
-      data and bandwidth—important for offices with uneven internet access or staff working in the
-      field.
-    </p>
-
+      <v-col class="d-flex flex-column justify-center" cols="12" sm="4" md="4">
+        <h3 class="text-center" style="cursor: pointer;">
+          <a href=" https://www.vivaldi.com/" target="_blank" rel="noopener noreferrer">Vivaldi Browser</a>
+          <v-img src="/blog/vivaldi.svg" alt="Vivaldi Browser Logo" max-height="80"></v-img>
+        </h3>
+      </v-col>
+      <v-col cols="12" md="8" sm="8">
+        <p>
+          Vivaldi is a strong choice for nonprofit teams who want greater privacy, security, and control
+          over their online experience. Vivaldi stands out by blocking website trackers and unwanted ads
+          automatically, which helps protect sensitive data from being collected or sold without your
+          knowledge. The built-in tracker and ad blockers make browsing safer and smoother, using less
+          data and bandwidth—important for offices with uneven internet access or staff working in the
+          field.
+        </p>
+      </v-col>
+    </v-row>
     <p>
       Vivaldi's biggest strength for nonprofit teams lies in its advanced customization. Unlike
       other browsers, Vivaldi lets you personalize nearly every part of your workspace—change the
       color themes, move the tab bar to any edge of the window, and even adjust the position of the
-      address bar to suit different ways of working. You can create split-screen views, stack tabs
-      into named groups, and save "Sessions" so a whole set of project tabs can be reopened any
+      address bar to suit different ways of working. <strong>You can create split-screen views, stack tabs
+        into named groups, and save "Sessions"</strong> so a whole set of project tabs can be reopened any
       time. For teams juggling outreach, research, and fundraising? All these features help arrange
       web resources side-by-side for faster switching and less clutter.
     </p>
@@ -72,20 +84,26 @@
       managing multiple tasks, events, and online activities, Vivaldi becomes more than a
       browser—it's an adaptable workspace designed to support real collaboration.
     </p>
-
-    <h3>
-      <a href="https://duckduckgo.com/" target="_blank" rel="noopener noreferrer">DuckDuckGo</a>
-    </h3>
-    <p>
-      DuckDuckGo's search engine is fully independent and distinct from major players like Google or
-      Bing. It aggregates results from over 400 trusted sources, including Bing, Yahoo!, and its own
-      web crawler called DuckDuckBot—but importantly, it does not track your searches or create
-      personal profiles. This means everyone sees the same unbiased search results for a given
-      query, without personalized filters or ad targeting based on past behavior. For nonprofits and
-      privacy-minded users, this ensures more objective information without the influence of hidden
-      algorithms reshaping what you see.
-    </p>
-
+    <v-divider class="mb-6"></v-divider>
+    <v-row>
+      <v-col cols="12" md="7" sm="7">
+        <p>
+          DuckDuckGo's search engine is fully independent and distinct from major players like Google or
+          Bing. It aggregates results from over 400 trusted sources, including Bing, Yahoo!, and its own
+          web crawler called DuckDuckBot—but importantly, it does not track your searches or create
+          personal profiles. <strong>This means everyone sees the same unbiased search results for a given</strong>
+          query, without personalized filters or ad targeting based on past behavior. For nonprofits and
+          privacy-minded users, this ensures more objective information without the influence of hidden
+          algorithms reshaping what you see.
+        </p>
+      </v-col>
+      <v-col class="d-flex flex-column justify-center" cols="12" sm="4" md="4">
+        <h3 class="text-center" style="cursor: pointer;">
+          <a href=" https://duckduckgo.com/" target="_blank" rel="noopener noreferrer">DuckDuckGo</a>
+          <v-img src="/blog/duck.svg" alt="DuckDuckGo Logo" max-height="100"></v-img>
+        </h3>
+      </v-col>
+    </v-row>
     <p>
       A standout feature of DuckDuckGo's search is "Instant Answers," which brings key facts,
       definitions, and data right to the top of the results page—often removing the need to click
@@ -96,7 +114,6 @@
       YouTube). It's a fast, privacy-respecting way to search across the web without leaving
       DuckDuckGo.
     </p>
-
     <p>
       DuckDuckGo also offers a clean, minimalist interface that is easy to use and customize. You
       can adjust your region, toggle safe search features for family-friendly results, and choose
